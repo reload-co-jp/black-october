@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server"
-import { devOnly, fail } from "@/lib/admin-api"
+import { devOnly, fail, sameOriginWrite } from "@/lib/admin-api"
 import { asCollection, readAll, update } from "@/lib/admin-store"
 
 type Ctx = { params: Promise<{ collection: string }> }
@@ -13,6 +13,8 @@ export const GET = async (_: Request, { params }: Ctx) => {
 export const POST = async (req: Request, { params }: Ctx) => {
   const c = asCollection((await params).collection)
   if (devOnly() || !c) return devOnly() ?? NextResponse.json({ error: "Not found" }, { status: 404 })
+  const forbidden = sameOriginWrite(req, true)
+  if (forbidden) return forbidden
   try {
     const body = await req.json()
     await update(c, (rows) => {

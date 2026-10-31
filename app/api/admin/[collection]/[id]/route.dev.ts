@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server"
-import { devOnly, fail } from "@/lib/admin-api"
+import { devOnly, fail, sameOriginWrite } from "@/lib/admin-api"
 import { asCollection, readAll, update } from "@/lib/admin-store"
 
 type Ctx = { params: Promise<{ collection: string; id: string }> }
@@ -20,6 +20,8 @@ export const GET = async (_: Request, { params }: Ctx) => {
 export const PUT = async (req: Request, { params }: Ctx) => {
   const { c, id } = await resolve(params)
   if (devOnly() || !c) return devOnly() ?? notFound()
+  const forbidden = sameOriginWrite(req, true)
+  if (forbidden) return forbidden
   try {
     const body = await req.json()
     const found = await update(c, (rows) => {
@@ -34,9 +36,11 @@ export const PUT = async (req: Request, { params }: Ctx) => {
 }
 
 // Deleting a row that is still referenced fails validation and is rejected.
-export const DELETE = async (_: Request, { params }: Ctx) => {
+export const DELETE = async (req: Request, { params }: Ctx) => {
   const { c, id } = await resolve(params)
   if (devOnly() || !c) return devOnly() ?? notFound()
+  const forbidden = sameOriginWrite(req, false)
+  if (forbidden) return forbidden
   try {
     const found = await update(c, (rows) => {
       const i = rows.findIndex((r) => r.id === id)
