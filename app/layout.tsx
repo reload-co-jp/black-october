@@ -1,7 +1,6 @@
 import Link from "next/link"
 import { Metadata } from "next"
 import { Footer, Header, Main, Title } from "@/components/elements/layout"
-import { mono } from "@/components/ui"
 import { SITE_NAME, SITE_URL } from "@/lib/site"
 import "./reset.css"
 
@@ -18,11 +17,11 @@ export const metadata: Metadata = {
 }
 
 const NAV = [
-  ["INCIDENTS", "/incidents/"],
-  ["VULNERABILITIES", "/vulnerabilities/"],
-  ["TECHNIQUES", "/techniques/"],
-  ["STATISTICS", "/statistics/"],
-  ["ABOUT", "/about/"],
+  ["Incidents", "/incidents/"],
+  ["Vulnerabilities", "/vulnerabilities/"],
+  ["Techniques", "/techniques/"],
+  ["Statistics", "/statistics/"],
+  ["About", "/about/"],
 ]
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
@@ -30,27 +29,26 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <html lang="ja">
       <body>
         <Header>
-          <Title style={{ ...mono, letterSpacing: ".18em" }}>
-            <Link href="/" style={{ color: "#e8e8ea" }}>
+          <Title style={{ fontWeight: 600 }}>
+            <Link href="/" style={{ color: "#e6edf3" }}>
               <span style={{ color: "#e5262b" }}>■</span> BLACK OCTOBER
             </Link>
           </Title>
           <nav aria-label="メインナビゲーション">
             <ul
               style={{
-                ...mono,
                 display: "flex",
                 flexWrap: "wrap",
-                fontSize: ".75rem",
+                fontSize: ".875rem",
+                fontWeight: 600,
                 gap: ".25rem 1rem",
-                letterSpacing: ".08em",
                 listStyle: "none",
                 padding: 0,
               }}
             >
               {NAV.map(([name, href]) => (
                 <li key={href}>
-                  <Link href={href} style={{ color: "#c9c9ce" }}>
+                  <Link href={href} style={{ color: "#e6edf3" }}>
                     {name}
                   </Link>
                 </li>

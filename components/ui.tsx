@@ -12,12 +12,12 @@ import {
 import { SITE_URL } from "@/lib/site"
 
 export const color = {
-  bg: "#0b0b0d",
-  panel: "#141418",
-  panel2: "#1b1b21",
-  border: "#2a2a32",
-  text: "#e8e8ea",
-  muted: "#9a9aa3",
+  bg: "#0d1117",
+  panel: "#161b22",
+  panel2: "#21262d",
+  border: "#30363d",
+  text: "#e6edf3",
+  muted: "#8b949e",
   accent: "#e5262b",
   accentSoft: "rgba(229, 38, 43, 0.12)",
 }
@@ -42,16 +42,15 @@ export const DateText: FC<{ value: string | null; label?: string }> = ({
 )
 
 const pill = (fg: string, bg = "transparent"): CSSProperties => ({
-  ...mono,
   border: `1px solid ${fg}`,
-  borderRadius: 3,
+  borderRadius: "2em",
   color: fg,
   background: bg,
   display: "inline-block",
-  fontSize: ".7rem",
-  letterSpacing: ".04em",
-  lineHeight: 1.6,
-  padding: "0 .45rem",
+  fontSize: "12px",
+  fontWeight: 500,
+  lineHeight: "18px",
+  padding: "0 7px",
   whiteSpace: "nowrap",
 })
 
@@ -80,11 +79,11 @@ export const CategoryTags: FC<{ values: string[] }> = ({ values }) => (
 )
 
 const verificationColor: Record<string, string> = {
-  confirmed: "#3ecf8e",
-  partially_confirmed: "#e6b800",
-  possible: "#e6b800",
-  unconfirmed: "#ff7a1a",
-  under_investigation: "#ff7a1a",
+  confirmed: "#3fb950",
+  partially_confirmed: "#d29922",
+  possible: "#d29922",
+  unconfirmed: "#db6d28",
+  under_investigation: "#db6d28",
   unknown: color.muted,
 }
 export const VerificationBadge: FC<{ value: string }> = ({ value }) => (
@@ -156,17 +155,14 @@ export const Section: FC<{
   <section id={id} style={{ margin: "2.5rem 0" }}>
     <h2
       style={{
-        ...mono,
         borderBottom: `1px solid ${color.border}`,
         color: color.text,
-        fontSize: ".85rem",
-        letterSpacing: ".12em",
+        fontSize: "1.25rem",
+        fontWeight: 600,
         marginBottom: "1rem",
-        paddingBottom: ".5rem",
-        textTransform: "uppercase",
+        paddingBottom: ".3em",
       }}
     >
-      <span style={{ color: color.accent }}>■ </span>
       {title}
     </h2>
     {children}
@@ -181,16 +177,21 @@ export const PageTitle: FC<{ kicker?: string; children: ReactNode }> = ({
     {kicker && (
       <p
         style={{
-          ...mono,
           color: color.accent,
           fontSize: ".75rem",
-          letterSpacing: ".15em",
+          fontWeight: 600,
         }}
       >
         {kicker}
       </p>
     )}
-    <h1 style={{ fontSize: "clamp(1.4rem, 4vw, 2rem)", lineHeight: 1.35 }}>
+    <h1
+      style={{
+        fontSize: "clamp(1.4rem, 4vw, 2rem)",
+        fontWeight: 600,
+        lineHeight: 1.25,
+      }}
+    >
       {children}
     </h1>
   </header>
@@ -209,6 +210,8 @@ export const Facts: FC<{ items: [string, ReactNode][] }> = ({ items }) => (
       gridTemplateColumns: "repeat(auto-fill, minmax(min(15rem, 100%), 1fr))",
       background: color.border,
       border: `1px solid ${color.border}`,
+      borderRadius: 6,
+      overflow: "hidden",
     }}
   >
     {items.map(([k, v]) => (
@@ -249,7 +252,7 @@ export const JsonLd: FC<{ data: object }> = ({ data }) => (
 export const Breadcrumbs: FC<{ items: Crumb[] }> = ({ items }) => {
   const all = [{ name: "HOME", href: "/" }, ...items]
   return (
-    <nav aria-label="パンくずリスト" style={{ ...mono, fontSize: ".75rem" }}>
+    <nav aria-label="パンくずリスト" style={{ fontSize: ".875rem" }}>
       <ol
         style={{
           color: color.muted,
@@ -308,7 +311,14 @@ export const Bars: FC<{
           }}
         >
           <span style={{ fontSize: ".85rem" }}>{format(d.key)}</span>
-          <span style={{ background: color.panel2, height: ".7rem" }}>
+          <span
+            style={{
+              background: color.panel2,
+              borderRadius: 6,
+              height: ".5rem",
+              overflow: "hidden",
+            }}
+          >
             <span
               style={{
                 background: barColor(d.key),

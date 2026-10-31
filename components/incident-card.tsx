@@ -31,7 +31,7 @@ export const IncidentCard: FC<{ incident: IncidentCardData }> = ({ incident: i }
         対応状況: <StatusText value={i.status} />
       </span>
     </Row>
-    <p style={{ fontSize: ".9rem", color: "#c9c9ce" }}>{i.summary}</p>
+    <p style={{ fontSize: ".9rem", color: color.muted }}>{i.summary}</p>
     <Row>
       <CategoryTags values={i.categories} />
     </Row>

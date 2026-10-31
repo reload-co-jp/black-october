@@ -139,7 +139,7 @@ const Page = async ({ params }: Props) => {
                   {t.title}
                   {cite(t.sourceIds)}
                 </p>
-                {t.description && <p style={{ color: "#c9c9ce" }}>{t.description}</p>}
+                {t.description && <p style={{ color: color.muted }}>{t.description}</p>}
               </li>
             ))}
           </ol>

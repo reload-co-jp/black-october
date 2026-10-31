@@ -43,14 +43,13 @@ const Page: FC = () => {
           padding: "3rem 0 2.5rem",
         }}
       >
-        <p style={{ ...mono, color: color.accent, letterSpacing: ".2em" }}>
+        <p style={{ color: color.accent, fontWeight: 600 }}>
           2026 CYBERSECURITY INCIDENT ARCHIVE
         </p>
         <h1
           style={{
-            ...mono,
             fontSize: "clamp(2.2rem, 9vw, 4.5rem)",
-            letterSpacing: ".06em",
+            fontWeight: 600,
             lineHeight: 1.1,
             margin: ".5rem 0 1rem",
           }}
