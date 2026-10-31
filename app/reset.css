@@ -9,3 +9,53 @@
   color: #f0f0f0;
   color-scheme: dark;
 }
+
+body {
+  background: #0b0b0d;
+  line-height: 1.7;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Hiragino Sans",
+    "Noto Sans JP",
+    sans-serif;
+}
+
+* {
+  font-family: inherit;
+}
+
+a {
+  color: #ff5a5f;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+:focus-visible {
+  outline: 2px solid #e5262b;
+  outline-offset: 2px;
+}
+
+input,
+select,
+textarea,
+button {
+  background: #1b1b21;
+  border: 1px solid #2a2a32;
+  border-radius: 4px;
+  color: #e8e8ea;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.6rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}

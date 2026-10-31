@@ -44,3 +44,6 @@ lib-cov
 out/
 
 next-env.d.ts
+
+# admin backups
+data/.backup/

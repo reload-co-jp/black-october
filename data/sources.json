@@ -1,0 +1,192 @@
+[
+  {
+    "id": "src-idcf-07",
+    "title": "【第7報】不正アクセスに関する調査結果および今後の対応について",
+    "url": "https://www.idcf.jp/news/topics/20261027001/",
+    "publisher": "IDCフロンティア",
+    "publishedAt": "2026-10-27",
+    "sourceType": "official",
+    "reliability": "primary",
+    "retrievedAt": "2026-10-31"
+  },
+  {
+    "id": "src-atmarkit-idcf",
+    "title": "一部顧客のデータは復旧困難 IDCフロンティアにランサムウェア、495社・自治体に影響",
+    "url": "https://atmarkit.itmedia.co.jp/ait/articles/2610/09/news036.html",
+    "publisher": "@IT",
+    "publishedAt": "2026-10-09",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-10-31"
+  },
+  {
+    "id": "src-omu-05",
+    "title": "本学情報基盤システムにおける障害の発生について【第5報】委託先公表のサイバー攻撃事案に伴うシステム障害・情報漏洩について",
+    "url": "https://www.omu.moe/news/2026-10-21-1d69aecb.html",
+    "publisher": "大阪公立大学",
+    "publishedAt": "2026-10-21",
+    "sourceType": "official",
+    "reliability": "primary",
+    "retrievedAt": "2026-10-31"
+  },
+  {
+    "id": "src-nec-20261020",
+    "title": "大阪公立大学のシステム障害に関するNECの公表（2026年10月20日）",
+    "url": "https://jpn.nec.com/news/info/20261020.html",
+    "publisher": "日本電気株式会社",
+    "publishedAt": "2026-10-20",
+    "sourceType": "official",
+    "reliability": "primary",
+    "retrievedAt": "2026-10-31"
+  },
+  {
+    "id": "src-westeria-omu",
+    "title": "大阪公立大学 ランサムウェア事案の経緯・原因・対応",
+    "url": "https://westeria.jp/security-incidents/cases/osaka-metropolitan-university-2026/",
+    "publisher": "株式会社ウェステリア",
+    "publishedAt": null,
+    "sourceType": "research",
+    "reliability": "secondary",
+    "retrievedAt": "2026-10-31"
+  },
+  {
+    "id": "src-sonet-release",
+    "title": "So-net 会員データベースへの不正アクセスに伴う情報漏洩に関するお詫びとお知らせ",
+    "url": "https://www.sonynetwork.co.jp/corporation/release/2026/v5e5u00000000zwj-att/20261027.pdf",
+    "publisher": "ソニーネットワークコミュニケーションズ",
+    "publishedAt": "2026-10-27",
+    "sourceType": "official",
+    "reliability": "primary",
+    "retrievedAt": "2026-10-31"
+  },
+  {
+    "id": "src-sonet-faq",
+    "title": "So-net 会員データベースへの不正アクセスに関するご質問と回答",
+    "url": "https://www.so-net.ne.jp/support/faq/qa202610_01",
+    "publisher": "So-net",
+    "publishedAt": null,
+    "sourceType": "official",
+    "reliability": "primary",
+    "retrievedAt": "2026-10-31"
+  },
+  {
+    "id": "src-onamae-01",
+    "title": "お名前.com デスクトップクラウドに関するお知らせ（第1報）",
+    "url": "https://www.onamae.com/news/article/11584",
+    "publisher": "お名前.com（GMOインターネット）",
+    "publishedAt": "2026-10-21",
+    "sourceType": "official",
+    "reliability": "primary",
+    "retrievedAt": "2026-10-31"
+  },
+  {
+    "id": "src-gmo-02",
+    "title": "【重要】お名前.com デスクトップクラウドサービスに対するサイバー攻撃について（第2報）",
+    "url": "https://group.gmo/info/alert/20261022/",
+    "publisher": "GMOインターネットグループ",
+    "publishedAt": "2026-10-22",
+    "sourceType": "official",
+    "reliability": "primary",
+    "retrievedAt": "2026-10-31"
+  },
+  {
+    "id": "src-gmo-04",
+    "title": "【重要】お名前.com デスクトップクラウドサービスに対するサイバー攻撃について（第4報）",
+    "url": "https://group.gmo/info/alert/20261024/",
+    "publisher": "GMOインターネットグループ",
+    "publishedAt": "2026-10-24",
+    "sourceType": "official",
+    "reliability": "primary",
+    "retrievedAt": "2026-10-31"
+  },
+  {
+    "id": "src-gmo-12",
+    "title": "【重要】お名前.com デスクトップクラウドサービスに対するサイバー攻撃について（第12報）",
+    "url": "https://group.gmo/info/alert/2026102705/",
+    "publisher": "GMOインターネットグループ",
+    "publishedAt": "2026-10-27",
+    "sourceType": "official",
+    "reliability": "primary",
+    "retrievedAt": "2026-10-31"
+  },
+  {
+    "id": "src-westeria-gmo",
+    "title": "お名前.com デスクトップクラウド事案の経緯・原因・対応",
+    "url": "https://westeria.jp/security-incidents/cases/gmo-onamae-desktop-cloud-2026/",
+    "publisher": "株式会社ウェステリア",
+    "publishedAt": null,
+    "sourceType": "research",
+    "reliability": "secondary",
+    "retrievedAt": "2026-10-31"
+  },
+  {
+    "id": "src-gitlab-1942",
+    "title": "GitLab Critical Patch Release: 19.4.2, 19.3.5, 19.2.8",
+    "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-4-2-released/",
+    "publisher": "GitLab",
+    "publishedAt": "2026-10-12",
+    "sourceType": "advisory",
+    "reliability": "primary",
+    "retrievedAt": "2026-10-31"
+  },
+  {
+    "id": "src-bc-gitlab",
+    "title": "GitLab warns of max severity code execution vulnerability",
+    "url": "https://www.bleepingcomputer.com/news/security/gitlab-warns-of-max-severity-rce-flaw-in-regex-compiler-engine/",
+    "publisher": "BleepingComputer",
+    "publishedAt": "2026-10-12",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-10-31"
+  },
+  {
+    "id": "src-cisa-kev",
+    "title": "Known Exploited Vulnerabilities Catalog",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+    "publisher": "CISA",
+    "publishedAt": null,
+    "sourceType": "government",
+    "reliability": "primary",
+    "retrievedAt": "2026-10-31"
+  },
+  {
+    "id": "src-rescana-cisco",
+    "title": "Cisco Secure Firewall ASA and FTD CVE-2026-76418: Exploited SSL VPN DoS Flaw Added to CISA KEV",
+    "url": "https://www.rescana.com/post/cisco-secure-firewall-asa-ftd-cve-2026-76418-ssl-ra-vpn-dos-kev",
+    "publisher": "Rescana",
+    "publishedAt": "2026-10-30",
+    "sourceType": "research",
+    "reliability": "secondary",
+    "retrievedAt": "2026-10-31"
+  },
+  {
+    "id": "src-jvn-88474777",
+    "title": "JVN#88474777: SiteGuard Server EditionにおけるOSコマンドインジェクションの脆弱性",
+    "url": "https://jvn.jp/jp/JVN88474777/",
+    "publisher": "JVN（JPCERT/CC・IPA）",
+    "publishedAt": "2026-10-14",
+    "sourceType": "advisory",
+    "reliability": "primary",
+    "retrievedAt": "2026-10-31"
+  },
+  {
+    "id": "src-jpcert-at260032",
+    "title": "SiteGuard Server EditionにおけるOSコマンドインジェクションの脆弱性（CVE-2026-106931）に関する注意喚起",
+    "url": "https://www.jpcert.or.jp/at/2026/at260032.html",
+    "publisher": "JPCERT/CC",
+    "publishedAt": null,
+    "sourceType": "government",
+    "reliability": "primary",
+    "retrievedAt": "2026-10-31"
+  },
+  {
+    "id": "src-eg-siteguard",
+    "title": "SiteGuard Server EditionにおけるOSコマンドインジェクションの脆弱性(緊急)",
+    "url": "https://www.eg-secure.co.jp/siteguard/news/alert-202610-1",
+    "publisher": "EGセキュアソリューションズ",
+    "publishedAt": null,
+    "sourceType": "advisory",
+    "reliability": "primary",
+    "retrievedAt": "2026-10-31"
+  }
+]

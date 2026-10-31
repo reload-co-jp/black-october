@@ -1,0 +1,34 @@
+[
+  {
+    "id": "org-idcf",
+    "slug": "idc-frontier",
+    "name": "IDCフロンティア",
+    "country": "JP",
+    "industry": "クラウド・データセンター",
+    "website": "https://www.idcf.jp/"
+  },
+  {
+    "id": "org-omu",
+    "slug": "osaka-metropolitan-university",
+    "name": "大阪公立大学",
+    "country": "JP",
+    "industry": "教育",
+    "website": "https://www.omu.ac.jp/"
+  },
+  {
+    "id": "org-sonync",
+    "slug": "sony-network-communications",
+    "name": "ソニーネットワークコミュニケーションズ",
+    "country": "JP",
+    "industry": "通信・ISP",
+    "website": "https://www.sonynetwork.co.jp/"
+  },
+  {
+    "id": "org-gmo-internet",
+    "slug": "gmo-internet",
+    "name": "GMOインターネット",
+    "country": "JP",
+    "industry": "ホスティング・クラウド",
+    "website": "https://group.gmo/"
+  }
+]

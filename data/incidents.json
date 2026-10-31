@@ -1,0 +1,260 @@
+[
+  {
+    "id": "inc-2026-idcf-cloud",
+    "slug": "idcf-cloud-ransomware-2026-10",
+    "title": "IDCFクラウド 東日本リージョン1へのランサムウェア攻撃",
+    "summary": "IDCフロンティアのクラウド基盤がランサムウェア攻撃を受け、東日本リージョン1の4ゾーンで仮想サーバーが停止・暗号化された。495の企業・自治体に影響した。",
+    "organizationId": "org-idcf",
+    "service": "IDCFクラウド（東日本リージョン1 tesla / henry / pascal / joule ゾーン）",
+    "incidentDate": "2026-10-07",
+    "discoveredAt": "2026-10-07",
+    "disclosedAt": "2026-10-07",
+    "updatedAt": "2026-10-27",
+    "country": "JP",
+    "industry": "クラウド・データセンター",
+    "categories": ["ransomware", "vulnerability", "supply-chain"],
+    "severity": "critical",
+    "status": "recovered",
+    "verificationStatus": "confirmed",
+    "featured": true,
+    "summaryDetails": "2026年10月7日午前3時40分頃、東日本リージョン1の一部ゾーンで仮想サーバーが停止し再起動できなくなった。同日中に第三者によるランサムウェア攻撃と特定され、管理ポータルの停止とネットワーク遮断が行われた。基盤事業者の被害が、その上でサービスを運用する多数の企業・自治体に一度に波及した事例。",
+    "cause": {
+      "status": "confirmed",
+      "description": "顧客向け管理ポータル「IDCFクラウドポータル」の認証システムで使用していたオープンソースソフトウェアの脆弱性を悪用され、第三者が認証システムに侵入した。その後、管理コンソールを経由して仮想化基盤の管理者権限を不正に取得し、仮想サーバーを停止・暗号化した（第7報）。悪用されたソフトウェア名・CVEは公表されていない。",
+      "factors": ["ソフトウェアの脆弱性", "管理系システムからの権限昇格"]
+    },
+    "attackMethods": ["vulnerability-exploitation", "privilege-escalation", "ransomware"],
+    "impact": {
+      "status": "confirmed",
+      "affectedUsers": null,
+      "leakedData": [
+        { "item": "ポータル登録情報（最大71社。企業名・ログインID・パスワードハッシュ等）の不正照会", "confidence": "confirmed" },
+        { "item": "仮想サーバー内データの外部流出", "confidence": "unknown" }
+      ],
+      "systems": ["IDCFクラウド 東日本リージョン1（4ゾーン）", "IDCFクラウドポータル"],
+      "serviceOutage": true,
+      "financialLoss": null,
+      "description": "影響を受けた契約者は495の企業・自治体。第7報で、仮想サーバー内データの外部持ち出しの痕跡は確認されなかったと公表。ポータルでは最大71社分の登録情報が不正に照会された（持ち出しの痕跡なし）。バックアップデータを取り出せた契約者は206。"
+    },
+    "response": {
+      "description": "攻撃特定後に全リージョンの管理ポータルを停止し、外部とのネットワークを遮断。外部セキュリティ専門企業と調査し、ソフトバンクと連携して代替環境への移行とバックアップの取り出しを支援した。",
+      "measures": [
+        "全リージョンのIDCFクラウドポータル停止・外部ネットワーク遮断",
+        "影響ゾーンのストレージ機器切り離し",
+        "緊急対策本部・顧客向け緊急対応窓口の設置",
+        "代替環境の案内とバックアップデータの引き渡し",
+        "セキュリティを専門に管理する独立組織の設置",
+        "脆弱性診断・修正対応の自動化、不正アクセス早期検知の拡充（再発防止策）"
+      ]
+    },
+    "technicalNotes": "公表内容から読み取れる攻撃の流れは「外部公開された管理ポータルの認証基盤 → 管理コンソール → 仮想化基盤の管理者権限 → 仮想マシン単位の停止・暗号化」。個々のゲストOSではなく基盤側の権限で暗号化されたため、利用者側のOS内対策では防げず、基盤内に置いたスナップショットの可用性も基盤の安全性に依存した。",
+    "lessons": [
+      "管理ポータル・認証基盤など外部公開された管理系コンポーネントのOSS依存関係を棚卸しし、脆弱性情報を継続的に追跡する",
+      "管理プレーンへの到達経路を限定し（IP制限・専用ネットワーク）、多要素認証を必須にする",
+      "クラウド利用者側も、提供事業者の基盤とは独立した場所にバックアップを保持する",
+      "単一リージョン・単一事業者障害時の事業継続計画を確認する"
+    ],
+    "timeline": [
+      { "date": "2026-10-07", "title": "障害発生・検知", "description": "午前3時40分頃、東日本リージョン1の一部で仮想サーバーが停止。", "sourceIds": ["src-idcf-07"] },
+      { "date": "2026-10-07", "title": "ランサムウェア攻撃と特定", "description": "午前11時42分に原因をランサムウェア攻撃と特定。午後に全リージョンのポータルを停止し外部ネットワークを遮断。", "sourceIds": ["src-idcf-07"] },
+      { "date": "2026-10-09", "title": "影響範囲の報道", "description": "495の企業・自治体に影響、一部データは復旧困難と報じられる。", "sourceIds": ["src-atmarkit-idcf"] },
+      { "date": "2026-10-14", "title": "データ流出なしと判断", "description": "仮想サーバー内データの外部流出はなかったと判断。ポータルで48社分の登録情報への不正照会が判明。", "sourceIds": ["src-idcf-07"] },
+      { "date": "2026-10-18", "title": "バックアップサービス再開", "description": "「IDCFクラウド バックアップ」の提供を再開。", "sourceIds": ["src-idcf-07"] },
+      { "date": "2026-10-27", "title": "調査完了・原因公表（第7報）", "description": "OSSの脆弱性を突いた認証システムへの侵入が原因と公表。不正照会は最大71社に拡大。", "sourceIds": ["src-idcf-07"] }
+    ],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": ["src-idcf-07", "src-atmarkit-idcf"],
+    "createdAt": "2026-10-31",
+    "publishedAt": "2026-10-31"
+  },
+  {
+    "id": "inc-2026-omu",
+    "slug": "osaka-metropolitan-university-ransomware-2026-10",
+    "title": "大阪公立大学 情報基盤システムのランサムウェア被害と委託先経由の不正アクセス",
+    "summary": "大阪公立大学の情報基盤システムが停止し、全授業を約1週間休講。保守委託先NECの再委託先が持つ正規アカウントで不正アクセスされたことが原因と報告された。",
+    "organizationId": "org-omu",
+    "service": "学内情報基盤システム（仮想化基盤・メール・教務システム等）",
+    "incidentDate": "2026-10-02",
+    "discoveredAt": "2026-10-02",
+    "disclosedAt": "2026-10-02",
+    "updatedAt": "2026-10-21",
+    "country": "JP",
+    "industry": "教育",
+    "categories": ["ransomware", "supply-chain", "unauthorized-access", "data-breach"],
+    "severity": "critical",
+    "status": "investigating",
+    "verificationStatus": "partially_confirmed",
+    "featured": true,
+    "summaryDetails": "2026年10月2日未明に情報基盤システムの障害が発生し、学内ネットワーク・メール・各種業務システムが停止した。大学は仮想化基盤の障害をランサムウェア攻撃によるものと判断し、全授業を休講とした。10月21日の第5報で、委託先経由の侵入と、委託先が利用していたクラウドストレージからの情報漏洩が報告された。",
+    "cause": {
+      "status": "partially_confirmed",
+      "description": "大学の基盤システム保守・運用の委託先であるNECから、NECの再委託先事業者が2026年9月下旬にサイバー攻撃を受け、その再委託先が持つ正規のアカウントで大学のシステムに不正アクセスされたとの報告を受けた（第5報）。再委託先が攻撃を受けた経緯の詳細は公表されていない。",
+      "factors": ["委託先・外部サービスの侵害", "正規アカウントの悪用"]
+    },
+    "attackMethods": ["supply-chain", "valid-accounts", "ransomware"],
+    "impact": {
+      "status": "partially_confirmed",
+      "affectedUsers": null,
+      "leakedData": [
+        { "item": "NECが利用していたクラウドストレージ内の大学関連の個人情報・システム関連情報", "confidence": "confirmed" },
+        { "item": "仮想化基盤内の教務システム関連情報（約13万件）", "confidence": "possible" }
+      ],
+      "systems": ["仮想化基盤", "学内ネットワーク", "メール", "教務・財務・人事給与・図書館システム"],
+      "serviceOutage": true,
+      "financialLoss": null,
+      "description": "委託先のクラウドストレージからの漏洩は確認済みだが、内容・件数はNECに確認中。大学の仮想化基盤内の情報（教務システム関連 約13万件など）の漏洩有無は調査継続中。"
+    },
+    "response": {
+      "description": "全授業を休講とし、システムの復旧と原因調査を進めた。対面授業は10月9日に再開。",
+      "measures": ["全授業の休講（10月2日〜8日）", "メール送受信の段階的再開", "委託先（NEC）と連携した影響範囲の調査"]
+    },
+    "technicalNotes": "侵入に使われたのは保守用の正規アカウントであり、認証自体は「成功」している。このため認証失敗の監視だけでは検知が難しい。委託先・再委託先が保有する保守アカウントは、発注側から利用状況が見えにくく、委託先の侵害がそのまま発注者システムへの侵入経路になる。",
+    "lessons": [
+      "委託先・再委託先が保有する保守アカウントを台帳化し、利用時のみ有効化する（JIT アクセス）",
+      "保守経路に多要素認証と接続元制限を適用する",
+      "保守アカウントのログインを通常時間帯・接続元と比較して監視する",
+      "委託契約に再委託先のセキュリティ要件とインシデント時の報告義務を明記する"
+    ],
+    "timeline": [
+      { "date": "2026-10-02", "title": "システム障害発生・休講告知", "description": "未明に情報基盤システムで障害が発生し、同日に休講を告知。", "sourceIds": ["src-westeria-omu"] },
+      { "date": "2026-10-05", "title": "ランサムウェア攻撃と判断", "description": "記者会見で、仮想化基盤の障害はランサムウェア攻撃によるものと説明。", "sourceIds": ["src-westeria-omu"] },
+      { "date": "2026-10-09", "title": "対面授業再開", "description": "全キャンパスで対面授業を再開。", "sourceIds": ["src-westeria-omu"] },
+      { "date": "2026-10-20", "title": "NECが委託先経由の侵入を公表", "description": "再委託先の正規アカウントによる不正アクセスと、クラウドストレージからの情報漏洩をNECが公表。", "sourceIds": ["src-nec-20261020", "src-omu-05"] },
+      { "date": "2026-10-21", "title": "第5報", "description": "大学がNECからの報告内容を公表。漏洩情報の内容・件数は確認中。", "sourceIds": ["src-omu-05"] }
+    ],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": ["src-omu-05", "src-nec-20261020", "src-westeria-omu"],
+    "createdAt": "2026-10-31",
+    "publishedAt": "2026-10-31"
+  },
+  {
+    "id": "inc-2026-sonet",
+    "slug": "so-net-member-database-breach-2026-10",
+    "title": "So-net 会員データベースへの不正アクセスによる情報漏洩",
+    "summary": "ソニーネットワークコミュニケーションズのSo-net会員データベースが不正アクセスを受け、So-net・plala（Sコース）会員の氏名・電話番号・メールアドレス等 最大約258.6万件が漏洩した。",
+    "organizationId": "org-sonync",
+    "service": "So-net / plala（Sコース）",
+    "incidentDate": null,
+    "discoveredAt": "2026-10-23",
+    "disclosedAt": "2026-10-27",
+    "updatedAt": "2026-10-29",
+    "country": "JP",
+    "industry": "通信・ISP",
+    "categories": ["unauthorized-access", "data-breach"],
+    "severity": "high",
+    "status": "contained",
+    "verificationStatus": "confirmed",
+    "featured": false,
+    "summaryDetails": "2026年10月23日に会員データベースへの外部からの不正アクセスを確認し、対象サーバーを停止して通信元からのアクセスを遮断した。会員情報のほか、一部有料・追加メールサービスのメールアドレスとメールパスワード、少数の銀行口座情報も漏洩した。",
+    "cause": {
+      "status": "under_investigation",
+      "description": "",
+      "factors": []
+    },
+    "attackMethods": [],
+    "impact": {
+      "status": "confirmed",
+      "affectedUsers": 2586000,
+      "leakedData": [
+        { "item": "氏名・電話番号・メールアドレス・ユーザーID・生年月日・性別・接続用ID（最大約258.6万件）", "confidence": "confirmed" },
+        { "item": "一部メールサービスのメールアドレスとメールパスワード（約5.4万件）", "confidence": "confirmed" },
+        { "item": "銀行口座情報（16件）", "confidence": "confirmed" },
+        { "item": "パスワード再設定用通知書情報（7件）", "confidence": "confirmed" },
+        { "item": "クレジットカード情報", "confidence": "unknown" }
+      ],
+      "systems": ["So-net 会員データベース"],
+      "serviceOutage": false,
+      "financialLoss": null,
+      "description": "公式FAQでは、マイページ用ユーザーIDパスワード（7件を除く）、基本メールボックスのパスワード、クレジットカード情報の漏洩は確認していないとしている。10月29日時点で二次被害は確認されていない。"
+    },
+    "response": {
+      "description": "対象サーバーを停止し、通信元からのアクセスを遮断。漏洩が確認されたメールサービスのパスワードを強制変更した。",
+      "measures": ["対象サーバー停止・通信元の遮断", "対象メールサービスのパスワード強制変更", "口座情報・通知書情報の対象者への個別連絡と書面送付", "不審な連絡への注意喚起"]
+    },
+    "technicalNotes": "侵入経路は公表されていない。漏洩項目にメールパスワードが含まれるため、同一パスワードを他サービスで使い回している利用者はクレデンシャルスタッフィングの標的になりうる。漏洩した氏名・電話番号・メールアドレスはフィッシングやSMS詐欺の文面の信憑性を高める材料になる。",
+    "lessons": [
+      "メールパスワードなど再利用可能な認証情報は平文や可逆形式で保存しない",
+      "会員データベースへのアクセスを最小権限化し、大量読み出しを検知する",
+      "漏洩後は利用者へのフィッシング注意喚起を速やかに行う"
+    ],
+    "timeline": [
+      { "date": "2026-10-23", "title": "不正アクセスを確認", "description": "会員データベースへの外部からの不正アクセスを確認し、サーバー停止・通信遮断。", "sourceIds": ["src-sonet-faq"] },
+      { "date": "2026-10-27", "title": "公表", "description": "情報漏洩に関するお詫びとお知らせを公表。", "sourceIds": ["src-sonet-release"] },
+      { "date": "2026-10-29", "title": "対象者へ書面送付", "description": "口座情報・通知書情報の対象者へ書面を発送。", "sourceIds": ["src-sonet-faq"] }
+    ],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": ["src-sonet-release", "src-sonet-faq"],
+    "createdAt": "2026-10-31",
+    "publishedAt": "2026-10-31"
+  },
+  {
+    "id": "inc-2026-gmo-desktop-cloud",
+    "slug": "onamae-desktop-cloud-attack-2026-10",
+    "title": "お名前.com デスクトップクラウドへのサイバー攻撃と利用者情報の持ち出し",
+    "summary": "FX自動売買向けVPS「お名前.com デスクトップクラウド」が攻撃を受け、利用者の情報が外部に持ち出された。全プランのサーバーを停止し、攻撃者は金銭を要求した。",
+    "organizationId": "org-gmo-internet",
+    "service": "お名前.com デスクトップクラウド",
+    "incidentDate": null,
+    "discoveredAt": "2026-10-20",
+    "disclosedAt": "2026-10-21",
+    "updatedAt": "2026-10-27",
+    "country": "JP",
+    "industry": "ホスティング・クラウド",
+    "categories": ["unauthorized-access", "data-breach", "malware"],
+    "severity": "critical",
+    "status": "investigating",
+    "verificationStatus": "partially_confirmed",
+    "featured": true,
+    "summaryDetails": "利用者からの問い合わせを契機に調査し、不正なプログラムを確認。全プランのサーバーを順次停止した。第4報で環境への不正アクセスと利用者情報の外部持ち出しを確認したと公表し、攻撃者とみられる者から金銭要求を受けていることを明らかにした。会社は要求に応じない方針。",
+    "cause": {
+      "status": "under_investigation",
+      "description": "サービスのシステムにセキュリティ上の問題があったとしているが、侵入経路の詳細はセキュリティ専門会社と調査中。",
+      "factors": []
+    },
+    "attackMethods": [],
+    "impact": {
+      "status": "partially_confirmed",
+      "affectedUsers": null,
+      "leakedData": [
+        { "item": "利用者の情報（外部への持ち出しを確認）", "confidence": "confirmed" },
+        { "item": "FX・証券取引口座のログイン情報", "confidence": "possible" }
+      ],
+      "systems": ["お名前.com デスクトップクラウド（影響の可能性があるサーバー 26,739件）"],
+      "serviceOutage": true,
+      "financialLoss": "利用者の取引口座で身に覚えのない取引の報告あり。件数・金額は未公表。",
+      "description": "利用者の取引口座のログイン情報などが不正利用された可能性がある（第2報）。被害件数・金額は公表されていない。"
+    },
+    "response": {
+      "description": "新規申込とコントロールパネルを停止し、全プランのサーバーを順次停止。警察に相談し、見舞金と損失補償の方針を公表した。",
+      "measures": [
+        "新規申込・コントロールパネルの停止",
+        "全プランのサーバー停止",
+        "警察への相談",
+        "全利用者への見舞金（一律5,000円）",
+        "不正取引による実現損失の補償",
+        "犯人特定につながる情報への懸賞金（第12報）"
+      ]
+    },
+    "technicalNotes": "FX自動売買用VPSには、取引ツールに保存された証券・FX口座のログイン情報が置かれやすい。基盤側が侵害されると、利用者が個別に管理していた外部サービスの認証情報まで一括して危険にさらされる。",
+    "lessons": [
+      "VPS上のアプリに外部サービスの認証情報を保存する場合、取引口座側で多要素認証を有効にする",
+      "サービス事業者は利用者環境への管理経路（エージェント・管理API）を攻撃面として評価する",
+      "侵害時に全台停止の判断ができる手順と連絡体制を事前に用意する"
+    ],
+    "timeline": [
+      { "date": "2026-10-20", "title": "不正なプログラムを確認", "description": "利用者からの問い合わせを受けた調査で不正なプログラムを確認し、新規申込とコントロールパネルを停止。", "sourceIds": ["src-westeria-gmo"] },
+      { "date": "2026-10-21", "title": "第1報・全サーバー停止", "description": "全プランのサーバーを順次停止。第1報では個人情報の漏洩・悪用は未確認としていた。", "sourceIds": ["src-onamae-01"] },
+      { "date": "2026-10-22", "title": "第2報", "description": "取引口座のログイン情報などが不正利用された可能性を公表。警察に相談。", "sourceIds": ["src-gmo-02"] },
+      { "date": "2026-10-24", "title": "第4報・情報持ち出しを確認", "description": "不正アクセスと利用者情報の外部持ち出しを確認。金銭要求を受けていることを公表。見舞金の支払いを発表。", "sourceIds": ["src-gmo-04"] },
+      { "date": "2026-10-27", "title": "第12報", "description": "公開された情報に本人情報が含まれる利用者への特別見舞金などを公表。", "sourceIds": ["src-gmo-12"] }
+    ],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": ["src-onamae-01", "src-gmo-02", "src-gmo-04", "src-gmo-12", "src-westeria-gmo"],
+    "createdAt": "2026-10-31",
+    "publishedAt": "2026-10-31"
+  }
+]
