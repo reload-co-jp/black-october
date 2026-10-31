@@ -49,4 +49,4 @@
 ## デプロイ
 
 `main` への push で GitHub Pages にデプロイ。canonical / sitemap / OGP の URL は
-リポジトリ変数 `SITE_URL`（→ `NEXT_PUBLIC_SITE_URL`）で設定する。
+`https://bo.reload.co.jp`（`lib/site.ts`）。リポジトリ変数 `SITE_URL` で上書き可。
