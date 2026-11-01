@@ -255,6 +255,17 @@ const AdminPage: FC = () => {
     setDraft(null)
     load()
   }
+  // Fill CVE-derived fields from NVD; local links (id, incidents, sources) stay as they are.
+  const fetchCve = async () => {
+    if (!draft) return
+    const cve = String(draft.cveId).trim().toUpperCase()
+    setMessage({ ok: true, text: `NVDから取得中: ${cve}` })
+    const res = await fetch(`/api/admin/cve/${encodeURIComponent(cve)}`)
+    const body = await res.json()
+    if (!res.ok) return setMessage({ ok: false, text: body.error })
+    setDraft({ ...draft, ...body, id: draft.id || cve.toLowerCase() })
+    setMessage({ ok: true, text: `NVDから取得しました: ${cve}（タイトル・説明は要確認）` })
+  }
   const open = (row: Obj | null) => {
     setDraft(row ? structuredClone(row) : TEMPLATES[tab]())
     setOriginalId(row ? String(row.id) : null)
@@ -294,6 +305,9 @@ const AdminPage: FC = () => {
               <button type="submit" style={{ borderColor: color.accent }}>{originalId ? "更新" : "登録"}</button>
               {tab === "incidents" && (
                 <button type="button" onClick={() => setDraft({ ...draft, updatedAt: today() })}>更新日を今日に</button>
+              )}
+              {tab === "vulnerabilities" && (
+                <button type="button" onClick={fetchCve} disabled={!draft.cveId}>CVEから取得</button>
               )}
               <button type="button" onClick={() => setRaw(!raw)}>{raw ? "フォーム" : "JSON"}</button>
             </div>
