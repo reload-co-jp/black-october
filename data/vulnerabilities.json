@@ -100,5 +100,644 @@
       "src-eg-siteguard",
       "src-cisa-kev"
     ]
+  },
+  {
+    "id": "vuln-cve-2026-118527",
+    "cveId": "CVE-2026-118527",
+    "title": "Ivanti Connect Secure Generation of Predictable Numbers or Identifiers Vulnerability",
+    "description": "Ivanti Connect Secure contains a generation of predictable numbers or identifiers vulnerability that allows a remote authenticated attacker to upload files with attacker-controlled content to a known location on disk. This vulnerability can be chained with CVE-2026-104935 and CVE-2026-111357.",
+    "cvssScore": null,
+    "cvssVector": null,
+    "cweId": null,
+    "affectedProducts": [],
+    "fixedVersions": [],
+    "publishedAt": null,
+    "modifiedAt": null,
+    "kevStatus": true,
+    "exploitation": "CISA KEV登録（2026-10-30）",
+    "mitigation": [
+      "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+    ],
+    "incidentIds": [],
+    "sourceIds": [
+      "src-cisa-kev"
+    ]
+  },
+  {
+    "id": "vuln-cve-2026-111357",
+    "cveId": "CVE-2026-111357",
+    "title": "Ivanti Connect Secure Missing Authentication for Critical Function Vulnerability",
+    "description": "Ivanti Connect Secure contains a missing authentication for critical function vulnerability that could allow a local authenticated attacker to escalate their privileges. This vulnerability can be chained with CVE-2026-104935 and CVE-2026-118527.",
+    "cvssScore": 7,
+    "cvssVector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "cweId": "CWE-829",
+    "affectedProducts": [
+      "ivanti connect secure >= 25.1.0.0, < 25.1.1.3",
+      "ivanti connect secure 22.8"
+    ],
+    "fixedVersions": [
+      "25.1.1.3"
+    ],
+    "publishedAt": "2026-10-15",
+    "modifiedAt": "2026-10-31",
+    "kevStatus": true,
+    "exploitation": "CISA KEV登録（2026-10-30）",
+    "mitigation": [
+      "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+    ],
+    "incidentIds": [],
+    "sourceIds": [
+      "src-cisa-kev"
+    ]
+  },
+  {
+    "id": "vuln-cve-2026-41709",
+    "cveId": "CVE-2026-41709",
+    "title": "Broadcom VMWare ESX Insufficient Logging Vulnerability",
+    "description": "Broadcom VMWare ESX contains an insufficient logging vulnerability that could allow a malicious actor with admin access to perform certain operations without being logged.",
+    "cvssScore": 2.7,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:N",
+    "cweId": "CWE-778",
+    "affectedProducts": [
+      "vmware esxi >= 9.0.0, < 9.0.2.0100",
+      "vmware esxi 8.0"
+    ],
+    "fixedVersions": [
+      "9.0.2.0100"
+    ],
+    "publishedAt": "2026-07-30",
+    "modifiedAt": "2026-10-29",
+    "kevStatus": true,
+    "exploitation": "CISA KEV登録（2026-10-28）",
+    "mitigation": [
+      "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+    ],
+    "incidentIds": [],
+    "sourceIds": [
+      "src-cisa-kev"
+    ]
+  },
+  {
+    "id": "vuln-cve-2026-46300",
+    "cveId": "CVE-2026-46300",
+    "title": "Linux Kernel Missing Initialization of a Variable Vulnerability",
+    "description": "Linux Kernel contains a missing initialization of a variable vulnerability that could allow for unintended modification of page-cache-backed data via failure to preserve the shared-fragment marker during socket buffer coalescing, causing ESP input processing to decrypt shared fragments in place. This vulnerability can be chained with CVE-2026-109618 and CVE-2026-109619 to implant PHP webshells and run commands as root.",
+    "cvssScore": 7.8,
+    "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "cweId": "CWE-787",
+    "affectedProducts": [
+      "linux linux kernel >= 3.9, <= 5.10.257",
+      "linux linux kernel >= 5.11, < 5.15.208",
+      "linux linux kernel >= 5.16, < 6.1.174",
+      "linux linux kernel >= 6.2, < 6.6.141",
+      "linux linux kernel >= 6.7, < 6.12.91",
+      "linux linux kernel >= 6.13, < 6.18.33",
+      "linux linux kernel >= 6.19, < 7.0.10",
+      "linux linux kernel 7.1",
+      "siemens simatic s7-1500 cpu 1518-4 pn\\/dp mfp firmware >= 3.1.5, <= 3.1.6",
+      "redhat openshift container platform >= 4.12, < 4.12.91",
+      "redhat openshift container platform >= 4.13, < 4.13.67",
+      "redhat openshift container platform >= 4.14, < 4.14.68",
+      "redhat openshift container platform >= 4.15, < 4.15.65",
+      "redhat openshift container platform >= 4.16, < 4.16.63",
+      "redhat openshift container platform >= 4.17, < 4.17.55",
+      "redhat openshift container platform >= 4.18, < 4.18.43",
+      "redhat openshift container platform >= 4.19, < 4.19.33",
+      "redhat openshift container platform >= 4.20, < 4.20.24",
+      "redhat openshift container platform >= 4.21, < 4.21.17",
+      "redhat enterprise linux 6.0",
+      "redhat enterprise linux 7.0",
+      "redhat enterprise linux 8.0",
+      "redhat enterprise linux 9.0",
+      "redhat enterprise linux 10.0",
+      "redhat enterprise linux aus 8.4",
+      "redhat enterprise linux aus 8.6",
+      "redhat enterprise linux eus 8.4",
+      "redhat enterprise linux eus 9.4",
+      "redhat enterprise linux eus 9.6",
+      "redhat enterprise linux eus 10.0",
+      "redhat enterprise linux tus 8.6",
+      "redhat enterprise linux tus 8.8",
+      "redhat enterprise linux update services for sap solutions 8.6",
+      "redhat enterprise linux update services for sap solutions 8.8",
+      "redhat enterprise linux update services for sap solutions 9.0",
+      "redhat enterprise linux update services for sap solutions 9.2",
+      "redhat enterprise linux update services for sap solutions 9.4"
+    ],
+    "fixedVersions": [
+      "5.15.208",
+      "6.1.174",
+      "6.6.141",
+      "6.12.91",
+      "6.18.33",
+      "7.0.10",
+      "4.12.91",
+      "4.13.67",
+      "4.14.68",
+      "4.15.65",
+      "4.16.63",
+      "4.17.55",
+      "4.18.43",
+      "4.19.33",
+      "4.20.24",
+      "4.21.17"
+    ],
+    "publishedAt": "2026-05-23",
+    "modifiedAt": "2026-10-29",
+    "kevStatus": true,
+    "exploitation": "CISA KEV登録（2026-10-28）",
+    "mitigation": [
+      "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+    ],
+    "incidentIds": [],
+    "sourceIds": [
+      "src-cisa-kev"
+    ]
+  },
+  {
+    "id": "vuln-cve-2026-48356",
+    "cveId": "CVE-2026-48356",
+    "title": "Adobe Commerce and Magento Unrestricted Upload of File with Dangerous Type Vulnerability",
+    "description": "Adobe Commerce and Magento contain an unrestricted upload of file with dangerous type vulnerability that could result in arbitrary code execution in the context of the current user, potentially gaining elevated access or control over the victim's account or session.",
+    "cvssScore": 9.3,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+    "cweId": "CWE-434",
+    "affectedProducts": [
+      "adobe commerce 2.4.4",
+      "adobe commerce 2.4.5",
+      "adobe commerce 2.4.6",
+      "adobe commerce 2.4.7",
+      "adobe commerce 2.4.8",
+      "adobe commerce 2.4.9",
+      "adobe commerce b2b 1.3.3",
+      "adobe commerce b2b 1.3.4",
+      "adobe commerce b2b 1.4.2",
+      "adobe commerce b2b 1.5.2",
+      "adobe commerce b2b 1.5.3",
+      "adobe magento 2.4.6",
+      "adobe magento 2.4.7",
+      "adobe magento 2.4.8",
+      "adobe magento 2.4.9",
+      "adobe i\\/o events >= 1.6.0, < 1.21.0"
+    ],
+    "fixedVersions": [
+      "1.21.0"
+    ],
+    "publishedAt": "2026-07-14",
+    "modifiedAt": "2026-10-28",
+    "kevStatus": true,
+    "exploitation": "CISA KEV登録（2026-10-27）",
+    "mitigation": [
+      "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+    ],
+    "incidentIds": [],
+    "sourceIds": [
+      "src-cisa-kev"
+    ]
+  },
+  {
+    "id": "vuln-cve-2026-111497",
+    "cveId": "CVE-2026-111497",
+    "title": "Google Brotli Unchecked Return Value Vulnerability",
+    "description": "Google Brotli contains an unchecked return value vulnerability that allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream.",
+    "cvssScore": 9.2,
+    "cvssVector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+    "cweId": "CWE-252",
+    "affectedProducts": [
+      "google brotli >= 1.0.3, < 1.0.10",
+      "google brotli >= 1.1.0, < 1.1.1",
+      "google brotli >= 1.2.0, < 1.2.1",
+      "nodejs node.js < 22.23.4",
+      "nodejs node.js >= 23.0.0, < 24.22.1",
+      "nodejs node.js >= 25.0.0, < 26.12.1",
+      "python-hyper brotlicffi < 1.2.1.0",
+      "microsoft .net >= 8.0.0, < 8.0.33",
+      "microsoft .net >= 9.0.0, < 9.0.22",
+      "microsoft .net >= 10.0.0, < 10.0.14",
+      "microsoft .net 11.0.0",
+      "debian debian linux 12.0",
+      "istio istio < 1.29.9",
+      "istio istio >= 1.30.0, < 1.30.6",
+      "istio istio >= 1.31.0, < 1.31.2",
+      "anthropic bun < 1.4.4",
+      "envoyproxy envoy < 1.37.8",
+      "envoyproxy envoy >= 1.38.0, < 1.38.6",
+      "envoyproxy envoy >= 1.39.0, < 1.39.3",
+      "tianocore edk2 <= 202608",
+      "google woff2",
+      "duckdb duckdb <= 2.0.0",
+      "clickhouse clickhouse <= 26.10.2.103",
+      "apache arrow <= 26.0.0",
+      "apache arrow 27.0.0",
+      "mcmilk 7-zip-zstd <= 26.02-1.5.7-r2",
+      "7-zip p7zip <= 16.02",
+      "andybalholm brotli < 1.2.7",
+      "siemens ruggedcom ape1808 firmware",
+      "siemens common configurator",
+      "siemens data flow monitoring",
+      "siemens edge opc ua server configurator",
+      "siemens flow creator configurator",
+      "siemens industrial edge cloud connector configurator",
+      "siemens industrial edge databus configurator",
+      "siemens industrial edge hub",
+      "siemens industrial edge management cloud"
+    ],
+    "fixedVersions": [
+      "1.0.10",
+      "1.1.1",
+      "1.2.1",
+      "22.23.4",
+      "24.22.1",
+      "26.12.1",
+      "1.2.1.0",
+      "8.0.33",
+      "9.0.22",
+      "10.0.14",
+      "1.29.9",
+      "1.30.6",
+      "1.31.2",
+      "1.4.4",
+      "1.37.8",
+      "1.38.6",
+      "1.39.3",
+      "1.2.7"
+    ],
+    "publishedAt": "2026-10-22",
+    "modifiedAt": "2026-10-30",
+    "kevStatus": true,
+    "exploitation": "CISA KEV登録（2026-10-27）",
+    "mitigation": [
+      "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+    ],
+    "incidentIds": [],
+    "sourceIds": [
+      "src-cisa-kev"
+    ]
+  },
+  {
+    "id": "vuln-cve-2026-109618",
+    "cveId": "CVE-2026-109618",
+    "title": "PHP Memory Corruption Vulnerability",
+    "description": "PHP contains an out-of-memory corruption vulnerability that allows for unauthenticated remote code execution.",
+    "cvssScore": 9.2,
+    "cvssVector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+    "cweId": "CWE-416",
+    "affectedProducts": [
+      "php php >= 7.3.0, < 8.2.35",
+      "php php >= 8.3.0, < 8.3.36",
+      "php php >= 8.4.0, < 8.4.27",
+      "php php >= 8.5.0, < 8.5.12",
+      "siemens ruggedcom ape1808 firmware",
+      "paloaltonetworks pan-os >= 10.2.0, < 10.2.7",
+      "paloaltonetworks pan-os 10.2.7",
+      "paloaltonetworks pan-os 10.2.8",
+      "paloaltonetworks pan-os 10.2.9",
+      "paloaltonetworks pan-os 10.2.10",
+      "paloaltonetworks pan-os 10.2.11",
+      "paloaltonetworks pan-os 10.2.12",
+      "paloaltonetworks pan-os 10.2.13",
+      "paloaltonetworks pan-os 10.2.14",
+      "paloaltonetworks pan-os 10.2.15",
+      "paloaltonetworks pan-os 10.2.16",
+      "paloaltonetworks pan-os 10.2.17",
+      "paloaltonetworks pan-os 10.2.18",
+      "paloaltonetworks pan-os >= 11.1.0, < 11.1.4",
+      "paloaltonetworks pan-os 11.1.4",
+      "paloaltonetworks pan-os 11.1.5",
+      "paloaltonetworks pan-os 11.1.6",
+      "paloaltonetworks pan-os 11.1.7",
+      "paloaltonetworks pan-os 11.1.8",
+      "paloaltonetworks pan-os 11.1.9",
+      "paloaltonetworks pan-os 11.1.10",
+      "paloaltonetworks pan-os 11.1.11",
+      "paloaltonetworks pan-os 11.1.12",
+      "paloaltonetworks pan-os 11.1.13",
+      "paloaltonetworks pan-os 11.1.14",
+      "paloaltonetworks pan-os 11.1.15",
+      "paloaltonetworks pan-os 11.1.16",
+      "paloaltonetworks pan-os >= 11.2.0, < 11.2.4",
+      "paloaltonetworks pan-os 11.2.4",
+      "paloaltonetworks pan-os 11.2.5",
+      "paloaltonetworks pan-os 11.2.6",
+      "paloaltonetworks pan-os 11.2.7",
+      "paloaltonetworks pan-os 11.2.8",
+      "paloaltonetworks pan-os 11.2.9",
+      "paloaltonetworks pan-os 11.2.10",
+      "paloaltonetworks pan-os 11.2.11",
+      "paloaltonetworks pan-os 11.2.12",
+      "paloaltonetworks pan-os 11.2.13",
+      "paloaltonetworks pan-os 11.2.15",
+      "paloaltonetworks pan-os 11.2.16",
+      "paloaltonetworks pan-os >= 12.1.0, < 12.1.4",
+      "paloaltonetworks pan-os 12.1.4",
+      "paloaltonetworks pan-os 12.1.5",
+      "paloaltonetworks pan-os 12.1.6",
+      "paloaltonetworks pan-os 12.1.7",
+      "paloaltonetworks pan-os 12.1.8",
+      "paloaltonetworks pan-os 12.1.9",
+      "paloaltonetworks pan-os 12.1.10",
+      "paloaltonetworks pan-os >= 12.2.0, < 12.2.4",
+      "paloaltonetworks pan-os 12.2.4",
+      "paloaltonetworks pan-os",
+      "paloaltonetworks panorama virtual appliance"
+    ],
+    "fixedVersions": [
+      "8.2.35",
+      "8.3.36",
+      "8.4.27",
+      "8.5.12",
+      "10.2.7",
+      "11.1.4",
+      "11.2.4",
+      "12.1.4",
+      "12.2.4"
+    ],
+    "publishedAt": "2026-10-21",
+    "modifiedAt": "2026-10-30",
+    "kevStatus": true,
+    "exploitation": "CISA KEV登録（2026-10-26）",
+    "mitigation": [
+      "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+    ],
+    "incidentIds": [],
+    "sourceIds": [
+      "src-cisa-kev"
+    ]
+  },
+  {
+    "id": "vuln-cve-2026-109619",
+    "cveId": "CVE-2026-109619",
+    "title": "PHP Stale Internal Request-State Vulnerability",
+    "description": "PHP contains a stale internal request-state vulnerability that allows for unauthenticated remote code execution.",
+    "cvssScore": 9.2,
+    "cvssVector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+    "cweId": "CWE-416",
+    "affectedProducts": [
+      "php php >= 5.4.0, < 8.2.35",
+      "php php >= 8.3.0, < 8.3.36",
+      "php php >= 8.4.0, < 8.4.27",
+      "php php >= 8.5.0, < 8.5.12",
+      "siemens ruggedcom ape1808 firmware",
+      "paloaltonetworks pan-os >= 10.2.0, < 10.2.7",
+      "paloaltonetworks pan-os 10.2.7",
+      "paloaltonetworks pan-os 10.2.8",
+      "paloaltonetworks pan-os 10.2.9",
+      "paloaltonetworks pan-os 10.2.10",
+      "paloaltonetworks pan-os 10.2.11",
+      "paloaltonetworks pan-os 10.2.12",
+      "paloaltonetworks pan-os 10.2.13",
+      "paloaltonetworks pan-os 10.2.14",
+      "paloaltonetworks pan-os 10.2.15",
+      "paloaltonetworks pan-os 10.2.16",
+      "paloaltonetworks pan-os 10.2.17",
+      "paloaltonetworks pan-os 10.2.18",
+      "paloaltonetworks pan-os >= 11.1.0, < 11.1.4",
+      "paloaltonetworks pan-os 11.1.4",
+      "paloaltonetworks pan-os 11.1.5",
+      "paloaltonetworks pan-os 11.1.6",
+      "paloaltonetworks pan-os 11.1.7",
+      "paloaltonetworks pan-os 11.1.8",
+      "paloaltonetworks pan-os 11.1.9",
+      "paloaltonetworks pan-os 11.1.10",
+      "paloaltonetworks pan-os 11.1.11",
+      "paloaltonetworks pan-os 11.1.12",
+      "paloaltonetworks pan-os 11.1.13",
+      "paloaltonetworks pan-os 11.1.14",
+      "paloaltonetworks pan-os 11.1.15",
+      "paloaltonetworks pan-os 11.1.16",
+      "paloaltonetworks pan-os >= 11.2.0, < 11.2.4",
+      "paloaltonetworks pan-os 11.2.4",
+      "paloaltonetworks pan-os 11.2.5",
+      "paloaltonetworks pan-os 11.2.6",
+      "paloaltonetworks pan-os 11.2.7",
+      "paloaltonetworks pan-os 11.2.8",
+      "paloaltonetworks pan-os 11.2.9",
+      "paloaltonetworks pan-os 11.2.10",
+      "paloaltonetworks pan-os 11.2.11",
+      "paloaltonetworks pan-os 11.2.12",
+      "paloaltonetworks pan-os 11.2.13",
+      "paloaltonetworks pan-os 11.2.15",
+      "paloaltonetworks pan-os 11.2.16",
+      "paloaltonetworks pan-os >= 12.1.0, < 12.1.4",
+      "paloaltonetworks pan-os 12.1.4",
+      "paloaltonetworks pan-os 12.1.5",
+      "paloaltonetworks pan-os 12.1.6",
+      "paloaltonetworks pan-os 12.1.7",
+      "paloaltonetworks pan-os 12.1.8",
+      "paloaltonetworks pan-os 12.1.9",
+      "paloaltonetworks pan-os 12.1.10",
+      "paloaltonetworks pan-os >= 12.2.0, < 12.2.4",
+      "paloaltonetworks pan-os 12.2.4",
+      "paloaltonetworks pan-os",
+      "paloaltonetworks panorama virtual appliance"
+    ],
+    "fixedVersions": [
+      "8.2.35",
+      "8.3.36",
+      "8.4.27",
+      "8.5.12",
+      "10.2.7",
+      "11.1.4",
+      "11.2.4",
+      "12.1.4",
+      "12.2.4"
+    ],
+    "publishedAt": "2026-10-21",
+    "modifiedAt": "2026-10-30",
+    "kevStatus": true,
+    "exploitation": "CISA KEV登録（2026-10-26）",
+    "mitigation": [
+      "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+    ],
+    "incidentIds": [],
+    "sourceIds": [
+      "src-cisa-kev"
+    ]
+  },
+  {
+    "id": "vuln-cve-2026-114625",
+    "cveId": "CVE-2026-114625",
+    "title": "Arista VeloCloud Orchestrator SQL Injection Vulnerability",
+    "description": "Arista VeloCloud Orchestrator on-prem contains a SQL injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.",
+    "cvssScore": 9.4,
+    "cvssVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+    "cweId": "CWE-89",
+    "affectedProducts": [
+      "arista velocloud orchestrator >= 5.2.0, < 5.2.3.18",
+      "arista velocloud orchestrator >= 6.1.0, < 6.1.3.10",
+      "arista velocloud orchestrator >= 6.4.0, < 6.4.2.12"
+    ],
+    "fixedVersions": [
+      "5.2.3.18",
+      "6.1.3.10",
+      "6.4.2.12"
+    ],
+    "publishedAt": "2026-10-22",
+    "modifiedAt": "2026-10-26",
+    "kevStatus": true,
+    "exploitation": "CISA KEV登録（2026-10-23）",
+    "mitigation": [
+      "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+    ],
+    "incidentIds": [],
+    "sourceIds": [
+      "src-cisa-kev"
+    ]
+  },
+  {
+    "id": "vuln-cve-2026-110447",
+    "cveId": "CVE-2026-110447",
+    "title": "Collabora Online – Built-in CODE Server OS Command Injection Vulnerability",
+    "description": "Collabora Collabora Online – Built-in CODE Server when used within the NextCloud platform contains an OS command injection vulnerability that allows for remote code execution when the CODE server isn't running.",
+    "cvssScore": 9.2,
+    "cvssVector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+    "cweId": "CWE-78",
+    "affectedProducts": [
+      "collabora collabora online - built-in code server < 26.4.303"
+    ],
+    "fixedVersions": [
+      "26.4.303"
+    ],
+    "publishedAt": "2026-10-14",
+    "modifiedAt": "2026-10-30",
+    "kevStatus": true,
+    "exploitation": "CISA KEV登録（2026-10-23）",
+    "mitigation": [
+      "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+    ],
+    "incidentIds": [],
+    "sourceIds": [
+      "src-cisa-kev"
+    ]
+  },
+  {
+    "id": "vuln-cve-2026-96656",
+    "cveId": "CVE-2026-96656",
+    "title": "Plex Media Server External Control of File Name or Path Vulnerability",
+    "description": "Plex Media Server contains an external control of file name or path vulnerability which can allow an admin user to write arbitrary files that may be executed on load. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96654, and CVE-2026-96655.",
+    "cvssScore": 8.6,
+    "cvssVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+    "cweId": "CWE-73",
+    "affectedProducts": [
+      "plex media server < 1.43.3.10861"
+    ],
+    "fixedVersions": [
+      "1.43.3.10861"
+    ],
+    "publishedAt": "2026-09-23",
+    "modifiedAt": "2026-10-21",
+    "kevStatus": true,
+    "exploitation": "CISA KEV登録（2026-10-20）",
+    "mitigation": [
+      "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+    ],
+    "incidentIds": [],
+    "sourceIds": [
+      "src-cisa-kev"
+    ]
+  },
+  {
+    "id": "vuln-cve-2026-96655",
+    "cveId": "CVE-2026-96655",
+    "title": "Plex Media Server Server-Side Request Forgery (SSRF) Vulnerability",
+    "description": "Plex Media Server contains a server-side request forgery (SSRF) vulnerability that could allow an authenticated user to request arbitrary internal or external addresses via the '/video/:/transcode/universal' path parameter. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96654, and CVE-2026-96656.",
+    "cvssScore": 5.3,
+    "cvssVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+    "cweId": "CWE-918",
+    "affectedProducts": [
+      "plex media server < 1.43.3.10861"
+    ],
+    "fixedVersions": [
+      "1.43.3.10861"
+    ],
+    "publishedAt": "2026-09-23",
+    "modifiedAt": "2026-10-21",
+    "kevStatus": true,
+    "exploitation": "CISA KEV登録（2026-10-20）",
+    "mitigation": [
+      "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+    ],
+    "incidentIds": [],
+    "sourceIds": [
+      "src-cisa-kev"
+    ]
+  },
+  {
+    "id": "vuln-cve-2026-96654",
+    "cveId": "CVE-2026-96654",
+    "title": "Plex Media Server Improper Neutralization of Encoded URI Schemes in a Web Page Vulnerability",
+    "description": "Plex Media Server contains an improper neutralization of encoded URI schemes in a web page vulnerability that could allow an attacker to call other plugins' functions and supply their own parameters. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96655, and CVE-2026-96656.",
+    "cvssScore": 6.9,
+    "cvssVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+    "cweId": "CWE-84",
+    "affectedProducts": [
+      "plex media server < 1.43.3.10861"
+    ],
+    "fixedVersions": [
+      "1.43.3.10861"
+    ],
+    "publishedAt": "2026-09-23",
+    "modifiedAt": "2026-10-21",
+    "kevStatus": true,
+    "exploitation": "CISA KEV登録（2026-10-20）",
+    "mitigation": [
+      "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+    ],
+    "incidentIds": [],
+    "sourceIds": [
+      "src-cisa-kev"
+    ]
+  },
+  {
+    "id": "vuln-cve-2026-96652",
+    "cveId": "CVE-2026-96652",
+    "title": "Plex Media Server Server-Side Request Forgery (SSRF) Vulnerability",
+    "description": "Plex Media Server contains a server-side request forgery (SSRF) vulnerability which could allow an attacker using any X-Plex-Token value to include a full URL in the 'protocol' parameter and force the Plex server to POST to the attacker's chosen destination. This vulnerability can be chained with CVE-2026-96654, CVE-2026-96655, and CVE-2026-96656. ",
+    "cvssScore": 5.3,
+    "cvssVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+    "cweId": "CWE-918",
+    "affectedProducts": [
+      "plex media server < 1.43.3.10861"
+    ],
+    "fixedVersions": [
+      "1.43.3.10861"
+    ],
+    "publishedAt": "2026-09-23",
+    "modifiedAt": "2026-10-21",
+    "kevStatus": true,
+    "exploitation": "CISA KEV登録（2026-10-20）",
+    "mitigation": [
+      "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+    ],
+    "incidentIds": [],
+    "sourceIds": [
+      "src-cisa-kev"
+    ]
+  },
+  {
+    "id": "vuln-cve-2026-110936",
+    "cveId": "CVE-2026-110936",
+    "title": "Siemens Software Center Uncontrolled Search Path Element Vulnerability",
+    "description": "Siemens Software Center contains an uncontrolled search path element vulnerability that could allow an authenticated local attacker to place a specially crafted DLL in a directory that the application searches, leading to arbitrary code execution with the privileges of the affected application.",
+    "cvssScore": 8.4,
+    "cvssVector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+    "cweId": "CWE-427",
+    "affectedProducts": [
+      "siemens software center < 4.0.9.8"
+    ],
+    "fixedVersions": [
+      "4.0.9.8"
+    ],
+    "publishedAt": "2026-10-15",
+    "modifiedAt": "2026-10-21",
+    "kevStatus": true,
+    "exploitation": "CISA KEV登録（2026-10-20）",
+    "mitigation": [
+      "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+    ],
+    "incidentIds": [],
+    "sourceIds": [
+      "src-cisa-kev"
+    ]
   }
 ]
