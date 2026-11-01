@@ -7,15 +7,30 @@
     "cvssScore": 10,
     "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
     "cweId": "CWE-190",
-    "affectedProducts": ["GitLab CE/EE 19.2 系（19.2.8 未満）", "GitLab CE/EE 19.3 系（19.3.5 未満）", "GitLab CE/EE 19.4 系（19.4.2 未満）"],
-    "fixedVersions": ["19.2.8", "19.3.5", "19.4.2"],
-    "publishedAt": "2026-10-12",
-    "modifiedAt": null,
+    "affectedProducts": [
+      "GitLab CE/EE 19.2 系（19.2.8 未満）",
+      "GitLab CE/EE 19.3 系（19.3.5 未満）",
+      "GitLab CE/EE 19.4 系（19.4.2 未満）"
+    ],
+    "fixedVersions": [
+      "19.2.8",
+      "19.3.5",
+      "19.4.2"
+    ],
+    "publishedAt": "2026-10-13",
+    "modifiedAt": "2026-10-31",
     "kevStatus": true,
     "exploitation": "2026-10-29 に CISA KEV へ追加（悪用確認）。",
-    "mitigation": ["セルフマネージド版を修正バージョンへ更新する（GitLab.com / Dedicated は適用済み）", "19.3 系は 19.3.4 に不具合があるため 19.3.5 を適用する"],
+    "mitigation": [
+      "セルフマネージド版を修正バージョンへ更新する（GitLab.com / Dedicated は適用済み）",
+      "19.3 系は 19.3.4 に不具合があるため 19.3.5 を適用する"
+    ],
     "incidentIds": [],
-    "sourceIds": ["src-gitlab-1942", "src-bc-gitlab", "src-cisa-kev"]
+    "sourceIds": [
+      "src-gitlab-1942",
+      "src-bc-gitlab",
+      "src-cisa-kev"
+    ]
   },
   {
     "id": "vuln-cve-2026-76418",
@@ -25,32 +40,65 @@
     "cvssScore": 8.6,
     "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
     "cweId": "CWE-690",
-    "affectedProducts": ["Cisco Secure Firewall ASA Software", "Cisco Secure Firewall Threat Defense (FTD) Software"],
-    "fixedVersions": ["ASA 9.22.3.200", "ASA 9.23.1.48", "ASA 9.24.1.27 / 9.24.10.1", "FTD 7.0.11", "FTD 7.2.13", "FTD 7.4.9", "FTD 7.6.7", "FTD 7.7.14", "FTD 10.0.3", "FTD 10.1.1"],
-    "publishedAt": null,
-    "modifiedAt": null,
+    "affectedProducts": [
+      "Cisco Secure Firewall ASA Software",
+      "Cisco Secure Firewall Threat Defense (FTD) Software"
+    ],
+    "fixedVersions": [
+      "ASA 9.22.3.200",
+      "ASA 9.23.1.48",
+      "ASA 9.24.1.27 / 9.24.10.1",
+      "FTD 7.0.11",
+      "FTD 7.2.13",
+      "FTD 7.4.9",
+      "FTD 7.6.7",
+      "FTD 7.7.14",
+      "FTD 10.0.3",
+      "FTD 10.1.1"
+    ],
+    "publishedAt": "2026-10-28",
+    "modifiedAt": "2026-10-30",
     "kevStatus": true,
     "exploitation": "2026-10-29 に CISA KEV へ追加（米連邦機関の対応期限 2026-11-01）。",
-    "mitigation": ["Cisco の Software Checker で該当リリースと修正版を確認し更新する", "SSL リモートアクセスVPNの公開状況と二次認証設定を確認する"],
+    "mitigation": [
+      "Cisco の Software Checker で該当リリースと修正版を確認し更新する",
+      "SSL リモートアクセスVPNの公開状況と二次認証設定を確認する"
+    ],
     "incidentIds": [],
-    "sourceIds": ["src-cisa-kev", "src-rescana-cisco"]
+    "sourceIds": [
+      "src-cisa-kev",
+      "src-rescana-cisco"
+    ]
   },
   {
     "id": "vuln-cve-2026-106931",
     "cveId": "CVE-2026-106931",
     "title": "SiteGuard Server Edition 統計機能のOSコマンドインジェクション",
     "description": "ホスト型WAF「SiteGuard Server Edition」の統計機能にOSコマンドインジェクションの脆弱性があり、製品が動作するサーバー上でroot/SYSTEM権限で任意のOSコマンドが実行される可能性がある。統計機能が有効な場合に影響（初期値は有効）。",
-    "cvssScore": 7.8,
-    "cvssVector": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "cvssScore": 8.5,
+    "cvssVector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
     "cweId": "CWE-78",
-    "affectedProducts": ["SiteGuard Server Edition Ver2.20 以降（IIS版 Ver3.10〜Ver4.00 Update4 を除く）"],
-    "fixedVersions": ["Apache版・Nginx版・IIS版 Ver8.00 Update5", "FreeBSD Apache版・Nginx版 Ver7.00 Update6"],
+    "affectedProducts": [
+      "SiteGuard Server Edition Ver2.20 以降（IIS版 Ver3.10〜Ver4.00 Update4 を除く）"
+    ],
+    "fixedVersions": [
+      "Apache版・Nginx版・IIS版 Ver8.00 Update5",
+      "FreeBSD Apache版・Nginx版 Ver7.00 Update6"
+    ],
     "publishedAt": "2026-10-14",
-    "modifiedAt": "2026-10-14",
+    "modifiedAt": "2026-10-21",
     "kevStatus": true,
     "exploitation": "JVN・開発者が悪用を確認。2026-10-20 に CISA KEV へ追加。CVSS v4.0 基本値は 8.5。",
-    "mitigation": ["修正バージョンへ更新する", "更新が困難な場合は開発者提供の個別パッチを適用する（サポート終了版を含む）"],
+    "mitigation": [
+      "修正バージョンへ更新する",
+      "更新が困難な場合は開発者提供の個別パッチを適用する（サポート終了版を含む）"
+    ],
     "incidentIds": [],
-    "sourceIds": ["src-jvn-88474777", "src-jpcert-at260032", "src-eg-siteguard", "src-cisa-kev"]
+    "sourceIds": [
+      "src-jvn-88474777",
+      "src-jpcert-at260032",
+      "src-eg-siteguard",
+      "src-cisa-kev"
+    ]
   }
 ]

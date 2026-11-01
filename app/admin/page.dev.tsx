@@ -211,6 +211,7 @@ const AdminPage: FC = () => {
   const [originalId, setOriginalId] = useState<string | null>(null)
   const [raw, setRaw] = useState(false)
   const [message, setMessage] = useState<{ ok: boolean; text: string } | null>(null)
+  const [cveList, setCveList] = useState("")
 
   const load = useCallback(() => fetchAll().then(setData), [])
   useEffect(() => {
@@ -266,6 +267,41 @@ const AdminPage: FC = () => {
     setDraft({ ...draft, ...body, id: draft.id || cve.toLowerCase() })
     setMessage({ ok: true, text: `NVDから取得しました: ${cve}（タイトル・説明は要確認）` })
   }
+  // Bulk import: fetch each CVE from NVD and save it as a new vulnerability.
+  const importCves = async () => {
+    if (!data) return
+    const known = new Set(data.vulnerabilities.map((r) => String(r.cveId)))
+    const ids = [...new Set(cveList.toUpperCase().match(/CVE-\d{4}-\d{4,}/g) ?? [])]
+    const log: string[] = []
+    const report = (ok = true) => setMessage({ ok, text: log.join("\n") })
+    for (const [n, cve] of ids.entries()) {
+      if (known.has(cve)) {
+        log.push(`skip ${cve}: 登録済み`)
+        continue
+      }
+      // ponytail: fixed pacing for NVD's keyless limit (5 req / 30s); drop it when NVD_API_KEY is set
+      if (n) await new Promise((r) => setTimeout(r, 6500))
+      log.push(`取得中 ${cve} (${n + 1}/${ids.length})`)
+      report()
+      const res = await fetch(`/api/admin/cve/${cve}`)
+      const fields = await res.json()
+      if (!res.ok) {
+        log[log.length - 1] = `NG ${cve}: ${fields.error}`
+        continue
+      }
+      const row = { ...TEMPLATES.vulnerabilities(), ...fields, id: cve.toLowerCase() }
+      const saved = await fetch("/api/admin/vulnerabilities", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(row),
+      })
+      const body = await saved.json()
+      log[log.length - 1] = saved.ok ? `OK ${cve}` : `NG ${cve}: ${(body.errors ?? [body.error]).join(", ")}`
+    }
+    log.push(`完了: ${ids.length}件`)
+    report(!log.some((l) => l.startsWith("NG")))
+    load()
+  }
   const open = (row: Obj | null) => {
     setDraft(row ? structuredClone(row) : TEMPLATES[tab]())
     setOriginalId(row ? String(row.id) : null)
@@ -286,6 +322,15 @@ const AdminPage: FC = () => {
       <div style={{ display: "grid", gap: "1rem", gridTemplateColumns: "repeat(auto-fit, minmax(min(22rem, 100%), 1fr))", alignItems: "start" }}>
         <div>
           <button type="button" onClick={() => open(null)} style={{ marginBottom: ".5rem" }}>＋ 新規登録</button>
+          {tab === "vulnerabilities" && (
+            <div style={{ display: "grid", gap: ".4rem", marginBottom: ".75rem" }}>
+              <textarea rows={3} placeholder="CVE-2026-12345, CVE-2026-23456 …（改行・カンマ区切り）" value={cveList} onChange={(e) => setCveList(e.target.value)} style={mono} />
+              <button type="button" onClick={importCves} disabled={!/CVE-\d{4}-\d{4,}/i.test(cveList)}>NVDから一括取得して保存</button>
+              {!draft && message && (
+                <pre style={{ ...mono, color: message.ok ? "#3ecf8e" : "#ff5a5f", fontSize: ".75rem", whiteSpace: "pre-wrap" }}>{message.text}</pre>
+              )}
+            </div>
+          )}
           <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: ".25rem" }}>
             {data[tab].map((r) => (
               <li key={String(r.id)} style={{ display: "flex", gap: ".5rem", alignItems: "center" }}>
