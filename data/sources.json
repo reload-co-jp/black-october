@@ -638,5 +638,1975 @@
     "sourceType": "media",
     "reliability": "secondary",
     "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-jal-jta-amadeus-reservation-unauthorized-access-mvxoq42o",
+    "title": "Amadeus の旅客サービスシステムへの不正アクセスについてまとめてみた",
+    "url": "https://piyolog.hatenadiary.jp/entry/2026/10/28/214917",
+    "publisher": "piyolog",
+    "publishedAt": "2026-10-28",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-jal-jta-amadeus-reservation-unauthorized-access-mvxy5uuv",
+    "title": "JALとJTAが委託先アマデウスへの不正アクセスで予約情報約9万2000人分の漏えいを発表",
+    "url": "https://cybersecurity-jp.com/news/117845",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-rakus-lite-cloud-blastmail-unauthorized-access-mvxp3m74",
+    "title": "メール配信サービス「ブラストメール」への不正アクセスについてまとめてみた",
+    "url": "https://piyolog.hatenadiary.jp/entry/2026/10/27/133851",
+    "publisher": "piyolog",
+    "publishedAt": "2026-10-27",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-gmo-internet-onamae-desktop-cloud-unauthorized-access-mvxp47ws",
+    "title": "お名前 .com デスクトップクラウドへの不正アクセスについてまとめてみた",
+    "url": "https://piyolog.hatenadiary.jp/entry/2026/10/23/014520",
+    "publisher": "piyolog",
+    "publishedAt": "2026-10-23",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-nec-contractor-unauthorized-access-mvxpp3qq",
+    "title": "NEC委託先への不正アクセスについてまとめてみた",
+    "url": "https://piyolog.hatenadiary.jp/entry/2026/10/22/114426",
+    "publisher": "piyolog",
+    "publishedAt": "2026-10-22",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-iwai-cosmo-securities-tradeworks-unauthorized-access-mvxris2w",
+    "title": "不正取引も行われた岩井コスモ証券への不正アクセスについてまとめてみた",
+    "url": "https://piyolog.hatenadiary.jp/entry/2026/10/22/113434",
+    "publisher": "piyolog",
+    "publishedAt": "2026-10-22",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-iwai-cosmo-securities-tradeworks-unauthorized-access-mvxxx1xd",
+    "title": "証券口座で不正取引、金融サービスへのサイバー攻撃で何が起きている？",
+    "url": "https://news.mynavi.jp/techplus/article/20261023-5178526/",
+    "publisher": "マイナビニュース TECH+",
+    "publishedAt": "2026-10-23",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-iwai-cosmo-securities-tradeworks-unauthorized-access-mvxypjb5",
+    "title": "岩井コスモ証券、顧客4,611人の情報が漏洩 システム運用委託先への不正アクセスで",
+    "url": "https://cybersecurity-jp.com/column/117419",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-16",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-studio-cloud-environment-unauthorized-access-mvxrjbl0",
+    "title": "Studioへの不正アクセスについてまとめてみた",
+    "url": "https://piyolog.hatenadiary.jp/entry/2026/10/20/204342",
+    "publisher": "piyolog",
+    "publishedAt": "2026-10-20",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-studio-cloud-environment-unauthorized-access-mvxyohus",
+    "title": "Web制作ツール「Studio」で不正アクセス、全登録者の情報流出の可能性│Studio株式会社",
+    "url": "https://cybersecurity-jp.com/news/117410",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-16",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-sourcenext-member-api-unauthorized-access-mvxrjpy2",
+    "title": "ソースネクストへの不正アクセスについてまとめてみた",
+    "url": "https://piyolog.hatenadiary.jp/entry/2026/10/20/073243",
+    "publisher": "piyolog",
+    "publishedAt": "2026-10-20",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-sourcenext-member-api-unauthorized-access-mvxyo6t1",
+    "title": "ソースネクストに不正アクセス、会員情報2,251万9,960件が流出した可能性",
+    "url": "https://cybersecurity-jp.com/news/117404",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-15",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-adventure-skyticket-unauthorized-access-mvxs4o20",
+    "title": "「skyticket」で確認された3つの不正アクセスについてまとめてみた",
+    "url": "https://piyolog.hatenadiary.jp/entry/2026/10/16/075103",
+    "publisher": "piyolog",
+    "publishedAt": "2026-10-16",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-adventure-skyticket-unauthorized-access-mvxy6xiy",
+    "title": "アドベンチャー運営のスカイチケットで返金先口座情報3万2,341件が流出",
+    "url": "https://cybersecurity-jp.com/news/117849",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-28",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-adventure-skyticket-unauthorized-access-mvxyzehr",
+    "title": "スカイチケットで約1,464万件の個人情報流出 約413万件にパスワードのハッシュ値、変更を呼びかけ",
+    "url": "https://cybersecurity-jp.com/news/117170",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-10",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-medley-atlink-unauthorized-access-mvxt2mn6",
+    "title": "産婦人科向けシステム「アットリンク」への不正アクセスについてまとめてみた",
+    "url": "https://piyolog.hatenadiary.jp/entry/2026/10/15/065625",
+    "publisher": "piyolog",
+    "publishedAt": "2026-10-15",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-arcadia-speecan-raiden-unauthorized-access-mvxt371z",
+    "title": "防災情報配信サービス「SpeeCAN RAIDEN」への不正アクセスについてまとめてみた",
+    "url": "https://piyolog.hatenadiary.jp/entry/2026/10/14/014350",
+    "publisher": "piyolog",
+    "publishedAt": "2026-10-14",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-arcadia-speecan-raiden-unauthorized-access-mvxyto97",
+    "title": "アルカディアに不正アクセス、メールアドレス最大約313万件が漏洩した可能性 NET119にも影響",
+    "url": "https://cybersecurity-jp.com/news/117289",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-14",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-commune-community-platform-unauthorized-access-mvxt81nx",
+    "title": "コミューンの「Commune」への不正アクセスについてまとめてみた",
+    "url": "https://piyolog.hatenadiary.jp/entry/2026/10/10/075729",
+    "publisher": "piyolog",
+    "publishedAt": "2026-10-10",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-commune-community-platform-unauthorized-access-mvxyuxpp",
+    "title": "コミューンに不正アクセス、約30.7万人の会員情報が漏えい",
+    "url": "https://cybersecurity-jp.com/news/117254",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-hi-ho-mypage-impersonation-unauthorized-login-mvxt8gd5",
+    "title": "光回線代理店営業担当による競合事業者への不正アクセスについてまとめてみた",
+    "url": "https://piyolog.hatenadiary.jp/entry/2026/10/09/165507",
+    "publisher": "piyolog",
+    "publishedAt": "2026-10-09",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-idcf-cloud-ransomware-mvxt95es",
+    "title": "IDCFクラウドへのランサムウェア攻撃についてまとめてみた",
+    "url": "https://piyolog.hatenadiary.jp/entry/2026/10/08/070606",
+    "publisher": "piyolog",
+    "publishedAt": "2026-10-08",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-idcf-cloud-ransomware-mvxtazb7",
+    "title": "「流出なし」で終わらないIDCFクラウド障害 「何をいつまで預けたか」で分かれた明暗",
+    "url": "https://www.itmedia.co.jp/enterprise/articles/2610/16/news098.html",
+    "publisher": "ITmedia エンタープライズ",
+    "publishedAt": "2026-10-20",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-idcf-cloud-ransomware-mvxz1hiw",
+    "title": "IDCフロンティアにランサムウェア攻撃、「IDCFクラウド」で障害 495の企業・自治体に影響",
+    "url": "https://cybersecurity-jp.com/news/117050",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-08",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-scala-communications-i-ask-unauthorized-access-mvxt9jne",
+    "title": "スカラコミュニケーションズへの不正アクセスについてまとめてみた",
+    "url": "https://piyolog.hatenadiary.jp/entry/2026/10/07/120750",
+    "publisher": "piyolog",
+    "publishedAt": "2026-10-07",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-scala-communications-i-ask-unauthorized-access-mvxyv6w0",
+    "title": "株式会社スカラコミュニケーションズ、最大71万件超の問い合わせ情報漏えいのおそれ",
+    "url": "https://cybersecurity-jp.com/news/117252",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-06",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-panasonic-oe-generative-ai-personal-data-upload-mvxt9xlu",
+    "title": "「禁止」するだけでは防げない？ パナソニックグループで約33万人分の個人情報が外部生成AIに",
+    "url": "https://www.itmedia.co.jp/enterprise/articles/2610/28/news060.html",
+    "publisher": "ITmedia エンタープライズ",
+    "publishedAt": "2026-10-28",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-panasonic-oe-generative-ai-personal-data-upload-mvxxvinh",
+    "title": "パナソニック、禁止された生成AIに約33万人分の個人情報をアップロード",
+    "url": "https://news.mynavi.jp/techplus/article/20261029-5214710/",
+    "publisher": "マイナビニュース TECH+",
+    "publishedAt": "2026-10-29",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-yamato-transport-kuroneko-atobarai-unauthorized-access-mvxtadce",
+    "title": "ヤマト運輸、8年分の顧客情報約526万件流出 企業が確かめるべき3項目",
+    "url": "https://www.itmedia.co.jp/enterprise/articles/2610/22/news020.html",
+    "publisher": "ITmedia エンタープライズ",
+    "publishedAt": "2026-10-23",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-yamato-transport-kuroneko-atobarai-unauthorized-access-mvxyrqd6",
+    "title": "ヤマト運輸、後払いサービスの利用者情報約526万件が流出 届け先・加盟店情報も不正持ち出し",
+    "url": "https://cybersecurity-jp.com/news/117390",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-16",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-rakuten-securities-ntt-data-digital-securities-platform-unauthorized-access-mvxtbnxu",
+    "title": "楽天証券がNTTデータ委託先の不正アクセスで社債購入者情報362件の漏えい可能性を公表",
+    "url": "https://cybersecurity-jp.com/news/118014",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-kintetsu-ghd-ntt-data-digital-securities-platform-unauthorized-access-mvxtbzdl",
+    "title": "近鉄GHD、再委託先への不正アクセスで社債購入者2,678人の情報漏えいの恐れ",
+    "url": "https://cybersecurity-jp.com/news/118013",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-31",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-club-tourism-internet-reservation-system-unauthorized-access-mvxtcawz",
+    "title": "クラブツーリズムが不正アクセスを受け会員約432万件の個人情報が漏えいの可能性",
+    "url": "https://cybersecurity-jp.com/news/118012",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-31",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-coade-hanikuji-land-unauthorized-access-mvxtcm34",
+    "title": "コアデのはにくじランドに不正アクセス 最大7,622名の個人情報流出の可能性",
+    "url": "https://cybersecurity-jp.com/news/117989",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-dhc-online-shop-unauthorized-access-mvxtd4qm",
+    "title": "DHCの公式オンラインショップに不正アクセス 会員情報5,096アカウントが書き換え被害",
+    "url": "https://cybersecurity-jp.com/news/117992",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-tokyu-land-aws-shared-server-website-unauthorized-access-mvxtdgte",
+    "title": "東急不動産が管理ウェブサイトへの不正アクセスを発表、個人情報流出の可能性",
+    "url": "https://cybersecurity-jp.com/news/117993",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-30",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-yumirlink-cuenote-fc-unauthorized-access-mvxxw8s0",
+    "title": "ユミルリンクの不正アクセス、JR・りそな銀行・サイボウズなどに影響 被害企業一覧",
+    "url": "https://news.mynavi.jp/techplus/article/20261028-5209023/",
+    "publisher": "マイナビニュース TECH+",
+    "publishedAt": "2026-10-28",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-resona-yumirlink-cuenote-fc-unauthorized-access-mvxy7z5v",
+    "title": "りそな銀行など3行がユミルリンク不正アクセスで顧客メール漏えいの可能性",
+    "url": "https://cybersecurity-jp.com/news/117831",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-mofa-external-network-unauthorized-access-mvxxy2ew",
+    "title": "外務省に不正アクセス、約3600件の個人情報が漏えいの可能性",
+    "url": "https://internet.watch.impress.co.jp/docs/news/2152757.html",
+    "publisher": "INTERNET Watch",
+    "publishedAt": "2026-10-30",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-mofa-external-network-unauthorized-access-mvxy1aa1",
+    "title": "外務省が運用するネットワークへの不正アクセスで約3,600件の個人情報が漏えいの可能性",
+    "url": "https://cybersecurity-jp.com/news/117971",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-matsuya-foods-app-member-data-breach-mvxxyebm",
+    "title": "松屋フーズ、不正アクセスにより公式アプリの利用者の情報約238万件が漏えい アプリ・ウェブサイトを停止中",
+    "url": "https://internet.watch.impress.co.jp/docs/news/2152679.html",
+    "publisher": "INTERNET Watch",
+    "publishedAt": "2026-10-30",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-matsuya-foods-app-management-system-unauthorized-access-mvxy2kai",
+    "title": "松屋フーズHDが公式アプリ管理システムへの不正アクセスで約238万件の個人情報漏えいを発表",
+    "url": "https://cybersecurity-jp.com/news/117950",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-30",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-matsuya-foods-official-app-unauthorized-access-mvxy3vb2",
+    "title": "松屋フーズが不正アクセスを検知し公式アプリと公式サイトを停止した",
+    "url": "https://cybersecurity-jp.com/news/117905",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-ryohin-keikaku-muji-app-unauthorized-access-mvxxypfw",
+    "title": "無印良品、「MUJIアプリ」の利用者情報最大約2726万件が不正アクセスにより流出の可能性",
+    "url": "https://internet.watch.impress.co.jp/docs/news/2152666.html",
+    "publisher": "INTERNET Watch",
+    "publishedAt": "2026-10-30",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-ryohin-keikaku-muji-app-unauthorized-access-mvxy2u40",
+    "title": "良品計画のMUJIアプリに不正アクセス 最大約2,726万件の情報流出の可能性",
+    "url": "https://cybersecurity-jp.com/news/117949",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-good-smile-company-official-shop-payment-page-tampering-mvxxzhvg",
+    "title": "「グッドスマイルカンパニー公式ショップ」、決済ページの改ざんでクレジットカード情報を含む個人情報が漏えいの可能性",
+    "url": "https://internet.watch.impress.co.jp/docs/news/2152332.html",
+    "publisher": "INTERNET Watch",
+    "publishedAt": "2026-10-29",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-ana-amadeus-reservation-unauthorized-access-mvxxzu4j",
+    "title": "ANAがアマデウスへの不正アクセスで約3万7,800人の予約情報が閲覧された可能性と発表",
+    "url": "https://cybersecurity-jp.com/news/117975",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-kddi-lifenet-linked-system-unauthorized-access-mvxy077f",
+    "title": "KDDI顧客情報最大2万2,541件漏えいか ライフネット生命連携システムに不正アクセス",
+    "url": "https://cybersecurity-jp.com/news/117974",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-30",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-nihon-kotsu-internal-system-malware-unauthorized-access-mvxy0nq5",
+    "title": "日本交通が不正アクセスで約29万人の個人情報が漏えいした可能性を発表",
+    "url": "https://cybersecurity-jp.com/news/117973",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-saga-university-office-nas-ransomware-mvxy10m6",
+    "title": "佐賀大学がランサムウェア被害を発表、約8万人分の個人情報が漏えいの可能性",
+    "url": "https://cybersecurity-jp.com/news/117972",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-yakult-honsha-official-website-unauthorized-access-mvxy1lua",
+    "title": "ヤクルト本社が公式サイトへの不正アクセスで個人情報約4万件の漏えいを確認",
+    "url": "https://cybersecurity-jp.com/news/117951",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-30",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-world-tinpanalley-business-server-unauthorized-access-mvxy1xf2",
+    "title": "ワールド子会社に不正アクセス 会員情報のべ約120万件が流出の可能性",
+    "url": "https://cybersecurity-jp.com/news/117952",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-30",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-iris-ohyama-iris-plaza-ec-site-unauthorized-access-mvxy28gu",
+    "title": "アイリスオーヤマの通販サイトのアイリスプラザで不正アクセスを確認しECサイトを一時停止",
+    "url": "https://cybersecurity-jp.com/news/117953",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-aisin-yysystem-studio-form-data-leak-mvxy37qr",
+    "title": "アイシンのYYSystem問い合わせ情報が委託先への不正アクセスで流出の可能性",
+    "url": "https://cybersecurity-jp.com/news/117903",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-arara-arara-message-unauthorized-access-mvxy3k1r",
+    "title": "アララのメール配信サービスが不正アクセスを受け約301万件のメールアドレスが流出",
+    "url": "https://cybersecurity-jp.com/news/117904",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-29",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-lifecard-yumirlink-cuenote-fc-unauthorized-access-mvxy4bhj",
+    "title": "ライフカードの委託先ユミルリンクへの不正アクセスで33万9,610契約に情報漏えいのおそれ",
+    "url": "https://cybersecurity-jp.com/news/117906",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-28",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-doutor-coffee-employee-data-breach-mvxy4wlx",
+    "title": "ドトールコーヒーが不正アクセス被害を発表、従業員と退職者951人の口座番号などが流出の可能性",
+    "url": "https://cybersecurity-jp.com/news/117894",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-eneos-power-eneos-denki-system-unauthorized-access-mvxy56p1",
+    "title": "ENEOS Powerが「ENEOSでんき」と「でんきサービス」のシステムへの不正アクセスで57名分の個人情報漏えいを発表",
+    "url": "https://cybersecurity-jp.com/news/117895",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-credit-saison-tokugai-forestec-unauthorized-access-mvxy5i6s",
+    "title": "クレディセゾンのトク買で委託先が不正アクセス被害を受け2万9465人分の情報が漏えい",
+    "url": "https://cybersecurity-jp.com/news/117893",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-28",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-sony-life-customer-web-service-unauthorized-access-mvxy67bh",
+    "title": "ソニー生命の契約者向けサイトが不正アクセスを受け代理店扱いの約38万5,000件が漏えい",
+    "url": "https://cybersecurity-jp.com/news/117846",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-don-quijote-cox-watch-repair-ransomware-mvxy6k79",
+    "title": "ドン・キホーテ、長崎屋、橘百貨店、UDリテールの4社が時計修理委託先コックスでランサム被害",
+    "url": "https://cybersecurity-jp.com/news/117847",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-egc-dentorinet-unauthorized-access-mvxy77fw",
+    "title": "経産省の電取委が運営する報告サイトのデントリネットに不正アクセス発生",
+    "url": "https://cybersecurity-jp.com/news/117850",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-hanacupid-management-system-unauthorized-access-mvxy7j7k",
+    "title": "花キューピットが不正アクセスで会員情報最大423万8,242件の漏えいの可能性を発表",
+    "url": "https://cybersecurity-jp.com/news/117843",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-futureshop-ec-platform-unauthorized-access-mvxy8880",
+    "title": "「futureshop」に不正アクセス、1店舗の会員情報約315万件が漏えい│株式会社フューチャーショップ",
+    "url": "https://cybersecurity-jp.com/news/117820",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-23",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-hokkaido-chuo-bus-hassha-orai-net-unauthorized-access-mvxy8hw8",
+    "title": "北海道中央バス、予約サイト「発車オーライネット」で予約情報漏えいの可能性",
+    "url": "https://cybersecurity-jp.com/news/117817",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-linkstation-gettiis-unauthorized-access-mvxy8sm3",
+    "title": "チケット購入サービス「GETTIIS」の会員情報が流出、脆弱性悪用か│株式会社リンクステーション",
+    "url": "https://cybersecurity-jp.com/news/117814",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-chari-loto-chariloto-app-unauthorized-access-mvxy94gm",
+    "title": "チャリロトに不正アクセス、会員373人の口座情報や投票履歴が漏えい│株式会社チャリ・ロト",
+    "url": "https://cybersecurity-jp.com/news/117812",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-24",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-furukawa-electric-power-systems-shipping-management-system-unauthorized-access-mvxy9d8y",
+    "title": "出荷管理システムに不正アクセスの疑い、個人情報漏えいのおそれ│古河電工パワーシステムズ株式会社",
+    "url": "https://cybersecurity-jp.com/news/117810",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-26",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-papyless-renta-unauthorized-access-mvxy9mag",
+    "title": "電子書籍サイト「Renta！」に不正アクセス、会員情報流出のおそれ│株式会社パピレス",
+    "url": "https://cybersecurity-jp.com/news/117806",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-kouseikai-studio-form-data-leak-mvxy9z2q",
+    "title": "外部サービスへの不正アクセスで問い合わせ情報約843件漏えいのおそれ│社会福祉法人高生会",
+    "url": "https://cybersecurity-jp.com/news/117804",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-20",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-digital-arts-cloud-service-unauthorized-access-mvxya8o4",
+    "title": "AI活用の総点検で不正アクセス発覚、クラウド利用者にパスワード変更要請│デジタルアーツ株式会社",
+    "url": "https://cybersecurity-jp.com/news/117802",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-21",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-pizza-hut-japan-online-order-payment-api-unauthorized-access-mvxyaj85",
+    "title": "オンライン注文サービスの決済APIに不正アクセス、顧客情報漏えい│日本ピザハット株式会社",
+    "url": "https://cybersecurity-jp.com/news/117750",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-treasure-factory-case-management-system-unauthorized-access-mvxyatmg",
+    "title": "顧客メールアドレス74万6,277件などが流出│株式会社トレジャー・ファクトリー",
+    "url": "https://cybersecurity-jp.com/news/117748",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-23",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-nippon-gas-mainichi-gas-registration-unauthorized-access-mvxyb43v",
+    "title": "「マイニチガス」に不正アクセス、顧客情報85件が漏えい｜日本瓦斯株式会社",
+    "url": "https://cybersecurity-jp.com/news/117746",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-23",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-and-st-hd-business-server-unauthorized-access-mvxyi2s5",
+    "title": "不正アクセスで顧客約250万件などの情報流出の可能性│株式会社アンドエスティHD",
+    "url": "https://cybersecurity-jp.com/news/117692",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-23",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-good-smile-company-official-shop-unauthorized-access-2026-10-mvxyiffo",
+    "title": "公式ショップに不正アクセス、会員情報などを不正閲覧│株式会社グッドスマイルカンパニー",
+    "url": "https://cybersecurity-jp.com/news/117694",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-23",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-capcom-capcom-id-unauthorized-access-mvxyis4r",
+    "title": "「CAPCOM ID」に不正アクセス、約1,177万件の顧客情報漏えい│株式会社カプコン",
+    "url": "https://cybersecurity-jp.com/news/117690",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-23",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-sagawa-express-parcel-tracking-service-unauthorized-access-mvxyj3h1",
+    "title": "佐川急便、最大約5,323万件の個人情報流出の可能性「お荷物問い合わせサービス」を再開",
+    "url": "https://cybersecurity-jp.com/news/117680",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-23",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-aeon-group-websites-unauthorized-access-mvxyjerl",
+    "title": "グループの一部ウェブサイトに不正アクセス、個人情報流出の有無を調査―イオン",
+    "url": "https://cybersecurity-jp.com/news/117646",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-21",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-nec-contractor-cyberattack-customer-system-encryption-mvxyk0yg",
+    "title": "委託先へのサイバー攻撃で顧客のシステム障害と情報漏えい―NEC",
+    "url": "https://cybersecurity-jp.com/news/117597",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-nec-contractor-cyberattack-customer-system-encryption-mvxylp2m",
+    "title": "NEC、委託先へのサイバー攻撃で顧客情報が漏洩 正規アカウント悪用、システム停止も発生",
+    "url": "https://cybersecurity-jp.com/news/117574",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-20",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-pingcap-internal-system-unauthorized-access-mvxyke8i",
+    "title": "社内システムへの不正アクセスで国内最大約5万件の個人情報漏えい―PingCAP",
+    "url": "https://cybersecurity-jp.com/news/117593",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-square-enix-account-credential-stuffing-mvxykpwb",
+    "title": "他社サービスの流出情報を悪用か―『FF14』公式サイトで不正アクセスへの注意喚起",
+    "url": "https://cybersecurity-jp.com/news/117595",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-19",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-recruit-carsensor-c-match-unauthorized-access-mvxyl3s1",
+    "title": "リクルート「カーセンサー」などに不正アクセス、最大370万9,551件の個人情報漏洩の可能性",
+    "url": "https://cybersecurity-jp.com/news/117599",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-21",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-joshin-network-unauthorized-access-mvxylb9j",
+    "title": "不正アクセスで一部サービス停止、情報流出の有無を調査│Joshin",
+    "url": "https://cybersecurity-jp.com/news/117568",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-19",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-crypton-sonicwire-d2r-unauthorized-access-mvxym2mr",
+    "title": "「SONICWIRE」などに不正アクセス、会員情報最大約42万件に漏えいの恐れ│クリプトン",
+    "url": "https://cybersecurity-jp.com/news/117566",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-19",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-nifty-line-application-system-unauthorized-access-mvxymdlt",
+    "title": "ニフティに不正アクセス、最大54万2,513件の個人情報が漏洩した可能性 光回線の申込者情報が対象",
+    "url": "https://cybersecurity-jp.com/news/117573",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-19",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-trustbank-furusato-choice-unauthorized-access-mvxymruz",
+    "title": "ふるさとチョイス、不正アクセスで445万件超の個人情報が流出 寄附控除試算額やパスワード情報も対象",
+    "url": "https://cybersecurity-jp.com/news/117571",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-20",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-businesstech-ashikaga-funeral-hall-reservation-unauthorized-access-mvxymzzr",
+    "title": "足利市の斎場予約システムに不正アクセス、約8,800人分の個人情報漏えいのおそれ│株式会社ビジネステック",
+    "url": "https://cybersecurity-jp.com/news/117564",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-18",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-raksul-studio-form-data-leak-mvxynd56",
+    "title": "「Studio」への不正アクセスでフォーム情報6,412件漏えいの可能性│ラクスル株式会社",
+    "url": "https://cybersecurity-jp.com/news/117514",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-16",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-shinseiki-komorebi-studio-form-data-leak-mvxynmjt",
+    "title": "「こもれび」のサイト構築サービスに不正アクセス、個人情報漏えいの可能性│社会福祉法人伸生紀",
+    "url": "https://cybersecurity-jp.com/news/117508",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-m3-mr-kun-unauthorized-access-mvxynvmf",
+    "title": "製薬企業向けサービス「MR君」に不正アクセス、医師会員などの個人情報が漏えい│エムスリー株式会社",
+    "url": "https://cybersecurity-jp.com/news/117511",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-15",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-wasabi-wasabi-switch-unauthorized-access-mvxyornn",
+    "title": "「WASABI SWITCH」で注文情報が流出、返金を装う不審メールも確認│株式会社ワサビ",
+    "url": "https://cybersecurity-jp.com/news/117406",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-16",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-smd-am-direct-net-contractor-unauthorized-access-mvxyozya",
+    "title": "三井住友DS投信直販ネット、委託先への不正アクセスで約10時間ログインできず 口座情報・取引への影響は未確認",
+    "url": "https://cybersecurity-jp.com/news/117424",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-16",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-keio-ransomware-system-outage-mvxyp7wi",
+    "title": "京王電鉄、ランサムウェア攻撃の続報を公表 攻撃組織による情報公開の主張を確認",
+    "url": "https://cybersecurity-jp.com/news/117422",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-16",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-astemo-shared-cloud-contractor-account-unauthorized-access-mvxypurt",
+    "title": "Astemo、委託先アカウントの侵害で約350人の個人情報が流出 共有クラウドに不正アクセス",
+    "url": "https://cybersecurity-jp.com/news/117416",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-16",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-wakayama-prefecture-foreign-talent-support-desk-studio-form-data-leak-mvxyq768",
+    "title": "和歌山県、外国人材支援サイトの登録情報が漏洩した可能性 417事業者・1,749人が対象",
+    "url": "https://cybersecurity-jp.com/news/117414",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-18",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-ntt-solmare-cmoa-unauthorized-access-mvxyqgu3",
+    "title": "コミックシーモア、不正アクセスで会員情報が流出 再開時に全会員へパスワード再設定を要請予定",
+    "url": "https://cybersecurity-jp.com/news/117400",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-16",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-access-ap-taiwan-cros-unauthorized-access-mvxyqtvk",
+    "title": "ACCESS台湾子会社で情報漏洩 顧客ID15万5,280件、カード情報1,305アカウント分が流出",
+    "url": "https://cybersecurity-jp.com/news/117398",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-15",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-estore-shopserve-unauthorized-access-mvxyr4wf",
+    "title": "ショップサーブ、約2,335万人の情報漏洩を公表 7,858店舗が対象、Eストアーが最終報告",
+    "url": "https://cybersecurity-jp.com/news/117395",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-16",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-nikkei-development-cloud-unauthorized-access-mvxyrfp0",
+    "title": "日本経済新聞社、クラウドへの不正アクセスで約183万件の情報漏洩 氏名・連絡先など約15万件を含む",
+    "url": "https://cybersecurity-jp.com/news/117393",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-16",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-dcm-maibo-member-system-unauthorized-access-mvxys5q8",
+    "title": "DCM、会員サービス「マイボ」で419人分の情報漏えい アプリを一時停止",
+    "url": "https://cybersecurity-jp.com/news/117337",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-13",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-dip-baitoru-unauthorized-access-mvxysesa",
+    "title": "「バイトル」などで不正アクセス、最大約388万件のメールアドレス漏えいの可能性",
+    "url": "https://cybersecurity-jp.com/news/117340",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-09",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-dip-baitoru-unauthorized-access-mvxyyptu",
+    "title": "バイトルに不正アクセス、最大388万件超のメールアドレスが漏洩した可能性",
+    "url": "https://cybersecurity-jp.com/news/117182",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-09",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-bk-japan-burger-king-app-member-data-breach-mvxyssk5",
+    "title": "バーガーキング、公式アプリの会員情報約1,118万件が漏洩 氏名・電話番号などが対象",
+    "url": "https://cybersecurity-jp.com/news/117343",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-15",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-chitose-group-chitose-academy-commune-unauthorized-access-mvxyt3us",
+    "title": "「ちとせアカデミー」で個人情報流出の可能性、最大843人が対象",
+    "url": "https://cybersecurity-jp.com/news/117282",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-09",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-resorttrust-website-unauthorized-access-mvxytcw1",
+    "title": "リゾートトラストに不正アクセス、会員やホテル予約者の個人情報が漏えい",
+    "url": "https://cybersecurity-jp.com/news/117280",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-daiwa-securities-scala-communications-inquiry-unauthorized-access-mvxytzq4",
+    "title": "大和証券、約11万人の顧客情報が漏洩した可能性 委託先への不正アクセスで氏名・口座番号などが対象",
+    "url": "https://cybersecurity-jp.com/news/117286",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-05",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-oita-prefecture-disaster-mail-system-vendor-unauthorized-access-mvxyuaml",
+    "title": "大分県、防災メールのアドレス2万7,667件が漏洩した可能性 新規登録などを停止、警報配信は継続",
+    "url": "https://cybersecurity-jp.com/news/117277",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-13",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-yokosuka-city-speecan-raiden-disaster-mail-unauthorized-access-mvxyun6s",
+    "title": "横須賀市、防災・防犯メールなどの登録者情報が漏洩した可能性 委託先への不正アクセスで4サービス停止",
+    "url": "https://cybersecurity-jp.com/news/117274",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-13",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-rideon-express-ginnosara-ransomware-mvxyvi9g",
+    "title": "「銀のさら」など最大約650万件の個人情報が漏洩した可能性 公式サイト・アプリの注文停止が継続",
+    "url": "https://cybersecurity-jp.com/news/117258",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-13",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-ly-corporation-ds-lab-commune-unauthorized-access-mvxyvsk0",
+    "title": "LINEヤフー株式会社、DS.LAB利用者1,750人の情報漏えいの可能性",
+    "url": "https://cybersecurity-jp.com/news/117173",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-09",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-hachijuni-nagano-bank-employee-email-account-unauthorized-access-mvxyw0u5",
+    "title": "株式会社八十二長野銀行に不正アクセス、35人のメールアドレス流出の可能性",
+    "url": "https://cybersecurity-jp.com/news/117175",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-enecom-internal-network-unauthorized-access-mvxyw9bf",
+    "title": "エネコムに不正アクセス、複数ファイルの外部流出の形跡を確認 顧客情報への影響を調査",
+    "url": "https://cybersecurity-jp.com/news/117207",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-09",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-yamaha-motor-yamaha-pas-life-commune-unauthorized-access-mvxywkf2",
+    "title": "ヤマハ発動機、約1,600人の会員情報が漏洩した可能性 「YAMAHA PAS Life」委託先に不正アクセス",
+    "url": "https://cybersecurity-jp.com/news/117204",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-12",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-dai-ichi-life-hr-system-unauthorized-access-mvxywvgb",
+    "title": "第一ライフグループ・第一生命に不正アクセス、従業員・退職者約12万人の個人情報が流出した可能性",
+    "url": "https://cybersecurity-jp.com/news/117201",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-02",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-orix-life-scala-communications-i-ask-unauthorized-access-mvxyx6w5",
+    "title": "オリックス生命、約2万6,500件の顧客情報が漏洩した可能性 委託先への不正アクセスで医療情報も対象",
+    "url": "https://cybersecurity-jp.com/news/117197",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-08",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-seicomart-app-member-server-unauthorized-access-mvxyxjpy",
+    "title": "セイコーマートアプリに不正アクセス、57万4,647人の個人情報が閲覧 会員情報変更などの機能を終了へ",
+    "url": "https://cybersecurity-jp.com/news/117194",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-05",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-his-thailand-subsidiary-file-server-unauthorized-access-mvxyxuca",
+    "title": "HIS、最大627人のパスポート情報などが流出した可能性 タイ子会社への不正アクセスを公表",
+    "url": "https://cybersecurity-jp.com/news/117191",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-07",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-jr-kyushu-idcf-unauthorized-access-mail-log-leak-mvxyy4om",
+    "title": "JR九州、最大約130万件のメールアドレスが漏洩した可能性 IDCフロンティアの不正アクセスが影響",
+    "url": "https://cybersecurity-jp.com/news/117188",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-09",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-temairazu-reservation-system-unauthorized-access-mvxyyg6x",
+    "title": "手間いらずに不正アクセス、最大約445万人の宿泊予約情報が漏洩した可能性",
+    "url": "https://cybersecurity-jp.com/news/117185",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-11",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-bookoff-member-management-system-unauthorized-access-mvxyz0sb",
+    "title": "ブックオフに不正アクセス、最大約643万件の会員情報漏洩の可能性 氏名・住所などが対象",
+    "url": "https://cybersecurity-jp.com/news/117179",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-11",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-jr-east-idcf-unauthorized-access-ekinet-mail-log-leak-mvxyzpje",
+    "title": "JR東日本、えきねっとなど最大約206万件の個人情報漏洩のおそれ IDCフロンティアへの攻撃が影響",
+    "url": "https://cybersecurity-jp.com/news/117167",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-10",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-sompo-japan-smiling-road-scala-communications-unauthorized-access-mvxz01a4",
+    "title": "損保ジャパン、委託先に不正アクセス 約6万件の問い合わせ情報漏えいの可能性",
+    "url": "https://cybersecurity-jp.com/news/117112",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-toda-corporation-payment-system-unauthorized-access-mvxz09jj",
+    "title": "戸田建設に不正アクセス、取引先情報と従業員の個人情報が漏えいか",
+    "url": "https://cybersecurity-jp.com/news/117114",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-active-ec-site-sql-injection-unauthorized-access-mvxz0jb8",
+    "title": "アクティブの通販サイトに不正アクセス、最大5万件超の顧客情報が漏えいした可能性",
+    "url": "https://cybersecurity-jp.com/news/117108",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-06",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-daiichikosho-nippon-columbia-malware-data-leak-mvxz0via",
+    "title": "第一興商、約872万件の個人情報漏洩のおそれ ビッグエコーなどの顧客・従業員情報が対象",
+    "url": "https://cybersecurity-jp.com/news/117121",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-09",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-lawson-lawson-id-app-reservation-unauthorized-access-mvxz16y8",
+    "title": "ローソンで個人情報215万件超が漏洩、「ローソンID」などに不正アクセス",
+    "url": "https://cybersecurity-jp.com/news/117118",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-09",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-nissui-logistics-contractor-datacenter-unauthorized-access-mvxz1sc9",
+    "title": "ニッスイグループの日水物流で入出荷停止、委託先への不正アクセスが原因か 情報流出は調査中",
+    "url": "https://cybersecurity-jp.com/news/117045",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-08",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-kansai-university-of-international-studies-internal-system-unauthorized-access-mvxz232t",
+    "title": "関西国際大学、学内システムに不正アクセス インターネット接続を停止",
+    "url": "https://cybersecurity-jp.com/news/117034",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-09-30",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-mrmax-app-online-store-unauthorized-access-mvxz2d4f",
+    "title": "ミスターマックスで個人情報流出、最大173万人超に影響の可能性",
+    "url": "https://cybersecurity-jp.com/news/117036",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-06",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-daiki-suisan-official-app-unauthorized-access-mvxz2lm7",
+    "title": "大起水産公式アプリに不正アクセス、約17万5千人の個人情報漏えいのおそれ",
+    "url": "https://cybersecurity-jp.com/news/117032",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-nikkei-bp-employee-email-account-phishing-mvxz2wot",
+    "title": "日経BP、従業員メールに不正アクセス 個人情報26件漏えいの恐れ",
+    "url": "https://cybersecurity-jp.com/news/117013",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-04",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-jogmec-unauthorized-access-email-address-leak-mvxz3797",
+    "title": "JOGMECに不正アクセス、メールアドレス約8,500件が漏えいした可能性",
+    "url": "https://cybersecurity-jp.com/news/117021",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-02",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-monogatari-yakiniku-king-app-unauthorized-access-mvxz3g5y",
+    "title": "焼肉きんぐ公式アプリシステム、不正アクセスにより１千万件超の情報漏えいか",
+    "url": "https://cybersecurity-jp.com/news/117015",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-05",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-abahouse-international-internal-system-unauthorized-access-mvxz3swb",
+    "title": "アバハウスに不正アクセス、退会者を含む顧客情報が漏えいした可能性",
+    "url": "https://cybersecurity-jp.com/news/116971",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-toyobo-mc-employee-email-account-phishing-mvxz43ij",
+    "title": "東洋紡エムシーの従業員2人のメールアカウントに不正アクセス",
+    "url": "https://cybersecurity-jp.com/news/116973",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-09-30",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-sammy-networks-777con-pass-unauthorized-access-mvxz4auy",
+    "title": "777CON-PASSに不正アクセス、個人情報流出の可能性",
+    "url": "https://cybersecurity-jp.com/news/116957",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-02",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-safer-internet-association-sakura-rental-server-unauthorized-access-mvxz4lpq",
+    "title": "セーファーインターネット協会、利用サーバーへの不正アクセスで情報漏えいの可能性",
+    "url": "https://cybersecurity-jp.com/news/116955",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-02",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-benefit-one-benewan-platform-program-defect-data-leak-mvxz4wvl",
+    "title": "ベネフィット・ワン、1万3460人の個人情報漏えい 把握済みの不具合解消に不備",
+    "url": "https://cybersecurity-jp.com/news/116906",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-lashinbang-service-unauthorized-access-mvxz580d",
+    "title": "らしんばんに不正アクセス、顧客情報が漏えいした可能性",
+    "url": "https://cybersecurity-jp.com/news/116904",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-10-01",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-eplus-smachike-refund-system-unauthorized-access-mvy3wsw9",
+    "title": "イープラスに不正アクセス、スマチケの払戻し情報1,463件が漏えい",
+    "url": "https://cybersecurity-jp.com/news/116881",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-09-29",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-sanpo-foods-website-unauthorized-access-tampering-mvy3x5ee",
+    "title": "サンポー食品のウェブサイトに不正アクセス、管理者権限の取得や改ざんを確認",
+    "url": "https://cybersecurity-jp.com/news/116879",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-times-mobility-times-car-web-system-unauthorized-access-mvy3xfef",
+    "title": "タイムズカー、不正アクセスで約660万アカウントの個人情報漏えい 免許証画像なども対象",
+    "url": "https://cybersecurity-jp.com/news/116861",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-09-28",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-fines-reservation-system-unauthorized-access-mvy3xr28",
+    "title": "ファインズ、予約システムへの不正アクセスを公表 予約者情報約154万件が対象",
+    "url": "https://cybersecurity-jp.com/news/116863",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-tokyo-metro-metpo-member-service-unauthorized-access-mvy3y0qd",
+    "title": "東京メトロに不正アクセス、メトポ会員のメールアドレス約5万9,000件が流出した可能性",
+    "url": "https://cybersecurity-jp.com/news/116838",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-keio-plaza-hotel-ransomware-system-outage-mvy3ydmd",
+    "title": "京王プラザホテルにランサムウェア攻撃、一部システムに障害",
+    "url": "https://cybersecurity-jp.com/news/116836",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-kufu-company-kufu-zaim-unauthorized-access-mvy3yn3l",
+    "title": "家計簿アプリ「くふう Zaim」に不正アクセス、14名の登録情報を書き換え",
+    "url": "https://cybersecurity-jp.com/news/116811",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-09-22",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-lean-body-metabase-unauthorized-access-mvy3z13a",
+    "title": "LEAN BODY、約44万アカウントの顧客情報流出 分析ツールへの不正アクセスで",
+    "url": "https://cybersecurity-jp.com/news/116793",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-09-15",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-montbell-global-site-unauthorized-access-mvy3zbyx",
+    "title": "モンベル、海外向けサイトに不正アクセス 最大15名の個人情報漏えいの可能性",
+    "url": "https://cybersecurity-jp.com/news/116791",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-score-japan-website-tampering-mvy3zld2",
+    "title": "スコア・ジャパン、サイト改ざんで無関係なサイトへ誘導 個人情報の漏えいはなし",
+    "url": "https://cybersecurity-jp.com/news/116783",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-minc-internet-website-tampering-mvy3zvvu",
+    "title": "ミンク・インターネット、Webサイトへの不正アクセスで一部ページ改ざん 復旧と脆弱性対策を実施",
+    "url": "https://cybersecurity-jp.com/news/116781",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-09-17",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-osaka-city-recruitment-video-interview-system-unauthorized-access-mvy406rj",
+    "title": "大阪市の採用試験申込者106人の個人情報漏えいか、録画面接システムに不正アクセス",
+    "url": "https://cybersecurity-jp.com/news/116729",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-helpfeel-gyazo-unauthorized-access-mvy40j0t",
+    "title": "Gyazoに不正アクセス、ユーザー情報約2,362万件と画像メタデータが流出",
+    "url": "https://cybersecurity-jp.com/news/116727",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-09-16",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-halmek-halmek-up-admin-unauthorized-access-mvy40tee",
+    "title": "「HALMEK up」が不正アクセス被害、社員の認証情報を窃取",
+    "url": "https://cybersecurity-jp.com/news/116684",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-09-11",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-kumamoto-prefecture-onestop-job-site-tampering-mvy414mt",
+    "title": "「ワンストップジョブサイトくまもと」に不正アクセス 登録画面で偽警告、有料アプリへ誘導",
+    "url": "https://cybersecurity-jp.com/news/116663",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-odawara-engineering-germany-subsidiary-email-account-unauthorized-access-mvy41fs8",
+    "title": "小田原エンジニアリングで不正アクセス、取引先に金銭被害",
+    "url": "https://cybersecurity-jp.com/news/116661",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-09-15",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-kichiri-hd-applynow-recruitment-platform-unauthorized-access-mvy41t1j",
+    "title": "きちりHD子会社で不正アクセス、マイナンバーなど個人情報漏えいの可能性",
+    "url": "https://cybersecurity-jp.com/news/116619",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-09-09",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-nihon-university-cst-email-account-phishing-mvy421rf",
+    "title": "日本大学理工学部でメールアカウント乗っ取り、個人情報が閲覧された可能性",
+    "url": "https://cybersecurity-jp.com/news/116617",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-09-08",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-rikkyo-university-google-account-unauthorized-access-spam-mvy42do6",
+    "title": "立教大学で6人のアカウントに不正アクセス、迷惑メール1万7,668件を送信",
+    "url": "https://cybersecurity-jp.com/news/116570",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-09-08",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-digital-agency-gss-vpn-unauthorized-access-mvy42pgf",
+    "title": "デジタル庁のGSSに不正アクセス、職員らの個人情報約24.6万件が漏えいした可能性",
+    "url": "https://cybersecurity-jp.com/news/116568",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-09-11",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-kyoto-sanga-fan-club-member-data-email-misdelivery-mvy430d0",
+    "title": "京都サンガF.C.、会員1万5,612人分の個人情報を誤送信",
+    "url": "https://cybersecurity-jp.com/news/116509",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-09-08",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-chiba-prefecture-biodiversity-center-website-unauthorized-access-mvy43d36",
+    "title": "千葉県の生物多様性センターに不正アクセス、サイト公開停止",
+    "url": "https://cybersecurity-jp.com/news/116507",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-09-01",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-ota-city-ota-kumin-plaza-support-scam-pc-unauthorized-access-mvy43pgk",
+    "title": "大田区民プラザのパソコンに不正アクセス、556人の個人情報漏えいか",
+    "url": "https://cybersecurity-jp.com/news/116494",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-institute-of-science-tokyo-information-infrastructure-unauthorized-access-mvy441ga",
+    "title": "東京科学大学、情報基盤への不正アクセスで個人情報漏えいの疑い",
+    "url": "https://cybersecurity-jp.com/news/116492",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-09-07",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-trunk-employee-email-account-unauthorized-access-mvy44b69",
+    "title": "TRUNK、不正アクセスで個人情報漏えい なりすましメールに注意喚起",
+    "url": "https://cybersecurity-jp.com/news/116486",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-09-01",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-up-rakusai-shingakukan-promotion-site-unauthorized-access-mvy44oge",
+    "title": "「洛西進学教室」「進学館」に不正アクセス 採用応募者ら13人の個人情報に閲覧の可能性",
+    "url": "https://cybersecurity-jp.com/news/116447",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-09-04",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-chikyoren-rizap-generative-ai-personal-data-input-mvy451f4",
+    "title": "RIZAP担当者が個人情報を生成AIに入力 地方職員共済組合の726人に漏えいの可能性",
+    "url": "https://cybersecurity-jp.com/news/116443",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-09-04",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-daiko-xtech-daiko-b-email-account-unauthorized-access-mvy45dsg",
+    "title": "DAIKO XTECH、メール不正アクセス被害を公表",
+    "url": "https://cybersecurity-jp.com/news/116430",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-09-01",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-t-and-k-toka-ransomware-business-suspension-mvy45ksl",
+    "title": "T K TOKA、ランサムウェア被害で一部業務を停止",
+    "url": "https://cybersecurity-jp.com/news/116432",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-osaka-senyo-high-school-learning-cloud-tool-misposting-mvy45yg6",
+    "title": "大阪府立高で生徒257人分の個人情報が一時閲覧可能に",
+    "url": "https://cybersecurity-jp.com/news/116419",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-pmda-usb-memory-loss-mvy46b5o",
+    "title": "PMDA、業務用USBメモリを紛失 286人分の個人情報を保存か",
+    "url": "https://cybersecurity-jp.com/news/116417",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-08-07",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-mandarake-server-unauthorized-access-mvy46kie",
+    "title": "まんだらけに不正アクセス、個人情報漏えいの可能性 通販停止とオークション延期",
+    "url": "https://cybersecurity-jp.com/news/116396",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-cinra-cinra-job-unauthorized-access-mvy46wm7",
+    "title": "「CINRA JOB」に不正アクセス、会員の個人情報が漏えいしたおそれ",
+    "url": "https://cybersecurity-jp.com/news/116394",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-08-27",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-coo-merhaikun-unauthorized-access-mvy4775r",
+    "title": "「める配くん」への不正アクセス、顧客メールアドレス2,255件が漏えい",
+    "url": "https://cybersecurity-jp.com/news/116378",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-corona-construction-cloud-service-unauthorized-access-mvy47jdv",
+    "title": "コロナ、最大3万5,000人分の個人情報が漏えいした可能性",
+    "url": "https://cybersecurity-jp.com/news/116376",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-08-28",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-kindal-ec-site-staff-account-phishing-unauthorized-access-mvy47t9k",
+    "title": "フィッシングメールで13万件超の個人情報が漏えいした可能性、カインドオル",
+    "url": "https://cybersecurity-jp.com/news/116362",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-akatake-engineering-ransomware-system-outage-mvy486bd",
+    "title": "赤武エンジニアリングでランサムウェア感染、システム障害が発生",
+    "url": "https://cybersecurity-jp.com/news/116322",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-cec-tokyo-second-datacenter-ransomware-mvy48g5a",
+    "title": "シーイーシーのデータセンターにランサムウェア攻撃、サービスは復旧",
+    "url": "https://cybersecurity-jp.com/news/116320",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-ne-chemcat-internal-system-unauthorized-access-mvy48r45",
+    "title": "エヌ・イー ケムキャットに不正アクセス、従業員らの個人情報漏えいのおそれ",
+    "url": "https://cybersecurity-jp.com/news/116279",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-08-20",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-cota-cyberattack-unauthorized-access-mvy49119",
+    "title": "コタがサイバー攻撃の調査結果を公表 約10万9000件の個人情報が閲覧された可能性",
+    "url": "https://cybersecurity-jp.com/news/116264",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-08-20",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-kankyo-kiki-mushitaiji-com-payment-page-tampering-mvy49dov",
+    "title": "環境機器の「虫退治ドットコム」に不正アクセス、顧客15名の情報漏えいのおそれ",
+    "url": "https://cybersecurity-jp.com/news/116238",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-rakuten-books-network-pc-unauthorized-access-mvy49n2d",
+    "title": "楽天ブックスネットワークで不正アクセス｜3万5千件の個人情報が対象PCに保存",
+    "url": "https://cybersecurity-jp.com/news/116236",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-08-21",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-weblife-oem-homepage-service-unauthorized-access-mvy49zwy",
+    "title": "ウェブライフのOEM向けサービスで不正アクセス、最大7千件超の個人情報漏えいの可能性",
+    "url": "https://cybersecurity-jp.com/news/116193",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-08-18",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-kyoiku-software-dormant-rental-server-ransomware-mvy4aagp",
+    "title": "教育ソフトウェアの休眠サーバーに不正アクセス、漏えいの可能性",
+    "url": "https://cybersecurity-jp.com/news/116188",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-08-17",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-joetsu-cable-vision-helpdesk-email-unauthorized-access-mvy4am8r",
+    "title": "上越ケーブルビジョン、ヘルプデスクのメールに不正アクセス│個人情報漏えいのおそれ",
+    "url": "https://cybersecurity-jp.com/news/116176",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-08-18",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-ghp-club-chapel-hotels-reservation-system-unauthorized-access-mvy4awji",
+    "title": "クラブチャペルホテルズ、不正アクセスで顧客情報流出の可能性",
+    "url": "https://cybersecurity-jp.com/news/116173",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-08-17",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-voising-bi-tool-unauthorized-access-mvy4ba2q",
+    "title": "VOISINGのBIツールに不正アクセス、顧客情報が漏えい",
+    "url": "https://cybersecurity-jp.com/news/116156",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-08-18",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-rext-holdings-rext-ransomware-system-outage-mvy4blhu",
+    "title": "WonderGOOなど、REXT子会社にランサムウェア攻撃",
+    "url": "https://cybersecurity-jp.com/news/116145",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-08-14",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-ryomo-systems-internal-system-unauthorized-access-mvy4bx5s",
+    "title": "両毛システムズ、社内システムへの不正アクセスを確認",
+    "url": "https://cybersecurity-jp.com/news/116143",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-white-essence-reservation-site-core-system-unauthorized-access-mvy4c6o3",
+    "title": "ホワイトエッセンス、不正アクセスで予約サイトなどを一時停止",
+    "url": "https://cybersecurity-jp.com/news/116122",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-godai-kaihatsu-isabo-net-server-unauthorized-access-mvy4ciu9",
+    "title": "ウェブサービスが不正アクセス被害で会員情報漏えいの可能性│五大開発株式会社",
+    "url": "https://cybersecurity-jp.com/news/116120",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-08-10",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-charm-honten-ec-site-unauthorized-access-mvy4cu0h",
+    "title": "チャーム、不正アクセスで約23万件の顧客情報漏えいのおそれ",
+    "url": "https://cybersecurity-jp.com/news/116101",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-tanoshii-museum-unko-museum-website-tampering-mvy4d6ai",
+    "title": "「うんこミュージアム」公式サイトに不正アクセス、問い合わせ利用者4名の情報漏えいのおそれ",
+    "url": "https://cybersecurity-jp.com/news/116099",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-08-14",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-okinawa-prefecture-agriculture-support-email-attachment-misdelivery-mvy4dgai",
+    "title": "沖縄県が200人分の個人情報を誤送信、添付ファイルを未確認",
+    "url": "https://cybersecurity-jp.com/news/116065",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-rizap-aporito-online-store-malicious-script-mvy4dtcm",
+    "title": "APORITOオンラインストアで個人情報流出の可能性、不正スクリプトを確認",
+    "url": "https://cybersecurity-jp.com/news/116067",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": null,
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-kaigetsukan-group-accommodation-unauthorized-access-mvy4e1k3",
+    "title": "海月館グループの宿泊施設に不正アクセス 顧客情報流出の可能性",
+    "url": "https://cybersecurity-jp.com/news/116020",
+    "publisher": "サイバーセキュリティ.com",
+    "publishedAt": "2026-08-03",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-01"
   }
 ]

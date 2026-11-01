@@ -318,5 +318,1237 @@
     "website": "https://share.timescar.jp/",
     "id": "org-times-mobility",
     "country": "JP"
+  },
+  {
+    "name": "日本航空",
+    "slug": "japan-airlines",
+    "industry": "航空",
+    "website": "https://www.jal.co.jp/",
+    "id": "org-japan-airlines",
+    "country": "JP"
+  },
+  {
+    "name": "ラクスライトクラウド",
+    "slug": "rakus-lite-cloud",
+    "industry": "情報通信業（メール配信サービス）",
+    "website": "",
+    "id": "org-rakus-lite-cloud",
+    "country": "JP"
+  },
+  {
+    "name": "岩井コスモ証券",
+    "slug": "iwai-cosmo-securities",
+    "industry": "金融（証券）",
+    "website": "",
+    "id": "org-iwai-cosmo-securities",
+    "country": "JP"
+  },
+  {
+    "name": "ソースネクスト",
+    "slug": "sourcenext",
+    "industry": "ソフトウェア",
+    "website": "",
+    "id": "org-sourcenext",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社アドベンチャー",
+    "slug": "adventure",
+    "industry": "旅行・比較予約サイト運営",
+    "website": "",
+    "id": "org-adventure",
+    "country": "JP"
+  },
+  {
+    "name": "コミューン",
+    "slug": "commune",
+    "industry": "情報通信業（コミュニティプラットフォーム SaaS）",
+    "website": "",
+    "id": "org-commune",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社ハイホー",
+    "slug": "hi-ho",
+    "industry": "インターネットサービスプロバイダ・通信",
+    "website": "",
+    "id": "org-hi-ho",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社スカラコミュニケーションズ",
+    "slug": "scala-communications",
+    "industry": "情報通信業（SaaS・FAQシステム提供）",
+    "website": "",
+    "id": "org-scala-communications",
+    "country": "JP"
+  },
+  {
+    "name": "ヤマト運輸",
+    "slug": "yamato-transport",
+    "industry": "運輸・物流",
+    "website": "",
+    "id": "org-yamato-transport",
+    "country": "JP"
+  },
+  {
+    "name": "楽天証券",
+    "slug": "rakuten-securities",
+    "industry": "金融（証券）",
+    "website": "https://www.rakuten-sec.co.jp/",
+    "id": "org-rakuten-securities",
+    "country": "JP"
+  },
+  {
+    "name": "近鉄グループホールディングス",
+    "slug": "kintetsu-group-holdings",
+    "industry": "運輸・持株会社",
+    "website": "",
+    "id": "org-kintetsu-group-holdings",
+    "country": "JP"
+  },
+  {
+    "name": "クラブツーリズム",
+    "slug": "club-tourism",
+    "industry": "旅行業",
+    "website": "",
+    "id": "org-club-tourism",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社コアデ",
+    "slug": "coade",
+    "industry": "オンラインくじサイト運営",
+    "website": "",
+    "id": "org-coade",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社ディーエイチシー（DHC）",
+    "slug": "dhc",
+    "industry": "化粧品・健康食品",
+    "website": "",
+    "id": "org-dhc",
+    "country": "JP"
+  },
+  {
+    "name": "東急不動産",
+    "slug": "tokyu-land",
+    "industry": "不動産",
+    "website": "https://www.tokyu-land.co.jp/",
+    "id": "org-tokyu-land",
+    "country": "JP"
+  },
+  {
+    "name": "ユミルリンク",
+    "slug": "yumirlink",
+    "industry": "情報通信業（メール配信サービス）",
+    "website": "",
+    "id": "org-yumirlink",
+    "country": "JP"
+  },
+  {
+    "name": "外務省",
+    "slug": "ministry-of-foreign-affairs-japan",
+    "industry": "政府機関",
+    "website": "https://www.mofa.go.jp/",
+    "id": "org-ministry-of-foreign-affairs-japan",
+    "country": "JP"
+  },
+  {
+    "name": "良品計画",
+    "slug": "ryohin-keikaku",
+    "industry": "小売",
+    "website": "",
+    "id": "org-ryohin-keikaku",
+    "country": "JP"
+  },
+  {
+    "name": "グッドスマイルカンパニー",
+    "slug": "good-smile-company",
+    "industry": "ホビー・フィギュア製造販売／EC",
+    "website": "",
+    "id": "org-good-smile-company",
+    "country": "JP"
+  },
+  {
+    "name": "KDDI",
+    "slug": "kddi",
+    "industry": "通信",
+    "website": "https://www.kddi.com/",
+    "id": "org-kddi",
+    "country": "JP"
+  },
+  {
+    "name": "日本交通",
+    "slug": "nihon-kotsu",
+    "industry": "運輸（タクシー・ハイヤー）",
+    "website": "",
+    "id": "org-nihon-kotsu",
+    "country": "JP"
+  },
+  {
+    "name": "佐賀大学",
+    "slug": "saga-university",
+    "industry": "教育・研究（国立大学）",
+    "website": "https://www.saga-u.ac.jp/",
+    "id": "org-saga-university",
+    "country": "JP"
+  },
+  {
+    "name": "ヤクルト本社",
+    "slug": "yakult-honsha",
+    "industry": "食品・飲料製造",
+    "website": "",
+    "id": "org-yakult-honsha",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社ワールド（連結子会社 ティンパンアレイ）",
+    "slug": "world",
+    "industry": "アパレル・小売",
+    "website": "",
+    "id": "org-world",
+    "country": "JP"
+  },
+  {
+    "name": "アイリスオーヤマ（株式会社アイリスプラザ）",
+    "slug": "iris-ohyama",
+    "industry": "製造・小売（生活用品・家電）",
+    "website": "",
+    "id": "org-iris-ohyama",
+    "country": "JP"
+  },
+  {
+    "name": "アイシン",
+    "slug": "aisin",
+    "industry": "製造業（自動車部品）",
+    "website": "",
+    "id": "org-aisin",
+    "country": "JP"
+  },
+  {
+    "name": "アララ",
+    "slug": "arara",
+    "industry": "情報通信業（メール配信サービス）",
+    "website": "",
+    "id": "org-arara",
+    "country": "JP"
+  },
+  {
+    "name": "ライフカード",
+    "slug": "lifecard",
+    "industry": "金融（クレジットカード）",
+    "website": "",
+    "id": "org-lifecard",
+    "country": "JP"
+  },
+  {
+    "name": "ENEOS Power",
+    "slug": "eneos-power",
+    "industry": "電力・エネルギー",
+    "website": "",
+    "id": "org-eneos-power",
+    "country": "JP"
+  },
+  {
+    "name": "ソニー生命保険",
+    "slug": "sony-life-insurance",
+    "industry": "保険",
+    "website": "",
+    "id": "org-sony-life-insurance",
+    "country": "JP"
+  },
+  {
+    "name": "ドン・キホーテ",
+    "slug": "don-quijote",
+    "industry": "小売業",
+    "website": "",
+    "id": "org-don-quijote",
+    "country": "JP"
+  },
+  {
+    "name": "電力・ガス取引監視等委員会（経済産業省）",
+    "slug": "electricity-and-gas-market-surveillance-commission",
+    "industry": "行政機関",
+    "website": "",
+    "id": "org-electricity-and-gas-market-surveillance-commission",
+    "country": "JP"
+  },
+  {
+    "name": "花キューピット株式会社",
+    "slug": "hanacupid",
+    "industry": "小売（花の通販・EC）",
+    "website": "",
+    "id": "org-hanacupid",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社フューチャーショップ",
+    "slug": "futureshop",
+    "industry": "ECプラットフォーム",
+    "website": "",
+    "id": "org-futureshop",
+    "country": "JP"
+  },
+  {
+    "name": "北海道中央バス株式会社",
+    "slug": "hokkaido-chuo-bus",
+    "industry": "運輸（バス）",
+    "website": "",
+    "id": "org-hokkaido-chuo-bus",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社チャリ・ロト",
+    "slug": "chari-loto",
+    "industry": "公営競技投票サービス",
+    "website": "",
+    "id": "org-chari-loto",
+    "country": "JP"
+  },
+  {
+    "name": "古河電工パワーシステムズ株式会社",
+    "slug": "furukawa-electric-power-systems",
+    "industry": "製造業（電力機器・防災製品）",
+    "website": "",
+    "id": "org-furukawa-electric-power-systems",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社パピレス",
+    "slug": "papyless",
+    "industry": "電子書籍販売",
+    "website": "",
+    "id": "org-papyless",
+    "country": "JP"
+  },
+  {
+    "name": "社会福祉法人高生会",
+    "slug": "kouseikai",
+    "industry": "社会福祉",
+    "website": "",
+    "id": "org-kouseikai",
+    "country": "JP"
+  },
+  {
+    "name": "デジタルアーツ株式会社",
+    "slug": "digital-arts",
+    "industry": "情報セキュリティ・ソフトウェア",
+    "website": "",
+    "id": "org-digital-arts",
+    "country": "JP"
+  },
+  {
+    "name": "日本ピザハット株式会社",
+    "slug": "pizza-hut-japan",
+    "industry": "外食・飲食",
+    "website": "",
+    "id": "org-pizza-hut-japan",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社トレジャー・ファクトリー",
+    "slug": "treasure-factory",
+    "industry": "小売（リユース）",
+    "website": "",
+    "id": "org-treasure-factory",
+    "country": "JP"
+  },
+  {
+    "name": "日本瓦斯株式会社",
+    "slug": "nippon-gas",
+    "industry": "エネルギー（ガス）",
+    "website": "",
+    "id": "org-nippon-gas",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社アンドエスティHD",
+    "slug": "and-st-hd",
+    "industry": "小売（アパレル）",
+    "website": "",
+    "id": "org-and-st-hd",
+    "country": "JP"
+  },
+  {
+    "name": "佐川急便",
+    "slug": "sagawa-express",
+    "industry": "運輸・物流",
+    "website": "https://www.sagawa-exp.co.jp/",
+    "id": "org-sagawa-express",
+    "country": "JP"
+  },
+  {
+    "name": "イオン株式会社",
+    "slug": "aeon",
+    "industry": "小売業",
+    "website": "",
+    "id": "org-aeon",
+    "country": "JP"
+  },
+  {
+    "name": "日本電気株式会社（NEC）",
+    "slug": "nec",
+    "industry": "情報通信・ITサービス",
+    "website": "https://jpn.nec.com/",
+    "id": "org-nec",
+    "country": "JP"
+  },
+  {
+    "name": "PingCAP株式会社",
+    "slug": "pingcap",
+    "industry": "情報通信業（データベースソフトウェア・クラウドサービス）",
+    "website": "",
+    "id": "org-pingcap",
+    "country": "JP"
+  },
+  {
+    "name": "スクウェア・エニックス",
+    "slug": "square-enix",
+    "industry": "ゲーム・エンターテインメント",
+    "website": "https://www.jp.square-enix.com/",
+    "id": "org-square-enix",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社リクルート",
+    "slug": "recruit",
+    "industry": "情報サービス・インターネットメディア",
+    "website": "https://www.recruit.co.jp/",
+    "id": "org-recruit",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社Joshin",
+    "slug": "joshin",
+    "industry": "小売（家電量販）",
+    "website": "",
+    "id": "org-joshin",
+    "country": "JP"
+  },
+  {
+    "name": "クリプトン・フューチャー・メディア株式会社",
+    "slug": "crypton-future-media",
+    "industry": "ソフトウェア・音楽コンテンツ配信",
+    "website": "",
+    "id": "org-crypton-future-media",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社トラストバンク",
+    "slug": "trustbank",
+    "industry": "インターネットサービス（ふるさと納税サイト運営）",
+    "website": "https://www.trustbank.co.jp/",
+    "id": "org-trustbank",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社ビジネステック",
+    "slug": "businesstech",
+    "industry": "情報通信業（システム開発・提供）",
+    "website": "",
+    "id": "org-businesstech",
+    "country": "JP"
+  },
+  {
+    "name": "ラクスル株式会社",
+    "slug": "raksul",
+    "industry": "印刷通販・インターネットサービス",
+    "website": "https://corp.raksul.com/",
+    "id": "org-raksul",
+    "country": "JP"
+  },
+  {
+    "name": "社会福祉法人伸生紀",
+    "slug": "shinseiki-social-welfare-corporation",
+    "industry": "社会福祉",
+    "website": "",
+    "id": "org-shinseiki-social-welfare-corporation",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社ワサビ",
+    "slug": "wasabi",
+    "industry": "情報通信業（店舗向けシステム提供）",
+    "website": "",
+    "id": "org-wasabi",
+    "country": "JP"
+  },
+  {
+    "name": "京王電鉄",
+    "slug": "keio-corporation",
+    "industry": "鉄道・運輸",
+    "website": "",
+    "id": "org-keio-corporation",
+    "country": "JP"
+  },
+  {
+    "name": "Astemo株式会社",
+    "slug": "astemo",
+    "industry": "製造業（自動車部品）",
+    "website": "",
+    "id": "org-astemo",
+    "country": "JP"
+  },
+  {
+    "name": "和歌山県",
+    "slug": "wakayama-prefecture",
+    "industry": "地方自治体",
+    "website": "",
+    "id": "org-wakayama-prefecture",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社ACCESS",
+    "slug": "access",
+    "industry": "ソフトウェア・情報通信",
+    "website": "",
+    "id": "org-access",
+    "country": "JP"
+  },
+  {
+    "name": "日本経済新聞社",
+    "slug": "nikkei",
+    "industry": "報道・メディア",
+    "website": "https://www.nikkei.com/",
+    "id": "org-nikkei",
+    "country": "JP"
+  },
+  {
+    "name": "DCMホールディングス",
+    "slug": "dcm-holdings",
+    "industry": "小売業（ホームセンター）",
+    "website": "",
+    "id": "org-dcm-holdings",
+    "country": "JP"
+  },
+  {
+    "name": "ディップ株式会社",
+    "slug": "dip",
+    "industry": "人材サービス",
+    "website": "",
+    "id": "org-dip",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社ビーケー・ジャパン",
+    "slug": "bk-japan",
+    "industry": "飲食（ファストフード）",
+    "website": "",
+    "id": "org-bk-japan",
+    "country": "JP"
+  },
+  {
+    "name": "ちとせグループ",
+    "slug": "chitose-group",
+    "industry": "バイオテクノロジー",
+    "website": "",
+    "id": "org-chitose-group",
+    "country": "JP"
+  },
+  {
+    "name": "リゾートトラスト",
+    "slug": "resorttrust",
+    "industry": "ホテル・リゾート",
+    "website": "",
+    "id": "org-resorttrust",
+    "country": "JP"
+  },
+  {
+    "name": "大和証券株式会社",
+    "slug": "daiwa-securities",
+    "industry": "金融（証券）",
+    "website": "",
+    "id": "org-daiwa-securities",
+    "country": "JP"
+  },
+  {
+    "name": "大分県",
+    "slug": "oita-prefecture",
+    "industry": "地方自治体",
+    "website": "",
+    "id": "org-oita-prefecture",
+    "country": "JP"
+  },
+  {
+    "name": "横須賀市",
+    "slug": "yokosuka-city",
+    "industry": "地方自治体",
+    "website": "",
+    "id": "org-yokosuka-city",
+    "country": "JP"
+  },
+  {
+    "name": "ライドオンエクスプレスホールディングス",
+    "slug": "rideon-express-holdings",
+    "industry": "飲食（宅配）",
+    "website": "",
+    "id": "org-rideon-express-holdings",
+    "country": "JP"
+  },
+  {
+    "name": "LINEヤフー株式会社",
+    "slug": "ly-corporation",
+    "industry": "情報通信・インターネットサービス",
+    "website": "https://www.lycorp.co.jp/",
+    "id": "org-ly-corporation",
+    "country": "JP"
+  },
+  {
+    "name": "八十二長野銀行",
+    "slug": "hachijuni-nagano-bank",
+    "industry": "金融（銀行）",
+    "website": "",
+    "id": "org-hachijuni-nagano-bank",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社エネコム",
+    "slug": "enecom",
+    "industry": "情報通信",
+    "website": "",
+    "id": "org-enecom",
+    "country": "JP"
+  },
+  {
+    "name": "ヤマハ発動機株式会社",
+    "slug": "yamaha-motor",
+    "industry": "製造業（輸送用機器）",
+    "website": "",
+    "id": "org-yamaha-motor",
+    "country": "JP"
+  },
+  {
+    "name": "第一ライフグループ・第一生命保険",
+    "slug": "dai-ichi-life",
+    "industry": "保険",
+    "website": "",
+    "id": "org-dai-ichi-life",
+    "country": "JP"
+  },
+  {
+    "name": "オリックス生命保険株式会社",
+    "slug": "orix-life-insurance",
+    "industry": "保険",
+    "website": "",
+    "id": "org-orix-life-insurance",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社セイコーマート",
+    "slug": "seicomart",
+    "industry": "小売（コンビニエンスストア）",
+    "website": "",
+    "id": "org-seicomart",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社エイチ・アイ・エス",
+    "slug": "his",
+    "industry": "旅行業",
+    "website": "https://www.his-j.com/",
+    "id": "org-his",
+    "country": "JP"
+  },
+  {
+    "name": "九州旅客鉄道株式会社（JR九州）",
+    "slug": "jr-kyushu",
+    "industry": "鉄道・運輸",
+    "website": "",
+    "id": "org-jr-kyushu",
+    "country": "JP"
+  },
+  {
+    "name": "手間いらず株式会社",
+    "slug": "temairazu",
+    "industry": "情報通信業（宿泊施設向け予約管理システム）",
+    "website": "",
+    "id": "org-temairazu",
+    "country": "JP"
+  },
+  {
+    "name": "ブックオフグループホールディングス株式会社",
+    "slug": "bookoff-group-holdings",
+    "industry": "小売（リユース）",
+    "website": "",
+    "id": "org-bookoff-group-holdings",
+    "country": "JP"
+  },
+  {
+    "name": "東日本旅客鉄道株式会社（JR東日本）",
+    "slug": "jr-east",
+    "industry": "運輸（鉄道）",
+    "website": "https://www.jreast.co.jp/",
+    "id": "org-jr-east",
+    "country": "JP"
+  },
+  {
+    "name": "損害保険ジャパン株式会社",
+    "slug": "sompo-japan",
+    "industry": "保険",
+    "website": "",
+    "id": "org-sompo-japan",
+    "country": "JP"
+  },
+  {
+    "name": "戸田建設株式会社",
+    "slug": "toda-corporation",
+    "industry": "建設業",
+    "website": "",
+    "id": "org-toda-corporation",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社アクティブ",
+    "slug": "active",
+    "industry": "小売・通販",
+    "website": "",
+    "id": "org-active",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社第一興商",
+    "slug": "daiichikosho",
+    "industry": "カラオケ・飲食店運営",
+    "website": "",
+    "id": "org-daiichikosho",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社ローソン",
+    "slug": "lawson",
+    "industry": "小売（コンビニエンスストア）",
+    "website": "https://www.lawson.co.jp/",
+    "id": "org-lawson",
+    "country": "JP"
+  },
+  {
+    "name": "日水物流株式会社（ニッスイグループ）",
+    "slug": "nissui-logistics",
+    "industry": "物流（食品物流）",
+    "website": "",
+    "id": "org-nissui-logistics",
+    "country": "JP"
+  },
+  {
+    "name": "関西国際大学",
+    "slug": "kansai-university-of-international-studies",
+    "industry": "教育",
+    "website": "",
+    "id": "org-kansai-university-of-international-studies",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社ミスターマックス",
+    "slug": "mrmax",
+    "industry": "小売業",
+    "website": "",
+    "id": "org-mrmax",
+    "country": "JP"
+  },
+  {
+    "name": "大起水産株式会社",
+    "slug": "daiki-suisan",
+    "industry": "水産・小売・飲食",
+    "website": "",
+    "id": "org-daiki-suisan",
+    "country": "JP"
+  },
+  {
+    "name": "日経BP",
+    "slug": "nikkei-bp",
+    "industry": "出版・メディア",
+    "website": "",
+    "id": "org-nikkei-bp",
+    "country": "JP"
+  },
+  {
+    "name": "独立行政法人エネルギー・金属鉱物資源機構（JOGMEC）",
+    "slug": "jogmec",
+    "industry": "独立行政法人（エネルギー・資源）",
+    "website": "https://www.jogmec.go.jp/",
+    "id": "org-jogmec",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社物語コーポレーション",
+    "slug": "monogatari-corporation",
+    "industry": "外食",
+    "website": "",
+    "id": "org-monogatari-corporation",
+    "country": "JP"
+  },
+  {
+    "name": "アバハウスインターナショナル",
+    "slug": "abahouse-international",
+    "industry": "アパレル・小売",
+    "website": "",
+    "id": "org-abahouse-international",
+    "country": "JP"
+  },
+  {
+    "name": "東洋紡エムシー株式会社",
+    "slug": "toyobo-mc",
+    "industry": "化学・素材",
+    "website": "",
+    "id": "org-toyobo-mc",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社サミーネットワークス",
+    "slug": "sammy-networks",
+    "industry": "インターネットサービス・エンターテインメント",
+    "website": "",
+    "id": "org-sammy-networks",
+    "country": "JP"
+  },
+  {
+    "name": "一般社団法人セーファーインターネット協会",
+    "slug": "safer-internet-association",
+    "industry": "業界団体・非営利団体",
+    "website": "",
+    "id": "org-safer-internet-association",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社らしんばん",
+    "slug": "lashinbang",
+    "industry": "小売（中古アニメ・ホビー商品の買取・販売）",
+    "website": "",
+    "id": "org-lashinbang",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社イープラス",
+    "slug": "eplus",
+    "industry": "チケット販売",
+    "website": "https://eplus.jp/",
+    "id": "org-eplus",
+    "country": "JP"
+  },
+  {
+    "name": "サンポー食品株式会社",
+    "slug": "sanpo-foods",
+    "industry": "食品製造",
+    "website": "",
+    "id": "org-sanpo-foods",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社ファインズ",
+    "slug": "fines",
+    "industry": "情報通信業（予約システム提供）",
+    "website": "",
+    "id": "org-fines",
+    "country": "JP"
+  },
+  {
+    "name": "東京地下鉄株式会社（東京メトロ）",
+    "slug": "tokyo-metro",
+    "industry": "鉄道",
+    "website": "",
+    "id": "org-tokyo-metro",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社京王プラザホテル",
+    "slug": "keio-plaza-hotel",
+    "industry": "宿泊業（ホテル）",
+    "website": "",
+    "id": "org-keio-plaza-hotel",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社くふうカンパニー",
+    "slug": "kufu-company",
+    "industry": "情報通信業（アプリ・Webサービス）",
+    "website": "",
+    "id": "org-kufu-company",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社LEAN BODY",
+    "slug": "lean-body",
+    "industry": "オンラインフィットネスサービス",
+    "website": "",
+    "id": "org-lean-body",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社ベルカディア（モンベル）",
+    "slug": "bellcadia-montbell",
+    "industry": "小売（アウトドア用品）",
+    "website": "",
+    "id": "org-bellcadia-montbell",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社スコア・ジャパン",
+    "slug": "score-japan",
+    "industry": "不明",
+    "website": "https://scorejp.com",
+    "id": "org-score-japan",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社南日本情報処理センター",
+    "slug": "minami-nihon-joho-shori-center",
+    "industry": "情報通信業（インターネットプロバイダー）",
+    "website": "",
+    "id": "org-minami-nihon-joho-shori-center",
+    "country": "JP"
+  },
+  {
+    "name": "大阪市",
+    "slug": "osaka-city",
+    "industry": "地方自治体",
+    "website": "https://www.city.osaka.lg.jp/",
+    "id": "org-osaka-city",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社Helpfeel",
+    "slug": "helpfeel",
+    "industry": "情報通信業（SaaS・画像共有サービス）",
+    "website": "",
+    "id": "org-helpfeel",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社ハルメク",
+    "slug": "halmek",
+    "industry": "出版・通信販売",
+    "website": "",
+    "id": "org-halmek",
+    "country": "JP"
+  },
+  {
+    "name": "熊本県",
+    "slug": "kumamoto-prefecture",
+    "industry": "地方自治体",
+    "website": "",
+    "id": "org-kumamoto-prefecture",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社小田原エンジニアリング",
+    "slug": "odawara-engineering",
+    "industry": "製造業",
+    "website": "",
+    "id": "org-odawara-engineering",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社きちりホールディングス",
+    "slug": "kichiri-holdings",
+    "industry": "飲食・HR Tech（持株会社）",
+    "website": "",
+    "id": "org-kichiri-holdings",
+    "country": "JP"
+  },
+  {
+    "name": "日本大学理工学部",
+    "slug": "nihon-university-college-of-science-and-technology",
+    "industry": "教育・学術",
+    "website": "",
+    "id": "org-nihon-university-college-of-science-and-technology",
+    "country": "JP"
+  },
+  {
+    "name": "立教大学",
+    "slug": "rikkyo-university",
+    "industry": "教育",
+    "website": "https://www.rikkyo.ac.jp/",
+    "id": "org-rikkyo-university",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社京都パープルサンガ（京都サンガF.C.）",
+    "slug": "kyoto-purple-sanga",
+    "industry": "スポーツ（プロサッカークラブ）",
+    "website": "",
+    "id": "org-kyoto-purple-sanga",
+    "country": "JP"
+  },
+  {
+    "name": "千葉県",
+    "slug": "chiba-prefecture",
+    "industry": "地方自治体",
+    "website": "https://www.pref.chiba.lg.jp/",
+    "id": "org-chiba-prefecture",
+    "country": "JP"
+  },
+  {
+    "name": "大田区（大田区民プラザ／公益財団法人大田区文化振興協会）",
+    "slug": "ota-city",
+    "industry": "地方自治体・公共施設",
+    "website": "",
+    "id": "org-ota-city",
+    "country": "JP"
+  },
+  {
+    "name": "東京科学大学",
+    "slug": "institute-of-science-tokyo",
+    "industry": "教育・研究（大学）",
+    "website": "",
+    "id": "org-institute-of-science-tokyo",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社TRUNK",
+    "slug": "trunk",
+    "industry": "不明",
+    "website": "",
+    "id": "org-trunk",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社アップ",
+    "slug": "up-inc",
+    "industry": "教育（学習塾）",
+    "website": "",
+    "id": "org-up-inc",
+    "country": "JP"
+  },
+  {
+    "name": "地方職員共済組合",
+    "slug": "chikyoren",
+    "industry": "共済組合（公務員向け社会保険）",
+    "website": "",
+    "id": "org-chikyoren",
+    "country": "JP"
+  },
+  {
+    "name": "DAIKO XTECH株式会社",
+    "slug": "daiko-xtech",
+    "industry": "情報通信・ITサービス",
+    "website": "",
+    "id": "org-daiko-xtech",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社T&K TOKA",
+    "slug": "t-and-k-toka",
+    "industry": "製造業（印刷インキ）",
+    "website": "",
+    "id": "org-t-and-k-toka",
+    "country": "JP"
+  },
+  {
+    "name": "大阪府教育庁（大阪府立泉陽高校）",
+    "slug": "osaka-prefecture-board-of-education",
+    "industry": "教育・地方自治体",
+    "website": "",
+    "id": "org-osaka-prefecture-board-of-education",
+    "country": "JP"
+  },
+  {
+    "name": "独立行政法人医薬品医療機器総合機構（PMDA）",
+    "slug": "pmda",
+    "industry": "独立行政法人（医薬品・医療機器審査）",
+    "website": "https://www.pmda.go.jp/",
+    "id": "org-pmda",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社まんだらけ",
+    "slug": "mandarake",
+    "industry": "小売（中古品販売・通販）",
+    "website": "",
+    "id": "org-mandarake",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社cinra（CINRA, Inc.）",
+    "slug": "cinra",
+    "industry": "求人サービス・メディア",
+    "website": "",
+    "id": "org-cinra",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社クー",
+    "slug": "coo",
+    "industry": "不明",
+    "website": "",
+    "id": "org-coo",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社コロナ",
+    "slug": "corona",
+    "industry": "製造業（暖房機器・住宅設備）",
+    "website": "",
+    "id": "org-corona",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社カインドオル",
+    "slug": "kindal",
+    "industry": "小売（ブランド古着リユース・EC）",
+    "website": "",
+    "id": "org-kindal",
+    "country": "JP"
+  },
+  {
+    "name": "赤武エンジニアリング株式会社",
+    "slug": "akatake-engineering",
+    "industry": "エンジニアリング",
+    "website": "",
+    "id": "org-akatake-engineering",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社シーイーシー",
+    "slug": "cec",
+    "industry": "情報サービス業（ITサービス・データセンター）",
+    "website": "",
+    "id": "org-cec",
+    "country": "JP"
+  },
+  {
+    "name": "エヌ・イー ケムキャット株式会社",
+    "slug": "ne-chemcat",
+    "industry": "化学・製造業",
+    "website": "",
+    "id": "org-ne-chemcat",
+    "country": "JP"
+  },
+  {
+    "name": "コタ株式会社",
+    "slug": "cota",
+    "industry": "化学（美容室向けヘアケア製品製造販売）",
+    "website": "",
+    "id": "org-cota",
+    "country": "JP"
+  },
+  {
+    "name": "環境機器株式会社",
+    "slug": "kankyo-kiki",
+    "industry": "環境機器・通信販売",
+    "website": "",
+    "id": "org-kankyo-kiki",
+    "country": "JP"
+  },
+  {
+    "name": "楽天ブックスネットワーク株式会社",
+    "slug": "rakuten-books-network",
+    "industry": "出版取次・物流",
+    "website": "",
+    "id": "org-rakuten-books-network",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社ウェブライフ",
+    "slug": "weblife",
+    "industry": "情報通信業（ホームページ作成サービス）",
+    "website": "",
+    "id": "org-weblife",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社教育ソフトウェア",
+    "slug": "kyoiku-software",
+    "industry": "ソフトウェア・教育",
+    "website": "",
+    "id": "org-kyoiku-software",
+    "country": "JP"
+  },
+  {
+    "name": "上越ケーブルビジョン株式会社",
+    "slug": "joetsu-cable-vision",
+    "industry": "ケーブルテレビ・通信",
+    "website": "",
+    "id": "org-joetsu-cable-vision",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社GHP（クラブチャペルホテルズ）",
+    "slug": "ghp-club-chapel-hotels",
+    "industry": "宿泊業",
+    "website": "",
+    "id": "org-ghp-club-chapel-hotels",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社VOISING",
+    "slug": "voising",
+    "industry": "エンターテインメント",
+    "website": "",
+    "id": "org-voising",
+    "country": "JP"
+  },
+  {
+    "name": "REXT Holdings株式会社",
+    "slug": "rext-holdings",
+    "industry": "小売",
+    "website": "",
+    "id": "org-rext-holdings",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社両毛システムズ",
+    "slug": "ryomo-systems",
+    "industry": "情報通信業（システム開発・ITサービス）",
+    "website": "",
+    "id": "org-ryomo-systems",
+    "country": "JP"
+  },
+  {
+    "name": "ホワイトエッセンス株式会社",
+    "slug": "white-essence",
+    "industry": "医療・歯科（審美歯科サービス）",
+    "website": "",
+    "id": "org-white-essence",
+    "country": "JP"
+  },
+  {
+    "name": "五大開発株式会社",
+    "slug": "godai-kaihatsu",
+    "industry": "建設コンサルタント",
+    "website": "",
+    "id": "org-godai-kaihatsu",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社チャーム",
+    "slug": "charm",
+    "industry": "小売（ペット用品通販）",
+    "website": "",
+    "id": "org-charm",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社たのしいミュージアム",
+    "slug": "tanoshii-museum",
+    "industry": "エンターテインメント・展示施設運営",
+    "website": "",
+    "id": "org-tanoshii-museum",
+    "country": "JP"
+  },
+  {
+    "name": "沖縄県",
+    "slug": "okinawa-prefecture",
+    "industry": "地方自治体",
+    "website": "",
+    "id": "org-okinawa-prefecture",
+    "country": "JP"
+  },
+  {
+    "name": "RIZAP株式会社",
+    "slug": "rizap",
+    "industry": "小売・EC（フィットネス関連）",
+    "website": "",
+    "id": "org-rizap",
+    "country": "JP"
+  },
+  {
+    "name": "海月館グループ",
+    "slug": "kaigetsukan-group",
+    "industry": "宿泊業",
+    "website": "",
+    "id": "org-kaigetsukan-group",
+    "country": "JP"
   }
 ]
