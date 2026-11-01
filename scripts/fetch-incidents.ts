@@ -15,7 +15,10 @@ const FEEDS = [
   "https://scan.netsecurity.ne.jp/rss/index.rdf",
   "https://piyolog.hatenadiary.jp/rss",
   "https://rss.itmedia.co.jp/rss/2.0/enterprise.xml",
-  "https://cybersecurity-jp.com/feed",
+  "https://news.mynavi.jp/rss/techplus/enterprise/security",
+  "https://internet.watch.impress.co.jp/data/rss/1.0/iw/feed.rdf",
+  // WordPress feed pages back through older articles.
+  ...Array.from({ length: 20 }, (_, i) => `https://cybersecurity-jp.com/feed?paged=${i + 1}`),
 ]
 // Cheap title filter so only likely incidents reach Claude.
 const KEYWORDS = /不正アクセス|不正ログイン|情報漏え?い|漏洩|流出|ランサム|サイバー攻撃|個人情報|侵害|乗っ取/
