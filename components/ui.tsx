@@ -173,7 +173,7 @@ export const PageTitle: FC<{ kicker?: string; children: ReactNode }> = ({
   kicker,
   children,
 }) => (
-  <header style={{ margin: "1rem 0 1.5rem" }}>
+  <header style={{ margin: "16px 0 24px" }}>
     {kicker && (
       <p
         style={{
@@ -218,6 +218,37 @@ export const Facts: FC<{ items: [string, ReactNode][] }> = ({ items }) => (
       <div key={k} style={{ background: color.panel, padding: ".6rem .8rem" }}>
         <dt style={{ color: color.muted, fontSize: ".75rem" }}>{k}</dt>
         <dd style={{ marginTop: ".2rem" }}>{v}</dd>
+      </div>
+    ))}
+  </dl>
+)
+
+/** GitHub issue-style layout: content + right sidebar, stacking when narrow. */
+export const WithSidebar: FC<{ children: ReactNode; aside: ReactNode }> = ({
+  children,
+  aside,
+}) => (
+  <div style={{ display: "flex", flexWrap: "wrap", gap: "24px" }}>
+    <div style={{ flex: "999 1 32rem", minWidth: 0 }}>{children}</div>
+    <aside style={{ flex: "1 1 16rem", minWidth: 0 }}>{aside}</aside>
+  </div>
+)
+
+/** Sidebar metadata blocks separated by dividers, like a GitHub issue sidebar. */
+export const Sidebar: FC<{ items: [string, ReactNode][] }> = ({ items }) => (
+  <dl>
+    {items.map(([k, v], i) => (
+      <div
+        key={k}
+        style={{
+          borderTop: i ? `1px solid ${color.border}` : undefined,
+          padding: "12px 0",
+        }}
+      >
+        <dt style={{ color: color.muted, fontSize: "12px", fontWeight: 600 }}>
+          {k}
+        </dt>
+        <dd style={{ marginTop: "4px", overflowWrap: "anywhere" }}>{v}</dd>
       </div>
     ))}
   </dl>

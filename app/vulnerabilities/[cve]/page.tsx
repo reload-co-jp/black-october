@@ -3,7 +3,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { IncidentCard } from "@/components/incident-card"
 import { SourceList } from "@/components/source-list"
-import { Breadcrumbs, Facts, Grid, JsonLd, List, Mono, Muted, PageTitle, Row, Section, SeverityBadge } from "@/components/ui"
+import { Breadcrumbs, Grid, JsonLd, List, Mono, Muted, PageTitle, Row, Section, SeverityBadge, Sidebar, WithSidebar } from "@/components/ui"
 import { cvssSeverity } from "@/lib/labels"
 import { db, getSources, incidentsForVulnerability, toCard } from "@/lib/data"
 import { SITE_NAME } from "@/lib/site"
@@ -41,19 +41,21 @@ const Page = async ({ params }: Props) => {
         {v.kevStatus && <span style={{ color: "#ff3b3b", fontSize: ".85rem" }}>● 悪用確認済み（CISA KEV）</span>}
       </Row>
       <p>{v.description}</p>
-      <Section title="基本情報">
-        <Facts
-          items={[
-            ["CVE ID", <Mono key="c">{v.cveId}</Mono>],
-            ["CVSSスコア", <Mono key="s">{v.cvssScore ?? "不明"}</Mono>],
-            ["CVSSベクター", <Mono key="v" style={{ fontSize: ".75rem", wordBreak: "break-all" }}>{v.cvssVector ?? "不明"}</Mono>],
-            ["CWE", v.cweId ? <a key="w" href={`https://cwe.mitre.org/data/definitions/${v.cweId.slice(4)}.html`}><Mono>{v.cweId}</Mono></a> : "不明"],
-            ["公開日", <Mono key="p">{v.publishedAt ?? "不明"}</Mono>],
-            ["更新日", <Mono key="m">{v.modifiedAt ?? "不明"}</Mono>],
-            ["悪用状況", v.exploitation ?? (v.kevStatus ? "悪用確認済み" : "未確認")],
-          ]}
-        />
-      </Section>
+      <WithSidebar
+        aside={
+          <Sidebar
+              items={[
+                ["CVE ID", <Mono key="c">{v.cveId}</Mono>],
+                ["CVSSスコア", <Mono key="s">{v.cvssScore ?? "不明"}</Mono>],
+                ["CVSSベクター", <Mono key="v" style={{ fontSize: ".75rem", wordBreak: "break-all" }}>{v.cvssVector ?? "不明"}</Mono>],
+                ["CWE", v.cweId ? <a key="w" href={`https://cwe.mitre.org/data/definitions/${v.cweId.slice(4)}.html`}><Mono>{v.cweId}</Mono></a> : "不明"],
+                ["公開日", <Mono key="p">{v.publishedAt ?? "不明"}</Mono>],
+                ["更新日", <Mono key="m">{v.modifiedAt ?? "不明"}</Mono>],
+                ["悪用状況", v.exploitation ?? (v.kevStatus ? "悪用確認済み" : "未確認")],
+              ]}
+          />
+        }
+      >
       <Section title="影響製品・バージョン"><List items={v.affectedProducts} /></Section>
       <Section title="修正バージョン"><List items={v.fixedVersions} empty="未公表" /></Section>
       <Section title="対応策"><List items={v.mitigation} /></Section>
@@ -66,6 +68,7 @@ const Page = async ({ params }: Props) => {
         )}
         <p style={{ marginTop: "1rem" }}><Link href="/vulnerabilities/">← 脆弱性一覧へ</Link></p>
       </Section>
+      </WithSidebar>
     </article>
   )
 }

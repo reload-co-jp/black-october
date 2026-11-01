@@ -10,6 +10,8 @@ import {
   countryLabel,
   DateText,
   Facts,
+  Sidebar,
+  WithSidebar,
   Grid,
   JsonLd,
   List,
@@ -107,23 +109,25 @@ const Page = async ({ params }: Props) => {
         <CategoryTags values={i.categories} />
       </Row>
       <p style={{ fontSize: "1.05rem" }}>{i.summary}</p>
+      <WithSidebar
+        aside={
+          <Sidebar
+              items={[
+                ["対象組織", <Link key="o" href={`/organizations/${org.slug}/`}>{org.name}</Link>],
+                ["対象サービス", i.service ?? "不明"],
+                ["発生日", <DateText key="d" value={i.incidentDate} />],
+                ["発覚日", <DateText key="d" value={i.discoveredAt} />],
+                ["公表日", <DateText key="d" value={i.disclosedAt} />],
+                ["最終更新日", <DateText key="d" value={i.updatedAt} />],
+                ["国・地域", countryLabel(i.country)],
+                ["業種", i.industry],
+                ["対応状況", <StatusText key="s" value={i.status} />],
+                ["情報の確認状況", <VerificationBadge key="v" value={i.verificationStatus} />],
+              ]}
+          />
+        }
+      >
 
-      <Section title="基本情報">
-        <Facts
-          items={[
-            ["対象組織", <Link key="o" href={`/organizations/${org.slug}/`}>{org.name}</Link>],
-            ["対象サービス", i.service ?? "不明"],
-            ["発生日", <DateText key="d" value={i.incidentDate} />],
-            ["発覚日", <DateText key="d" value={i.discoveredAt} />],
-            ["公表日", <DateText key="d" value={i.disclosedAt} />],
-            ["最終更新日", <DateText key="d" value={i.updatedAt} />],
-            ["国・地域", countryLabel(i.country)],
-            ["業種", i.industry],
-            ["対応状況", <StatusText key="s" value={i.status} />],
-            ["情報の確認状況", <VerificationBadge key="v" value={i.verificationStatus} />],
-          ]}
-        />
-      </Section>
 
       <Section title="概要">
         <p>{i.summaryDetails || i.summary}</p>
@@ -263,6 +267,7 @@ const Page = async ({ params }: Props) => {
           <Muted>関連付けられたインシデントはありません。</Muted>
         )}
       </Section>
+      </WithSidebar>
     </article>
   )
 }

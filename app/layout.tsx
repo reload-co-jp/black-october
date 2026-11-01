@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Metadata } from "next"
 import { Footer, Header, Main, Title } from "@/components/elements/layout"
+import { UnderlineNav } from "@/components/elements/nav"
 import { SITE_NAME, SITE_URL } from "@/lib/site"
 import "./reset.css"
 
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 }
 
-const NAV = [
+const NAV: [string, string][] = [
   ["Incidents", "/incidents/"],
   ["Vulnerabilities", "/vulnerabilities/"],
   ["Techniques", "/techniques/"],
@@ -34,27 +35,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
               <span style={{ color: "#e5262b" }}>■</span> BLACK OCTOBER
             </Link>
           </Title>
-          <nav aria-label="メインナビゲーション">
-            <ul
-              style={{
-                display: "flex",
-                flexWrap: "wrap",
-                fontSize: ".875rem",
-                fontWeight: 600,
-                gap: ".25rem 1rem",
-                listStyle: "none",
-                padding: 0,
-              }}
-            >
-              {NAV.map(([name, href]) => (
-                <li key={href}>
-                  <Link href={href} style={{ color: "#e6edf3" }}>
-                    {name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
+          <UnderlineNav items={NAV} />
         </Header>
         <Main>{children}</Main>
         <Footer>
