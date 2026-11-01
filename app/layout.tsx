@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   openGraph: { ...OG_BASE, type: "website" },
   twitter: { card: "summary_large_image" },
   alternates: { canonical: "/" },
+  other: { "google-adsense-account": "ca-pub-6542845006087970" },
 }
 
 const NAV: [string, string][] = [
@@ -50,6 +51,11 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-0XL3V4J6CP"
           strategy="afterInteractive"
+        />
+        <Script
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6542845006087970"
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
         />
         <Script id="gtag-init" strategy="afterInteractive">
           {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-0XL3V4J6CP")`}
