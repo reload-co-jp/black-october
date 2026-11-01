@@ -10,7 +10,9 @@ type Json = null | boolean | number | string | Json[] | { [k: string]: Json }
 type Obj = { [k: string]: Json }
 type Data = Record<Collection, Obj[]>
 // Incident draft (or follow-up on `updateOf`) queued by scripts/fetch-incidents.ts, with the rows it references.
-type Candidate = { id: string; url: string; updateOf: string | null; organization: Obj | null; sources: Obj[]; incident: Obj }
+type Candidate = {
+  id: string; url: string; updateOf: string | null; organization: Obj | null; sources: Obj[]; vulnerabilities?: Obj[]; incident: Obj
+}
 
 const today = () => new Date().toISOString().slice(0, 10)
 
@@ -252,9 +254,13 @@ const AdminPage: FC = () => {
   const save = async () => {
     if (!draft || !data) return
     const row = clean(draft) as Obj
-    // A crawled candidate brings its organization and sources; create them first if missing.
+    // A crawled candidate brings its organization, sources and CVEs; create them first if missing.
     if (pending)
-      for (const [c, r] of [["organizations", pending.organization], ...pending.sources.map((x) => ["sources", x] as const)] as const)
+      for (const [c, r] of [
+        ["organizations", pending.organization],
+        ...pending.sources.map((x) => ["sources", x] as const),
+        ...(pending.vulnerabilities ?? []).map((x) => ["vulnerabilities", x] as const),
+      ] as const)
         if (r && !data[c].some((x) => x.id === r.id)) {
           const error = await send(c, r)
           if (error) return setMessage({ ok: false, text: `${c}: ${error}` })
@@ -351,7 +357,10 @@ const AdminPage: FC = () => {
     const base = c.updateOf && data?.incidents.find((i) => i.id === c.updateOf)
     if (base) {
       // Follow-up: the existing incident with the new articles attached.
-      setDraft({ ...structuredClone(base), sourceIds: [...(base.sourceIds as string[]), ...(c.incident.sourceIds as string[])], updatedAt: today() })
+      setDraft({ ...structuredClone(base), sourceIds: [...(base.sourceIds as string[]), ...(c.incident.sourceIds as string[])],
+        vulnerabilityIds: [...new Set([...(base.vulnerabilityIds as string[]), ...((c.incident.vulnerabilityIds as string[]) ?? [])])],
+        updatedAt: today(),
+      })
       setOriginalId(c.updateOf)
       setMessage({ ok: true, text: `続報: ${c.sources.map((x) => x.url).join("\n")}\n${c.incident.summary}\n反映して「更新」（出典も同時に登録）` })
     } else {

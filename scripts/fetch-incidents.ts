@@ -6,6 +6,7 @@ import { execFileSync } from "node:child_process"
 import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs"
 import { tmpdir } from "node:os"
 import { z } from "zod"
+import { CVE_ID, fromNvd } from "../lib/nvd.ts"
 import { ENUMS } from "../lib/validation.ts"
 
 const FEEDS = [
@@ -36,6 +37,7 @@ const Draft = z.object({
   }),
   publisher: str.describe("記事の媒体名"),
   publishedAt: date,
+  cveIds: z.array(str.regex(CVE_ID)).describe("この事件の原因・侵入経路として本文に書かれたCVE ID。関連記事欄などの無関係なものは含めない"),
   incident: z.object({
     title: str,
     slug: str.describe("組織と事象 (例: idcf-cloud-ransomware)"),
@@ -67,12 +69,15 @@ const Draft = z.object({
 const file = (f: string) => new URL(`../data/${f}.json`, import.meta.url)
 const read = (f: string) => JSON.parse(readFileSync(file(f), "utf8"))
 type Row = Record<string, unknown>
-type Candidate = { id: string; url: string; updateOf: string | null; organization: Row | null; sources: Row[]; incident: Row }
+type Candidate = {
+  id: string; url: string; updateOf: string | null; organization: Row | null; sources: Row[]; vulnerabilities?: Row[]; incident: Row
+}
 const store: { seen: string[]; items: Candidate[] } = existsSync(file("candidates"))
   ? read("candidates")
   : { seen: [], items: [] }
 const organizations: { id: string; name: string }[] = read("organizations")
 const incidents: { id: string; title: string; updatedAt: string }[] = read("incidents")
+const vulns: { id: string; cveId: string }[] = read("vulnerabilities")
 const seen = new Set([...store.seen, ...read("sources").map((s: { url: string }) => s.url)])
 const save = () => writeFileSync(file("candidates"), JSON.stringify({ ...store, seen: [...seen] }, null, 2) + "\n")
 
@@ -94,6 +99,25 @@ const get = (url: string): Promise<Response> =>
     await new Promise((r) => setTimeout(r, 3000))
     return fetch(url, { headers: { "user-agent": "Mozilla/5.0 (black-october crawler)" } })
   })
+
+const vulnId = (cve: string) => vulns.find((v) => v.cveId === cve)?.id ?? `vuln-${cve.toLowerCase()}`
+// Vulnerability rows for CVEs not in the database yet, filled from NVD where it has them.
+const newVulns = async (cves: string[]) => {
+  const rows: Row[] = []
+  for (const cve of cves.filter((c) => !vulns.some((v) => v.cveId === c))) {
+    // ponytail: fixed pacing for NVD's keyless limit (5 req / 30s); drop it when NVD_API_KEY is set
+    if (rows.length) await new Promise((r) => setTimeout(r, 6500))
+    const key = process.env.NVD_API_KEY
+    const res = await fetch(`https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=${cve}`, { headers: key ? { apiKey: key } : {} })
+    rows.push({
+      id: vulnId(cve), cveId: cve, title: cve, description: "", cvssScore: null, cvssVector: null, cweId: null,
+      affectedProducts: [], fixedVersions: [], publishedAt: null, modifiedAt: null, kevStatus: false,
+      exploitation: null, mitigation: [], incidentIds: [], sourceIds: [],
+      ...(res.ok ? fromNvd(await res.json()) : null),
+    })
+  }
+  return rows
+}
 
 const items = (
   await Promise.all(FEEDS.map(async (f) => [...(await (await get(f)).text()).matchAll(/<item[\s>][\s\S]*?<\/item>/g)]))
@@ -142,9 +166,14 @@ for (const { title, url } of items) {
       id: `src-${slug}-${Date.now().toString(36)}`, title, url, publisher: d.publisher, publishedAt: d.publishedAt,
       sourceType: "media", reliability: "secondary", retrievedAt: today,
     }
+    const cves = [...new Set(d.cveIds)]
+    const vulnerabilities = await newVulns(cves)
     const addTo = (c: Candidate) => {
       c.sources.push(source)
       c.incident.sourceIds = [...(c.incident.sourceIds as string[]), source.id]
+      const queued = c.vulnerabilities ?? []
+      c.vulnerabilities = [...queued, ...vulnerabilities.filter((v) => !queued.some((q) => q.id === v.id))]
+      c.incident.vulnerabilityIds = [...new Set([...((c.incident.vulnerabilityIds as string[]) ?? []), ...cves.map(vulnId)])]
     }
     // Same incident as a queued draft: just add the article as another source.
     const draft = store.items.find((c) => !c.updateOf && c.incident.id === d.sameAs)
@@ -161,8 +190,10 @@ for (const { title, url } of items) {
       if (update) addTo(update)
       else
         store.items.push({
-          id: `cand-${Date.now().toString(36)}`, url, updateOf: existing.id, organization: null, sources: [source],
-          incident: { id: existing.id, title: existing.title, summary: fields.summary, sourceIds: [source.id] },
+          id: `cand-${Date.now().toString(36)}`, url, updateOf: existing.id, organization: null, sources: [source], vulnerabilities,
+          incident: {
+            id: existing.id, title: existing.title, summary: fields.summary, sourceIds: [source.id], vulnerabilityIds: cves.map(vulnId),
+          },
         })
       console.log(`UPDATE ${title} -> ${existing.id}`)
       save()
@@ -180,6 +211,7 @@ for (const { title, url } of items) {
         ? null
         : (queuedOrg ?? { ...d.organization, id: orgId, slug: slugify(d.organization.slug), country: "JP" }),
       sources: [source],
+      vulnerabilities,
       incident: {
         id: `inc-${fields.disclosedAt.slice(0, 4)}-${slug}`,
         slug: `${slug}-${fields.disclosedAt.slice(0, 7)}`,
@@ -192,7 +224,7 @@ for (const { title, url } of items) {
         attackMethods: [],
         technicalNotes: "",
         timeline: [],
-        vulnerabilityIds: [],
+        vulnerabilityIds: cves.map(vulnId),
         relatedIncidentIds: [],
         sourceIds: [source.id],
         createdAt: today,
