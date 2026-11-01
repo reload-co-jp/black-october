@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Script from "next/script"
 import { Metadata } from "next"
 import { Footer, Header, Main, Title } from "@/components/elements/layout"
 import { UnderlineNav } from "@/components/elements/nav"
@@ -46,6 +47,13 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             掲載内容は公開情報の要約です。詳細は各出典をご確認ください。
           </p>
         </Footer>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-0XL3V4J6CP"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-0XL3V4J6CP")`}
+        </Script>
       </body>
     </html>
   )
