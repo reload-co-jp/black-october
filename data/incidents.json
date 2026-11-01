@@ -12,7 +12,11 @@
     "updatedAt": "2026-10-27",
     "country": "JP",
     "industry": "クラウド・データセンター",
-    "categories": ["ransomware", "vulnerability", "supply-chain"],
+    "categories": [
+      "ransomware",
+      "vulnerability",
+      "supply-chain"
+    ],
     "severity": "critical",
     "status": "recovered",
     "verificationStatus": "confirmed",
@@ -21,17 +25,33 @@
     "cause": {
       "status": "confirmed",
       "description": "顧客向け管理ポータル「IDCFクラウドポータル」の認証システムで使用していたオープンソースソフトウェアの脆弱性を悪用され、第三者が認証システムに侵入した。その後、管理コンソールを経由して仮想化基盤の管理者権限を不正に取得し、仮想サーバーを停止・暗号化した（第7報）。悪用されたソフトウェア名・CVEは公表されていない。",
-      "factors": ["ソフトウェアの脆弱性", "管理系システムからの権限昇格"]
+      "factors": [
+        "ソフトウェアの脆弱性",
+        "管理系システムからの権限昇格"
+      ]
     },
-    "attackMethods": ["vulnerability-exploitation", "privilege-escalation", "ransomware"],
+    "attackMethods": [
+      "vulnerability-exploitation",
+      "privilege-escalation",
+      "ransomware"
+    ],
     "impact": {
       "status": "confirmed",
       "affectedUsers": null,
       "leakedData": [
-        { "item": "ポータル登録情報（最大71社。企業名・ログインID・パスワードハッシュ等）の不正照会", "confidence": "confirmed" },
-        { "item": "仮想サーバー内データの外部流出", "confidence": "unknown" }
+        {
+          "item": "ポータル登録情報（最大71社。企業名・ログインID・パスワードハッシュ等）の不正照会",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "仮想サーバー内データの外部流出",
+          "confidence": "unknown"
+        }
       ],
-      "systems": ["IDCFクラウド 東日本リージョン1（4ゾーン）", "IDCFクラウドポータル"],
+      "systems": [
+        "IDCFクラウド 東日本リージョン1（4ゾーン）",
+        "IDCFクラウドポータル"
+      ],
       "serviceOutage": true,
       "financialLoss": null,
       "description": "影響を受けた契約者は495の企業・自治体。第7報で、仮想サーバー内データの外部持ち出しの痕跡は確認されなかったと公表。ポータルでは最大71社分の登録情報が不正に照会された（持ち出しの痕跡なし）。バックアップデータを取り出せた契約者は206。"
@@ -55,16 +75,61 @@
       "単一リージョン・単一事業者障害時の事業継続計画を確認する"
     ],
     "timeline": [
-      { "date": "2026-10-07", "title": "障害発生・検知", "description": "午前3時40分頃、東日本リージョン1の一部で仮想サーバーが停止。", "sourceIds": ["src-idcf-07"] },
-      { "date": "2026-10-07", "title": "ランサムウェア攻撃と特定", "description": "午前11時42分に原因をランサムウェア攻撃と特定。午後に全リージョンのポータルを停止し外部ネットワークを遮断。", "sourceIds": ["src-idcf-07"] },
-      { "date": "2026-10-09", "title": "影響範囲の報道", "description": "495の企業・自治体に影響、一部データは復旧困難と報じられる。", "sourceIds": ["src-atmarkit-idcf"] },
-      { "date": "2026-10-14", "title": "データ流出なしと判断", "description": "仮想サーバー内データの外部流出はなかったと判断。ポータルで48社分の登録情報への不正照会が判明。", "sourceIds": ["src-idcf-07"] },
-      { "date": "2026-10-18", "title": "バックアップサービス再開", "description": "「IDCFクラウド バックアップ」の提供を再開。", "sourceIds": ["src-idcf-07"] },
-      { "date": "2026-10-27", "title": "調査完了・原因公表（第7報）", "description": "OSSの脆弱性を突いた認証システムへの侵入が原因と公表。不正照会は最大71社に拡大。", "sourceIds": ["src-idcf-07"] }
+      {
+        "date": "2026-10-07",
+        "title": "障害発生・検知",
+        "description": "午前3時40分頃、東日本リージョン1の一部で仮想サーバーが停止。",
+        "sourceIds": [
+          "src-idcf-07"
+        ]
+      },
+      {
+        "date": "2026-10-07",
+        "title": "ランサムウェア攻撃と特定",
+        "description": "午前11時42分に原因をランサムウェア攻撃と特定。午後に全リージョンのポータルを停止し外部ネットワークを遮断。",
+        "sourceIds": [
+          "src-idcf-07"
+        ]
+      },
+      {
+        "date": "2026-10-09",
+        "title": "影響範囲の報道",
+        "description": "495の企業・自治体に影響、一部データは復旧困難と報じられる。",
+        "sourceIds": [
+          "src-atmarkit-idcf"
+        ]
+      },
+      {
+        "date": "2026-10-14",
+        "title": "データ流出なしと判断",
+        "description": "仮想サーバー内データの外部流出はなかったと判断。ポータルで48社分の登録情報への不正照会が判明。",
+        "sourceIds": [
+          "src-idcf-07"
+        ]
+      },
+      {
+        "date": "2026-10-18",
+        "title": "バックアップサービス再開",
+        "description": "「IDCFクラウド バックアップ」の提供を再開。",
+        "sourceIds": [
+          "src-idcf-07"
+        ]
+      },
+      {
+        "date": "2026-10-27",
+        "title": "調査完了・原因公表（第7報）",
+        "description": "OSSの脆弱性を突いた認証システムへの侵入が原因と公表。不正照会は最大71社に拡大。",
+        "sourceIds": [
+          "src-idcf-07"
+        ]
+      }
     ],
     "vulnerabilityIds": [],
     "relatedIncidentIds": [],
-    "sourceIds": ["src-idcf-07", "src-atmarkit-idcf"],
+    "sourceIds": [
+      "src-idcf-07",
+      "src-atmarkit-idcf"
+    ],
     "createdAt": "2026-10-31",
     "publishedAt": "2026-10-31"
   },
@@ -81,7 +146,12 @@
     "updatedAt": "2026-10-21",
     "country": "JP",
     "industry": "教育",
-    "categories": ["ransomware", "supply-chain", "unauthorized-access", "data-breach"],
+    "categories": [
+      "ransomware",
+      "supply-chain",
+      "unauthorized-access",
+      "data-breach"
+    ],
     "severity": "critical",
     "status": "investigating",
     "verificationStatus": "partially_confirmed",
@@ -90,24 +160,46 @@
     "cause": {
       "status": "partially_confirmed",
       "description": "大学の基盤システム保守・運用の委託先であるNECから、NECの再委託先事業者が2026年9月下旬にサイバー攻撃を受け、その再委託先が持つ正規のアカウントで大学のシステムに不正アクセスされたとの報告を受けた（第5報）。再委託先が攻撃を受けた経緯の詳細は公表されていない。",
-      "factors": ["委託先・外部サービスの侵害", "正規アカウントの悪用"]
+      "factors": [
+        "委託先・外部サービスの侵害",
+        "正規アカウントの悪用"
+      ]
     },
-    "attackMethods": ["supply-chain", "valid-accounts", "ransomware"],
+    "attackMethods": [
+      "supply-chain",
+      "valid-accounts",
+      "ransomware"
+    ],
     "impact": {
       "status": "partially_confirmed",
       "affectedUsers": null,
       "leakedData": [
-        { "item": "NECが利用していたクラウドストレージ内の大学関連の個人情報・システム関連情報", "confidence": "confirmed" },
-        { "item": "仮想化基盤内の教務システム関連情報（約13万件）", "confidence": "possible" }
+        {
+          "item": "NECが利用していたクラウドストレージ内の大学関連の個人情報・システム関連情報",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "仮想化基盤内の教務システム関連情報（約13万件）",
+          "confidence": "possible"
+        }
       ],
-      "systems": ["仮想化基盤", "学内ネットワーク", "メール", "教務・財務・人事給与・図書館システム"],
+      "systems": [
+        "仮想化基盤",
+        "学内ネットワーク",
+        "メール",
+        "教務・財務・人事給与・図書館システム"
+      ],
       "serviceOutage": true,
       "financialLoss": null,
       "description": "委託先のクラウドストレージからの漏洩は確認済みだが、内容・件数はNECに確認中。大学の仮想化基盤内の情報（教務システム関連 約13万件など）の漏洩有無は調査継続中。"
     },
     "response": {
       "description": "全授業を休講とし、システムの復旧と原因調査を進めた。対面授業は10月9日に再開。",
-      "measures": ["全授業の休講（10月2日〜8日）", "メール送受信の段階的再開", "委託先（NEC）と連携した影響範囲の調査"]
+      "measures": [
+        "全授業の休講（10月2日〜8日）",
+        "メール送受信の段階的再開",
+        "委託先（NEC）と連携した影響範囲の調査"
+      ]
     },
     "technicalNotes": "侵入に使われたのは保守用の正規アカウントであり、認証自体は「成功」している。このため認証失敗の監視だけでは検知が難しい。委託先・再委託先が保有する保守アカウントは、発注側から利用状況が見えにくく、委託先の侵害がそのまま発注者システムへの侵入経路になる。",
     "lessons": [
@@ -117,15 +209,55 @@
       "委託契約に再委託先のセキュリティ要件とインシデント時の報告義務を明記する"
     ],
     "timeline": [
-      { "date": "2026-10-02", "title": "システム障害発生・休講告知", "description": "未明に情報基盤システムで障害が発生し、同日に休講を告知。", "sourceIds": ["src-westeria-omu"] },
-      { "date": "2026-10-05", "title": "ランサムウェア攻撃と判断", "description": "記者会見で、仮想化基盤の障害はランサムウェア攻撃によるものと説明。", "sourceIds": ["src-westeria-omu"] },
-      { "date": "2026-10-09", "title": "対面授業再開", "description": "全キャンパスで対面授業を再開。", "sourceIds": ["src-westeria-omu"] },
-      { "date": "2026-10-20", "title": "NECが委託先経由の侵入を公表", "description": "再委託先の正規アカウントによる不正アクセスと、クラウドストレージからの情報漏洩をNECが公表。", "sourceIds": ["src-nec-20261020", "src-omu-05"] },
-      { "date": "2026-10-21", "title": "第5報", "description": "大学がNECからの報告内容を公表。漏洩情報の内容・件数は確認中。", "sourceIds": ["src-omu-05"] }
+      {
+        "date": "2026-10-02",
+        "title": "システム障害発生・休講告知",
+        "description": "未明に情報基盤システムで障害が発生し、同日に休講を告知。",
+        "sourceIds": [
+          "src-westeria-omu"
+        ]
+      },
+      {
+        "date": "2026-10-05",
+        "title": "ランサムウェア攻撃と判断",
+        "description": "記者会見で、仮想化基盤の障害はランサムウェア攻撃によるものと説明。",
+        "sourceIds": [
+          "src-westeria-omu"
+        ]
+      },
+      {
+        "date": "2026-10-09",
+        "title": "対面授業再開",
+        "description": "全キャンパスで対面授業を再開。",
+        "sourceIds": [
+          "src-westeria-omu"
+        ]
+      },
+      {
+        "date": "2026-10-20",
+        "title": "NECが委託先経由の侵入を公表",
+        "description": "再委託先の正規アカウントによる不正アクセスと、クラウドストレージからの情報漏洩をNECが公表。",
+        "sourceIds": [
+          "src-nec-20261020",
+          "src-omu-05"
+        ]
+      },
+      {
+        "date": "2026-10-21",
+        "title": "第5報",
+        "description": "大学がNECからの報告内容を公表。漏洩情報の内容・件数は確認中。",
+        "sourceIds": [
+          "src-omu-05"
+        ]
+      }
     ],
     "vulnerabilityIds": [],
     "relatedIncidentIds": [],
-    "sourceIds": ["src-omu-05", "src-nec-20261020", "src-westeria-omu"],
+    "sourceIds": [
+      "src-omu-05",
+      "src-nec-20261020",
+      "src-westeria-omu"
+    ],
     "createdAt": "2026-10-31",
     "publishedAt": "2026-10-31"
   },
@@ -139,10 +271,13 @@
     "incidentDate": null,
     "discoveredAt": "2026-10-23",
     "disclosedAt": "2026-10-27",
-    "updatedAt": "2026-10-29",
+    "updatedAt": "2026-11-01",
     "country": "JP",
     "industry": "通信・ISP",
-    "categories": ["unauthorized-access", "data-breach"],
+    "categories": [
+      "unauthorized-access",
+      "data-breach"
+    ],
     "severity": "high",
     "status": "contained",
     "verificationStatus": "confirmed",
@@ -158,20 +293,42 @@
       "status": "confirmed",
       "affectedUsers": 2586000,
       "leakedData": [
-        { "item": "氏名・電話番号・メールアドレス・ユーザーID・生年月日・性別・接続用ID（最大約258.6万件）", "confidence": "confirmed" },
-        { "item": "一部メールサービスのメールアドレスとメールパスワード（約5.4万件）", "confidence": "confirmed" },
-        { "item": "銀行口座情報（16件）", "confidence": "confirmed" },
-        { "item": "パスワード再設定用通知書情報（7件）", "confidence": "confirmed" },
-        { "item": "クレジットカード情報", "confidence": "unknown" }
+        {
+          "item": "氏名・電話番号・メールアドレス・ユーザーID・生年月日・性別・接続用ID（最大約258.6万件）",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "一部メールサービスのメールアドレスとメールパスワード（約5.4万件）",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "銀行口座情報（16件）",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "パスワード再設定用通知書情報（7件）",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "クレジットカード情報",
+          "confidence": "unknown"
+        }
       ],
-      "systems": ["So-net 会員データベース"],
+      "systems": [
+        "So-net 会員データベース"
+      ],
       "serviceOutage": false,
       "financialLoss": null,
       "description": "公式FAQでは、マイページ用ユーザーIDパスワード（7件を除く）、基本メールボックスのパスワード、クレジットカード情報の漏洩は確認していないとしている。10月29日時点で二次被害は確認されていない。"
     },
     "response": {
       "description": "対象サーバーを停止し、通信元からのアクセスを遮断。漏洩が確認されたメールサービスのパスワードを強制変更した。",
-      "measures": ["対象サーバー停止・通信元の遮断", "対象メールサービスのパスワード強制変更", "口座情報・通知書情報の対象者への個別連絡と書面送付", "不審な連絡への注意喚起"]
+      "measures": [
+        "対象サーバー停止・通信元の遮断",
+        "対象メールサービスのパスワード強制変更",
+        "口座情報・通知書情報の対象者への個別連絡と書面送付",
+        "不審な連絡への注意喚起"
+      ]
     },
     "technicalNotes": "侵入経路は公表されていない。漏洩項目にメールパスワードが含まれるため、同一パスワードを他サービスで使い回している利用者はクレデンシャルスタッフィングの標的になりうる。漏洩した氏名・電話番号・メールアドレスはフィッシングやSMS詐欺の文面の信憑性を高める材料になる。",
     "lessons": [
@@ -180,13 +337,38 @@
       "漏洩後は利用者へのフィッシング注意喚起を速やかに行う"
     ],
     "timeline": [
-      { "date": "2026-10-23", "title": "不正アクセスを確認", "description": "会員データベースへの外部からの不正アクセスを確認し、サーバー停止・通信遮断。", "sourceIds": ["src-sonet-faq"] },
-      { "date": "2026-10-27", "title": "公表", "description": "情報漏洩に関するお詫びとお知らせを公表。", "sourceIds": ["src-sonet-release"] },
-      { "date": "2026-10-29", "title": "対象者へ書面送付", "description": "口座情報・通知書情報の対象者へ書面を発送。", "sourceIds": ["src-sonet-faq"] }
+      {
+        "date": "2026-10-23",
+        "title": "不正アクセスを確認",
+        "description": "会員データベースへの外部からの不正アクセスを確認し、サーバー停止・通信遮断。",
+        "sourceIds": [
+          "src-sonet-faq"
+        ]
+      },
+      {
+        "date": "2026-10-27",
+        "title": "公表",
+        "description": "情報漏洩に関するお詫びとお知らせを公表。",
+        "sourceIds": [
+          "src-sonet-release"
+        ]
+      },
+      {
+        "date": "2026-10-29",
+        "title": "対象者へ書面送付",
+        "description": "口座情報・通知書情報の対象者へ書面を発送。",
+        "sourceIds": [
+          "src-sonet-faq"
+        ]
+      }
     ],
     "vulnerabilityIds": [],
     "relatedIncidentIds": [],
-    "sourceIds": ["src-sonet-release", "src-sonet-faq"],
+    "sourceIds": [
+      "src-sonet-release",
+      "src-sonet-faq",
+      "src-sonet-member-database-unauthorized-access-mvxlhhtf"
+    ],
     "createdAt": "2026-10-31",
     "publishedAt": "2026-10-31"
   },
@@ -200,10 +382,14 @@
     "incidentDate": null,
     "discoveredAt": "2026-10-20",
     "disclosedAt": "2026-10-21",
-    "updatedAt": "2026-10-27",
+    "updatedAt": "2026-11-01",
     "country": "JP",
     "industry": "ホスティング・クラウド",
-    "categories": ["unauthorized-access", "data-breach", "malware"],
+    "categories": [
+      "unauthorized-access",
+      "data-breach",
+      "malware"
+    ],
     "severity": "critical",
     "status": "investigating",
     "verificationStatus": "partially_confirmed",
@@ -219,10 +405,18 @@
       "status": "partially_confirmed",
       "affectedUsers": null,
       "leakedData": [
-        { "item": "利用者の情報（外部への持ち出しを確認）", "confidence": "confirmed" },
-        { "item": "FX・証券取引口座のログイン情報", "confidence": "possible" }
+        {
+          "item": "利用者の情報（外部への持ち出しを確認）",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "FX・証券取引口座のログイン情報",
+          "confidence": "possible"
+        }
       ],
-      "systems": ["お名前.com デスクトップクラウド（影響の可能性があるサーバー 26,739件）"],
+      "systems": [
+        "お名前.com デスクトップクラウド（影響の可能性があるサーバー 26,739件）"
+      ],
       "serviceOutage": true,
       "financialLoss": "利用者の取引口座で身に覚えのない取引の報告あり。件数・金額は未公表。",
       "description": "利用者の取引口座のログイン情報などが不正利用された可能性がある（第2報）。被害件数・金額は公表されていない。"
@@ -245,16 +439,2713 @@
       "侵害時に全台停止の判断ができる手順と連絡体制を事前に用意する"
     ],
     "timeline": [
-      { "date": "2026-10-20", "title": "不正なプログラムを確認", "description": "利用者からの問い合わせを受けた調査で不正なプログラムを確認し、新規申込とコントロールパネルを停止。", "sourceIds": ["src-westeria-gmo"] },
-      { "date": "2026-10-21", "title": "第1報・全サーバー停止", "description": "全プランのサーバーを順次停止。第1報では個人情報の漏洩・悪用は未確認としていた。", "sourceIds": ["src-onamae-01"] },
-      { "date": "2026-10-22", "title": "第2報", "description": "取引口座のログイン情報などが不正利用された可能性を公表。警察に相談。", "sourceIds": ["src-gmo-02"] },
-      { "date": "2026-10-24", "title": "第4報・情報持ち出しを確認", "description": "不正アクセスと利用者情報の外部持ち出しを確認。金銭要求を受けていることを公表。見舞金の支払いを発表。", "sourceIds": ["src-gmo-04"] },
-      { "date": "2026-10-27", "title": "第12報", "description": "公開された情報に本人情報が含まれる利用者への特別見舞金などを公表。", "sourceIds": ["src-gmo-12"] }
+      {
+        "date": "2026-10-20",
+        "title": "不正なプログラムを確認",
+        "description": "利用者からの問い合わせを受けた調査で不正なプログラムを確認し、新規申込とコントロールパネルを停止。",
+        "sourceIds": [
+          "src-westeria-gmo"
+        ]
+      },
+      {
+        "date": "2026-10-21",
+        "title": "第1報・全サーバー停止",
+        "description": "全プランのサーバーを順次停止。第1報では個人情報の漏洩・悪用は未確認としていた。",
+        "sourceIds": [
+          "src-onamae-01"
+        ]
+      },
+      {
+        "date": "2026-10-22",
+        "title": "第2報",
+        "description": "取引口座のログイン情報などが不正利用された可能性を公表。警察に相談。",
+        "sourceIds": [
+          "src-gmo-02"
+        ]
+      },
+      {
+        "date": "2026-10-24",
+        "title": "第4報・情報持ち出しを確認",
+        "description": "不正アクセスと利用者情報の外部持ち出しを確認。金銭要求を受けていることを公表。見舞金の支払いを発表。",
+        "sourceIds": [
+          "src-gmo-04"
+        ]
+      },
+      {
+        "date": "2026-10-27",
+        "title": "第12報",
+        "description": "公開された情報に本人情報が含まれる利用者への特別見舞金などを公表。",
+        "sourceIds": [
+          "src-gmo-12"
+        ]
+      }
     ],
     "vulnerabilityIds": [],
     "relatedIncidentIds": [],
-    "sourceIds": ["src-onamae-01", "src-gmo-02", "src-gmo-04", "src-gmo-12", "src-westeria-gmo"],
+    "sourceIds": [
+      "src-onamae-01",
+      "src-gmo-02",
+      "src-gmo-04",
+      "src-gmo-12",
+      "src-westeria-gmo",
+      "src-gmo-onamae-desktop-cloud-unauthorized-access-bounty-mvxlg1cr",
+      "src-gmo-onamae-desktop-cloud-unauthorized-access-mvxlhqpc",
+      "src-gmo-onamae-desktop-cloud-unauthorized-access-mvxlqwgg"
+    ],
     "createdAt": "2026-10-31",
     "publishedAt": "2026-10-31"
+  },
+  {
+    "id": "inc-2026-matsuya-foods-app-member-data-breach",
+    "slug": "matsuya-foods-app-member-data-breach-2026-10",
+    "title": "松屋フーズ 公式アプリ管理システムへの侵害による会員情報流出",
+    "summary": "松屋フーズの公式アプリ管理システムが第三者に侵害され、2026年10月28日に会員情報の流出が判明した。「松弁ネット」「モバイルオーダー」「松弁デリバリー」の利用者情報237万7127件と、アプリ会員情報2000件（最大3000件の可能性）が流出した。",
+    "organizationId": "org-matsuya-foods",
+    "service": "松屋公式アプリ（松弁ネット、モバイルオーダー、松弁デリバリー）",
+    "incidentDate": null,
+    "discoveredAt": "2026-10-28",
+    "disclosedAt": "2026-10-30",
+    "updatedAt": "2026-10-30",
+    "country": "JP",
+    "industry": "飲食業",
+    "categories": [
+      "unauthorized-access",
+      "data-breach"
+    ],
+    "severity": "critical",
+    "status": "investigating",
+    "verificationStatus": "confirmed",
+    "featured": false,
+    "summaryDetails": "松屋フーズは、公式アプリの管理システムが第三者に侵害され、アプリに登録された会員情報などが流出したことが2026年10月28日に判明したと発表した。「松弁ネット」「モバイルオーダー」「松弁デリバリー」を利用した顧客の会員ID、お届け先住所、氏名、電話番号、松屋ポイントの情報237万7127件が流出した。このほか、アプリから登録された会員ID、都道府県、氏名、電話番号、生年月日、メールアドレス、暗号化されたパスワード、松屋ポイントなどの会員情報2000件の流出も確認されており、最大3000件に増える可能性がある。同社は外部からのアクセスを検知した後、アプリやウェブサイトなどの関連サービスを停止し、経緯・原因・影響範囲を調べている。",
+    "cause": {
+      "status": "under_investigation",
+      "description": "公式アプリの管理システムが第三者に侵害された。詳しい経緯と原因は調査中。",
+      "factors": [
+        "公式アプリ管理システムへの第三者による侵害"
+      ]
+    },
+    "attackMethods": [],
+    "impact": {
+      "status": "partially_confirmed",
+      "affectedUsers": 2377127,
+      "leakedData": [
+        {
+          "item": "会員ID",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "お届け先住所",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "氏名",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "電話番号",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "松屋ポイント情報",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "都道府県",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "生年月日",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "メールアドレス",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "暗号化されたパスワード",
+          "confidence": "confirmed"
+        }
+      ],
+      "systems": [
+        "公式アプリ管理システム",
+        "松弁ネット",
+        "モバイルオーダー",
+        "松弁デリバリー"
+      ],
+      "serviceOutage": true,
+      "financialLoss": null,
+      "description": "松弁ネット・モバイルオーダー・松弁デリバリーの利用者情報237万7127件が流出した。加えてアプリ会員情報2000件の流出が確認されており、最大3000件となる可能性がある。アプリやウェブサイトなどの関連サービスは停止している。"
+    },
+    "response": {
+      "description": "外部からのアクセスを検知した後、関連サービスを停止して調査を進めている。個人情報保護委員会に報告し、情報が流出した関係者には順次連絡する予定。システムの復旧作業も進めている。",
+      "measures": [
+        "アプリ・ウェブサイトなど関連サービスの停止",
+        "個人情報保護委員会への報告",
+        "流出対象者への順次連絡",
+        "原因と影響範囲の調査",
+        "システム復旧作業"
+      ]
+    },
+    "technicalNotes": "",
+    "lessons": [
+      "アプリ管理システムのように大量の会員情報を扱う管理基盤では、アクセス制御と監視を強化する必要がある"
+    ],
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-matsuya-foods-app-member-data-breach-mvxldy6g",
+      "src-matsuya-foods-app-unauthorized-access-data-breach-mvxley44",
+      "src-matsuya-foods-app-website-unauthorized-access-mvxlfgqg"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-doutor-coffee-employee-data-breach",
+    "slug": "doutor-coffee-employee-data-breach-2026-10",
+    "title": "ドトールコーヒー システム侵害による従業員個人情報流出の可能性",
+    "summary": "ドトールコーヒーは2026年10月20日にシステムへの侵害を検知した。都内4店舗の従業員（退職者を含む）951人の個人情報が流出した可能性があると公表した。",
+    "organizationId": "org-doutor-coffee",
+    "service": null,
+    "incidentDate": null,
+    "discoveredAt": "2026-10-20",
+    "disclosedAt": "2026-10-29",
+    "updatedAt": "2026-10-29",
+    "country": "JP",
+    "industry": "飲食（コーヒーショップチェーン）",
+    "categories": [
+      "unauthorized-access",
+      "data-breach"
+    ],
+    "severity": "medium",
+    "status": "investigating",
+    "verificationStatus": "partially_confirmed",
+    "featured": false,
+    "summaryDetails": "2026年10月20日、同社はシステムへの侵害を検知した。このシステムに保存されていた、都内4店舗の退職者を含む従業員計951人の個人情報が流出した可能性がある。対象となる情報は氏名、住所、電話番号、生年月日、銀行口座番号など。同社は被害拡大を防ぐ措置を講じて調査を進めており、個人情報保護委員会へ報告したうえで、対象の従業員に順次連絡している。",
+    "cause": {
+      "status": "under_investigation",
+      "description": "システムへの侵害を検知したが、侵害の手口や原因の詳細は明らかにされていない。",
+      "factors": []
+    },
+    "attackMethods": [],
+    "impact": {
+      "status": "partially_confirmed",
+      "affectedUsers": 951,
+      "leakedData": [
+        {
+          "item": "氏名",
+          "confidence": "possible"
+        },
+        {
+          "item": "住所",
+          "confidence": "possible"
+        },
+        {
+          "item": "電話番号",
+          "confidence": "possible"
+        },
+        {
+          "item": "生年月日",
+          "confidence": "possible"
+        },
+        {
+          "item": "銀行口座番号",
+          "confidence": "possible"
+        }
+      ],
+      "systems": [
+        "従業員の個人情報を保存していたシステム"
+      ],
+      "serviceOutage": null,
+      "financialLoss": null,
+      "description": "都内4店舗の従業員（退職者を含む）951人の個人情報が流出した可能性がある。"
+    },
+    "response": {
+      "description": "被害拡大の防止措置を講じたうえで事実関係を調査している。個人情報保護委員会へ報告し、対象の従業員に順次連絡している。",
+      "measures": [
+        "被害拡大防止措置",
+        "事実関係の調査",
+        "個人情報保護委員会への報告",
+        "対象従業員への連絡"
+      ]
+    },
+    "technicalNotes": "",
+    "lessons": [],
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-doutor-coffee-employee-data-breach-mvxle7r0"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-giftee-egift-unauthorized-issuance",
+    "slug": "giftee-egift-unauthorized-issuance-2026-10",
+    "title": "ギフティ システムの脆弱性を突いた不正アクセスによるeギフトの不正発行",
+    "summary": "ギフティグループ子会社のギフティが2026年10月25日、システムの脆弱性を突いた不正アクセスを受けました。第三者にeギフトを不正に発行され、約5億5000万円の損失が見込まれています。",
+    "organizationId": "org-giftee",
+    "service": "eギフト",
+    "incidentDate": "2026-10-25",
+    "discoveredAt": null,
+    "disclosedAt": "2026-10-29",
+    "updatedAt": "2026-10-29",
+    "country": "JP",
+    "industry": "電子ギフトサービス",
+    "categories": [
+      "unauthorized-access",
+      "vulnerability"
+    ],
+    "severity": "high",
+    "status": "contained",
+    "verificationStatus": "confirmed",
+    "featured": false,
+    "summaryDetails": "2026年10月25日、システムの脆弱性を悪用した不正アクセスがあり、そのシステムを通じて第三者がeギフトを不正に発行した。同社の金銭損失は10月26日時点で約5億5000万円の見込み。利用者が持つeギフトの不正使用や利用者の金銭的損失は確認されておらず、個人情報の流出も確認されていない。同社は原因となった脆弱性と攻撃経路を特定してシステムを停止しており、再開の予定はない。主要サービスは平常どおり動いている。",
+    "cause": {
+      "status": "confirmed",
+      "description": "システムの脆弱性を突いた不正アクセスにより、第三者がeギフトを不正に発行した。",
+      "factors": [
+        "システムの脆弱性"
+      ]
+    },
+    "attackMethods": [],
+    "impact": {
+      "status": "confirmed",
+      "affectedUsers": null,
+      "leakedData": [],
+      "systems": [
+        "eギフトを発行するシステム"
+      ],
+      "serviceOutage": false,
+      "financialLoss": "約5億5000万円（2026年10月26日時点の見込み）",
+      "description": "eギフトが不正に発行され、同社に約5億5000万円の損失が見込まれる。利用者の金銭的損失と個人情報の流出は確認されていない。"
+    },
+    "response": {
+      "description": "脆弱性と攻撃経路を特定して該当システムを停止した。今後も再開しない方針。",
+      "measures": [
+        "脆弱性と攻撃経路の特定",
+        "該当システムの停止と廃止"
+      ]
+    },
+    "technicalNotes": "",
+    "lessons": [
+      "価値を持つデジタル資産を発行するシステムは、脆弱性管理と発行処理の異常検知が欠かせない"
+    ],
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-giftee-egift-unauthorized-issuance-mvxlehpz"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-ana-amadeus-reservation-unauthorized-access",
+    "slug": "ana-amadeus-reservation-unauthorized-access-2026-10",
+    "title": "ANA 委託先Amadeusの旅客サービスシステム経由で予約情報に不正アクセス",
+    "summary": "全日本空輸（ANA）は、旅客サービスシステムの提供元であるスペインのAmadeus IT Group経由でANA便の予約情報に不正アクセスがあり、第三者が一部顧客の個人情報を参照した形跡があると発表した。",
+    "organizationId": "org-ana",
+    "service": "旅客サービスシステム（Amadeus）",
+    "incidentDate": null,
+    "discoveredAt": null,
+    "disclosedAt": "2026-10-29",
+    "updatedAt": "2026-10-29",
+    "country": "JP",
+    "industry": "航空",
+    "categories": [
+      "unauthorized-access",
+      "supply-chain",
+      "data-breach"
+    ],
+    "severity": "high",
+    "status": "investigating",
+    "verificationStatus": "partially_confirmed",
+    "featured": false,
+    "summaryDetails": "ANAは2026年10月29日、旅客サービスシステムの提供元であるAmadeusから報告を受け、ANA便の予約情報への不正アクセスが発覚したと発表した。第三者が一部顧客の個人情報を参照した形跡があるという。対象人数、情報項目、不正アクセスの時期は明らかにされておらず、ANAはAmadeusと連携して影響範囲の特定を進めている。ANAは2015年4月に国際線でAmadeusのシステムを使い始め、2026年5月には国内線も切り替えていた。同じAmadeusのシステムを巡っては、JALと日本トランスオーシャン航空が約9万2000人分の予約情報への不正アクセスを、大韓航空とアシアナ航空も予約番号の流出の形跡を発表している。",
+    "cause": {
+      "status": "under_investigation",
+      "description": "旅客サービスシステムの提供元であるAmadeus IT Groupのシステムへの不正アクセスにより、ANA便の予約情報が参照された。詳細な侵入経路は明らかにされていない。",
+      "factors": [
+        "委託先（Amadeus）のシステムへの不正アクセス",
+        "複数の航空会社が共通の旅客サービスシステムを利用していた"
+      ]
+    },
+    "attackMethods": [],
+    "impact": {
+      "status": "unconfirmed",
+      "affectedUsers": null,
+      "leakedData": [
+        {
+          "item": "予約情報に含まれる顧客の個人情報",
+          "confidence": "possible"
+        }
+      ],
+      "systems": [
+        "Amadeus 旅客サービスシステム（予約・発券・搭乗手続き）"
+      ],
+      "serviceOutage": null,
+      "financialLoss": null,
+      "description": "第三者が一部顧客の個人情報を参照した形跡がある。対象人数や情報項目、不正アクセスの時期は未公表。"
+    },
+    "response": {
+      "description": "Amadeusと連携して影響範囲の特定を進め、詳細が判明次第、対象顧客に通知する方針。",
+      "measures": [
+        "Amadeusと連携した影響範囲の調査",
+        "対象顧客への通知予定",
+        "Webサイトでの公表"
+      ]
+    },
+    "technicalNotes": "",
+    "lessons": [
+      "基幹システムを外部委託する場合、委託先のインシデントが自社顧客に直接影響するため、委託先のセキュリティ管理と報告体制の確保が重要",
+      "複数社が共通利用するシステムはサプライチェーン攻撃で影響が広がりやすい"
+    ],
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-ana-amadeus-reservation-unauthorized-access-mvxlf7sj"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-benefit-one-tokugai-forestec-unauthorized-access",
+    "slug": "benefit-one-tokugai-forestec-unauthorized-access-2026-10",
+    "title": "ベネフィット・ワン 委託先フォレステックへの不正アクセスによる「トク買」会員情報漏えい",
+    "summary": "ベネフィット・ワンの業務委託先フォレステックが運用するシステムが不正アクセスを受け、クレディセゾン会員向け優待サービス「トク買」の会員2万9465人分の個人情報が漏えいした。",
+    "organizationId": "org-benefit-one",
+    "service": "トク買",
+    "incidentDate": "2026-10-14",
+    "discoveredAt": "2026-10-21",
+    "disclosedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "country": "JP",
+    "industry": "福利厚生サービス",
+    "categories": [
+      "unauthorized-access",
+      "data-breach",
+      "supply-chain"
+    ],
+    "severity": "high",
+    "status": "contained",
+    "verificationStatus": "confirmed",
+    "featured": false,
+    "summaryDetails": "フォレステックのシステムに2026年10月14日から20日まで断続的に不正アクセスがあった。21日にフォレステックが一部を検知してベネフィット・ワンに報告し、ベネフィット・ワンは同日中にトク買を一時停止した。24〜25日にも追加の不正アクセスを検知している。漏えいしたのは氏名、フリガナ、生年月日、性別、郵便番号、メールアドレス、お客様番号、入退会情報、決済管理番号などで、退会済み会員も一部含まれる。決済システム連携用のベネフィット・ワンの認証関連情報も一部流出したおそれがある。クレディセゾンが管理するシステムからの漏えいではないという。詳しい原因は調査中。",
+    "cause": {
+      "status": "under_investigation",
+      "description": "業務委託先フォレステックが運用するシステムへの不正アクセス。詳しい原因は調査中。",
+      "factors": [
+        "委託先システムへの断続的な不正アクセス",
+        "検知後にも追加の不正アクセスが発生"
+      ]
+    },
+    "attackMethods": [],
+    "impact": {
+      "status": "confirmed",
+      "affectedUsers": 29465,
+      "leakedData": [
+        {
+          "item": "氏名",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "フリガナ",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "生年月日",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "性別",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "郵便番号",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "メールアドレス",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "お客様番号",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "入退会情報",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "会費徴収の決済処理用管理番号",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "決済システム連携用の認証関連情報",
+          "confidence": "possible"
+        }
+      ],
+      "systems": [
+        "フォレステックが運用するトク買関連システム"
+      ],
+      "serviceOutage": true,
+      "financialLoss": null,
+      "description": "トク買の会員2万9465人分（退会済み会員を一部含む）の個人情報が漏えい。トク買は一時停止中。"
+    },
+    "response": {
+      "description": "検知当日にトク買を一時停止し、認証関連情報を変更。対象会員へ順次メールで連絡し、不審メールへの注意を呼び掛けている。再開は原因究明と再発防止策完了後の予定。",
+      "measures": [
+        "サービスの一時停止",
+        "認証関連情報の変更",
+        "対象会員へのメール連絡",
+        "なりすましメールへの注意喚起",
+        "原因調査と再発防止策の策定"
+      ]
+    },
+    "technicalNotes": "",
+    "lessons": [
+      "委託先システムのセキュリティ管理・監視体制の確認が重要",
+      "検知後の追加侵入を防ぐ迅速な封じ込めが必要"
+    ],
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-benefit-one-tokugai-forestec-unauthorized-access-mvxlfqtp"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-digital-agency-studio-form-data-leak",
+    "slug": "digital-agency-studio-form-data-leak-2026-10",
+    "title": "デジタル庁 Web制作ツール「Studio」への不正アクセスで問い合わせ情報最大1万3323件漏えいの可能性",
+    "summary": "デジタル庁は、公式サイトの運営に一部使っていたノーコードWeb制作サービス「Studio」が不正アクセスを受けた影響で、問い合わせフォームに寄せられた情報が最大1万3323件漏えいした可能性があると発表した。",
+    "organizationId": "org-digital-agency",
+    "service": "デジタル庁公式サイト（Studio利用部分）の問い合わせフォーム",
+    "incidentDate": null,
+    "discoveredAt": "2026-10-16",
+    "disclosedAt": "2026-10-22",
+    "updatedAt": "2026-10-22",
+    "country": "JP",
+    "industry": "行政機関",
+    "categories": [
+      "unauthorized-access",
+      "supply-chain",
+      "data-breach"
+    ],
+    "severity": "high",
+    "status": "investigating",
+    "verificationStatus": "partially_confirmed",
+    "featured": false,
+    "summaryDetails": "Studioの運営元が10月16日にデジタル庁へ報告し、事案が分かった。第三者がStudioのクラウド環境に不正アクセスし、データを外部から取得できる状態にしていた。漏えいした可能性があるのは、2021年5月から2023年3月までに問い合わせフォームへ入力された内容。内訳は「一般的なご意見・ご要望」最大8833件、新型コロナの接種証明書アプリに関する問い合わせ最大3661件、ワークショップなどへの参加関連最大462件、採用に関する問い合わせ最大250件、マイナちゃんの着ぐるみ借用に関する問い合わせ最大117件。このほか、デジタル庁職員や委託事業の従事者のStudioアカウント情報35件も漏えいした可能性がある。Studio社は、登録している全ユーザーの情報が流出した可能性があると発表している。",
+    "cause": {
+      "status": "partially_confirmed",
+      "description": "委託先にあたるWeb制作サービス「Studio」のクラウド環境に第三者が不正アクセスし、データを外部から取得できる状態にしていた。",
+      "factors": [
+        "外部SaaS（ノーコードWeb制作サービス）のクラウド環境への不正アクセス",
+        "過去の問い合わせデータが外部サービス上に保管されたままだった"
+      ]
+    },
+    "attackMethods": [],
+    "impact": {
+      "status": "partially_confirmed",
+      "affectedUsers": 13323,
+      "leakedData": [
+        {
+          "item": "氏名（任意で記入した場合）",
+          "confidence": "possible"
+        },
+        {
+          "item": "メールアドレス（任意で記入した場合）",
+          "confidence": "possible"
+        },
+        {
+          "item": "問い合わせ内容",
+          "confidence": "possible"
+        },
+        {
+          "item": "所属（一部の窓口）",
+          "confidence": "possible"
+        },
+        {
+          "item": "送付先住所（一部の窓口）",
+          "confidence": "possible"
+        },
+        {
+          "item": "電話番号（一部の窓口）",
+          "confidence": "possible"
+        },
+        {
+          "item": "職員・委託事業従事者のStudioアカウント情報35件（氏名・メールアドレス）",
+          "confidence": "possible"
+        }
+      ],
+      "systems": [
+        "Studio（ノーコードWeb制作サービス）",
+        "デジタル庁公式サイトの問い合わせフォーム"
+      ],
+      "serviceOutage": null,
+      "financialLoss": null,
+      "description": "2021年5月から2023年3月までに問い合わせフォームへ入力された最大1万3323件と、Studioアカウント情報35件が漏えいした可能性がある。漏えいの範囲は精査中。10月22日時点で二次被害は確認されていない。"
+    },
+    "response": {
+      "description": "漏えいの可能性を公表し、デジタル庁や関係機関を名乗る不審なメール・電話・SMSに注意するよう呼び掛けた。漏えいの範囲は精査を続けている。",
+      "measures": [
+        "漏えいの可能性の公表",
+        "なりすましメール・電話・SMSへの注意喚起",
+        "漏えい範囲の精査"
+      ]
+    },
+    "technicalNotes": "",
+    "lessons": [
+      "外部SaaSに保管された個人情報も委託先リスクとして管理する必要がある",
+      "不要になった過去の問い合わせデータは外部サービス上から速やかに削除するべきである"
+    ],
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-digital-agency-studio-form-data-leak-mvxlgd1d",
+      "src-digital-agency-studio-form-data-leak-mvxlnd01"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-capcom-capcom-id-unauthorized-access",
+    "slug": "capcom-capcom-id-unauthorized-access-2026-10",
+    "title": "カプコン 「CAPCOM ID」への不正アクセスで1177万件の会員情報漏えい",
+    "summary": "カプコンは不正アクセスにより会員サービス「CAPCOM ID」の情報が全世界合計で1177万4247件漏えいしたと発表した。パスワードやクレジットカード情報の漏えいはないとしている。",
+    "organizationId": "org-capcom",
+    "service": "CAPCOM ID",
+    "incidentDate": null,
+    "discoveredAt": "2026-10-19",
+    "disclosedAt": "2026-10-22",
+    "updatedAt": "2026-10-22",
+    "country": "JP",
+    "industry": "ゲーム",
+    "categories": [
+      "unauthorized-access",
+      "data-breach"
+    ],
+    "severity": "high",
+    "status": "contained",
+    "verificationStatus": "confirmed",
+    "featured": false,
+    "summaryDetails": "2026年10月19日に不正アクセスの痕跡を発見し、同日中にアクセス元を遮断して調査を開始。20日に漏えいが判明した。漏えいした情報はメールアドレス、アカウント作成日時、最終ログイン時刻、ログイン回数などで、うち43件では生年月日やニックネームも含まれる。196件ではログインパスワードの不正変更があった。対象アカウントのパスワードはリセット済み。警察や個人情報保護委員会への報告は完了しており、攻撃手段の特定と緊急対応も済んでいる。ゲームやCAPCOM IDのサービスへの影響はないという。",
+    "cause": {
+      "status": "under_investigation",
+      "description": "不正アクセスによるもの。攻撃手段は特定済みとされるが詳細は公表されていない。",
+      "factors": []
+    },
+    "attackMethods": [],
+    "impact": {
+      "status": "confirmed",
+      "affectedUsers": 11774247,
+      "leakedData": [
+        {
+          "item": "メールアドレス",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "アカウント作成日時",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "最終ログイン時刻",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "ログイン回数",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "生年月日（43件）",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "ニックネーム（43件）",
+          "confidence": "confirmed"
+        }
+      ],
+      "systems": [
+        "CAPCOM ID"
+      ],
+      "serviceOutage": false,
+      "financialLoss": null,
+      "description": "全世界合計1177万4247件の会員情報が漏えい。196件でログインパスワードの不正変更。パスワード・クレジットカード情報の漏えいはなく、ゲームやサービスへの影響もないとしている。"
+    },
+    "response": {
+      "description": "発見当日にアクセス元を遮断し調査を開始。対象アカウントのパスワードをリセットし、警察・個人情報保護委員会へ報告。対象ユーザーへ順次連絡し、専用窓口を設置。",
+      "measures": [
+        "アクセス元の遮断",
+        "対象アカウントのパスワードリセット",
+        "警察・個人情報保護委員会への報告",
+        "対象ユーザーへの順次連絡",
+        "専用問い合わせ窓口の設置",
+        "再発防止策の策定と調査継続"
+      ]
+    },
+    "technicalNotes": "",
+    "lessons": [],
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-capcom-capcom-id-unauthorized-access-mvxlgkws",
+      "src-capcom-capcom-id-unauthorized-access-mvxlrkhh"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-ntt-solmare-cmoa-unauthorized-access",
+    "slug": "ntt-solmare-cmoa-unauthorized-access-2026-10",
+    "title": "コミックシーモア サーバへの不正アクセスで最大約420万件の会員情報が流出",
+    "summary": "NTTソルマーレが運営する電子書籍ストア「コミックシーモア」のサーバが不正アクセスを受けた。会員データベース上の319件とシステムログファイル上の最大約420万件の会員情報が流出し、サービスは停止された。",
+    "organizationId": "org-ntt-solmare",
+    "service": "コミックシーモア",
+    "incidentDate": null,
+    "discoveredAt": "2026-10-15",
+    "disclosedAt": "2026-10-16",
+    "updatedAt": "2026-10-16",
+    "country": "JP",
+    "industry": "電子書籍・情報通信",
+    "categories": [
+      "unauthorized-access",
+      "data-breach"
+    ],
+    "severity": "high",
+    "status": "contained",
+    "verificationStatus": "confirmed",
+    "featured": false,
+    "summaryDetails": "NTTソルマーレは2026年10月15日にサーバへの不正アクセスの可能性を確認し、コミックシーモアのサービスを停止した。16日に一部会員情報の流出を公表し、21日の第4報で最大約420万件の流出を確認した。会員データベース上の登録情報319件では、メールアドレス、ハッシュ化パスワード、ニックネーム、生年月日、性別が流出した。システムログファイル上の最大約420万件では、メールアドレス、ニックネーム、生年月日、性別が流出したが、パスワードは含まれない。同一会員の重複を含む可能性がある。クレジットカード情報は対象システムで保有しておらず、流出していない。購入履歴や「MY本棚」のデータの流出・消失は確認されていない。侵入経路と攻撃手法の特定・遮断は完了しており、購入済み作品の閲覧機能を優先してサービス再開を準備している。",
+    "cause": {
+      "status": "partially_confirmed",
+      "description": "サーバへの不正アクセス。侵入経路と攻撃手法は特定・遮断済みだが、詳細は公表されていない。",
+      "factors": [
+        "サーバへの不正アクセス",
+        "システムログファイルに会員情報が記録されていた"
+      ]
+    },
+    "attackMethods": [],
+    "impact": {
+      "status": "confirmed",
+      "affectedUsers": 4200000,
+      "leakedData": [
+        {
+          "item": "メールアドレス",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "ニックネーム",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "生年月日",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "性別",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "ハッシュ化されたパスワード（319件）",
+          "confidence": "confirmed"
+        }
+      ],
+      "systems": [
+        "会員データベース",
+        "システムログファイル",
+        "サーバ"
+      ],
+      "serviceOutage": true,
+      "financialLoss": null,
+      "description": "会員データベース上の319件と、システムログファイル上の最大約420万件（重複を含む可能性あり）の会員情報が流出した。クレジットカード情報は流出しておらず、購入履歴やMY本棚データの流出・消失は確認されていない。サービスは全面停止中。"
+    },
+    "response": {
+      "description": "サービスを停止し、侵入経路と攻撃手法を特定・遮断した。該当会員へはメールで連絡し、サービス再開に向けて準備している。",
+      "measures": [
+        "サービスの停止",
+        "侵入経路・攻撃手法の特定と遮断",
+        "該当会員へのメール連絡",
+        "再開時に全会員へパスワード再設定を求める",
+        "停止期間中の自動引き落としを基本的に行わない",
+        "失効ポイントの再付与を検討",
+        "他社サービスでパスワードを使い回している場合の変更呼び掛け"
+      ]
+    },
+    "technicalNotes": "",
+    "lessons": [
+      "システムログファイルに個人情報を大量に記録すると、侵害時の被害が拡大する",
+      "パスワードを使い回すとリスト型攻撃の被害につながるため、利用者への注意喚起が必要"
+    ],
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-ntt-solmare-cmoa-unauthorized-access-mvxlgukt"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-gunosy-internal-account-unauthorized-login",
+    "slug": "gunosy-internal-account-unauthorized-login-2026-10",
+    "title": "Gunosy 社内業務用アカウントの認証情報悪用による不正ログインで役職員・取引先情報が流出",
+    "summary": "第三者が不正に入手したGunosyの社内業務用アカウントのIDとパスワードでログインし、クラウド環境や業務ツールにアクセスした。役職員と一部取引先担当者の個人情報が流出した。",
+    "organizationId": "org-gunosy",
+    "service": null,
+    "incidentDate": "2026-10-21",
+    "discoveredAt": "2026-10-21",
+    "disclosedAt": "2026-10-26",
+    "updatedAt": "2026-10-26",
+    "country": "JP",
+    "industry": "情報通信業（インターネットメディア）",
+    "categories": [
+      "unauthorized-access",
+      "data-breach"
+    ],
+    "severity": "medium",
+    "status": "investigating",
+    "verificationStatus": "confirmed",
+    "featured": false,
+    "summaryDetails": "株式会社Gunosyは2026年10月26日に不正アクセスを公表した。10月21日午後、第三者が不正に入手した社内業務用アカウントの認証情報（ID・パスワード）でログインし、サービス運営や社内業務に使うクラウド環境・業務ツール等にアクセスしたのを、同社の監視システムが検知した。その後の調査で、当該アカウントのメールボックスにあったメールの一部が閲覧されたこと、業務用ツールに登録された利用者の情報が取得されたことが判明した。",
+    "cause": {
+      "status": "partially_confirmed",
+      "description": "第三者が不正に入手した社内業務用アカウントの認証情報（ID・パスワード）を使ってログインした。認証情報を入手された経緯は明らかになっていない。",
+      "factors": [
+        "社内業務用アカウントの認証情報（ID・パスワード）の不正入手",
+        "窃取した正規認証情報によるクラウド環境・業務ツールへのログイン"
+      ]
+    },
+    "attackMethods": [],
+    "impact": {
+      "status": "confirmed",
+      "affectedUsers": null,
+      "leakedData": [
+        {
+          "item": "当該アカウントのメールボックスにあったメールの一部（閲覧）",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "業務用ツールに登録された利用者の情報",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "役職員等の個人情報",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "一部取引先担当者の個人情報",
+          "confidence": "confirmed"
+        }
+      ],
+      "systems": [
+        "社内業務用アカウント",
+        "クラウド環境",
+        "業務用ツール",
+        "メールボックス"
+      ],
+      "serviceOutage": null,
+      "financialLoss": null,
+      "description": "役職員等と一部取引先担当者の個人情報が流出した。メールの一部が閲覧され、業務用ツールの利用者情報が取得された。件数は記事に書かれていない。"
+    },
+    "response": {
+      "description": "監視システムで不正ログインを検知し、調査で被害範囲を特定したうえで、10月26日に公表した。",
+      "measures": [
+        "監視システムによる不正ログインの検知",
+        "影響範囲の調査",
+        "公表と関係者へのお詫び"
+      ]
+    },
+    "technicalNotes": "",
+    "lessons": [
+      "社内業務用アカウントに多要素認証を導入し、IDとパスワードだけで入れないようにする",
+      "クラウド環境や業務ツールへのアクセスを監視し、異常をすぐ検知できる体制を整える",
+      "メールボックスに保管する機密情報の量を見直す"
+    ],
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-gunosy-internal-account-unauthorized-login-mvxlh8un"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-linkstation-gettiis-unauthorized-access",
+    "slug": "linkstation-gettiis-unauthorized-access-2026-10",
+    "title": "リンクステーション 「Gettii-Lite」の脆弱性悪用による「GETTIIS」会員情報の外部流出",
+    "summary": "リンクステーションが運営する主催者向け公演登録サービス「Gettii-Lite」のサーバに第三者が不正アクセスし、プログラムの脆弱性を悪用してチケット購入サービス「GETTIIS」の会員情報を不正に取得した。",
+    "organizationId": "org-linkstation",
+    "service": "GETTIIS / Gettii-Lite",
+    "incidentDate": "2026-10-18",
+    "discoveredAt": "2026-10-18",
+    "disclosedAt": "2026-10-20",
+    "updatedAt": "2026-10-20",
+    "country": "JP",
+    "industry": "チケット販売・興行システム",
+    "categories": [
+      "unauthorized-access",
+      "vulnerability",
+      "data-breach"
+    ],
+    "severity": "high",
+    "status": "investigating",
+    "verificationStatus": "confirmed",
+    "featured": false,
+    "summaryDetails": "同社は10月18日に自社システムへの不審なアクセスを確認して調査を始めた。その結果、同日の午前0時頃から午前7時頃にかけて、第三者が「Gettii-Lite」のプログラムの脆弱性を悪用し、「GETTIIS」の会員情報を不正に取得していたことが分かった。同社は10月20日に第2報を発表した。漏えいした件数や情報の項目は記事に書かれていない。",
+    "cause": {
+      "status": "partially_confirmed",
+      "description": "第三者が「Gettii-Lite」のプログラムの脆弱性を悪用し、サーバに不正アクセスした。",
+      "factors": [
+        "Gettii-Liteのプログラムの脆弱性"
+      ]
+    },
+    "attackMethods": [],
+    "impact": {
+      "status": "confirmed",
+      "affectedUsers": null,
+      "leakedData": [
+        {
+          "item": "GETTIIS会員情報",
+          "confidence": "confirmed"
+        }
+      ],
+      "systems": [
+        "Gettii-Liteサーバ",
+        "GETTIIS会員情報"
+      ],
+      "serviceOutage": null,
+      "financialLoss": null,
+      "description": "チケット購入サービス「GETTIIS」の会員情報が外部に流出したことが確認された。件数や項目は記事に記載がない。"
+    },
+    "response": {
+      "description": "不審なアクセスを確認した後に調査を始め、第1報と第2報を公表した。",
+      "measures": [
+        "調査の開始",
+        "第1報・第2報の公表"
+      ]
+    },
+    "technicalNotes": "",
+    "lessons": [
+      "Webアプリケーションの脆弱性診断と、早めの修正が重要",
+      "関連サービスから会員データベースへのアクセス範囲を最小限にする必要がある"
+    ],
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-linkstation-gettiis-unauthorized-access-mvxlihre"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-entouch-ransomware-data-leak",
+    "slug": "entouch-ransomware-data-leak-2026-10",
+    "title": "エンタッチ データベースへのランサムウェア攻撃によるリモートディテーリング事業データの漏えい",
+    "summary": "東邦ホールディングスの子会社エンタッチが管理するデータベースに、ランサムウェア攻撃者による不正アクセスがあった。リモートディテーリング事業に関するデータが外部に漏えいした。",
+    "organizationId": "org-entouch",
+    "service": "リモートディテーリング事業",
+    "incidentDate": null,
+    "discoveredAt": "2026-10-13",
+    "disclosedAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
+    "country": "JP",
+    "industry": "医薬品・ヘルスケア（リモートディテーリング事業）",
+    "categories": [
+      "ransomware",
+      "unauthorized-access",
+      "data-breach"
+    ],
+    "severity": "high",
+    "status": "investigating",
+    "verificationStatus": "confirmed",
+    "featured": false,
+    "summaryDetails": "東邦ホールディングスは2026年10月19日、子会社エンタッチへの不正アクセスを発表した。エンタッチが管理するデータベースに第三者が不正アクセスし、リモートディテーリング事業に関するデータが外部に漏えいした。発覚は10月13日午後4時頃で、原因はランサムウェア攻撃を行う第三者による不正アクセスとされている。リモートディテーリング事業には、東邦薬品から受託している案件と、エンタッチが製薬企業から直接受託している案件がある。",
+    "cause": {
+      "status": "partially_confirmed",
+      "description": "ランサムウェア攻撃を行う第三者が、エンタッチの管理するデータベースに不正アクセスした。侵入経路は明らかにされていない。",
+      "factors": [
+        "ランサムウェア攻撃者による不正アクセス"
+      ]
+    },
+    "attackMethods": [],
+    "impact": {
+      "status": "partially_confirmed",
+      "affectedUsers": null,
+      "leakedData": [
+        {
+          "item": "リモートディテーリング事業に関するデータ",
+          "confidence": "confirmed"
+        }
+      ],
+      "systems": [
+        "エンタッチが管理するデータベース"
+      ],
+      "serviceOutage": null,
+      "financialLoss": null,
+      "description": "リモートディテーリング事業に関するデータが外部に漏えいした。この事業には、東邦薬品から受託した案件と、製薬企業から直接受託した案件が含まれる。漏えいした件数や詳しい項目は記事に書かれていない。"
+    },
+    "response": {
+      "description": "親会社の東邦ホールディングスが、10月19日に不正アクセスと情報漏えいを公表した。",
+      "measures": [
+        "不正アクセスおよび情報漏えいの公表"
+      ]
+    },
+    "technicalNotes": "",
+    "lessons": [],
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-entouch-ransomware-data-leak-mvxlis0h",
+      "src-entouch-ransomware-data-leak-mvxljlqe"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-nifty-line-application-system-unauthorized-access",
+    "slug": "nifty-line-application-system-unauthorized-access-2026-10",
+    "title": "ニフティ 回線申込・受付管理システムへの不正アクセスで最大54万2,513件の会員情報に影響",
+    "summary": "ニフティは、社内で情報を登録するために使う回線申込・受付管理システムが外部から不正アクセスを受けたと発表した。最大54万2,513件の会員情報に影響が出たおそれがある。",
+    "organizationId": "org-nifty",
+    "service": "回線申込・受付管理システム",
+    "incidentDate": "2026-10-19",
+    "discoveredAt": "2026-10-19",
+    "disclosedAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
+    "country": "JP",
+    "industry": "情報通信（インターネットサービスプロバイダ）",
+    "categories": [
+      "unauthorized-access",
+      "data-breach"
+    ],
+    "severity": "high",
+    "status": "investigating",
+    "verificationStatus": "partially_confirmed",
+    "featured": false,
+    "summaryDetails": "2026年10月19日午前10時20分頃、ニフティが管理する回線申込・受付管理システムへの外部からの不正アクセスが確認され、同社は同日に第一報を発表した。このシステムは同社が情報を登録するための管理用ツールで、顧客が直接アクセスするWebサイト（申込フォーム等）とは別のシステムである。記事タイトルによると、影響は最大54万2,513件の会員情報に及ぶ。",
+    "cause": {
+      "status": "under_investigation",
+      "description": "回線申込・受付管理システムへ外部から不正アクセスを受けた。侵入の手口は記事では明らかにされていない。",
+      "factors": []
+    },
+    "attackMethods": [],
+    "impact": {
+      "status": "partially_confirmed",
+      "affectedUsers": 542513,
+      "leakedData": [
+        {
+          "item": "会員情報",
+          "confidence": "possible"
+        }
+      ],
+      "systems": [
+        "回線申込・受付管理システム（社内の管理用ツール）"
+      ],
+      "serviceOutage": null,
+      "financialLoss": null,
+      "description": "最大54万2,513件の会員情報に影響が出たおそれがある。顧客が直接使う申込フォーム等のWebサイトは別のシステムである。"
+    },
+    "response": {
+      "description": "2026年10月19日に不正アクセスを確認し、同日に第一報を発表した。",
+      "measures": [
+        "第一報の公表"
+      ]
+    },
+    "technicalNotes": "",
+    "lessons": [
+      "顧客から見えない社内の管理用ツールにも大量の会員情報が保存されるため、公開Webサイトと同じ水準でアクセス制御と監視を行う必要がある。"
+    ],
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-nifty-line-application-system-unauthorized-access-mvxlj06x"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-second-retailing-internal-system-unauthorized-access",
+    "slug": "second-retailing-internal-system-unauthorized-access-2026-10",
+    "title": "セカンドリテイリング 社内システムへの不正アクセスでセカンドストリート・ゲオ等のアプリ・Webサービスを停止",
+    "summary": "セカンドリテイリングは10月15日に社内システムへの第三者による不正アクセスを確認し、セカンドストリートやゲオなどのアプリ・Webサービスを停止した。調査の結果、個人情報や機密情報が外部に漏えいした事実は確認されなかった。",
+    "organizationId": "org-second-retailing",
+    "service": "セカンドストリート、ゲオ等のアプリ・Webサービス",
+    "incidentDate": null,
+    "discoveredAt": "2026-10-15",
+    "disclosedAt": "2026-10-17",
+    "updatedAt": "2026-10-17",
+    "country": "JP",
+    "industry": "小売",
+    "categories": [
+      "unauthorized-access"
+    ],
+    "severity": "medium",
+    "status": "contained",
+    "verificationStatus": "confirmed",
+    "featured": false,
+    "summaryDetails": "株式会社セカンドリテイリングは2026年10月15日、社内システムへの第三者による不正アクセスを確認した。10月17日にこれを公表し、二次被害を防ぐため同日午後9時から、セカンドストリートやゲオなどを含むアプリ・Webサービスを停止してシステムメンテナンスを行った。外部のセキュリティ専門機関と連携して調査を進め、10月19日の第2報で、データベースサーバへの不審な外部接続や直接アクセスの形跡はなく、個人情報や機密情報の外部漏えいは確認されなかったと発表した。",
+    "cause": {
+      "status": "under_investigation",
+      "description": "社内システムに第三者が不正アクセスした。侵入経路などの詳しい原因は記事に書かれていない。",
+      "factors": []
+    },
+    "attackMethods": [],
+    "impact": {
+      "status": "confirmed",
+      "affectedUsers": null,
+      "leakedData": [],
+      "systems": [
+        "社内システム",
+        "セカンドストリート、ゲオ等のアプリ・Webサービス"
+      ],
+      "serviceOutage": true,
+      "financialLoss": null,
+      "description": "二次被害を防ぐため、10月17日午後9時からセカンドストリートやゲオなどのアプリ・Webサービスを停止した。データベースサーバへの不審な外部接続や直接アクセスの形跡はなく、個人情報や機密情報の外部漏えいは確認されなかった。"
+    },
+    "response": {
+      "description": "必要な対策を講じたうえで、アプリ・Webサービスを停止してシステムメンテナンスを行った。外部のセキュリティ専門機関と連携し、原因と影響範囲を調べた。",
+      "measures": [
+        "アプリ・Webサービスの停止とシステムメンテナンス",
+        "外部のセキュリティ専門機関と連携した原因究明と影響範囲の調査",
+        "第2報での調査結果の公表"
+      ]
+    },
+    "technicalNotes": "",
+    "lessons": [
+      "不正アクセスを確認した段階でサービスを停止すれば、二次被害の防止につながる",
+      "データベースサーバへのアクセスログを残しておくと、情報が漏えいしたかどうかを判断する根拠になる"
+    ],
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-second-retailing-internal-system-unauthorized-access-mvxljbcv"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-arcadia-speecan-raiden-unauthorized-access",
+    "slug": "arcadia-speecan-raiden-unauthorized-access-2026-10",
+    "title": "アルカディア 「SpeeCAN RAIDEN」のメディアサーバのディレクトリパストラバーサルを突いた不正アクセス",
+    "summary": "アルカディアが運営する「SpeeCAN RAIDEN」で、メディアサーバのディレクトリパストラバーサルを悪用されて内部ソースファイルとシークレットキーを取得され、総当たり攻撃でログインされたセッションから内部情報が取得された。",
+    "organizationId": "org-arcadia",
+    "service": "SpeeCAN RAIDEN",
+    "incidentDate": null,
+    "discoveredAt": "2026-10-11",
+    "disclosedAt": "2026-10-13",
+    "updatedAt": "2026-10-13",
+    "country": "JP",
+    "industry": "情報通信業（メール配信サービス）",
+    "categories": [
+      "unauthorized-access",
+      "vulnerability",
+      "data-breach"
+    ],
+    "severity": "high",
+    "status": "contained",
+    "verificationStatus": "confirmed",
+    "featured": false,
+    "summaryDetails": "株式会社アルカディアは2026年10月11日、同社が運営する「SpeeCAN RAIDEN」で不正アクセスが疑われる不審な挙動を確認した。10月12日午前3時頃に侵入経路を塞ぐ応急措置を講じ、影響範囲の調査を開始。10月13日に第一報を公表し、10月19日に判明した事実、影響範囲、対応状況などを発表した。添付ファイルを公開するメディアサーバにディレクトリパストラバーサルがあり、内部URLへのアクセスが可能だった。これを悪用して内部ソースファイルが取得され、設定ファイルに含まれるサービス間ログイン用のシークレットキーが漏れた。第三者はこのキーを使ってアカウントIDへの総当たり攻撃を行い、ログインしたセッションから内部情報を取得した。関連記事によると、同社に業務委託している唐津市の情報メール配信サービスにも影響が及んでいる。",
+    "cause": {
+      "status": "confirmed",
+      "description": "添付ファイルを公開するメディアサーバのディレクトリパストラバーサルを悪用されて内部ソースファイルが取得され、設定ファイル内のサービス間ログイン用シークレットキーが漏れた。第三者はこのキーを使ってアカウントIDへの総当たり攻撃を行い、ログインに成功した。",
+      "factors": [
+        "メディアサーバのディレクトリパストラバーサル",
+        "設定ファイルにサービス間ログイン用シークレットキーを保管",
+        "アカウントIDへの総当たり攻撃を許した"
+      ]
+    },
+    "attackMethods": [],
+    "impact": {
+      "status": "partially_confirmed",
+      "affectedUsers": null,
+      "leakedData": [
+        {
+          "item": "内部ソースファイル",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "サービス間ログイン用シークレットキー",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "ログインされたセッションからの内部情報",
+          "confidence": "confirmed"
+        }
+      ],
+      "systems": [
+        "SpeeCAN RAIDEN",
+        "メディアサーバ"
+      ],
+      "serviceOutage": null,
+      "financialLoss": null,
+      "description": "内部ソースファイルとシークレットキーが取得され、不正にログインされたセッションから内部情報が取得された。関連記事によると、委託元である唐津市の情報メール配信サービスにも影響が及んでいる。影響件数は記事に記載がない。"
+    },
+    "response": {
+      "description": "10月12日午前3時頃に侵入経路を塞ぐ応急措置を講じ、影響範囲の調査を開始した。10月13日に第一報を、10月19日に経過と対処状況を公表した。",
+      "measures": [
+        "侵入経路を塞ぐ応急措置",
+        "影響範囲の調査",
+        "経過と対処状況の公表"
+      ]
+    },
+    "technicalNotes": "",
+    "lessons": [
+      "公開サーバにパストラバーサルなどの脆弱性がないか点検する",
+      "シークレットキーを設定ファイルやソースと分けて安全に管理する",
+      "総当たり攻撃を検知・制限する仕組みを入れる"
+    ],
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-arcadia-speecan-raiden-unauthorized-access-mvxljypf"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-h2o-retailing-hankyu-hanshin-reservation-site-unauthorized-access",
+    "slug": "h2o-retailing-hankyu-hanshin-reservation-site-unauthorized-access-2026-10",
+    "title": "阪急阪神百貨店 予約サイト経由の不正アクセスで約126万件の「H2O ID」個人情報が漏えい",
+    "summary": "阪急阪神百貨店が運営する「阪急百貨店・阪神百貨店予約サイト」を経由して顧客管理システムに第三者が不正アクセスし、「H2O ID」約126万件の個人情報の一部が漏えいした。「HANKYU HANSHIN E-STORES」「Remo Order」でも不正アクセスが確認され、各サイトのシステムを停止した。",
+    "organizationId": "org-h2o-retailing",
+    "service": "阪急百貨店・阪神百貨店予約サイト / HANKYU HANSHIN E-STORES / Remo Order",
+    "incidentDate": "2026-10-16",
+    "discoveredAt": "2026-10-16",
+    "disclosedAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
+    "country": "JP",
+    "industry": "小売（百貨店）",
+    "categories": [
+      "unauthorized-access",
+      "data-breach"
+    ],
+    "severity": "high",
+    "status": "investigating",
+    "verificationStatus": "confirmed",
+    "featured": false,
+    "summaryDetails": "エイチ・ツー・オー リテイリングは2026年10月19日、子会社の阪急阪神百貨店が運営する「阪急百貨店・阪神百貨店予約サイト」「HANKYU HANSHIN E-STORES」「Remo Order」への不正アクセスを発表した。10月16日、予約サイトを経由した顧客管理システムへの不正アクセスを確認し、同日中に不正な通信を遮断して予約サイトのシステム全体を停止した。翌17日には「HANKYU HANSHIN E-STORES」と「Remo Order」でも不正アクセスを確認し、両サイトのシステム全体を停止した。その後の調査で、10月19日に顧客管理システムで管理する「H2O ID」のうち約126万件の個人情報の一部が漏えいしたことが判明した。",
+    "cause": {
+      "status": "under_investigation",
+      "description": "「阪急百貨店・阪神百貨店予約サイト」を経由して、第三者が顧客管理システムに不正アクセスした。侵入手口の詳細は記事に記載されていない。",
+      "factors": [
+        "予約サイトを経由した顧客管理システムへの不正アクセス"
+      ]
+    },
+    "attackMethods": [],
+    "impact": {
+      "status": "confirmed",
+      "affectedUsers": 1260000,
+      "leakedData": [
+        {
+          "item": "H2O ID会員の個人情報の一部",
+          "confidence": "confirmed"
+        }
+      ],
+      "systems": [
+        "阪急百貨店・阪神百貨店予約サイト",
+        "顧客管理システム",
+        "HANKYU HANSHIN E-STORES",
+        "Remo Order"
+      ],
+      "serviceOutage": true,
+      "financialLoss": null,
+      "description": "顧客管理システムで管理する「H2O ID」のうち約126万件の個人情報の一部が漏えいした。3サイトのシステム全体を停止した。"
+    },
+    "response": {
+      "description": "不正アクセスを確認した10月16日のうちに外部からの不正な通信を遮断し、予約サイトのシステム全体を停止した。10月17日には「HANKYU HANSHIN E-STORES」と「Remo Order」のシステム全体も停止した。",
+      "measures": [
+        "外部からの不正な通信の遮断",
+        "予約サイトのシステム全体停止",
+        "HANKYU HANSHIN E-STORESおよびRemo Orderのシステム全体停止",
+        "漏えい範囲の調査"
+      ]
+    },
+    "technicalNotes": "",
+    "lessons": [
+      "共通ID基盤の顧客管理システムにつながる周辺サイトは、1つ侵害されると大量の会員情報漏えいにつながるため、サイト間の分離とアクセス制御が重要である"
+    ],
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-h2o-retailing-hankyu-hanshin-reservation-site-unauthorized-access-mvxlkaws"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-smd-am-direct-net-contractor-unauthorized-access",
+    "slug": "smd-am-direct-net-contractor-unauthorized-access-2026-10",
+    "title": "三井住友DSアセットマネジメント 取引委託業者システムへの不正アクセス検知で投信直販ネットのマイページを一時停止",
+    "summary": "三井住友DSアセットマネジメントの「三井住友DS投信直販ネット」で、取引委託業者のシステムに第三者からの不正アクセスが検知され、予防措置としてシステムを停止したため、マイページに一時ログインできなくなった。",
+    "organizationId": "org-sumitomo-mitsui-ds-asset-management",
+    "service": "三井住友DS投信直販ネット",
+    "incidentDate": "2026-10-15",
+    "discoveredAt": "2026-10-15",
+    "disclosedAt": "2026-10-16",
+    "updatedAt": "2026-10-16",
+    "country": "JP",
+    "industry": "金融（資産運用）",
+    "categories": [
+      "unauthorized-access",
+      "supply-chain"
+    ],
+    "severity": "low",
+    "status": "recovered",
+    "verificationStatus": "confirmed",
+    "featured": false,
+    "summaryDetails": "同社は10月16日に発表した。取引委託業者のシステムで第三者からの不正アクセスを検知し、一時的な予防措置としてシステムを停止した。その影響で、10月15日午後7時50分頃から10月16日午前6時頃までマイページにログインできない状態が続いた。現時点では、顧客の口座情報や取引への影響は確認されていない。",
+    "cause": {
+      "status": "under_investigation",
+      "description": "取引委託業者のシステムで第三者からの不正アクセスが検知された。侵入経路など詳しい原因は公表されていない。",
+      "factors": [
+        "委託先システムへの第三者による不正アクセス"
+      ]
+    },
+    "attackMethods": [],
+    "impact": {
+      "status": "partially_confirmed",
+      "affectedUsers": null,
+      "leakedData": [],
+      "systems": [
+        "取引委託業者のシステム",
+        "三井住友DS投信直販ネット マイページ"
+      ],
+      "serviceOutage": true,
+      "financialLoss": null,
+      "description": "10月15日19時50分頃から10月16日6時頃まで、マイページにログインできなかった。顧客の口座情報や取引への影響は、現時点で確認されていない。"
+    },
+    "response": {
+      "description": "不正アクセスの検知を受けて、予防措置としてシステムを一時停止した。10月16日午前6時頃に復旧し、お詫びと復旧のお知らせを公表した。",
+      "measures": [
+        "予防措置としてのシステムの一時停止",
+        "サービスの復旧",
+        "利用者への告知"
+      ]
+    },
+    "technicalNotes": "",
+    "lessons": [
+      "委託先システムの侵害は自社サービスの停止に直結するため、委託先のセキュリティ管理と監視体制が重要",
+      "不正アクセスを検知したら、すぐにシステムを止める初動が被害の拡大防止につながる"
+    ],
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-smd-am-direct-net-contractor-unauthorized-access-mvxlkmft"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-fuji-television-program-promotion-system-unauthorized-access",
+    "slug": "fuji-television-program-promotion-system-unauthorized-access-2026-10",
+    "title": "フジテレビ 番組宣伝システムへの不正アクセスでメディア関係者の個人情報最大730件が漏えいした可能性",
+    "summary": "フジテレビジョンの番組宣伝システムに10月19日夜に第三者による不正アクセスがあり、登録されていたメディア関係者の氏名・会社名・メールアドレス等最大730件が漏えいした可能性がある。",
+    "organizationId": "org-fuji-television",
+    "service": "番組宣伝システム",
+    "incidentDate": "2026-10-19",
+    "discoveredAt": null,
+    "disclosedAt": "2026-10-20",
+    "updatedAt": "2026-10-20",
+    "country": "JP",
+    "industry": "放送・メディア",
+    "categories": [
+      "unauthorized-access",
+      "data-breach"
+    ],
+    "severity": "medium",
+    "status": "unknown",
+    "verificationStatus": "confirmed",
+    "featured": false,
+    "summaryDetails": "株式会社フジテレビジョンは10月20日、同社の番組宣伝システムへの不正アクセスについて発表した。10月19日夜に第三者による不正アクセスが発生し、当該システムに登録されていたメディア関係者の氏名、会社名、メールアドレス等を含む最大730件の個人情報が外部に漏えいした可能性がある。",
+    "cause": {
+      "status": "under_investigation",
+      "description": "第三者による番組宣伝システムへの不正アクセス。侵入手法は記事では明らかにされていない。",
+      "factors": []
+    },
+    "attackMethods": [],
+    "impact": {
+      "status": "unconfirmed",
+      "affectedUsers": 730,
+      "leakedData": [
+        {
+          "item": "氏名",
+          "confidence": "possible"
+        },
+        {
+          "item": "会社名",
+          "confidence": "possible"
+        },
+        {
+          "item": "メールアドレス",
+          "confidence": "possible"
+        }
+      ],
+      "systems": [
+        "番組宣伝システム"
+      ],
+      "serviceOutage": null,
+      "financialLoss": null,
+      "description": "番組宣伝システムに登録されていたメディア関係者の個人情報最大730件が外部に漏えいした可能性がある。"
+    },
+    "response": {
+      "description": "10月20日に不正アクセスについて公表した。",
+      "measures": []
+    },
+    "technicalNotes": "",
+    "lessons": [],
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-fuji-television-program-promotion-system-unauthorized-access-mvxll6u2"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-estore-shopserve-unauthorized-access",
+    "slug": "estore-shopserve-unauthorized-access-2026-08",
+    "title": "Eストアー 「ショップサーブ」への不正アクセスで約2,335万6,000人の購入者情報が漏えい",
+    "summary": "Eストアーが運営するECサイト構築・運営支援サービス「ショップサーブ」で、外部の第三者がアプリケーションの脆弱性を悪用してサーバ上で不正なプログラムを実行し、購入者情報を外部へ送信した。漏えい対象者は約2,335万6,000人。",
+    "organizationId": "org-estore",
+    "service": "ショップサーブ",
+    "incidentDate": "2026-05-21",
+    "discoveredAt": null,
+    "disclosedAt": "2026-08-01",
+    "updatedAt": "2026-08-01",
+    "country": "JP",
+    "industry": "ECサイト構築・運営支援サービス",
+    "categories": [
+      "unauthorized-access",
+      "vulnerability",
+      "data-breach"
+    ],
+    "severity": "critical",
+    "status": "resolved",
+    "verificationStatus": "confirmed",
+    "featured": false,
+    "summaryDetails": "株式会社Eストアーは2026年8月1日に「ショップサーブ」への不正アクセスによる情報漏えいを公表し、10月16日に最終報を発表した。2026年5月21日から8月1日までの間、外部の第三者が同社サーバ上で稼働するアプリケーションの脆弱性を悪用して不正なプログラムを実行し、データベースに格納された購入者情報を外部に送信していた。外部専門機関によるフォレンジック調査を含む調査が行われた。漏えい対象者数は約2,335万6,000人。",
+    "cause": {
+      "status": "confirmed",
+      "description": "同社サーバ上で稼働するアプリケーションの脆弱性を外部の第三者に悪用され、不正なプログラムを実行されてデータベース内の情報が外部へ送信された。",
+      "factors": [
+        "サーバ上で稼働するアプリケーションの脆弱性",
+        "不正なプログラムの実行",
+        "約2か月半にわたり不正送信が続いた"
+      ]
+    },
+    "attackMethods": [],
+    "impact": {
+      "status": "confirmed",
+      "affectedUsers": 23356000,
+      "leakedData": [
+        {
+          "item": "購入者情報",
+          "confidence": "confirmed"
+        }
+      ],
+      "systems": [
+        "ショップサーブのサーバ",
+        "ショップサーブのデータベース"
+      ],
+      "serviceOutage": null,
+      "financialLoss": null,
+      "description": "2026年5月21日から8月1日にかけて、ショップサーブ上のデータベースに格納された購入者情報が外部へ送信され、約2,335万6,000人分が漏えい対象となった。"
+    },
+    "response": {
+      "description": "8月1日に公表し、外部専門機関によるフォレンジック調査を含む調査を続け、10月16日に最終報を発表した。",
+      "measures": [
+        "外部専門機関によるフォレンジック調査",
+        "最終報の公表"
+      ]
+    },
+    "technicalNotes": "",
+    "lessons": [
+      "ECプラットフォームのアプリケーション脆弱性を早く見つけて修正する体制が必要",
+      "データベースから外部への不審な通信を監視し、早期検知につなげる必要がある"
+    ],
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-estore-shopserve-unauthorized-access-mvxlkxxq"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-medley-atlink-unauthorized-access",
+    "slug": "medley-atlink-unauthorized-access-2026-10",
+    "title": "メドレー 医療機関業務支援システム「@link（アットリンク）」への不正アクセスでサービスを一時停止",
+    "summary": "株式会社メドレーが提供する医療機関業務支援システム「@link（アットリンク）」で第三者による不正アクセスが確認され、10月14日深夜から@link、患者向けアプリ、周辺サービスの提供を一時停止した。",
+    "summaryDetails": "メドレーは10月20日、医療機関業務支援システム「@link」への不正アクセスを公表した。原因と影響範囲を調べ、被害の拡大を防ぐため、10月14日深夜から「@link」、患者向けの「アットリンクアプリ」と周辺サービスの提供を一時停止した。原因と個人情報への影響については、外部の専門機関と連携して調査を続けている。",
+    "service": "@link（アットリンク）",
+    "incidentDate": null,
+    "discoveredAt": null,
+    "disclosedAt": "2026-10-20",
+    "categories": [
+      "unauthorized-access"
+    ],
+    "severity": "high",
+    "status": "investigating",
+    "verificationStatus": "confirmed",
+    "cause": {
+      "status": "under_investigation",
+      "description": "第三者による不正アクセス。原因は調査中。",
+      "factors": []
+    },
+    "impact": {
+      "status": "unconfirmed",
+      "affectedUsers": null,
+      "leakedData": [],
+      "systems": [
+        "@link（アットリンク）",
+        "アットリンクアプリ",
+        "周辺サービス"
+      ],
+      "serviceOutage": true,
+      "financialLoss": null,
+      "description": "10月14日深夜から@link、患者向けアプリ、周辺サービスの提供を停止。個人情報への影響は調査中。"
+    },
+    "response": {
+      "description": "サービスの提供を一時停止し、外部の専門機関と連携して原因と影響範囲を調査している。",
+      "measures": [
+        "@linkと関連サービスの一時停止",
+        "外部専門機関と連携した調査"
+      ]
+    },
+    "lessons": [],
+    "organizationId": "org-medley",
+    "updatedAt": "2026-10-20",
+    "country": "JP",
+    "industry": "医療IT・情報サービス",
+    "featured": false,
+    "attackMethods": [],
+    "technicalNotes": "",
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-medley-atlink-unauthorized-access-mvxlle4m"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-panasonic-oe-generative-ai-personal-data-upload",
+    "slug": "panasonic-oe-generative-ai-personal-data-upload-2026-10",
+    "title": "パナソニック オペレーショナルエクセレンス 人事情報システム導入プロジェクトでグループ従業員の個人情報を外部生成AIサービスにアップロード",
+    "summary": "パナソニック オペレーショナルエクセレンスと子会社パナソニック デジタルの人事情報システム導入プロジェクトで、プロジェクトメンバーが社内ルールに反し、グループ従業員・元従業員・家族の個人情報を含むデータを外部の生成AIサービスにアップロードした。",
+    "summaryDetails": "パナソニック オペレーショナルエクセレンスは2026年10月23日、外部生成AIサービスへ個人情報がアップロードされたと発表した。同社と子会社のパナソニック デジタル株式会社が進める人事情報システム導入プロジェクトで、プロジェクトメンバーがパナソニックグループの従業員、元従業員とその家族の個人情報を含むデータを外部の生成AIサービスにアップロードした。同社は外部生成AIサービスの利用を禁止していたが、メンバーがこのルールに違反した。件数、アップロード先のサービス、アップロードされた具体的な項目は記事に書かれていない。",
+    "service": "人事情報システム導入プロジェクト",
+    "incidentDate": null,
+    "discoveredAt": null,
+    "disclosedAt": "2026-10-23",
+    "categories": [
+      "data-breach",
+      "other"
+    ],
+    "severity": "medium",
+    "status": "unknown",
+    "verificationStatus": "confirmed",
+    "cause": {
+      "status": "confirmed",
+      "description": "プロジェクトメンバーが社内ルールで禁止されていた外部生成AIサービスを使い、個人情報を含むデータをアップロードした。",
+      "factors": [
+        "外部生成AIサービス利用禁止ルールへの違反",
+        "内部関係者による不適切なデータの取り扱い"
+      ]
+    },
+    "impact": {
+      "status": "partially_confirmed",
+      "affectedUsers": null,
+      "leakedData": [
+        {
+          "item": "パナソニックグループ従業員の個人情報",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "元従業員の個人情報",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "従業員の家族の個人情報",
+          "confidence": "confirmed"
+        }
+      ],
+      "systems": [
+        "外部生成AIサービス",
+        "人事情報システム導入プロジェクトのデータ"
+      ],
+      "serviceOutage": null,
+      "financialLoss": null,
+      "description": "グループ従業員・元従業員・家族の個人情報を含むデータが外部の生成AIサービスにアップロードされた。影響を受けた人数や項目は記事に書かれていない。"
+    },
+    "response": {
+      "description": "同社はお詫びとお知らせを公表した。具体的な対応策は記事に書かれていない。",
+      "measures": [
+        "お詫びとお知らせの公表"
+      ]
+    },
+    "lessons": [
+      "生成AIの利用禁止ルールを定めるだけでなく、技術的な制御（DLP、アクセス制限など）と教育で実効性を確保する必要がある",
+      "システム導入プロジェクトで個人情報を扱う場合は、データのマスキングや最小化を徹底する"
+    ],
+    "organizationId": "org-panasonic-operational-excellence",
+    "updatedAt": "2026-10-23",
+    "country": "JP",
+    "industry": "電機・グループ共通機能（シェアードサービス）",
+    "featured": false,
+    "attackMethods": [],
+    "technicalNotes": "",
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-panasonic-oe-generative-ai-personal-data-upload-mvxlloti"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-net-protections-np-atobarai-reissue-system-unauthorized-access",
+    "slug": "net-protections-np-atobarai-reissue-system-unauthorized-access-2026-10",
+    "title": "ネットプロテクションズ 「NP後払い」請求書再発行システムへの不正アクセスで28,884件の個人情報にアクセス",
+    "summary": "ネットプロテクションズが運営するBtoC通販向け決済「NP後払い」の請求書再発行システムに、第三者から機械的かつ連続的なリクエストが送られ、一部取引28,884件の氏名・住所へのアクセスが確認された。",
+    "summaryDetails": "株式会社ネットプロテクションズは2026年10月22日、「NP後払い」の請求書再発行システムに第三者が通常想定されない方法で機械的かつ連続的なリクエストを行い、顧客の個人情報の一部にアクセスしていたと発表した。判明したのは10月14日。アクセスされたのは「NP後払い」を利用した一部取引28,884件の個人情報（氏名、住所）で、法人利用の場合は会社名と部署名も含まれる。",
+    "service": "NP後払い",
+    "incidentDate": null,
+    "discoveredAt": "2026-10-14",
+    "disclosedAt": "2026-10-22",
+    "categories": [
+      "unauthorized-access",
+      "data-breach"
+    ],
+    "severity": "medium",
+    "status": "unknown",
+    "verificationStatus": "confirmed",
+    "cause": {
+      "status": "partially_confirmed",
+      "description": "請求書再発行システムに対し、第三者が通常想定されない方法で機械的かつ連続的なリクエストを行い、個人情報を取得した。",
+      "factors": [
+        "請求書再発行システムへの機械的・連続的なリクエスト",
+        "通常想定されない方法でのシステム利用"
+      ]
+    },
+    "impact": {
+      "status": "confirmed",
+      "affectedUsers": 28884,
+      "leakedData": [
+        {
+          "item": "氏名",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "住所",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "会社名（法人利用の場合）",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "部署名（法人利用の場合）",
+          "confidence": "confirmed"
+        }
+      ],
+      "systems": [
+        "NP後払い 請求書再発行システム"
+      ],
+      "serviceOutage": null,
+      "financialLoss": null,
+      "description": "「NP後払い」を利用した一部取引28,884件の氏名・住所にアクセスされ、法人利用の場合は会社名・部署名も含まれる。"
+    },
+    "response": {
+      "description": "2026年10月22日に不正アクセスの事実を公表した。",
+      "measures": []
+    },
+    "lessons": [
+      "請求書再発行など本人確認が簡易な機能は、機械的な連続リクエストに対するレート制限や検知の仕組みを設ける必要がある"
+    ],
+    "organizationId": "org-net-protections",
+    "updatedAt": "2026-10-22",
+    "country": "JP",
+    "industry": "決済サービス",
+    "featured": false,
+    "attackMethods": [],
+    "technicalNotes": "",
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-net-protections-np-atobarai-reissue-system-unauthorized-access-mvxllzf3"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-japex-blastmail-raks-lite-cloud-unauthorized-access",
+    "slug": "japex-blastmail-raks-lite-cloud-unauthorized-access-2026-10",
+    "title": "石油資源開発 委託先ラクスライトクラウドの「blastmail」への不正アクセスで個人情報漏えいの可能性",
+    "summary": "石油資源開発（JAPEX）がメールマガジンや投資家向けイベント案内の配信に使っていたラクスライトクラウドのASPサービス「blastmail」が第三者から不正アクセスを受け、同社が管理する個人情報が漏えいした可能性が判明した。",
+    "summaryDetails": "JAPEXは「JAPEX メールマガジン」と、機関投資家・証券アナリスト向けのイベント案内の配信ツールとしてラクスライトクラウドのASPサービス「blastmail」を使っていた。このサービスに第三者からの不正アクセスがあり、2026年10月21日にラクスライトクラウドから報告を受けて発覚した。JAPEXは同日、公表した。漏えいした可能性のある個人情報の詳細は、記事本文に記載がなかった。",
+    "service": "blastmail（JAPEX メールマガジン・機関投資家/証券アナリスト向けイベント案内配信）",
+    "incidentDate": null,
+    "discoveredAt": "2026-10-21",
+    "disclosedAt": "2026-10-21",
+    "categories": [
+      "unauthorized-access",
+      "supply-chain",
+      "data-breach"
+    ],
+    "severity": "medium",
+    "status": "investigating",
+    "verificationStatus": "partially_confirmed",
+    "cause": {
+      "status": "under_investigation",
+      "description": "メール配信用ASPサービス「blastmail」を提供するラクスライトクラウドへの第三者による不正アクセス。",
+      "factors": [
+        "委託先（ASPサービス事業者）への不正アクセス"
+      ]
+    },
+    "impact": {
+      "status": "unconfirmed",
+      "affectedUsers": null,
+      "leakedData": [
+        {
+          "item": "JAPEXが管理するメールマガジン購読者・機関投資家・証券アナリスト等の個人情報",
+          "confidence": "possible"
+        }
+      ],
+      "systems": [
+        "ラクスライトクラウド「blastmail」"
+      ],
+      "serviceOutage": null,
+      "financialLoss": null,
+      "description": "JAPEXがメールマガジンとイベント案内の配信に使っていたblastmail上の個人情報が漏えいした可能性がある。件数・項目は記事からは不明。"
+    },
+    "response": {
+      "description": "ラクスライトクラウドからの報告を受け、JAPEXが不正アクセスと個人情報漏えいの可能性を公表した。",
+      "measures": [
+        "不正アクセスと漏えいの可能性の公表"
+      ]
+    },
+    "lessons": [
+      "メール配信などの外部SaaS/ASPに預けた個人情報も委託先経由で漏えいするリスクがあるため、委託先の管理状況を確認し、保存するデータを最小限にすることが重要。"
+    ],
+    "organizationId": "org-japex",
+    "updatedAt": "2026-10-21",
+    "country": "JP",
+    "industry": "エネルギー（石油・天然ガス開発）",
+    "featured": false,
+    "attackMethods": [],
+    "technicalNotes": "",
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-japex-blastmail-raks-lite-cloud-unauthorized-access-mvxlmbm9"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-maruki-medical-core-system-cyberattack",
+    "slug": "maruki-medical-core-system-cyberattack-2026-10",
+    "title": "丸木医科器械 サイバー攻撃で基幹システムがダウンし受注・出荷を停止",
+    "summary": "丸木医科器械は2026年10月15日午前10時頃から自社サーバに不審なアクセス（サイバー攻撃）を受け、発注・仕入・入出庫管理を担う基幹システムが全面的にダウンした。これにより商品の注文受付と出荷業務を一時停止した。",
+    "summaryDetails": "丸木医科器械株式会社は10月15日、同社サーバへのサイバー攻撃について発表した。同日午前10時頃からサーバに不審なアクセスを受け、基幹システム（発注・仕入・入出庫管理）が全面的にダウンした。発注・仕入・入出庫データへのアクセスや処理ができなくなり、商品の注文受付と出荷業務を一時的に停止した。記事のタイトルによると、注文はFAXで受け付けている。攻撃の手口や情報漏えいの有無は明らかにされていない。",
+    "service": "基幹システム（発注・仕入・入出庫管理）",
+    "incidentDate": "2026-10-15",
+    "discoveredAt": "2026-10-15",
+    "disclosedAt": "2026-10-15",
+    "categories": [
+      "unauthorized-access"
+    ],
+    "severity": "high",
+    "status": "investigating",
+    "verificationStatus": "confirmed",
+    "cause": {
+      "status": "under_investigation",
+      "description": "同社サーバが不審なアクセス（サイバー攻撃）を受けたが、詳しい手口は明らかにされていない。",
+      "factors": []
+    },
+    "impact": {
+      "status": "partially_confirmed",
+      "affectedUsers": null,
+      "leakedData": [],
+      "systems": [
+        "社内サーバ",
+        "基幹システム（発注・仕入・入出庫管理）"
+      ],
+      "serviceOutage": true,
+      "financialLoss": null,
+      "description": "基幹システムが全面的にダウンして発注・仕入・入出庫データへのアクセスや処理ができなくなり、商品の注文受付と出荷業務を一時停止した。"
+    },
+    "response": {
+      "description": "受注・出荷の停止を告知して謝罪し、記事のタイトルによると注文はFAXで受け付けている。",
+      "measures": [
+        "受注・出荷業務の一時停止",
+        "FAXでの注文受付"
+      ]
+    },
+    "lessons": [
+      "基幹システムが止まっても業務を続けられるよう、代わりの手段や事業継続計画（BCP）を用意しておく",
+      "サーバへの不審なアクセスを早く見つけて封じ込められる監視体制を整える"
+    ],
+    "organizationId": "org-maruki-medical",
+    "updatedAt": "2026-10-15",
+    "country": "JP",
+    "industry": "医療機器卸売",
+    "featured": false,
+    "attackMethods": [],
+    "technicalNotes": "",
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-maruki-medical-core-system-cyberattack-mvxlmljk"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-shizuoka-city-ekipa-parking-lost-ticket-forms-leak",
+    "slug": "shizuoka-city-ekipa-parking-lost-ticket-forms-leak-2026-10",
+    "title": "静岡市 静岡駅前地下駐車場（エキパ）の駐車券紛失届を拾得したとする人物から買い取り要求、個人情報漏えいのおそれ",
+    "summary": "静岡市が設置する静岡駅前地下駐車場（エキパ）の管理業務受託者に、約300枚の駐車券紛失届を拾得したとする人物から買い取りを求める電話があり、2名分の個人情報が読み上げられた。相手方は個人情報の拡散も示唆している。",
+    "summaryDetails": "2026年10月23日、静岡駅前地下駐車場（エキパ）の管理業務受託者に対し、約300枚の駐車券紛失届を拾得したとする人物から書類の買い取りを求める電話があった。相手方は2名分の個人情報を読み上げ、その後の電話で個人情報の拡散を示唆する発言をした。静岡市と管理業務受託者が10月24日に書類の保管状況を確認したところ、相手方が示した日付に該当する書類は確認できなかった。また、読み上げられた2名については、紛失当日の業務日報で駐車券の紛失が確認されている。静岡市は10月24日に個人情報漏えいのおそれを公表した。",
+    "service": "静岡駅前地下駐車場（エキパ）",
+    "incidentDate": "2026-10-23",
+    "discoveredAt": "2026-10-23",
+    "disclosedAt": "2026-10-24",
+    "categories": [
+      "data-breach",
+      "other"
+    ],
+    "severity": "medium",
+    "status": "investigating",
+    "verificationStatus": "partially_confirmed",
+    "cause": {
+      "status": "under_investigation",
+      "description": "駐車券紛失届（紙書類）が所在不明となり、第三者の手に渡ったとみられる。流出の経緯は記事では明らかにされていない。",
+      "factors": [
+        "紙書類の保管管理の不備の可能性",
+        "相手方が示した日付の書類が保管場所で確認できない"
+      ]
+    },
+    "impact": {
+      "status": "partially_confirmed",
+      "affectedUsers": null,
+      "leakedData": [
+        {
+          "item": "駐車券紛失届に記載された個人情報（約300枚分とされる）",
+          "confidence": "possible"
+        },
+        {
+          "item": "電話で読み上げられた2名分の個人情報",
+          "confidence": "confirmed"
+        }
+      ],
+      "systems": [
+        "駐車券紛失届（紙書類）"
+      ],
+      "serviceOutage": null,
+      "financialLoss": null,
+      "description": "約300枚の駐車券紛失届を拾得したと主張する人物から買い取りを要求された。2名分の個人情報が読み上げられ、拡散を示唆する発言もあった。"
+    },
+    "response": {
+      "description": "静岡市と管理業務受託者は10月24日に書類の保管状況と業務日報を確認し、同日に個人情報漏えいのおそれを公表した。",
+      "measures": [
+        "書類の保管状況の確認",
+        "業務日報の照合",
+        "公表"
+      ]
+    },
+    "lessons": [
+      "個人情報が記載された紙書類の保管・廃棄を厳しく管理する必要がある",
+      "委託先が扱う紙書類も含めて管理状況を定期的に確認する必要がある"
+    ],
+    "organizationId": "org-shizuoka-city",
+    "updatedAt": "2026-10-24",
+    "country": "JP",
+    "industry": "地方自治体",
+    "featured": false,
+    "attackMethods": [],
+    "technicalNotes": "",
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-shizuoka-city-ekipa-parking-lost-ticket-forms-leak-mvxlmvz8"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-yamada-denki-yamada-video-smartphone-gold-unauthorized-access",
+    "slug": "yamada-denki-yamada-video-smartphone-gold-unauthorized-access-2026-10",
+    "title": "ヤマダデンキ 「ヤマダビデオ」「スマホゴールド会員」の手続き画面への不正アクセスでサービスを一時停止",
+    "summary": "ヤマダデンキが提供する「ヤマダビデオ」と「スマホゴールド会員」の各種手続き画面に外部から不正アクセスがあったことが確認され、2026年10月22日午後4時13分頃からサービスを一時停止した。個人情報への影響は調査中。",
+    "summaryDetails": "株式会社ヤマダデンキは10月23日、同社が提供する「ヤマダビデオ」と「スマホゴールド会員」の各種手続き画面に外部から不正アクセスがあったことを確認したと発表した。これを受けて10月22日午後4時13分頃からサービスを一時停止している。個人情報への影響については引き続き調査するとしている。",
+    "service": "ヤマダビデオ、スマホゴールド会員",
+    "incidentDate": null,
+    "discoveredAt": "2026-10-22",
+    "disclosedAt": "2026-10-23",
+    "categories": [
+      "unauthorized-access"
+    ],
+    "severity": "medium",
+    "status": "investigating",
+    "verificationStatus": "confirmed",
+    "cause": {
+      "status": "under_investigation",
+      "description": "各種手続き画面に外部から不正アクセスがあった。手口の詳細は公表されていない。",
+      "factors": []
+    },
+    "impact": {
+      "status": "unconfirmed",
+      "affectedUsers": null,
+      "leakedData": [],
+      "systems": [
+        "ヤマダビデオ 各種手続き画面",
+        "スマホゴールド会員 各種手続き画面"
+      ],
+      "serviceOutage": true,
+      "financialLoss": null,
+      "description": "2026年10月22日午後4時13分頃からサービスを一時停止。個人情報への影響は調査中。"
+    },
+    "response": {
+      "description": "不正アクセスを確認した後にサービスを一時停止し、個人情報への影響を調査している。",
+      "measures": [
+        "サービスの一時停止",
+        "個人情報への影響調査"
+      ]
+    },
+    "lessons": [],
+    "organizationId": "org-yamada-denki",
+    "updatedAt": "2026-10-23",
+    "country": "JP",
+    "industry": "小売（家電量販）",
+    "featured": false,
+    "attackMethods": [],
+    "technicalNotes": "",
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-yamada-denki-yamada-video-smartphone-gold-unauthorized-access-mvxln5co"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-jfe-chemical-it-environment-unauthorized-access",
+    "slug": "jfe-chemical-it-environment-unauthorized-access-2026-10",
+    "title": "JFEケミカル IT環境への不正アクセスでデータが不正取得",
+    "summary": "JFEケミカルは同社IT環境への不正アクセスを受け、データが不正に取得されたことが2026年10月19日に判明したと10月21日に発表した。",
+    "summaryDetails": "JFEケミカルは2026年10月14日に不正アクセスの可能性を把握して調査を始め、10月19日に同社IT環境への不正アクセスとデータの不正取得を確認した。社内に緊急対策本部を設置し、外部のサイバーセキュリティ専門機関と連携して、影響範囲の調査と被害拡大の防止を進めている。不正取得されたデータの内容や件数は、まだ明らかにされていない。",
+    "service": null,
+    "incidentDate": null,
+    "discoveredAt": "2026-10-14",
+    "disclosedAt": "2026-10-21",
+    "categories": [
+      "unauthorized-access",
+      "data-breach"
+    ],
+    "severity": "unknown",
+    "status": "investigating",
+    "verificationStatus": "confirmed",
+    "cause": {
+      "status": "under_investigation",
+      "description": "同社IT環境に不正アクセスがあったことは判明しているが、侵入の経路や手口は公表されていない。",
+      "factors": []
+    },
+    "impact": {
+      "status": "partially_confirmed",
+      "affectedUsers": null,
+      "leakedData": [
+        {
+          "item": "同社IT環境内のデータ（内容は不明）",
+          "confidence": "confirmed"
+        }
+      ],
+      "systems": [
+        "社内IT環境"
+      ],
+      "serviceOutage": null,
+      "financialLoss": null,
+      "description": "同社IT環境のデータが不正に取得されたことは確認されたが、データの内容や影響範囲は調査中。"
+    },
+    "response": {
+      "description": "緊急対策本部を設置し、外部のサイバーセキュリティ専門機関と連携して、影響範囲の調査と被害拡大の防止を進めている。",
+      "measures": [
+        "社内に緊急対策本部を設置",
+        "外部のサイバーセキュリティ専門機関と連携して影響範囲を調査",
+        "被害拡大を防ぐ対応"
+      ]
+    },
+    "lessons": [],
+    "organizationId": "org-jfe-chemical",
+    "updatedAt": "2026-10-21",
+    "country": "JP",
+    "industry": "化学",
+    "featured": false,
+    "attackMethods": [],
+    "technicalNotes": "",
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-jfe-chemical-it-environment-unauthorized-access-mvxlnjzq"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-studio-cloud-environment-unauthorized-access",
+    "slug": "studio-cloud-environment-unauthorized-access-2026-10",
+    "title": "Studio 一部機能の脆弱性を悪用したクラウド環境への不正アクセスで復号鍵も読み出し",
+    "summary": "Studio株式会社が利用するクラウド環境に、2026年9月30日から10月1日にかけて第三者が一部機能の脆弱性を悪用して不正アクセスした。環境内のデータが外部から取得できる状態になっており、復号に必要な鍵も読み出されていた。",
+    "summaryDetails": "Studio株式会社は10月16日、同社が利用するクラウド環境への不正アクセスを発表した。2026年9月30日から10月1日の期間に、第三者がStudioの一部機能の脆弱性を悪用してクラウド環境に不正アクセスし、環境内のデータを外部から取得できる状態にしていた。記事タイトルによれば、復号に必要な鍵も読み出されていた。同社は10月13日に社内調査で不正アクセスを確認し、13日から14日にかけて脆弱性を修正した。あわせて不正アクセスに使われた経路を塞ぎ、外部から取得できる状態を解消した。フォーム機能を利用する顧客に向けて、個人情報保護委員会への報告に関する案内も出している。",
+    "service": "Studio",
+    "incidentDate": "2026-09-30",
+    "discoveredAt": "2026-10-13",
+    "disclosedAt": "2026-10-16",
+    "categories": [
+      "vulnerability",
+      "unauthorized-access",
+      "data-breach"
+    ],
+    "severity": "high",
+    "status": "contained",
+    "verificationStatus": "confirmed",
+    "cause": {
+      "status": "partially_confirmed",
+      "description": "Studioの一部機能にあった脆弱性を第三者に悪用され、クラウド環境に不正アクセスされた。",
+      "factors": [
+        "Studio一部機能の脆弱性",
+        "クラウド環境内のデータが外部から取得可能な状態にされた",
+        "復号に必要な鍵の読み出し"
+      ]
+    },
+    "impact": {
+      "status": "partially_confirmed",
+      "affectedUsers": null,
+      "leakedData": [
+        {
+          "item": "クラウド環境内のデータ（フォーム機能で受け付けた情報を含む可能性）",
+          "confidence": "possible"
+        },
+        {
+          "item": "復号に必要な鍵",
+          "confidence": "confirmed"
+        }
+      ],
+      "systems": [
+        "Studioが利用するクラウド環境",
+        "Studioの一部機能（フォーム機能関連）"
+      ],
+      "serviceOutage": null,
+      "financialLoss": null,
+      "description": "クラウド環境内のデータが外部から取得できる状態になり、復号鍵も読み出された。フォーム機能を利用する顧客には、個人情報保護委員会への報告に関する案内が出されている。"
+    },
+    "response": {
+      "description": "10月13日に社内調査で不正アクセスを確認し、13日から14日にかけて脆弱性の修正と侵入経路の封鎖を完了して、外部から取得できる状態を解消した。",
+      "measures": [
+        "脆弱性の修正",
+        "不正アクセス経路の封鎖",
+        "フォーム機能利用顧客への個人情報保護委員会報告に関する案内"
+      ]
+    },
+    "lessons": [
+      "SaaS機能の脆弱性管理を徹底する",
+      "暗号鍵とデータを分けて保管・管理する",
+      "クラウド環境での異常アクセスを早期に検知する体制を整える"
+    ],
+    "organizationId": "org-studio",
+    "updatedAt": "2026-10-16",
+    "country": "JP",
+    "industry": "情報通信業（Web制作SaaS）",
+    "featured": false,
+    "attackMethods": [],
+    "technicalNotes": "",
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-studio-cloud-environment-unauthorized-access-mvxlnxxs"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-kushiro-city-portus-ransomware",
+    "slug": "kushiro-city-portus-ransomware-2026-10",
+    "title": "釧路市 学習用端末の管理運用委託先ポータスへのランサムウェア攻撃で情報流出の可能性",
+    "summary": "釧路市が市立小中学校の学習用端末の管理運用を委託している株式会社ポータスの社内サーバが8月29日にランサムウェア攻撃を受けた。釧路市の端末設定等に関する情報を保存していたサーバで不正アクセスの痕跡が見つかり、情報が外部に流出した可能性を否定できない。",
+    "summaryDetails": "北海道釧路市は10月15日、委託事業者への不正アクセスについて発表した。8月29日、市立小中学校の学習用端末の管理運用業務を委託している株式会社ポータスの社内サーバがランサムウェア攻撃を受けた。ポータスは当初、市が利用するサーバに影響はないと報告していた。しかしその後の外部専門機関による調査で、市の端末設定等に関する情報を保存していたサーバに不正アクセスの痕跡が確認された。ポータスは10月13日、情報が外部に流出した可能性を否定できないと市に報告した。",
+    "service": "市立小中学校 学習用端末の管理運用業務",
+    "incidentDate": "2026-08-29",
+    "discoveredAt": "2026-08-29",
+    "disclosedAt": "2026-10-15",
+    "categories": [
+      "ransomware",
+      "supply-chain",
+      "unauthorized-access"
+    ],
+    "severity": "medium",
+    "status": "investigating",
+    "verificationStatus": "partially_confirmed",
+    "cause": {
+      "status": "partially_confirmed",
+      "description": "委託先のポータスの社内サーバがランサムウェア攻撃を受け、釧路市の端末設定等の情報を保存していたサーバにも不正アクセスの痕跡が見つかった。侵入経路は記事に書かれていない。",
+      "factors": [
+        "委託事業者のサーバへのランサムウェア攻撃"
+      ]
+    },
+    "impact": {
+      "status": "unconfirmed",
+      "affectedUsers": null,
+      "leakedData": [
+        {
+          "item": "市立小中学校の学習用端末の設定等に関する情報",
+          "confidence": "possible"
+        }
+      ],
+      "systems": [
+        "ポータス社内サーバ",
+        "釧路市の端末設定等の情報を保存していたサーバ"
+      ],
+      "serviceOutage": null,
+      "financialLoss": null,
+      "description": "釧路市の学習用端末の設定等に関する情報が外部に流出した可能性を否定できない。"
+    },
+    "response": {
+      "description": "ポータスは外部専門機関に調査を依頼し、その結果を10月13日に市へ報告した。釧路市は10月15日に公表した。",
+      "measures": [
+        "外部専門機関による調査",
+        "市による公表"
+      ]
+    },
+    "lessons": [
+      "委託先がインシデントの影響範囲を最初に報告しても、専門機関の調査で覆ることがある。委託元は、続報の確認や調査結果の共有を委託先に求める必要がある。"
+    ],
+    "organizationId": "org-kushiro-city",
+    "updatedAt": "2026-10-15",
+    "country": "JP",
+    "industry": "地方自治体",
+    "featured": false,
+    "attackMethods": [],
+    "technicalNotes": "",
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-kushiro-city-portus-ransomware-mvxlo8qt"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-m3-mr-kun-unauthorized-access",
+    "slug": "m3-mr-kun-unauthorized-access-2026-10",
+    "title": "エムスリー 製薬企業向けサービス「MR君」への不正アクセスで医師会員・製薬企業担当者の情報が漏えい",
+    "summary": "エムスリーが運営する製薬企業向けサービス「MR君」のシステムが2026年10月14日に第三者から不正アクセスを受けていたことが確認された。一部の医師会員と製薬企業の担当者の氏名・勤務先・メールアドレス等が漏えいした。",
+    "summaryDetails": "エムスリー株式会社は2026年10月15日、製薬企業向けサービス「MR君」のシステムへの不正アクセスについて発表した。10月14日に第三者による不正アクセスが確認され、調査の結果、医師会員の一部（医師会員全体の1割未満）と製薬企業の担当者（数百名規模）に関する情報が漏えいしたことがわかった。不正アクセスが確認された情報には、氏名、勤務先、一部のメールアドレス等が含まれる。",
+    "service": "MR君",
+    "incidentDate": null,
+    "discoveredAt": "2026-10-14",
+    "disclosedAt": "2026-10-15",
+    "categories": [
+      "unauthorized-access",
+      "data-breach"
+    ],
+    "severity": "high",
+    "status": "investigating",
+    "verificationStatus": "confirmed",
+    "cause": {
+      "status": "under_investigation",
+      "description": "第三者が「MR君」のシステムに不正アクセスした。侵入の手口は記事では明らかにされていない。",
+      "factors": []
+    },
+    "impact": {
+      "status": "partially_confirmed",
+      "affectedUsers": null,
+      "leakedData": [
+        {
+          "item": "氏名",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "勤務先",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "メールアドレス（一部）",
+          "confidence": "confirmed"
+        }
+      ],
+      "systems": [
+        "MR君"
+      ],
+      "serviceOutage": null,
+      "financialLoss": null,
+      "description": "医師会員の一部（医師会員全体の1割未満）と製薬企業の担当者（数百名規模）の氏名・勤務先・一部のメールアドレス等への不正アクセスが確認された。"
+    },
+    "response": {
+      "description": "10月14日に不正アクセスを確認して調査を行い、10月15日にお詫びとお知らせを公表した。",
+      "measures": [
+        "調査の実施",
+        "公表"
+      ]
+    },
+    "lessons": [],
+    "organizationId": "org-m3",
+    "updatedAt": "2026-10-15",
+    "country": "JP",
+    "industry": "医療情報サービス",
+    "featured": false,
+    "attackMethods": [],
+    "technicalNotes": "",
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-m3-mr-kun-unauthorized-access-mvxloj7t"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-eyelash-garage-ec-site-unauthorized-access",
+    "slug": "eyelash-garage-ec-site-unauthorized-access-2026-10",
+    "title": "アイラッシュガレージ ECサイトへの不正アクセスで4万9,191件の顧客情報が漏えい",
+    "summary": "アイラッシュガレージのECサイトのサーバに2026年10月10日から12日にかけて不正侵入があり、顧客情報4万9,191件の一部が取得され外部に流出した。",
+    "summaryDetails": "株式会社アイラッシュガレージは10月15日、同社ECサイトへの不正アクセスを発表した。10月10日から12日にかけてECサイトのサーバへの不正侵入が発生し、顧客情報の一部が取得され外部に流出した。漏えい件数は4万9,191件。同社は10月13日に事象を検知し、不正アクセス経路を特定した上で同日中に遮断を完了した。",
+    "service": "アイラッシュガレージ ECサイト",
+    "incidentDate": "2026-10-10",
+    "discoveredAt": "2026-10-13",
+    "disclosedAt": "2026-10-15",
+    "categories": [
+      "unauthorized-access",
+      "data-breach"
+    ],
+    "severity": "high",
+    "status": "contained",
+    "verificationStatus": "confirmed",
+    "cause": {
+      "status": "under_investigation",
+      "description": "ECサイトのサーバへの不正侵入。侵入経路は特定済みとされるが、詳細は記事では明らかにされていない。",
+      "factors": []
+    },
+    "impact": {
+      "status": "confirmed",
+      "affectedUsers": 49191,
+      "leakedData": [
+        {
+          "item": "顧客情報",
+          "confidence": "confirmed"
+        }
+      ],
+      "systems": [
+        "ECサイトのサーバ"
+      ],
+      "serviceOutage": null,
+      "financialLoss": null,
+      "description": "ECサイトのサーバから顧客情報4万9,191件の一部が取得され外部に流出した。"
+    },
+    "response": {
+      "description": "10月13日に事象を検知し、不正アクセス経路を特定して同日中に遮断した。10月15日に公表。",
+      "measures": [
+        "不正アクセス経路の特定",
+        "不正アクセス経路の遮断",
+        "公表・お詫び"
+      ]
+    },
+    "lessons": [],
+    "organizationId": "org-eyelash-garage",
+    "updatedAt": "2026-10-15",
+    "country": "JP",
+    "industry": "小売・EC（美容商材）",
+    "featured": false,
+    "attackMethods": [],
+    "technicalNotes": "",
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-eyelash-garage-ec-site-unauthorized-access-mvxlotne"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-toypo-toypo-app-unauthorized-access",
+    "slug": "toypo-toypo-app-unauthorized-access-2026-10",
+    "title": "トイポ 行動データプラットフォーム「トイポアプリ」への不正アクセスで69万7,209名の登録情報が漏えいした可能性",
+    "summary": "株式会社トイポが運営する「トイポアプリ」で、権限のない第三者が他のユーザー情報を取得できる脆弱性を突かれた不正アクセスがあった。69万7,209名の登録情報が漏えいした可能性がある。",
+    "summaryDetails": "トイポは2026年10月4日、同社システムへの第三者による不正アクセスを確認した。調査の結果、一部のシステムに、アクセス権限を持たない第三者が他のユーザー情報を取得できる脆弱性があることが分かった。対象は697,209名の登録情報で、電話番号、ユーザーIDなどの識別情報に加え、登録していた場合は氏名、氏名カナ、メールアドレス、生年月日、性別、住所が含まれる。同社は10月14日に公表した。",
+    "service": "トイポアプリ",
+    "incidentDate": null,
+    "discoveredAt": "2026-10-04",
+    "disclosedAt": "2026-10-14",
+    "categories": [
+      "unauthorized-access",
+      "vulnerability",
+      "data-breach"
+    ],
+    "severity": "high",
+    "status": "unknown",
+    "verificationStatus": "confirmed",
+    "cause": {
+      "status": "partially_confirmed",
+      "description": "一部のシステムに、アクセス権限を持たない第三者が他のユーザー情報を取得できる脆弱性があり、これを悪用した不正アクセスを受けた。",
+      "factors": [
+        "アクセス制御の不備（権限のない第三者が他ユーザーの情報を取得できる脆弱性）"
+      ]
+    },
+    "impact": {
+      "status": "partially_confirmed",
+      "affectedUsers": 697209,
+      "leakedData": [
+        {
+          "item": "電話番号",
+          "confidence": "possible"
+        },
+        {
+          "item": "ユーザーID等の識別情報",
+          "confidence": "possible"
+        },
+        {
+          "item": "氏名・氏名カナ（登録者のみ）",
+          "confidence": "possible"
+        },
+        {
+          "item": "メールアドレス（登録者のみ）",
+          "confidence": "possible"
+        },
+        {
+          "item": "生年月日（登録者のみ）",
+          "confidence": "possible"
+        },
+        {
+          "item": "性別（登録者のみ）",
+          "confidence": "possible"
+        },
+        {
+          "item": "住所（登録者のみ）",
+          "confidence": "possible"
+        }
+      ],
+      "systems": [
+        "トイポアプリ"
+      ],
+      "serviceOutage": null,
+      "financialLoss": null,
+      "description": "69万7,209名のユーザー登録情報が外部に漏えいした可能性がある。"
+    },
+    "response": {
+      "description": "不正アクセスを確認した後に調査を行い、10月14日にお詫びとお知らせを公表した。",
+      "measures": [
+        "調査の実施",
+        "公表・お詫び"
+      ]
+    },
+    "lessons": [
+      "APIなどで認可チェックを徹底し、他ユーザーの情報を取得できないようにする",
+      "個人情報を扱うアプリでは、アクセス制御の不備がないか定期的に脆弱性診断を行う"
+    ],
+    "organizationId": "org-toypo",
+    "updatedAt": "2026-10-14",
+    "country": "JP",
+    "industry": "情報通信業（アプリ開発・運営）",
+    "featured": false,
+    "attackMethods": [],
+    "technicalNotes": "",
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-toypo-toypo-app-unauthorized-access-mvxlp3j2"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-sapporo-international-university-email-account-phishing",
+    "slug": "sapporo-international-university-email-account-phishing-2026-10",
+    "title": "札幌国際大学 フィッシングによるメールアカウントへの不正アクセスで学内外に大量のフィッシングメールを送信",
+    "summary": "札幌国際大学で、7月9日以降に学生・教職員がフィッシングメールから偽装サイトにアクセスしたことで複数のメールアカウントが不正利用された。これらのアカウントを踏み台に、学内外の宛先へ大量のフィッシングメールが送信された。",
+    "summaryDetails": "札幌国際大学は2026年10月14日、同学のメールアカウントへの不正アクセスについて発表した。7月9日以降、学生や教職員がフィッシングメールを受け取り、本文のURLから偽装サイトにアクセスしたことで、メールアカウントが第三者に不正利用された。大学が調査した結果、複数のアカウントへの不正アクセスが確認された。これらのアカウントを踏み台にして、学内外の宛先へ大量のフィッシングメールが送信されていた。大学は調査結果を公表し、対応が完了したと報告している。",
+    "service": "大学メールアカウント",
+    "incidentDate": "2026-07-09",
+    "discoveredAt": null,
+    "disclosedAt": "2026-10-14",
+    "categories": [
+      "phishing",
+      "unauthorized-access"
+    ],
+    "severity": "medium",
+    "status": "resolved",
+    "verificationStatus": "confirmed",
+    "cause": {
+      "status": "confirmed",
+      "description": "学生・教職員がフィッシングメールを受け取り、本文のURLから偽装サイトにアクセスしたことで、メールアカウントの認証情報が第三者に渡り、不正利用された。",
+      "factors": [
+        "フィッシングメール内のURLから偽装サイトへアクセス",
+        "メールアカウント認証情報の窃取"
+      ]
+    },
+    "impact": {
+      "status": "confirmed",
+      "affectedUsers": null,
+      "leakedData": [
+        {
+          "item": "メールアカウント認証情報",
+          "confidence": "confirmed"
+        }
+      ],
+      "systems": [
+        "大学メールシステム"
+      ],
+      "serviceOutage": null,
+      "financialLoss": null,
+      "description": "複数のメールアカウントが不正アクセスを受け、それらを踏み台に学内外の宛先へ大量のフィッシングメールが送信された。"
+    },
+    "response": {
+      "description": "大学が調査を行い、調査結果と対応完了を公表した。",
+      "measures": [
+        "不正アクセスされたアカウントの調査",
+        "調査結果および対応完了の公表"
+      ]
+    },
+    "lessons": [
+      "フィッシングメール内のURLにアクセスしないよう、利用者への教育を徹底する",
+      "多要素認証の導入により、認証情報が盗まれた場合の被害を抑える",
+      "アカウントが乗っ取られて踏み台にされていないか、大量送信などを監視する"
+    ],
+    "organizationId": "org-sapporo-international-university",
+    "updatedAt": "2026-10-14",
+    "country": "JP",
+    "industry": "教育",
+    "featured": false,
+    "attackMethods": [],
+    "technicalNotes": "",
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-sapporo-international-university-email-account-phishing-mvxlpebo"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-suzuki-nirin-suzuki-world-website-unauthorized-access",
+    "slug": "suzuki-nirin-suzuki-world-website-unauthorized-access-2026-10",
+    "title": "スズキ二輪 スズキワールドホームページへの不正アクセスで問い合わせフォームの送信ログ約4,400件が閲覧・取得された可能性",
+    "summary": "スズキ二輪は、スズキワールドホームページが不正アクセスを受け、問い合わせフォームの送信ログに記録された約4,400件の個人情報を第三者が閲覧・取得した可能性があると発表した。",
+    "summaryDetails": "2026年7月29日にスズキワールドホームページで不正アクセスを検知した。同ページを閉鎖して不正アクセスの経路を遮断し、ページの管理会社や外部の専門業者と調査を行った。その結果、問い合わせフォームの送信ログに残っていた約4,400件の個人情報（名前、メールアドレス、電話番号、住所、問い合わせ内容）を第三者が閲覧・取得した可能性があることがわかった。同社は10月14日に公表した。",
+    "service": "スズキワールドホームページ",
+    "incidentDate": null,
+    "discoveredAt": "2026-07-29",
+    "disclosedAt": "2026-10-14",
+    "categories": [
+      "unauthorized-access",
+      "data-breach"
+    ],
+    "severity": "medium",
+    "status": "contained",
+    "verificationStatus": "confirmed",
+    "cause": {
+      "status": "under_investigation",
+      "description": "スズキワールドホームページへの不正アクセス。侵入の詳しい経路は公表されていない。",
+      "factors": [
+        "問い合わせフォームの送信内容がログとしてサーバ上に残っていた"
+      ]
+    },
+    "impact": {
+      "status": "partially_confirmed",
+      "affectedUsers": 4400,
+      "leakedData": [
+        {
+          "item": "名前",
+          "confidence": "possible"
+        },
+        {
+          "item": "メールアドレス",
+          "confidence": "possible"
+        },
+        {
+          "item": "電話番号",
+          "confidence": "possible"
+        },
+        {
+          "item": "住所",
+          "confidence": "possible"
+        },
+        {
+          "item": "問い合わせ内容",
+          "confidence": "possible"
+        }
+      ],
+      "systems": [
+        "スズキワールドホームページ",
+        "問い合わせフォーム送信ログ"
+      ],
+      "serviceOutage": true,
+      "financialLoss": null,
+      "description": "問い合わせフォームの送信ログに記録された約4,400件の個人情報を、第三者が閲覧・取得した可能性がある。ホームページは閉鎖された。"
+    },
+    "response": {
+      "description": "不正アクセスを検知した後、ホームページを閉鎖して経路を遮断し、管理会社や外部の専門業者と調査を行った。",
+      "measures": [
+        "ホームページの閉鎖",
+        "不正アクセス経路の遮断",
+        "管理会社・外部専門業者による調査"
+      ]
+    },
+    "lessons": [
+      "問い合わせフォームの送信内容をログとしてWebサーバに残さない、または最小限にする",
+      "Webサイトの管理を委託している会社のセキュリティ対策を確認する"
+    ],
+    "organizationId": "org-suzuki-nirin",
+    "updatedAt": "2026-10-14",
+    "country": "JP",
+    "industry": "二輪車販売",
+    "featured": false,
+    "attackMethods": [],
+    "technicalNotes": "",
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-suzuki-nirin-suzuki-world-website-unauthorized-access-mvxlppy7"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-aena-ec-app-unauthorized-access",
+    "slug": "aena-ec-app-unauthorized-access-2026-10",
+    "title": "アエナ 「ECアプリ」への不正アクセスで最大81万7,215人の会員情報が閲覧された可能性",
+    "summary": "株式会社アエナが運営する「ECアプリ」が第三者から不正アクセスを受けた。機械的な連続アクセスにより会員のマイページ情報が閲覧され、最大81万7,215人の会員情報が閲覧された可能性がある。",
+    "summaryDetails": "アエナは2026年10月14日、運営する「ECアプリ」への不正アクセスを発表した。10月13日、同社システムログを解析した結果、会員のマイページ情報が第三者に不正に閲覧されていたことが分かった。原因は不正アクセスによる機械的な連続アクセスとされる。閲覧された可能性があるのは最大817,215人分の会員情報。同社はサービス再開予定のお知らせを出し、「ECアプリ会員 退会専用ページ」を開設した。",
+    "service": "ECアプリ",
+    "incidentDate": null,
+    "discoveredAt": "2026-10-13",
+    "disclosedAt": "2026-10-14",
+    "categories": [
+      "unauthorized-access",
+      "data-breach"
+    ],
+    "severity": "high",
+    "status": "contained",
+    "verificationStatus": "confirmed",
+    "cause": {
+      "status": "partially_confirmed",
+      "description": "第三者がECアプリに不正アクセスし、機械的な連続アクセスを行って会員のマイページ情報を閲覧した。",
+      "factors": [
+        "機械的な連続アクセスを受けた",
+        "第三者がマイページ情報を閲覧できた"
+      ]
+    },
+    "impact": {
+      "status": "partially_confirmed",
+      "affectedUsers": 817215,
+      "leakedData": [
+        {
+          "item": "会員のマイページ情報",
+          "confidence": "possible"
+        }
+      ],
+      "systems": [
+        "ECアプリ"
+      ],
+      "serviceOutage": true,
+      "financialLoss": null,
+      "description": "最大817,215人分の会員マイページ情報が閲覧された可能性がある。ECアプリのサービスは停止され、再開予定が案内された。"
+    },
+    "response": {
+      "description": "システムログを解析して不正閲覧を確認し、公表した。サービス再開予定を案内し、会員向けの退会専用ページを開設した。",
+      "measures": [
+        "システムログの解析",
+        "ECアプリサービスの停止と再開予定の案内",
+        "ECアプリ会員 退会専用ページの開設"
+      ]
+    },
+    "lessons": [
+      "機械的な連続アクセスを検知・遮断する仕組み（レート制限やボット対策）が必要",
+      "マイページなど個人情報を表示する機能のアクセス制御を強化する必要がある"
+    ],
+    "organizationId": "org-aena",
+    "updatedAt": "2026-10-14",
+    "country": "JP",
+    "industry": "小売・EC",
+    "featured": false,
+    "attackMethods": [],
+    "technicalNotes": "",
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-aena-ec-app-unauthorized-access-mvxlq2ep"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-piece-booking-com-admin-account-unauthorized-access",
+    "slug": "piece-booking-com-admin-account-unauthorized-access-2026-10",
+    "title": "PIECE 運営施設のBooking.com管理アカウントへの不正アクセスで不正な予約・フィッシングメッセージが発生",
+    "summary": "株式会社PIECEが運営する施設のBooking.com管理アカウントが2026年10月13日に第三者から不正アクセスを受けた。本来販売していない期間や客室が販売され、一部顧客には施設を装って個人情報を求める不正メッセージが送信された。",
+    "summaryDetails": "2026年10月13日午後8時から10時30分にかけて、同社施設のBooking.com管理アカウントへの第三者による不正アクセスが確認された。本来販売していない期間や客室が販売されたことで、正常に部屋を用意できない予約が発生した。また、一部顧客に同社施設を装った「特別割引キャンペーンのご案内」という不正メッセージが送信され、個人情報の提供を求める事象も確認された。同社は10月14日に発表した。",
+    "service": "Booking.com 管理アカウント",
+    "incidentDate": "2026-10-13",
+    "discoveredAt": "2026-10-13",
+    "disclosedAt": "2026-10-14",
+    "categories": [
+      "unauthorized-access",
+      "phishing"
+    ],
+    "severity": "medium",
+    "status": "unknown",
+    "verificationStatus": "confirmed",
+    "cause": {
+      "status": "under_investigation",
+      "description": "第三者がBooking.com管理アカウントに不正アクセスした。侵入経路は記事中に記載がない。",
+      "factors": [
+        "Booking.com管理アカウントへの第三者による不正アクセス"
+      ]
+    },
+    "impact": {
+      "status": "partially_confirmed",
+      "affectedUsers": null,
+      "leakedData": [],
+      "systems": [
+        "Booking.com 管理アカウント"
+      ],
+      "serviceOutage": null,
+      "financialLoss": null,
+      "description": "本来販売していない期間や客室が販売され、正常に部屋を用意できない予約が発生した。一部顧客に施設を装った不正メッセージが送信され、個人情報の提供が求められた。"
+    },
+    "response": {
+      "description": "同社は10月14日に不正アクセスについて発表し、お詫びと注意喚起を行った。",
+      "measures": [
+        "不正アクセスの公表と顧客への注意喚起"
+      ]
+    },
+    "lessons": [
+      "OTA管理アカウントには多要素認証などの強固な認証を導入する",
+      "OTA経由のメッセージを悪用したフィッシングについて、宿泊客へ事前に注意喚起する"
+    ],
+    "organizationId": "org-piece",
+    "updatedAt": "2026-10-14",
+    "country": "JP",
+    "industry": "宿泊業",
+    "featured": false,
+    "attackMethods": [],
+    "technicalNotes": "",
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-piece-booking-com-admin-account-unauthorized-access-mvxlqcbt"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-times-mobility-times-car-web-system-unauthorized-access",
+    "slug": "times-mobility-times-car-web-system-unauthorized-access-2026-09",
+    "title": "タイムズモビリティ 「タイムズカー」Webシステムへの不正アクセスで運転免許証画像など本人確認書類が漏えい",
+    "summary": "パーク24の子会社タイムズモビリティが運営するカーシェアリングサービス「タイムズカー」のWebシステムが不正アクセスを受け、本人確認書類の画像データなど同社グループが保有する個人情報が第三者に閲覧・取得された。第5報では、本人確認書類の画像が漏えいした顧客に3,000円相当の見舞いを支払うと発表した。",
+    "summaryDetails": "タイムズモビリティは2026年9月25日午前9時7分、「タイムズカー」Webシステムへの不正アクセスを検知した。調査の結果、第三者がシステムに不正にアクセスし、同社グループが保有する個人情報の一部を閲覧または取得していたことがわかった。外部の専門機関によるフォレンジック調査では、本件に関連してタイムズクラブWebシステムへの不正アクセスも確認された。関連記事の見出しによると、運転免許証画像など本人確認書類約160万件が漏えいした。パーク24は10月23日に第5報を公表し、本人確認書類の画像データが漏えいした顧客に3,000円相当を見舞いとして支払うとした。",
+    "service": "タイムズカー",
+    "incidentDate": null,
+    "discoveredAt": "2026-09-25",
+    "disclosedAt": "2026-09-25",
+    "categories": [
+      "unauthorized-access",
+      "data-breach"
+    ],
+    "severity": "critical",
+    "status": "contained",
+    "verificationStatus": "confirmed",
+    "cause": {
+      "status": "under_investigation",
+      "description": "第三者がタイムズカーWebシステムに不正アクセスした。侵入の手口は記事に書かれていない。",
+      "factors": [
+        "タイムズカーWebシステムへの不正アクセス",
+        "関連するタイムズクラブWebシステムへの不正アクセス"
+      ]
+    },
+    "impact": {
+      "status": "confirmed",
+      "affectedUsers": 1600000,
+      "leakedData": [
+        {
+          "item": "運転免許証画像などの本人確認書類の画像データ",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "タイムズカーの会員情報",
+          "confidence": "confirmed"
+        }
+      ],
+      "systems": [
+        "タイムズカーWebシステム",
+        "タイムズクラブWebシステム"
+      ],
+      "serviceOutage": null,
+      "financialLoss": "本人確認書類の画像が漏えいした顧客1人につき3,000円相当の見舞い",
+      "description": "同社グループが保有する個人情報の一部が第三者に閲覧または取得された。関連記事によると、運転免許証画像など約160万件の本人確認書類が漏えいした。"
+    },
+    "response": {
+      "description": "不正アクセスを検知した後に調査を行い、外部の専門機関にフォレンジック調査を依頼した。調査結果は第5報まで段階的に公表し、本人確認書類の画像が漏えいした顧客には3,000円相当の見舞いを支払う。",
+      "measures": [
+        "外部専門機関によるフォレンジック調査",
+        "続報（第5報まで）による公表",
+        "本人確認書類の画像が漏えいした顧客への3,000円相当の見舞い"
+      ]
+    },
+    "lessons": [
+      "運転免許証画像などの本人確認書類は漏えい時の影響が大きいため、保存期間を最小限にし、アクセス制御や暗号化を徹底する必要がある",
+      "関連するWebシステムにも侵害が広がっていないか調べることが重要"
+    ],
+    "organizationId": "org-times-mobility",
+    "updatedAt": "2026-09-25",
+    "country": "JP",
+    "industry": "カーシェアリング・モビリティサービス",
+    "featured": false,
+    "attackMethods": [],
+    "technicalNotes": "",
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-times-mobility-times-car-web-system-unauthorized-access-mvxlraah"
+    ],
+    "createdAt": "2026-11-01",
+    "publishedAt": "2026-11-01"
   }
 ]

@@ -30,5 +30,293 @@
     "country": "JP",
     "industry": "ホスティング・クラウド",
     "website": "https://group.gmo/"
+  },
+  {
+    "name": "松屋フーズ",
+    "slug": "matsuya-foods",
+    "industry": "飲食業",
+    "website": "https://www.matsuyafoods.co.jp/",
+    "id": "org-matsuya-foods",
+    "country": "JP"
+  },
+  {
+    "name": "ドトールコーヒー",
+    "slug": "doutor-coffee",
+    "industry": "飲食（コーヒーショップチェーン）",
+    "website": "",
+    "id": "org-doutor-coffee",
+    "country": "JP"
+  },
+  {
+    "name": "ギフティ",
+    "slug": "giftee",
+    "industry": "電子ギフトサービス",
+    "website": "",
+    "id": "org-giftee",
+    "country": "JP"
+  },
+  {
+    "name": "全日本空輸（ANA）",
+    "slug": "ana",
+    "industry": "航空",
+    "website": "https://www.ana.co.jp/",
+    "id": "org-ana",
+    "country": "JP"
+  },
+  {
+    "name": "ベネフィット・ワン",
+    "slug": "benefit-one",
+    "industry": "福利厚生サービス",
+    "website": "",
+    "id": "org-benefit-one",
+    "country": "JP"
+  },
+  {
+    "name": "デジタル庁",
+    "slug": "digital-agency",
+    "industry": "行政機関",
+    "website": "https://www.digital.go.jp/",
+    "id": "org-digital-agency",
+    "country": "JP"
+  },
+  {
+    "name": "カプコン",
+    "slug": "capcom",
+    "industry": "ゲーム",
+    "website": "https://www.capcom.co.jp/",
+    "id": "org-capcom",
+    "country": "JP"
+  },
+  {
+    "name": "NTTソルマーレ",
+    "slug": "ntt-solmare",
+    "industry": "電子書籍・情報通信",
+    "website": "https://www.cmoa.jp/",
+    "id": "org-ntt-solmare",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社Gunosy",
+    "slug": "gunosy",
+    "industry": "情報通信業（インターネットメディア）",
+    "website": "https://gunosy.co.jp/",
+    "id": "org-gunosy",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社リンクステーション",
+    "slug": "linkstation",
+    "industry": "チケット販売・興行システム",
+    "website": "",
+    "id": "org-linkstation",
+    "country": "JP"
+  },
+  {
+    "name": "エンタッチ株式会社",
+    "slug": "entouch",
+    "industry": "医薬品・ヘルスケア（リモートディテーリング事業）",
+    "website": "",
+    "id": "org-entouch",
+    "country": "JP"
+  },
+  {
+    "name": "ニフティ株式会社",
+    "slug": "nifty",
+    "industry": "情報通信（インターネットサービスプロバイダ）",
+    "website": "https://www.nifty.co.jp/",
+    "id": "org-nifty",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社セカンドリテイリング",
+    "slug": "second-retailing",
+    "industry": "小売",
+    "website": "",
+    "id": "org-second-retailing",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社アルカディア",
+    "slug": "arcadia",
+    "industry": "情報通信業（メール配信サービス）",
+    "website": "",
+    "id": "org-arcadia",
+    "country": "JP"
+  },
+  {
+    "name": "エイチ・ツー・オー リテイリング株式会社",
+    "slug": "h2o-retailing",
+    "industry": "小売（百貨店）",
+    "website": "",
+    "id": "org-h2o-retailing",
+    "country": "JP"
+  },
+  {
+    "name": "三井住友DSアセットマネジメント株式会社",
+    "slug": "sumitomo-mitsui-ds-asset-management",
+    "industry": "金融（資産運用）",
+    "website": "",
+    "id": "org-sumitomo-mitsui-ds-asset-management",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社フジテレビジョン",
+    "slug": "fuji-television",
+    "industry": "放送・メディア",
+    "website": "https://www.fujitv.co.jp/",
+    "id": "org-fuji-television",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社Eストアー",
+    "slug": "estore",
+    "industry": "ECサイト構築・運営支援サービス",
+    "website": "",
+    "id": "org-estore",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社メドレー",
+    "slug": "medley",
+    "industry": "医療IT・情報サービス",
+    "website": "",
+    "id": "org-medley",
+    "country": "JP"
+  },
+  {
+    "name": "パナソニック オペレーショナルエクセレンス株式会社",
+    "slug": "panasonic-operational-excellence",
+    "industry": "電機・グループ共通機能（シェアードサービス）",
+    "website": "",
+    "id": "org-panasonic-operational-excellence",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社ネットプロテクションズ",
+    "slug": "net-protections",
+    "industry": "決済サービス",
+    "website": "",
+    "id": "org-net-protections",
+    "country": "JP"
+  },
+  {
+    "name": "石油資源開発株式会社（JAPEX）",
+    "slug": "japex",
+    "industry": "エネルギー（石油・天然ガス開発）",
+    "website": "https://www.japex.co.jp/",
+    "id": "org-japex",
+    "country": "JP"
+  },
+  {
+    "name": "丸木医科器械株式会社",
+    "slug": "maruki-medical",
+    "industry": "医療機器卸売",
+    "website": "",
+    "id": "org-maruki-medical",
+    "country": "JP"
+  },
+  {
+    "name": "静岡市",
+    "slug": "shizuoka-city",
+    "industry": "地方自治体",
+    "website": "https://www.city.shizuoka.lg.jp/",
+    "id": "org-shizuoka-city",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社ヤマダデンキ",
+    "slug": "yamada-denki",
+    "industry": "小売（家電量販）",
+    "website": "",
+    "id": "org-yamada-denki",
+    "country": "JP"
+  },
+  {
+    "name": "JFEケミカル株式会社",
+    "slug": "jfe-chemical",
+    "industry": "化学",
+    "website": "",
+    "id": "org-jfe-chemical",
+    "country": "JP"
+  },
+  {
+    "name": "Studio株式会社",
+    "slug": "studio",
+    "industry": "情報通信業（Web制作SaaS）",
+    "website": "https://studio.design/",
+    "id": "org-studio",
+    "country": "JP"
+  },
+  {
+    "name": "釧路市",
+    "slug": "kushiro-city",
+    "industry": "地方自治体",
+    "website": "",
+    "id": "org-kushiro-city",
+    "country": "JP"
+  },
+  {
+    "name": "エムスリー株式会社",
+    "slug": "m3",
+    "industry": "医療情報サービス",
+    "website": "https://corporate.m3.com/",
+    "id": "org-m3",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社アイラッシュガレージ",
+    "slug": "eyelash-garage",
+    "industry": "小売・EC（美容商材）",
+    "website": "",
+    "id": "org-eyelash-garage",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社トイポ",
+    "slug": "toypo",
+    "industry": "情報通信業（アプリ開発・運営）",
+    "website": "",
+    "id": "org-toypo",
+    "country": "JP"
+  },
+  {
+    "name": "札幌国際大学",
+    "slug": "sapporo-international-university",
+    "industry": "教育",
+    "website": "",
+    "id": "org-sapporo-international-university",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社スズキ二輪",
+    "slug": "suzuki-nirin",
+    "industry": "二輪車販売",
+    "website": "",
+    "id": "org-suzuki-nirin",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社アエナ",
+    "slug": "aena",
+    "industry": "小売・EC",
+    "website": "",
+    "id": "org-aena",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社PIECE",
+    "slug": "piece",
+    "industry": "宿泊業",
+    "website": "",
+    "id": "org-piece",
+    "country": "JP"
+  },
+  {
+    "name": "タイムズモビリティ株式会社（パーク24株式会社 連結子会社）",
+    "slug": "times-mobility",
+    "industry": "カーシェアリング・モビリティサービス",
+    "website": "https://share.timescar.jp/",
+    "id": "org-times-mobility",
+    "country": "JP"
   }
 ]
