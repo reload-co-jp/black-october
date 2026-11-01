@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Metadata } from "next"
 import { Footer, Header, Main, Title } from "@/components/elements/layout"
 import { UnderlineNav } from "@/components/elements/nav"
-import { SITE_NAME, SITE_URL } from "@/lib/site"
+import { OG_BASE, SITE_NAME, SITE_URL } from "@/lib/site"
 import "./reset.css"
 
 export const metadata: Metadata = {
@@ -13,7 +13,8 @@ export const metadata: Metadata = {
   },
   description:
     "2026年10月に発生・公表されたサイバーセキュリティインシデントを、一次情報に基づき経緯・原因・影響・対応まで整理するアーカイブ。",
-  openGraph: { siteName: SITE_NAME, type: "website", locale: "ja_JP" },
+  openGraph: { ...OG_BASE, type: "website" },
+  twitter: { card: "summary_large_image" },
   alternates: { canonical: "/" },
 }
 

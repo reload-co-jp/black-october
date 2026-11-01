@@ -35,7 +35,7 @@ import {
   toCard,
   vulnerabilitiesForIncident,
 } from "@/lib/data"
-import { SITE_NAME, SITE_URL } from "@/lib/site"
+import { OG_BASE, SITE_NAME, SITE_URL } from "@/lib/site"
 
 type Props = { params: Promise<{ slug: string }> }
 
@@ -55,6 +55,7 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
     description: i.summary,
     alternates: { canonical: path },
     openGraph: {
+      ...OG_BASE,
       type: "article",
       title: i.title,
       description: i.summary,

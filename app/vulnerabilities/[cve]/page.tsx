@@ -6,7 +6,7 @@ import { SourceList } from "@/components/source-list"
 import { Breadcrumbs, Grid, JsonLd, List, Mono, Muted, PageTitle, Row, Section, SeverityBadge, Sidebar, WithSidebar } from "@/components/ui"
 import { cvssSeverity } from "@/lib/labels"
 import { db, getSources, incidentsForVulnerability, toCard } from "@/lib/data"
-import { SITE_NAME } from "@/lib/site"
+import { OG_BASE, SITE_NAME } from "@/lib/site"
 
 type Props = { params: Promise<{ cve: string }> }
 
@@ -24,7 +24,7 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
     title: `${v.cveId}: ${v.title}`,
     description: v.description,
     alternates: { canonical: `/vulnerabilities/${v.cveId}/` },
-    openGraph: { type: "article", title: `${v.cveId}: ${v.title}`, description: v.description },
+    openGraph: { ...OG_BASE, type: "article", title: `${v.cveId}: ${v.title}`, description: v.description },
   }
 }
 
