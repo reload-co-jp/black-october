@@ -47,3 +47,6 @@ next-env.d.ts
 
 # admin backups
 data/.backup/
+
+# incident drafts queued by scripts/fetch-incidents.ts
+data/candidates.json

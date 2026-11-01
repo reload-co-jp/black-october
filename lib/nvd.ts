@@ -76,3 +76,18 @@ export const fromNvd = (res: NvdResponse) => {
     mitigation: cve.cisaRequiredAction ? [cve.cisaRequiredAction] : [],
   }
 }
+
+type Fields = NonNullable<ReturnType<typeof fromNvd>>
+// NVD-owned facts are overwritten; curated text is only filled when empty.
+const OVERWRITE = ["cvssScore", "cvssVector", "cweId", "publishedAt", "modifiedAt", "kevStatus"] as const
+const FILL_IF_EMPTY = ["title", "description", "affectedProducts", "fixedVersions", "mitigation", "exploitation"] as const
+const empty = (v: unknown) => v == null || v === "" || (Array.isArray(v) && !v.length)
+
+/** Applies NVD fields to a row; returns the merged row and the keys that changed. */
+export const mergeNvd = <T extends Record<string, unknown>>(row: T, fields: Fields) => {
+  const changed = [
+    ...OVERWRITE.filter((k) => JSON.stringify(row[k]) !== JSON.stringify(fields[k])),
+    ...FILL_IF_EMPTY.filter((k) => empty(row[k]) && !empty(fields[k])),
+  ]
+  return { row: { ...row, ...Object.fromEntries(changed.map((k) => [k, fields[k]])) } as T, changed }
+}

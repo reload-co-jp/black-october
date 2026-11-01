@@ -15,6 +15,7 @@
     "test:watch": "vitest",
     "validate": "node scripts/validate-data.ts",
     "fetch:cves": "node scripts/fetch-cves.ts",
+    "fetch:incidents": "node scripts/fetch-incidents.ts",
     "prebuild": "node scripts/validate-data.ts"
   },
   "keywords": [],

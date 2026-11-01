@@ -1,13 +1,16 @@
 "use client"
 
 // Dev-only page: the .dev.tsx extension is only registered by `next dev`.
-import { FC, ReactNode, useCallback, useEffect, useState } from "react"
+import { FC, ReactNode, useCallback, useEffect, useRef, useState } from "react"
 import { color, mono } from "@/components/ui"
+import { CVE_ID, mergeNvd } from "@/lib/nvd"
 import { Collection, COLLECTIONS, ENUMS } from "@/lib/validation"
 
 type Json = null | boolean | number | string | Json[] | { [k: string]: Json }
 type Obj = { [k: string]: Json }
 type Data = Record<Collection, Obj[]>
+// Incident draft (or follow-up on `updateOf`) queued by scripts/fetch-incidents.ts, with the rows it references.
+type Candidate = { id: string; url: string; updateOf: string | null; organization: Obj | null; sources: Obj[]; incident: Obj }
 
 const today = () => new Date().toISOString().slice(0, 10)
 
@@ -212,11 +215,18 @@ const AdminPage: FC = () => {
   const [raw, setRaw] = useState(false)
   const [message, setMessage] = useState<{ ok: boolean; text: string } | null>(null)
   const [cveList, setCveList] = useState("")
+  const [candidates, setCandidates] = useState<Candidate[]>([])
+  const [pending, setPending] = useState<Candidate | null>(null)
 
   const load = useCallback(() => fetchAll().then(setData), [])
+  const loadCandidates = useCallback(
+    () => fetch("/api/admin/candidates").then((r) => r.json()).then(setCandidates),
+    []
+  )
   useEffect(() => {
     fetchAll().then(setData)
-  }, [])
+    loadCandidates()
+  }, [loadCandidates])
 
   const refs = (key: string) => {
     if (!data) return null
@@ -230,16 +240,28 @@ const AdminPage: FC = () => {
     return null
   }
 
-  const save = async () => {
-    if (!draft) return
-    const row = clean(draft) as Obj
-    const res = await fetch(originalId ? `/api/admin/${tab}/${encodeURIComponent(originalId)}` : `/api/admin/${tab}`, {
-      method: originalId ? "PUT" : "POST",
+  // Returns an error message, or null on success.
+  const send = async (c: Collection, row: Obj, id?: string | null) => {
+    const res = await fetch(id ? `/api/admin/${c}/${encodeURIComponent(id)}` : `/api/admin/${c}`, {
+      method: id ? "PUT" : "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(row),
     })
-    const body = await res.json()
-    if (!res.ok) return setMessage({ ok: false, text: (body.errors ?? [body.error]).join("\n") })
+    return res.ok ? null : ((b) => (b.errors ?? [b.error]).join("\n"))(await res.json())
+  }
+  const save = async () => {
+    if (!draft || !data) return
+    const row = clean(draft) as Obj
+    // A crawled candidate brings its organization and sources; create them first if missing.
+    if (pending)
+      for (const [c, r] of [["organizations", pending.organization], ...pending.sources.map((x) => ["sources", x] as const)] as const)
+        if (r && !data[c].some((x) => x.id === r.id)) {
+          const error = await send(c, r)
+          if (error) return setMessage({ ok: false, text: `${c}: ${error}` })
+        }
+    const error = await send(tab, row, originalId)
+    if (error) return setMessage({ ok: false, text: error })
+    if (pending) await rejectCandidate(pending.id)
     setMessage({ ok: true, text: `保存しました: ${row.id}` })
     setDraft(row)
     setOriginalId(String(row.id))
@@ -256,17 +278,34 @@ const AdminPage: FC = () => {
     setDraft(null)
     load()
   }
-  // Fill CVE-derived fields from NVD; local links (id, incidents, sources) stay as they are.
-  const fetchCve = async () => {
-    if (!draft) return
-    const cve = String(draft.cveId).trim().toUpperCase()
-    setMessage({ ok: true, text: `NVDから取得中: ${cve}` })
-    const res = await fetch(`/api/admin/cve/${encodeURIComponent(cve)}`)
-    const body = await res.json()
-    if (!res.ok) return setMessage({ ok: false, text: body.error })
-    setDraft({ ...draft, ...body, id: draft.id || cve.toLowerCase() })
-    setMessage({ ok: true, text: `NVDから取得しました: ${cve}（タイトル・説明は要確認）` })
-  }
+  // Auto-fill from NVD whenever a vulnerability's CVE ID is set or opened; the admin only reviews and saves.
+  const draftRef = useRef(draft)
+  useEffect(() => {
+    draftRef.current = draft
+  })
+  const cve = tab === "vulnerabilities" ? String(draft?.cveId ?? "").trim().toUpperCase() : ""
+  useEffect(() => {
+    if (!CVE_ID.test(cve)) return
+    let stale = false
+    const timer = setTimeout(async () => {
+      setMessage({ ok: true, text: `NVDから取得中: ${cve}` })
+      const res = await fetch(`/api/admin/cve/${cve}`)
+      const body = await res.json()
+      const d = draftRef.current
+      if (stale || !d) return
+      if (!res.ok) return setMessage({ ok: false, text: body.error })
+      const { row, changed } = mergeNvd(d, body)
+      setDraft({ ...row, id: d.id || cve.toLowerCase() })
+      setMessage({
+        ok: true,
+        text: changed.length ? `NVDから更新: ${changed.join(", ")}（確認して保存）` : `NVDと一致: ${cve}`,
+      })
+    }, 500)
+    return () => {
+      stale = true
+      clearTimeout(timer)
+    }
+  }, [cve])
   // Bulk import: fetch each CVE from NVD and save it as a new vulnerability.
   const importCves = async () => {
     if (!data) return
@@ -305,7 +344,27 @@ const AdminPage: FC = () => {
   const open = (row: Obj | null) => {
     setDraft(row ? structuredClone(row) : TEMPLATES[tab]())
     setOriginalId(row ? String(row.id) : null)
+    setPending(null)
     setMessage(null)
+  }
+  const openCandidate = (c: Candidate) => {
+    const base = c.updateOf && data?.incidents.find((i) => i.id === c.updateOf)
+    if (base) {
+      // Follow-up: the existing incident with the new articles attached.
+      setDraft({ ...structuredClone(base), sourceIds: [...(base.sourceIds as string[]), ...(c.incident.sourceIds as string[])], updatedAt: today() })
+      setOriginalId(c.updateOf)
+      setMessage({ ok: true, text: `続報: ${c.sources.map((x) => x.url).join("\n")}\n${c.incident.summary}\n反映して「更新」（出典も同時に登録）` })
+    } else {
+      setDraft({ ...TEMPLATES.incidents(), ...structuredClone(c.incident) })
+      setOriginalId(null)
+      setMessage({ ok: true, text: `自動取得の下書き（出典${c.sources.length}件）: ${c.url}\n内容を確認して「登録」（組織・出典も同時に登録）` })
+    }
+    setPending(c)
+  }
+  const rejectCandidate = async (id: string) => {
+    await fetch(`/api/admin/candidates?id=${encodeURIComponent(id)}`, { method: "DELETE" })
+    if (pending?.id === id) setPending(null)
+    loadCandidates()
   }
 
   if (!data) return <p>Loading…</p>
@@ -331,6 +390,22 @@ const AdminPage: FC = () => {
               )}
             </div>
           )}
+          {tab === "incidents" && candidates.length > 0 && (
+            <fieldset style={{ border: `1px solid ${color.accent}`, display: "grid", gap: ".25rem", marginBottom: ".75rem", padding: ".5rem" }}>
+              <legend style={{ ...mono, fontSize: ".75rem" }}>自動取得の候補 ({candidates.length})</legend>
+              {candidates.map((c) => (
+                <div key={c.id} style={{ display: "flex", gap: ".5rem", alignItems: "center" }}>
+                  <button type="button" onClick={() => openCandidate(c)} style={{ flex: 1, textAlign: "left", borderColor: pending?.id === c.id ? color.accent : undefined }}>
+                    {c.updateOf && "【続報】"}{String(c.incident.title)}
+                    <br />
+                    <span style={{ ...mono, color: color.muted, fontSize: ".7rem" }}>{c.sources.map((x) => x.publisher).join(" / ")} {String(c.incident.disclosedAt ?? "")}</span>
+                  </button>
+                  <a href={c.url} target="_blank" rel="noreferrer" aria-label="記事を開く">↗</a>
+                  <button type="button" onClick={() => rejectCandidate(c.id)} aria-label={`${c.incident.title} を却下`}>却下</button>
+                </div>
+              ))}
+            </fieldset>
+          )}
           <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: ".25rem" }}>
             {data[tab].map((r) => (
               <li key={String(r.id)} style={{ display: "flex", gap: ".5rem", alignItems: "center" }}>
@@ -350,9 +425,6 @@ const AdminPage: FC = () => {
               <button type="submit" style={{ borderColor: color.accent }}>{originalId ? "更新" : "登録"}</button>
               {tab === "incidents" && (
                 <button type="button" onClick={() => setDraft({ ...draft, updatedAt: today() })}>更新日を今日に</button>
-              )}
-              {tab === "vulnerabilities" && (
-                <button type="button" onClick={fetchCve} disabled={!draft.cveId}>CVEから取得</button>
               )}
               <button type="button" onClick={() => setRaw(!raw)}>{raw ? "フォーム" : "JSON"}</button>
             </div>

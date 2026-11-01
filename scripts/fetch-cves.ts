@@ -2,18 +2,14 @@
 // NVD-owned facts are overwritten; curated text is only filled when empty.
 // Usage: node scripts/fetch-cves.ts [CVE-ID ...]   (NVD_API_KEY raises the rate limit)
 import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from "node:fs"
-import { fromNvd } from "../lib/nvd.ts"
+import { fromNvd, mergeNvd } from "../lib/nvd.ts"
 import { COLLECTIONS, validateDb } from "../lib/validation.ts"
-
-const OVERWRITE = ["cvssScore", "cvssVector", "cweId", "publishedAt", "modifiedAt", "kevStatus"]
-const FILL_IF_EMPTY = ["title", "description", "affectedProducts", "fixedVersions", "mitigation", "exploitation"]
 
 const url = (c: string) => new URL(`../data/${c}.json`, import.meta.url)
 const all = Object.fromEntries(COLLECTIONS.map((c) => [c, JSON.parse(readFileSync(url(c), "utf8"))]))
 const rows: Record<string, unknown>[] = all.vulnerabilities
 const only = process.argv.slice(2).map((s) => s.toUpperCase())
 const key = process.env.NVD_API_KEY
-const empty = (v: unknown) => v == null || v === "" || (Array.isArray(v) && !v.length)
 
 for (const [i, row] of rows.entries()) {
   const cve = String(row.cveId)
@@ -28,11 +24,8 @@ for (const [i, row] of rows.entries()) {
     console.log(`skip ${cve}: ${res.ok ? "not in NVD" : `HTTP ${res.status}`}`)
     continue
   }
-  const changed = [
-    ...OVERWRITE.filter((k) => JSON.stringify(row[k]) !== JSON.stringify(fields[k as keyof typeof fields])),
-    ...FILL_IF_EMPTY.filter((k) => empty(row[k]) && !empty(fields[k as keyof typeof fields])),
-  ]
-  for (const k of changed) row[k] = fields[k as keyof typeof fields]
+  const { row: merged, changed } = mergeNvd(row, fields)
+  rows[i] = merged
   console.log(`${cve}: ${changed.length ? changed.join(", ") : "no change"}`)
 }
 
