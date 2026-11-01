@@ -3,7 +3,7 @@
 // Usage: node scripts/fetch-incidents.ts [max items]
 // Claude runs through the `claude` CLI, so it uses the Claude Code login (OAuth), not an API key.
 import { execFileSync } from "node:child_process"
-import { existsSync, readFileSync, writeFileSync } from "node:fs"
+import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs"
 import { tmpdir } from "node:os"
 import { z } from "zod"
 import { ENUMS } from "../lib/validation.ts"
@@ -32,7 +32,7 @@ const Draft = z.object({
     name: str,
     slug: str.describe("組織名の英語表記 (例: idc-frontier)"),
     industry: str,
-    website: str,
+    website: z.union([z.literal(""), z.url({ protocol: /^https?$/ })]).describe("公式サイトURL。不明なら空文字"),
   }),
   publisher: str.describe("記事の媒体名"),
   publishedAt: date,
@@ -105,14 +105,17 @@ const items = (
 console.log(`${items.length} new item(s)`)
 
 const SCHEMA = JSON.stringify(z.toJSONSchema(Draft, { target: "draft-07" }))
+// Private empty cwd and no settings sources: nothing on disk (hooks, CLAUDE.md) can steer the run.
+const cwd = mkdtempSync(`${tmpdir()}/fetch-incidents-`)
+process.on("exit", () => rmSync(cwd, { recursive: true, force: true }))
 const ask = (prompt: string) => {
-  // No tools, no user/plugin settings, run outside the repo: a plain one-shot extraction.
+  // No tools: a plain one-shot extraction.
   const out = execFileSync(
     "claude",
     ["-p", "--output-format", "json", "--model", "claude-opus-5-5", "--effort", "medium",
-      "--tools", "", "--setting-sources", "project", "--no-session-persistence",
+      "--tools", "", "--setting-sources", "", "--no-session-persistence",
       "--system-prompt", SYSTEM, "--json-schema", SCHEMA],
-    { input: prompt, cwd: tmpdir(), encoding: "utf8", maxBuffer: 16 << 20 }
+    { input: prompt, cwd, encoding: "utf8", maxBuffer: 16 << 20 }
   )
   const res = JSON.parse(out)
   if (res.is_error) throw new Error(res.result || res.subtype)

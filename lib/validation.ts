@@ -27,6 +27,7 @@ const date = z.iso.date()
 const nullableDate = date.nullable()
 const id = z.string().regex(/^[a-z0-9-]+$/, "lowercase/digits/hyphen only")
 const slug = id
+const httpUrl = z.url({ protocol: /^https?$/ })
 
 const leakedItem = z.object({
   item: z.string().min(1),
@@ -127,13 +128,13 @@ export const organizationSchema = z.object({
   name: z.string().min(1),
   country: z.string().length(2),
   industry: z.string().min(1),
-  website: z.string(),
+  website: z.union([z.literal(""), httpUrl]),
 })
 
 export const sourceSchema = z.object({
   id,
   title: z.string().min(1),
-  url: z.url({ protocol: /^https?$/ }),
+  url: httpUrl,
   publisher: z.string().min(1),
   publishedAt: nullableDate,
   sourceType: z.enum(ENUMS.sourceType),

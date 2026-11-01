@@ -357,7 +357,11 @@ const AdminPage: FC = () => {
     } else {
       setDraft({ ...TEMPLATES.incidents(), ...structuredClone(c.incident) })
       setOriginalId(null)
-      setMessage({ ok: true, text: `自動取得の下書き（出典${c.sources.length}件）: ${c.url}\n内容を確認して「登録」（組織・出典も同時に登録）` })
+      const org = c.organization ? `新規組織: ${c.organization.name} ${c.organization.website || "(サイト不明)"}\n` : ""
+      setMessage({
+        ok: true,
+        text: `${org}出典: ${c.sources.map((x) => `${x.publisher} ${x.url}`).join("\n      ")}\n内容を確認して「登録」（組織・出典も同時に登録）`,
+      })
     }
     setPending(c)
   }
