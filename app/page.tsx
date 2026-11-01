@@ -5,6 +5,7 @@ import { Bars, Card, color, Grid, mono, Muted, Section } from "@/components/ui"
 import { db, getTechnique, incidents, toCard } from "@/lib/data"
 import { PERIOD } from "@/lib/site"
 import { computeStats } from "@/lib/statistics"
+import hero from "./hero.module.css"
 
 // Techniques highlighted on the top page, in this order.
 const HOME_TECHNIQUES = [
@@ -37,34 +38,28 @@ const Page: FC = () => {
   const techniqueCounts = new Map(s.byTechnique.map((t) => [t.key, t.count]))
   return (
     <>
-      <section
-        style={{
-          borderBottom: `1px solid ${color.border}`,
-          padding: "3rem 0 2.5rem",
-        }}
-      >
-        <p style={{ color: color.accent, fontWeight: 600 }}>
+      <section className={hero.hero}>
+        <span className={hero.badge}>
+          <span className={hero.dot} />
           2026 CYBERSECURITY INCIDENT ARCHIVE
-        </p>
-        <h1
-          style={{
-            fontSize: "clamp(2.2rem, 9vw, 4.5rem)",
-            fontWeight: 600,
-            lineHeight: 1.1,
-            margin: ".5rem 0 1rem",
-          }}
-        >
-          BLACK OCTOBER <span style={{ color: color.accent }}>2026</span>
+        </span>
+        <h1 className={hero.title}>
+          BLACK OCTOBER <span className={hero.accent}>2026</span>
         </h1>
-        <p style={{ fontSize: "1.05rem" }}>
-          2026年10月のサイバーインシデントを記録するアーカイブ
-        </p>
-        <p style={{ ...mono, color: color.muted, fontSize: ".85rem" }}>
-          対象期間：2026/10/01〜2026/10/31
-        </p>
-        <p style={{ color: color.muted, marginTop: "1rem", maxWidth: "40rem" }}>
-          何が起きたのか。何が原因だったのか。どのような対応が行われたのか。
+        <p className={hero.lead}>
+          2026年10月のサイバーインシデントを記録するアーカイブ。
           一次情報に基づき、経緯・原因・影響・対応・教訓までを整理します。
+        </p>
+        <div className={hero.actions}>
+          <Link href="/incidents/" className={hero.primary}>
+            インシデントを見る →
+          </Link>
+          <Link href="/statistics/" className={hero.secondary}>
+            統計
+          </Link>
+        </div>
+        <p className={hero.period} style={mono}>
+          対象期間：2026/10/01〜2026/10/31
         </p>
       </section>
 
