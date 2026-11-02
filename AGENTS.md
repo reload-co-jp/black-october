@@ -7,3 +7,9 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+## Collecting incident news
+
+Sources and the step-by-step method for finding incident / unauthorized-access news are in
+`docs/news-collection.md`; the machine-readable source list is `data/news-sources.json`
+(schema: `lib/news-sources.ts`). Add or disable sources there, not in the scripts.
