@@ -60,11 +60,12 @@ export const SeverityBadge: FC<{ value: string }> = ({ value }) => (
   </span>
 )
 
-export const Tag: FC<{ children: ReactNode; href?: string }> = ({
+export const Tag: FC<{ children: ReactNode; href?: string; color?: string }> = ({
   children,
   href,
+  color: fg = color.muted,
 }) => {
-  const el = <span style={pill(color.muted)}>{children}</span>
+  const el = <span style={pill(fg)}>{children}</span>
   return href ? <Link href={href}>{el}</Link> : el
 }
 

@@ -1,0 +1,165 @@
+/* Alternating center-line timeline. Colors mirror `color` in components/ui.tsx. */
+.row {
+  display: grid;
+  grid-template-columns: 1fr minmax(1.25rem, 5rem) 1fr;
+}
+
+.rail {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.line {
+  position: absolute;
+  inset: 0 auto;
+  width: 2px;
+  background: #e5262b;
+}
+.row:first-child .line {
+  top: 50%;
+}
+.row:last-child .line {
+  bottom: 50%;
+}
+
+.marker {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #e5262b;
+  border-radius: 100%;
+  background: #0d1117;
+}
+.marker::after {
+  content: "";
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 100%;
+  background: #e5262b;
+}
+
+.card {
+  margin: 0.75rem 0;
+  padding: 1.5rem;
+  border: 1px solid #30363d;
+  border-radius: 0.875rem;
+  background: #161b22;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.rail,
+.card {
+  grid-row: 1;
+}
+.rail {
+  grid-column: 2;
+}
+.card {
+  grid-column: 3;
+}
+.row:nth-child(even) .card {
+  grid-column: 1;
+}
+
+/* Date sits in the empty cell across the line from the card. */
+.date {
+  grid-row: 1;
+  grid-column: 1;
+  align-self: center;
+  text-align: right;
+  color: #e5262b;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.row:nth-child(even) .date {
+  grid-column: 3;
+  text-align: left;
+}
+
+/* Closed entries are one-line rows; an opened one gets a bordered box. */
+.entries {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+.entry {
+  min-width: 0;
+  flex-basis: 100%;
+}
+.entry[open] {
+  border: 1px solid #30363d;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+}
+.entry summary {
+  cursor: pointer;
+  list-style: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* Extra groups render before the "他N件" toggle and show only while it is open. */
+.extra {
+  display: contents;
+}
+.entries:has(> .more:not([open])) > .extra {
+  display: none;
+}
+.more {
+  flex-basis: 100%;
+}
+.more[open] .closed,
+.more:not([open]) .opened {
+  display: none;
+}
+.more > summary {
+  cursor: pointer;
+  color: #8b949e;
+  font-size: 0.85rem;
+}
+
+.dot {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-right: 0.25rem;
+  border-radius: 100%;
+  vertical-align: middle;
+}
+.entry summary::-webkit-details-marker {
+  display: none;
+}
+.entry[open] summary {
+  white-space: normal;
+}
+
+/* Narrow screens: single column, rail on the left. */
+@media (max-width: 720px) {
+  .row {
+    grid-template-columns: 1.25rem 1fr;
+    column-gap: 0.75rem;
+  }
+  .rail {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+  .card,
+  .row:nth-child(even) .card {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .date,
+  .row:nth-child(even) .date {
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 0.75rem;
+    text-align: left;
+    font-size: 1.1rem;
+  }
+}
