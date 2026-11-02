@@ -7,21 +7,11 @@ import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "no
 import { tmpdir } from "node:os"
 import { z } from "zod"
 import { CVE_ID, fromNvd } from "../lib/nvd.ts"
+import { feeds, matchesKeywords, newsSourcesSchema } from "../lib/news-sources.ts"
 import { ENUMS } from "../lib/validation.ts"
 
-const FEEDS = [
-  "https://www.security-next.com/feed",
-  "https://rss.itmedia.co.jp/rss/2.0/news_security.xml",
-  "https://scan.netsecurity.ne.jp/rss/index.rdf",
-  "https://piyolog.hatenadiary.jp/rss",
-  "https://rss.itmedia.co.jp/rss/2.0/enterprise.xml",
-  "https://news.mynavi.jp/rss/techplus/enterprise/security",
-  "https://internet.watch.impress.co.jp/data/rss/1.0/iw/feed.rdf",
-  // WordPress feed pages back through older articles.
-  ...Array.from({ length: 20 }, (_, i) => `https://cybersecurity-jp.com/feed?paged=${i + 1}`),
-]
-// Cheap title filter so only likely incidents reach Claude.
-const KEYWORDS = /不正アクセス|不正ログイン|情報漏え?い|漏洩|流出|ランサム|サイバー攻撃|個人情報|侵害|乗っ取/
+// Feeds and the title keyword filter live in data/news-sources.json (see docs/news-collection.md).
+const SOURCES = newsSourcesSchema.parse(JSON.parse(readFileSync(new URL("../data/news-sources.json", import.meta.url), "utf8")))
 
 const SYSTEM = `あなたは日本のセキュリティインシデントデータベースの編集者。
 渡されたニュース記事から、日本の組織が被害を受けた不正アクセス・情報漏洩などの個別インシデントを抽出する。
@@ -126,11 +116,18 @@ const newVulns = async (cves: string[]) => {
 }
 
 const items = (
-  await Promise.all(FEEDS.map(async (f) => [...(await (await get(f)).text()).matchAll(/<item[\s>][\s\S]*?<\/item>/g)]))
+  await Promise.all(
+    feeds(SOURCES, "fetch-incidents").map(async ({ url, source }) =>
+      [...(await (await get(url)).text()).matchAll(/<item[\s>][\s\S]*?<\/item>/g)].map(([xml]) => ({
+        title: tag(xml, "title"),
+        url: tag(xml, "link"),
+        feed: source,
+      }))
+    )
+  )
 )
   .flat()
-  .map(([xml]) => ({ title: tag(xml, "title"), url: tag(xml, "link") }))
-  .filter((i) => i.url && !seen.has(i.url) && KEYWORDS.test(i.title))
+  .filter((i) => i.url && !seen.has(i.url) && matchesKeywords(SOURCES, i.title))
   .slice(0, Number(process.argv[2]) || Infinity)
 console.log(`${items.length} new item(s)`)
 
@@ -151,7 +148,7 @@ const ask = (prompt: string) => {
   if (res.is_error) throw new Error(res.result || res.subtype)
   return Draft.parse(res.structured_output)
 }
-for (const { title, url } of items) {
+for (const { title, url, feed } of items) {
   try {
     const page = await get(url)
     if (!page.ok) throw new Error(`HTTP ${page.status}`)
@@ -170,7 +167,7 @@ for (const { title, url } of items) {
     const slug = slugify(rawSlug)
     const source = {
       id: `src-${slug}-${Date.now().toString(36)}`, title, url, publisher: d.publisher, publishedAt: d.publishedAt,
-      sourceType: "media", reliability: "secondary", retrievedAt: today,
+      sourceType: feed.sourceType, reliability: feed.reliability, retrievedAt: today,
     }
     const cves = [...new Set(d.cveIds)]
     const vulnerabilities = await newVulns(cves)
