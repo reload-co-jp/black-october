@@ -2608,5 +2608,165 @@
     "sourceType": "media",
     "reliability": "secondary",
     "retrievedAt": "2026-11-01"
+  },
+  {
+    "id": "src-iris-ohyama-iris-plaza-ec-site-unauthorized-access-mvzoqk2s",
+    "title": "アイリスオーヤマ通販サイトで侵害 - 詳細を調査",
+    "url": "https://www.security-next.com/192208",
+    "publisher": "Security NEXT",
+    "publishedAt": "2026-11-02",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-02"
+  },
+  {
+    "id": "src-mofa-external-network-unauthorized-access-mvzoqx7m",
+    "title": "外務省のネットワークで侵害 - 個人情報流出の可能性",
+    "url": "https://www.security-next.com/192256",
+    "publisher": "Security NEXT",
+    "publishedAt": "2026-11-02",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-02"
+  },
+  {
+    "id": "src-good-smile-company-official-shop-unauthorized-access-2026-10-mvzorcqe",
+    "title": "ECサイトに不正アクセス、会員情報流出 - フィギュアメーカー",
+    "url": "https://www.security-next.com/191996",
+    "publisher": "Security NEXT",
+    "publishedAt": "2026-11-02",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-02"
+  },
+  {
+    "id": "src-digital-arts-cloud-service-unauthorized-access-mvzort03",
+    "title": "AI を活用した総点検で発見 ～ デジタルアーツのクラウドサービス運用環境に不正アクセス",
+    "url": "https://scan.netsecurity.ne.jp/article/2026/11/02/56649.html",
+    "publisher": "ScanNetSecurity",
+    "publishedAt": "2026-11-02",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-02"
+  },
+  {
+    "id": "src-tss-link-wordpress-plugin-website-unauthorized-access-mvzos6vy",
+    "title": "WPプラグインの脆弱性悪用 ～ ティエスエスリンクのウェブサイトに不正アクセス、製品にはセキュリティ上の問題 確認されておらず",
+    "url": "https://scan.netsecurity.ne.jp/article/2026/11/02/56648.html",
+    "publisher": "ScanNetSecurity",
+    "publishedAt": "2026-11-02",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-02"
+  },
+  {
+    "id": "src-yamamoto-town-employee-shared-folder-insider-unauthorized-access-mvzoskho",
+    "title": "他の職員のIDとパスワードを使用し複数回にわたり庁内共有フォルダに不正アクセス、上司の印影の偽造も",
+    "url": "https://scan.netsecurity.ne.jp/article/2026/11/02/56647.html",
+    "publisher": "ScanNetSecurity",
+    "publishedAt": "2026-11-02",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-02"
+  },
+  {
+    "id": "src-rakuten-travel-overseas-hotel-multilingual-site-unauthorized-access-mvzot0rs",
+    "title": "「楽天トラベル」海外ホテル予約サイトの一部ページと多言語予約サイトに不正アクセス",
+    "url": "https://scan.netsecurity.ne.jp/article/2026/11/02/56646.html",
+    "publisher": "ScanNetSecurity",
+    "publishedAt": "2026-11-02",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-02"
+  },
+  {
+    "id": "src-yumirlink-cuenote-fc-unauthorized-access-mvzotem3",
+    "title": "ユミルリンクのメール配信サービスの一部サーバシステムに不正アクセス、延べ5,162万8,280件の情報が流出",
+    "url": "https://scan.netsecurity.ne.jp/article/2026/11/02/56645.html",
+    "publisher": "ScanNetSecurity",
+    "publishedAt": "2026-11-02",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-02"
+  },
+  {
+    "id": "src-fujicco-campaign-contractor-server-unauthorized-access-mvzotsiy",
+    "title": "フジッコのキャンペーンの応募受付業務の委託先に不正アクセス",
+    "url": "https://scan.netsecurity.ne.jp/article/2026/11/02/56644.html",
+    "publisher": "ScanNetSecurity",
+    "publishedAt": "2026-11-02",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-02"
+  },
+  {
+    "id": "src-free-standard-ships-cycle-market-swym-wishlist-plus-unauthorized-access-mvzou6ui",
+    "title": "「SHIPS CYCLE MARKET」で利用している外部アプリケーション「Swym Wishlist Plus」に不正アクセス、外部の疑似サイトに誘導",
+    "url": "https://scan.netsecurity.ne.jp/article/2026/11/02/56643.html",
+    "publisher": "ScanNetSecurity",
+    "publishedAt": "2026-11-02",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-02"
+  },
+  {
+    "id": "src-shinryo-cyberattack-system-outage-mvzougdu",
+    "title": "新菱冷熱工業にサイバー攻撃、システム障害で一部サービスにも影響",
+    "url": "https://scan.netsecurity.ne.jp/article/2026/11/02/56642.html",
+    "publisher": "ScanNetSecurity",
+    "publishedAt": "2026-11-02",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-02"
+  },
+  {
+    "id": "src-sally-uzu-inquiry-studio-form-unauthorized-access-mvzoutq1",
+    "title": "Sallyに2件の不正アクセス、問い合わせ情報が漏えいした可能性",
+    "url": "https://scan.netsecurity.ne.jp/article/2026/11/02/56641.html",
+    "publisher": "ScanNetSecurity",
+    "publishedAt": "2026-11-02",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-02"
+  },
+  {
+    "id": "src-pingcap-internal-system-unauthorized-access-mvzov62r",
+    "title": "PingCAPに不正アクセス、日本国内で最大約5万件の個人情報が漏えい",
+    "url": "https://scan.netsecurity.ne.jp/article/2026/11/02/56640.html",
+    "publisher": "ScanNetSecurity",
+    "publishedAt": "2026-11-02",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-02"
+  },
+  {
+    "id": "src-aidma-hd-mamaworks-unauthorized-access-mvzovhu7",
+    "title": "会員名簿とされるデータがアップロードされていると警察から報告 ～ 在宅ワーク求人サイト「ママワークス」に不正アクセス",
+    "url": "https://scan.netsecurity.ne.jp/article/2026/11/02/56639.html",
+    "publisher": "ScanNetSecurity",
+    "publishedAt": "2026-11-02",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-02"
+  },
+  {
+    "id": "src-zigzag-worldshopping-unauthorized-access-mvzovv54",
+    "title": "越境ECサービス「WorldShopping」に不正アクセス、海外顧客301名の個人情報が漏えい",
+    "url": "https://scan.netsecurity.ne.jp/article/2026/11/02/56638.html",
+    "publisher": "ScanNetSecurity",
+    "publishedAt": "2026-11-02",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-02"
+  },
+  {
+    "id": "src-ntt-data-stdirectservices-contractor-saas-unauthorized-access-mvzow9pw",
+    "title": "NTTデータ委託先への不正アクセス、楽天証券や近鉄など影響を受けた企業一覧",
+    "url": "https://news.mynavi.jp/techplus/article/20261102-5242219/",
+    "publisher": "マイナビニュース TECH+",
+    "publishedAt": "2026-11-02",
+    "sourceType": "media",
+    "reliability": "secondary",
+    "retrievedAt": "2026-11-02"
   }
 ]

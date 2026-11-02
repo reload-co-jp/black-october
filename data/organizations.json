@@ -1550,5 +1550,77 @@
     "website": "",
     "id": "org-kaigetsukan-group",
     "country": "JP"
+  },
+  {
+    "name": "ティエスエスリンク",
+    "slug": "tss-link",
+    "industry": "ソフトウェア",
+    "website": "",
+    "id": "org-tss-link",
+    "country": "JP"
+  },
+  {
+    "name": "宮城県山元町",
+    "slug": "yamamoto-town-miyagi",
+    "industry": "地方自治体",
+    "website": "",
+    "id": "org-yamamoto-town-miyagi",
+    "country": "JP"
+  },
+  {
+    "name": "楽天グループ株式会社",
+    "slug": "rakuten-group",
+    "industry": "インターネットサービス・旅行予約",
+    "website": "https://corp.rakuten.co.jp/",
+    "id": "org-rakuten-group",
+    "country": "JP"
+  },
+  {
+    "name": "フジッコ株式会社",
+    "slug": "fujicco",
+    "industry": "食品製造",
+    "website": "",
+    "id": "org-fujicco",
+    "country": "JP"
+  },
+  {
+    "name": "Free Standard株式会社",
+    "slug": "free-standard",
+    "industry": "小売・EC（自転車売買）",
+    "website": "",
+    "id": "org-free-standard",
+    "country": "JP"
+  },
+  {
+    "name": "新菱冷熱工業株式会社",
+    "slug": "shinryo-corporation",
+    "industry": "建設業（設備工事）",
+    "website": "",
+    "id": "org-shinryo-corporation",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社Sally",
+    "slug": "sally",
+    "industry": "情報通信・ITサービス",
+    "website": "https://sally-inc.jp",
+    "id": "org-sally",
+    "country": "JP"
+  },
+  {
+    "name": "アイドマ・ホールディングス",
+    "slug": "aidma-holdings",
+    "industry": "人材・求人サービス",
+    "website": "",
+    "id": "org-aidma-holdings",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社ジグザグ",
+    "slug": "zigzag",
+    "industry": "越境ECサービス",
+    "website": "",
+    "id": "org-zigzag",
+    "country": "JP"
   }
 ]

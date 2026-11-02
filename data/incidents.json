@@ -4217,7 +4217,7 @@
       "顧客へのフィッシング注意喚起と公式連絡手段の周知"
     ],
     "organizationId": "org-kintetsu-group-holdings",
-    "updatedAt": "2026-10-31",
+    "updatedAt": "2026-11-02",
     "country": "JP",
     "industry": "運輸・持株会社",
     "featured": false,
@@ -4227,7 +4227,8 @@
     "vulnerabilityIds": [],
     "relatedIncidentIds": [],
     "sourceIds": [
-      "src-kintetsu-ghd-ntt-data-digital-securities-platform-unauthorized-access-mvxtbzdl"
+      "src-kintetsu-ghd-ntt-data-digital-securities-platform-unauthorized-access-mvxtbzdl",
+      "src-ntt-data-stdirectservices-contractor-saas-unauthorized-access-mvzow9pw"
     ],
     "createdAt": "2026-11-01",
     "publishedAt": "2026-11-01"
@@ -4675,7 +4676,7 @@
       "漏えい後は正規ドメインを悪用したフィッシングへの警戒が必要"
     ],
     "organizationId": "org-yumirlink",
-    "updatedAt": "2026-10-19",
+    "updatedAt": "2026-11-02",
     "country": "JP",
     "industry": "情報通信業（メール配信サービス）",
     "featured": false,
@@ -4686,7 +4687,8 @@
     "relatedIncidentIds": [],
     "sourceIds": [
       "src-yumirlink-cuenote-fc-unauthorized-access-mvxxw8s0",
-      "src-resona-yumirlink-cuenote-fc-unauthorized-access-mvxy7z5v"
+      "src-resona-yumirlink-cuenote-fc-unauthorized-access-mvxy7z5v",
+      "src-yumirlink-cuenote-fc-unauthorized-access-mvzotem3"
     ],
     "createdAt": "2026-11-01",
     "publishedAt": "2026-11-01"
@@ -4749,7 +4751,7 @@
       "機密情報を扱う閉域ネットワークと外部接続ネットワークを分離しておくことで、被害範囲を限定できる"
     ],
     "organizationId": "org-ministry-of-foreign-affairs-japan",
-    "updatedAt": "2026-10-30",
+    "updatedAt": "2026-11-02",
     "country": "JP",
     "industry": "政府機関",
     "featured": false,
@@ -4760,7 +4762,8 @@
     "relatedIncidentIds": [],
     "sourceIds": [
       "src-mofa-external-network-unauthorized-access-mvxxy2ew",
-      "src-mofa-external-network-unauthorized-access-mvxy1aa1"
+      "src-mofa-external-network-unauthorized-access-mvxy1aa1",
+      "src-mofa-external-network-unauthorized-access-mvzoqx7m"
     ],
     "createdAt": "2026-11-01",
     "publishedAt": "2026-11-01"
@@ -5529,7 +5532,7 @@
       "ECサイトが持つ顧客情報の項目と保存場所を把握しておく"
     ],
     "organizationId": "org-iris-ohyama",
-    "updatedAt": "2026-10-29",
+    "updatedAt": "2026-11-02",
     "country": "JP",
     "industry": "製造・小売（生活用品・家電）",
     "featured": false,
@@ -5539,7 +5542,8 @@
     "vulnerabilityIds": [],
     "relatedIncidentIds": [],
     "sourceIds": [
-      "src-iris-ohyama-iris-plaza-ec-site-unauthorized-access-mvxy28gu"
+      "src-iris-ohyama-iris-plaza-ec-site-unauthorized-access-mvxy28gu",
+      "src-iris-ohyama-iris-plaza-ec-site-unauthorized-access-mvzoqk2s"
     ],
     "createdAt": "2026-11-01",
     "publishedAt": "2026-11-01"
@@ -7166,7 +7170,7 @@
       "システムログを監視し、不正アクセスを早く検知できる体制を整える"
     ],
     "organizationId": "org-good-smile-company",
-    "updatedAt": "2026-10-23",
+    "updatedAt": "2026-11-02",
     "country": "JP",
     "industry": "ホビー・フィギュア製造販売",
     "featured": false,
@@ -7176,7 +7180,8 @@
     "vulnerabilityIds": [],
     "relatedIncidentIds": [],
     "sourceIds": [
-      "src-good-smile-company-official-shop-unauthorized-access-2026-10-mvxyiffo"
+      "src-good-smile-company-official-shop-unauthorized-access-2026-10-mvxyiffo",
+      "src-good-smile-company-official-shop-unauthorized-access-2026-10-mvzorcqe"
     ],
     "createdAt": "2026-11-01",
     "publishedAt": "2026-11-01"
@@ -7492,7 +7497,8 @@
     "vulnerabilityIds": [],
     "relatedIncidentIds": [],
     "sourceIds": [
-      "src-pingcap-internal-system-unauthorized-access-mvxyke8i"
+      "src-pingcap-internal-system-unauthorized-access-mvxyke8i",
+      "src-pingcap-internal-system-unauthorized-access-mvzov62r"
     ],
     "createdAt": "2026-11-01",
     "publishedAt": "2026-11-01"
@@ -16458,7 +16464,7 @@
       "従来の点検で見落とされた侵入の痕跡が、AIを活用した点検で見つかることがある"
     ],
     "organizationId": "org-digital-arts",
-    "updatedAt": "2026-10-21",
+    "updatedAt": "2026-11-02",
     "country": "JP",
     "industry": "情報セキュリティ・ソフトウェア",
     "featured": false,
@@ -16468,9 +16474,787 @@
     "vulnerabilityIds": [],
     "relatedIncidentIds": [],
     "sourceIds": [
-      "src-digital-arts-cloud-service-unauthorized-access-mvxya8o4"
+      "src-digital-arts-cloud-service-unauthorized-access-mvxya8o4",
+      "src-digital-arts-cloud-service-unauthorized-access-mvzort03"
     ],
     "createdAt": "2026-11-01",
     "publishedAt": "2026-11-01"
+  },
+  {
+    "id": "inc-2026-tss-link-wordpress-plugin-website-unauthorized-access",
+    "slug": "tss-link-wordpress-plugin-website-unauthorized-access-2026-10",
+    "title": "ティエスエスリンク WordPressプラグインの脆弱性悪用によるウェブサイトへの不正アクセスで問い合わせ情報・サポートサイト認証情報が漏えいした可能性",
+    "summary": "ティエスエスリンクが外部委託で運用するウェブサイトのWordPressプラグインの脆弱性が悪用され、2026年6月12日から10月13日にかけて不正アクセスが発生。問い合わせ・評価版申し込み情報約160件と製品サポートサイト認証情報約250件が漏えいした可能性がある。",
+    "summaryDetails": "対象は企業サイト、製品サポートサイト、評価版ダウンロードサイト、製品ヘルプサイト。10月13日に判明し、10月21日に公表。漏えいの可能性がある情報は、問い合わせ/評価版申し込みフォームの入力内容約160件（氏名、メールアドレス、電話番号、会社名/部署名、保守ユーザーID、評価版申し込み製品、問い合わせ内容、添付ファイル）と、製品サポートサイトの認証情報約250件（ユーザーID、ログイン用パスワード）。公開中のWebページや配布モジュールの改ざんは現時点で確認されておらず、確認できる範囲では不審なメール送信も確認されていない。製品自体に起因する問題ではないとしている。",
+    "service": "ティエスエスリンク企業サイト・製品サポートサイト・評価版ダウンロードサイト・製品ヘルプサイト",
+    "incidentDate": "2026-06-12",
+    "discoveredAt": "2026-10-13",
+    "disclosedAt": "2026-10-21",
+    "categories": [
+      "vulnerability",
+      "unauthorized-access",
+      "data-breach"
+    ],
+    "severity": "medium",
+    "status": "contained",
+    "verificationStatus": "confirmed",
+    "cause": {
+      "status": "confirmed",
+      "description": "外部委託で運用しているウェブサイトの管理・運用に使っていたWordPressプラグインの脆弱性を第三者に悪用され、不正アクセスを受けた。",
+      "factors": [
+        "WordPressプラグインの脆弱性",
+        "外部委託先によるウェブサイト運用",
+        "不正な管理者アカウントの作成"
+      ]
+    },
+    "impact": {
+      "status": "partially_confirmed",
+      "affectedUsers": null,
+      "leakedData": [
+        {
+          "item": "問い合わせ/評価版申し込みフォームの入力内容 約160件（氏名、メールアドレス、電話番号、会社名/部署名、保守ユーザーID、評価版申し込み製品、問い合わせ内容、添付ファイル）",
+          "confidence": "possible"
+        },
+        {
+          "item": "製品サポートサイトの認証情報 約250件（ユーザーID、ログイン用パスワード）",
+          "confidence": "possible"
+        }
+      ],
+      "systems": [
+        "企業サイト",
+        "製品サポートサイト",
+        "評価版ダウンロードサイト",
+        "製品ヘルプサイト",
+        "WordPress"
+      ],
+      "serviceOutage": null,
+      "financialLoss": null,
+      "description": "問い合わせ情報約160件とサポートサイト認証情報約250件が漏えいした可能性がある。Webページと配布モジュールの改ざんや、不審なメール送信は確認されていない。"
+    },
+    "response": {
+      "description": "不正な管理者アカウント、不正ファイル、悪用されたプラグインなどを削除し、既知の侵入経路を封じ込めた。今後はサイトの管理・運用体制を見直し、委託先への監督を強化する。",
+      "measures": [
+        "不正な管理者アカウント・不正ファイル・悪用されたプラグインの削除",
+        "既知の侵入経路の封じ込め",
+        "公開中のWebページ・配布モジュールの照合",
+        "外部委託先への指揮・監督とセキュリティ管理状況の確認の強化",
+        "脆弱性対応、認証・ログ管理、インシデント対応体制の見直し"
+      ]
+    },
+    "lessons": [
+      "WordPressプラグインの脆弱性を継続的に管理し、速やかに更新する必要がある",
+      "外部委託先が運用するウェブサイトでも、委託元が監督し、セキュリティ状況を確認する必要がある",
+      "長期間の侵入に早く気づけるよう、ログ管理と監視が重要である"
+    ],
+    "organizationId": "org-tss-link",
+    "updatedAt": "2026-10-21",
+    "country": "JP",
+    "industry": "ソフトウェア",
+    "featured": false,
+    "attackMethods": [],
+    "technicalNotes": "",
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-tss-link-wordpress-plugin-website-unauthorized-access-mvzos6vy"
+    ],
+    "createdAt": "2026-11-02",
+    "publishedAt": "2026-11-02"
+  },
+  {
+    "id": "inc-2026-yamamoto-town-employee-shared-folder-insider-unauthorized-access",
+    "slug": "yamamoto-town-employee-shared-folder-insider-unauthorized-access-2026-10",
+    "title": "宮城県山元町 職員が他職員のIDとパスワードを使って庁内共有フォルダに不正アクセス、公印の無断使用や印影偽造も",
+    "summary": "宮城県山元町の男性主事（26歳）が、2026年6月から7月にかけて他の職員のIDとパスワードを使い、庁内共有フォルダや職員個人専用フォルダに複数回不正アクセスし、データを閲覧・操作・削除した。町はこの職員を10月16日付で懲戒免職とした。",
+    "summaryDetails": "町長事務部局の男性主事は、勤務時間外に自分の職員用端末から他の職員の認証情報を使って庁内共有フォルダに不正アクセスした。また、他の職員の端末も無断で使い、共有フォルダや個人専用フォルダのデータを閲覧・削除した。7月には、あらかじめ解錠しておいた庁舎1階の扉から深夜に侵入したほか、休日には勤務中の職員に扉を開けさせ、その職員の退庁後に侵入した。さらに、町長印を無断で使用して請負業者2社に契約書を交付し、上司2名の印影を偽造して未決裁の文書を決裁済みとして使った。印紙を偽造して業者提出書類を偽造した行為もあった。町は2026年10月16日付でこの職員を免職とし、管理監督責任を問うため関係職員を戒告とした。発表は10月20日。",
+    "service": "庁内共有フォルダ",
+    "incidentDate": "2026-06-01",
+    "discoveredAt": null,
+    "disclosedAt": "2026-10-20",
+    "categories": [
+      "unauthorized-access",
+      "other"
+    ],
+    "severity": "medium",
+    "status": "resolved",
+    "verificationStatus": "confirmed",
+    "cause": {
+      "status": "confirmed",
+      "description": "内部の職員が他の職員のIDとパスワードを不正に使ったり、他の職員の端末を無断で使ったりして、庁内共有フォルダと職員個人専用フォルダにアクセスした内部不正。",
+      "factors": [
+        "他の職員の認証情報（IDとパスワード）の不正使用",
+        "他の職員の端末の無断使用",
+        "勤務時間外・深夜の庁舎への不法侵入",
+        "庁舎の物理的な入退室管理の不備",
+        "公印の管理不備"
+      ]
+    },
+    "impact": {
+      "status": "partially_confirmed",
+      "affectedUsers": null,
+      "leakedData": [],
+      "systems": [
+        "庁内共有フォルダ",
+        "職員個人専用フォルダ",
+        "職員用端末"
+      ],
+      "serviceOutage": false,
+      "financialLoss": null,
+      "description": "庁内共有フォルダと職員個人専用フォルダのデータが閲覧・操作・削除された。あわせて、公印の無断使用、上司の印影の偽造、偽造印紙による書類偽造が行われた。外部への情報漏えいについては記載がない。"
+    },
+    "response": {
+      "description": "地方公務員法第29条第1項第1号〜第3号に該当するとして、2026年10月16日付で当該職員を懲戒免職とした。管理監督責任を問い、関係職員も戒告処分とした。",
+      "measures": [
+        "当該職員の懲戒免職",
+        "関係職員の戒告処分",
+        "懲戒処分の公表"
+      ]
+    },
+    "lessons": [
+      "認証情報の共有や漏えいを防ぐため、多要素認証の導入と端末ロックを徹底する",
+      "勤務時間外のアクセスを監視し、アクセスログを点検する",
+      "庁舎の入退室管理を強化する",
+      "公印と決裁手続きの管理を厳格にする"
+    ],
+    "organizationId": "org-yamamoto-town-miyagi",
+    "updatedAt": "2026-10-20",
+    "country": "JP",
+    "industry": "地方自治体",
+    "featured": false,
+    "attackMethods": [],
+    "technicalNotes": "",
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-yamamoto-town-employee-shared-folder-insider-unauthorized-access-mvzoskho"
+    ],
+    "createdAt": "2026-11-02",
+    "publishedAt": "2026-11-02"
+  },
+  {
+    "id": "inc-2026-rakuten-travel-overseas-hotel-multilingual-site-unauthorized-access",
+    "slug": "rakuten-travel-overseas-hotel-multilingual-site-unauthorized-access-2026-10",
+    "title": "楽天グループ 「楽天トラベル」海外ホテル予約サイトの一部ページと多言語予約サイトへの不正アクセスで顧客情報が流出した可能性",
+    "summary": "楽天グループが運営する「楽天トラベル」で、子会社Rakuten Travel Xchangeが管理する海外ホテル予約サイトの一部ページと、多言語予約サイトに第三者からの不正アクセスがあったことが判明した。最大約260万件のログイン顧客情報や、カード情報の一部を含む予約情報などが不正アクセスの対象になった。",
+    "summaryDetails": "2026年9月10日、海外ホテル予約サイトのうちRakuten Travel Xchangeが管理・運営する一部のページで異常が検知された。9月15日に原因を特定し、9月16日にシステム改修を完了した。対象となった情報は次のとおり。予約顧客最大約4万件の氏名、メールアドレス、電話番号、居住国、社内用の識別番号、予約情報、同伴者の氏名・居住国。このうち最大約3万6千件には支払情報（カード発行者識別番号、下4桁、名義、有効期限、国際ブランド区分）が含まれる。さらに、ログインした顧客最大約260万件の氏名、メールアドレス、電話番号、社内用の識別番号も対象となった。10月20日には多言語予約サイトでも不正アクセスの可能性を検知し、同日中に原因を特定、翌21日に改修を完了した。こちらでは、ログイン顧客最大約86万件のメールアドレスと社内用の識別番号、管理画面に入力のあった宿泊施設従業員最大約4万件のアカウント名、メールアドレス、社内用の識別番号が対象となった。同社は10月26日に公表し、顧客への個別通知を行っている。",
+    "service": "楽天トラベル（海外ホテル予約サイト・多言語予約サイト）",
+    "incidentDate": null,
+    "discoveredAt": "2026-09-10",
+    "disclosedAt": "2026-10-26",
+    "categories": [
+      "unauthorized-access",
+      "data-breach"
+    ],
+    "severity": "high",
+    "status": "contained",
+    "verificationStatus": "confirmed",
+    "cause": {
+      "status": "partially_confirmed",
+      "description": "社外の第三者による不正アクセス。同社は原因を特定してシステムを改修したと説明しているが、具体的な原因や手口は公表されていない。",
+      "factors": [
+        "子会社Rakuten Travel Xchangeが管理・運営する海外ホテル予約ページへの不正アクセス",
+        "多言語予約サイトへの不正アクセス"
+      ]
+    },
+    "impact": {
+      "status": "confirmed",
+      "affectedUsers": null,
+      "leakedData": [
+        {
+          "item": "氏名",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "メールアドレス",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "電話番号",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "居住国",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "社内用の識別番号",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "予約情報（施設名、予約金額等）",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "同伴者の氏名・居住国",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "クレジットカードの発行者識別番号・下4桁・名義・有効期限・国際ブランド区分（最大約3万6千件）",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "宿泊施設従業員のアカウント名・メールアドレス（最大約4万件）",
+          "confidence": "confirmed"
+        }
+      ],
+      "systems": [
+        "楽天トラベル 海外ホテル予約サイト（Rakuten Travel Xchange管理の一部ページ）",
+        "楽天トラベル 多言語予約サイト",
+        "多言語予約サイト管理画面"
+      ],
+      "serviceOutage": null,
+      "financialLoss": null,
+      "description": "内訳は、海外ホテル予約顧客最大約4万件（うち支払情報を含むもの最大約3万6千件）、海外ホテル予約ページのログイン顧客最大約260万件、多言語予約サイトのログイン顧客最大約86万件、宿泊施設従業員最大約4万件。"
+    },
+    "response": {
+      "description": "原因を特定してシステムを改修し、対象となった顧客に個別通知を行った。今後もセキュリティ対策の強化など再発防止に取り組むとしている。",
+      "measures": [
+        "2026-09-16 海外ホテル予約ページのシステム改修を完了",
+        "2026-10-21 多言語予約サイトのシステム改修を完了",
+        "顧客への個別通知",
+        "セキュリティ対策の強化"
+      ]
+    },
+    "lessons": [
+      "子会社が管理・運営するページも含め、グループ全体でセキュリティ監視と脆弱性対策を行う必要がある",
+      "1つのサイトで被害が見つかった時点で、関連サイトも横断的に点検すべきである"
+    ],
+    "organizationId": "org-rakuten-group",
+    "updatedAt": "2026-10-26",
+    "country": "JP",
+    "industry": "インターネットサービス・旅行予約",
+    "featured": false,
+    "attackMethods": [],
+    "technicalNotes": "",
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-rakuten-travel-overseas-hotel-multilingual-site-unauthorized-access-mvzot0rs"
+    ],
+    "createdAt": "2026-11-02",
+    "publishedAt": "2026-11-02"
+  },
+  {
+    "id": "inc-2026-fujicco-campaign-contractor-server-unauthorized-access",
+    "slug": "fujicco-campaign-contractor-server-unauthorized-access-2026-10",
+    "title": "フジッコ キャンペーン応募受付業務の委託先サーバへの不正アクセスで延べ約15,500件の個人情報が漏えいした可能性",
+    "summary": "フジッコのキャンペーンで非会員向け応募フォームの受付業務を委託している会社のサーバに第三者が不正アクセスし、延べ約15,500件の個人情報が漏えいした可能性がある。",
+    "summaryDetails": "2026年5月以降に実施した「カスピ海ヨーグルトシリーズ『もっと！とろぉ～もっちキャンペーン第2弾』」と「フジッコ大感謝祭キャンペーン」で、非会員向け応募フォームの受付業務の委託先サーバに第三者が不正アクセスした。これにより、フォームに入力された氏名、年齢、性別、職業、婚姻状況、家族構成、電話番号、メールアドレス、住所、アンケート情報が漏えいした可能性があることが10月21日に分かった。同社は情報が第三者に取得されたものとみなして対応しており、該当する応募受付を一時停止している。",
+    "service": "キャンペーン非会員向け応募フォーム",
+    "incidentDate": null,
+    "discoveredAt": "2026-10-21",
+    "disclosedAt": "2026-10-22",
+    "categories": [
+      "unauthorized-access",
+      "data-breach",
+      "supply-chain"
+    ],
+    "severity": "medium",
+    "status": "contained",
+    "verificationStatus": "confirmed",
+    "cause": {
+      "status": "partially_confirmed",
+      "description": "応募受付業務の委託先のサーバに第三者が不正アクセスした。侵入の手口は公表されていない。",
+      "factors": [
+        "委託先サーバへの第三者による不正アクセス"
+      ]
+    },
+    "impact": {
+      "status": "partially_confirmed",
+      "affectedUsers": 15500,
+      "leakedData": [
+        {
+          "item": "氏名",
+          "confidence": "possible"
+        },
+        {
+          "item": "年齢",
+          "confidence": "possible"
+        },
+        {
+          "item": "性別",
+          "confidence": "possible"
+        },
+        {
+          "item": "職業",
+          "confidence": "possible"
+        },
+        {
+          "item": "婚姻状況",
+          "confidence": "possible"
+        },
+        {
+          "item": "家族構成",
+          "confidence": "possible"
+        },
+        {
+          "item": "電話番号",
+          "confidence": "possible"
+        },
+        {
+          "item": "メールアドレス",
+          "confidence": "possible"
+        },
+        {
+          "item": "住所",
+          "confidence": "possible"
+        },
+        {
+          "item": "アンケート情報",
+          "confidence": "possible"
+        }
+      ],
+      "systems": [
+        "委託先の応募受付サーバ"
+      ],
+      "serviceOutage": true,
+      "financialLoss": null,
+      "description": "2つのキャンペーンの非会員向け応募フォームに入力された延べ約15,500件の個人情報が漏えいした可能性がある。該当する応募受付は一時停止している。"
+    },
+    "response": {
+      "description": "対象の顧客には準備が整い次第、謝罪と経緯、注意点を順次連絡する。該当する応募受付を一時停止し、今後は安全性が確認された環境にシステムを集約するとともに、監視体制とセキュリティ対策を強化・見直す。",
+      "measures": [
+        "該当する応募受付の一時停止",
+        "対象顧客への謝罪と注意喚起の連絡",
+        "安全性が確認された環境へのシステム集約",
+        "監視体制とセキュリティ対策の強化・見直し"
+      ]
+    },
+    "lessons": [
+      "キャンペーン応募受付などを外部に委託する場合も、委託先のセキュリティ管理状況を確認する必要がある",
+      "キャンペーンごとに分散したシステムを集約し、監視を一元化することが重要"
+    ],
+    "organizationId": "org-fujicco",
+    "updatedAt": "2026-10-22",
+    "country": "JP",
+    "industry": "食品製造",
+    "featured": false,
+    "attackMethods": [],
+    "technicalNotes": "",
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-fujicco-campaign-contractor-server-unauthorized-access-mvzotsiy"
+    ],
+    "createdAt": "2026-11-02",
+    "publishedAt": "2026-11-02"
+  },
+  {
+    "id": "inc-2026-free-standard-ships-cycle-market-swym-wishlist-plus-unauthorized-access",
+    "slug": "free-standard-ships-cycle-market-swym-wishlist-plus-unauthorized-access-2026-10",
+    "title": "Free Standard 「SHIPS CYCLE MARKET」で利用する外部アプリ「Swym Wishlist Plus」開発元への不正アクセスで偽の購入手続き画面へ誘導された可能性",
+    "summary": "Free Standardが運営する「SHIPS CYCLE MARKET」でお気に入り機能に使う外部アプリ「Swym Wishlist Plus」の開発元Swym Corporationが不正アクセスを受け、改ざんされたプログラムにより購入手続き時に偽サイトへ誘導された可能性がある。偽サイト上で顧客がクレジットカード情報を入力した可能性がある。",
+    "summaryDetails": "開発元の説明では、日本時間2026年10月14日午後7時6分から10月15日午前1時32分頃にかけて、同アプリを使う一部のショップで購入手続きボタンを押すと、正規の購入手続き画面を模した外部の疑似サイトへ誘導する不正なプログラムが読み込まれた可能性がある。同店のデータベースなどに保存された情報の流出はない。ただし、誘導先の疑似サイトで顧客がクレジットカード情報を入力した可能性がある。Free Standardは10月22日に発表し、開発元に対して同店の顧客への影響の有無を正式に調査・確認するよう求めている。",
+    "service": "SHIPS CYCLE MARKET",
+    "incidentDate": "2026-10-14",
+    "discoveredAt": null,
+    "disclosedAt": "2026-10-22",
+    "categories": [
+      "supply-chain",
+      "unauthorized-access",
+      "phishing"
+    ],
+    "severity": "medium",
+    "status": "investigating",
+    "verificationStatus": "partially_confirmed",
+    "cause": {
+      "status": "partially_confirmed",
+      "description": "外部アプリ「Swym Wishlist Plus」の開発元Swym Corporationのシステムが第三者から不正アクセスを受け、アプリのプログラムが改ざんされて偽の購入手続き画面へ誘導する不正なプログラムが読み込まれた。",
+      "factors": [
+        "サードパーティ製アプリ開発元への不正アクセス",
+        "外部アプリのプログラム改ざん",
+        "偽の購入手続き画面への誘導"
+      ]
+    },
+    "impact": {
+      "status": "unconfirmed",
+      "affectedUsers": null,
+      "leakedData": [
+        {
+          "item": "クレジットカード情報（偽サイトでの入力分）",
+          "confidence": "possible"
+        }
+      ],
+      "systems": [
+        "Swym Wishlist Plus（お気に入り機能）",
+        "SHIPS CYCLE MARKET 購入手続き画面"
+      ],
+      "serviceOutage": true,
+      "financialLoss": null,
+      "description": "2026年10月14日19時6分から10月15日1時32分頃に購入手続きを行った顧客が偽サイトでカード情報を入力した可能性がある。同店のデータベースからの情報流出はない。アプリの機能停止により、お気に入り機能が利用できない状態になっている。"
+    },
+    "response": {
+      "description": "開発元に顧客への影響の有無を正式に調査・確認するよう求め、該当期間に購入手続きを行った顧客にカード利用明細の確認を呼びかけている。開発元は予防措置として、全ショップで同アプリの機能を一時停止した。",
+      "measures": [
+        "開発元への影響調査の依頼",
+        "該当顧客へのカード利用明細確認の呼びかけ",
+        "全ショップでの同アプリ機能の一時停止（開発元）"
+      ]
+    },
+    "lessons": [
+      "ECサイトに組み込むサードパーティ製スクリプトやアプリは、改ざんされると決済画面の乗っ取りにつながるため、リスクの評価と監視が必要",
+      "外部スクリプトの整合性検証やCSPの導入を検討する"
+    ],
+    "organizationId": "org-free-standard",
+    "updatedAt": "2026-10-22",
+    "country": "JP",
+    "industry": "小売・EC（自転車売買）",
+    "featured": false,
+    "attackMethods": [],
+    "technicalNotes": "",
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-free-standard-ships-cycle-market-swym-wishlist-plus-unauthorized-access-mvzou6ui"
+    ],
+    "createdAt": "2026-11-02",
+    "publishedAt": "2026-11-02"
+  },
+  {
+    "id": "inc-2026-shinryo-cyberattack-system-outage",
+    "slug": "shinryo-cyberattack-system-outage-2026-10",
+    "title": "新菱冷熱工業 サイバー攻撃によるシステム障害で一部サービスに影響",
+    "summary": "新菱冷熱工業で2026年10月17日に第三者からのサイバー攻撃によるシステム障害が発生し、同社提供の一部サービスにも影響が出た。個人情報や顧客データの外部流出は現時点で確認されていない。",
+    "summaryDetails": "新菱冷熱工業株式会社は10月21日、10月17日に第三者からのサイバー攻撃によりシステム障害が発生したと発表した。障害に伴い同社提供の一部サービスにも影響が発生している。現時点で個人情報や顧客データの外部流出は確認されていないが、継続して調査中。外部専門機関・関係機関と連携し、サービス復旧、事実関係の確認、影響範囲の特定、再発防止策の実施に取り組むとしている。",
+    "service": null,
+    "incidentDate": "2026-10-17",
+    "discoveredAt": "2026-10-17",
+    "disclosedAt": "2026-10-21",
+    "categories": [
+      "unauthorized-access"
+    ],
+    "severity": "medium",
+    "status": "investigating",
+    "verificationStatus": "confirmed",
+    "cause": {
+      "status": "under_investigation",
+      "description": "第三者からのサイバー攻撃によるシステム障害。攻撃手法や侵入経路は公表されていない。",
+      "factors": []
+    },
+    "impact": {
+      "status": "partially_confirmed",
+      "affectedUsers": null,
+      "leakedData": [],
+      "systems": [
+        "社内システム",
+        "同社提供の一部サービス"
+      ],
+      "serviceOutage": true,
+      "financialLoss": null,
+      "description": "システム障害が発生し、同社提供の一部サービスに影響。個人情報や顧客データの外部流出は現時点で確認されていない。"
+    },
+    "response": {
+      "description": "外部専門機関及び関係機関と連携し、サービス復旧、事実関係の確認、影響範囲の特定と再発防止策の実施に取り組んでいる。",
+      "measures": [
+        "外部専門機関・関係機関との連携",
+        "サービス復旧作業",
+        "影響範囲の調査",
+        "再発防止策の実施"
+      ]
+    },
+    "lessons": [],
+    "organizationId": "org-shinryo-corporation",
+    "updatedAt": "2026-10-21",
+    "country": "JP",
+    "industry": "建設業（設備工事）",
+    "featured": false,
+    "attackMethods": [],
+    "technicalNotes": "",
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-shinryo-cyberattack-system-outage-mvzougdu"
+    ],
+    "createdAt": "2026-11-02",
+    "publishedAt": "2026-11-02"
+  },
+  {
+    "id": "inc-2026-sally-uzu-inquiry-studio-form-unauthorized-access",
+    "slug": "sally-uzu-inquiry-studio-form-unauthorized-access-2026-10",
+    "title": "Sally メールアカウントの不正利用とWeb制作ツール「Studio」への不正アクセスの2件で問い合わせ情報計948名分が漏えいした可能性",
+    "summary": "株式会社Sallyで不正アクセスが2件発生し、問い合わせ情報が漏えいした可能性がある。ウズへの問い合わせ544名分と、同社Webサイトのフォームから送信された404名分が対象。",
+    "summaryDetails": "1件目は2026年10月14日、同社のメールアカウントが第三者に不正利用され、社員になりすまして問い合わせ管理システムにログインされた。対象は2026年3月30日〜10月14日にウズへ問い合わせた544名で、メールアドレス、電話番号、問い合わせ内容（ユーザーID、添付ファイルを含む）が漏えいした可能性がある。2件目は2026年9月30日〜10月1日に、同社が以前Webサイト制作に使っていた「Studio」を運営するStudio株式会社のクラウド環境で起きた不正アクセスによるもの。対象は2026年4月までに同社Webサイト（sally-inc.jp）のフォームから送信した404名で、氏名、メールアドレス、問い合わせ内容（フォームによっては会社名、部署名、役職、電話番号を含む）が漏えいした可能性がある。同社は2026年10月21日に発表した。",
+    "service": "ウズ 問い合わせ管理システム / 同社Webサイト問い合わせフォーム（Studio）",
+    "incidentDate": "2026-10-14",
+    "discoveredAt": null,
+    "disclosedAt": "2026-10-21",
+    "categories": [
+      "unauthorized-access",
+      "data-breach",
+      "supply-chain"
+    ],
+    "severity": "medium",
+    "status": "contained",
+    "verificationStatus": "confirmed",
+    "cause": {
+      "status": "partially_confirmed",
+      "description": "1件目は、同社のメールアカウントが第三者に不正利用され、社員になりすまして問い合わせ管理システムにログインされたこと。2件目は、以前Webサイト制作に利用していたStudio株式会社のクラウド環境への不正アクセス。",
+      "factors": [
+        "社員メールアカウントの不正利用",
+        "社員へのなりすましによる問い合わせ管理システムへのログイン",
+        "多要素認証が徹底されていなかった",
+        "委託先（Studio）のクラウド環境への不正アクセス"
+      ]
+    },
+    "impact": {
+      "status": "partially_confirmed",
+      "affectedUsers": 948,
+      "leakedData": [
+        {
+          "item": "メールアドレス",
+          "confidence": "possible"
+        },
+        {
+          "item": "電話番号",
+          "confidence": "possible"
+        },
+        {
+          "item": "問い合わせ内容（ユーザーID、添付ファイルを含む）",
+          "confidence": "possible"
+        },
+        {
+          "item": "氏名",
+          "confidence": "possible"
+        },
+        {
+          "item": "会社名・部署名・役職",
+          "confidence": "possible"
+        }
+      ],
+      "systems": [
+        "ウズ 問い合わせ管理システム",
+        "社員メールアカウント",
+        "Studio（Webサイトの問い合わせフォーム）"
+      ],
+      "serviceOutage": null,
+      "financialLoss": null,
+      "description": "ウズへの問い合わせ者544名と、同社Webサイトのフォームから送信した404名の、合計948名分の問い合わせ情報が漏えいした可能性がある。"
+    },
+    "response": {
+      "description": "対象者にはメールで個別に連絡する。社員アカウントの保護とシステムの修正を進めている。現在の同社WebサイトはStudioを利用していない。",
+      "measures": [
+        "対象者へのメールでの個別連絡",
+        "社員アカウントの保護",
+        "システムの修正",
+        "社員アカウントの多要素認証の徹底",
+        "監視の強化"
+      ]
+    },
+    "lessons": [
+      "業務システムにつながる社員アカウントには多要素認証を徹底する必要がある",
+      "過去に利用していた外部サービスにも預けたデータが残るため、利用をやめる際にデータを削除できているか確認する必要がある"
+    ],
+    "organizationId": "org-sally",
+    "updatedAt": "2026-10-21",
+    "country": "JP",
+    "industry": "情報通信・ITサービス",
+    "featured": false,
+    "attackMethods": [],
+    "technicalNotes": "",
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-sally-uzu-inquiry-studio-form-unauthorized-access-mvzoutq1"
+    ],
+    "createdAt": "2026-11-02",
+    "publishedAt": "2026-11-02"
+  },
+  {
+    "id": "inc-2026-aidma-hd-mamaworks-unauthorized-access",
+    "slug": "aidma-hd-mamaworks-unauthorized-access-2026-10",
+    "title": "アイドマ・ホールディングス 在宅ワーク求人サイト「ママワークス」への不正アクセスで会員名簿とされるデータがネット上にアップロード",
+    "summary": "アイドマ・ホールディングスが運営する在宅ワーク求人サイト「ママワークス」で、システム設定の脆弱性を突いた不正アクセスがあり、会員の個人情報の一部が漏えいした可能性がある。会員名簿とされるデータがインターネット上にアップロードされていると警察から報告があり、判明した。",
+    "summaryDetails": "警察から「ママワークス」の会員名簿とされるデータがインターネット上にアップロードされているとの報告を受け、同社は外部の専門調査会社に調査を依頼した。その結果、システム設定の脆弱性による不正アクセスが確認され、アップロードされたデータが実際の会員名簿である可能性が判明した。漏えいした可能性があるのは、氏名（漢字・フリガナ）、生年月日、性別、電話番号、郵便番号・住所、メールアドレス、職務経歴等の登録情報、パスワードのハッシュ値。同社は2026年10月20日に公表した。",
+    "service": "ママワークス",
+    "incidentDate": null,
+    "discoveredAt": null,
+    "disclosedAt": "2026-10-20",
+    "categories": [
+      "unauthorized-access",
+      "data-breach",
+      "misconfiguration"
+    ],
+    "severity": "high",
+    "status": "contained",
+    "verificationStatus": "confirmed",
+    "cause": {
+      "status": "confirmed",
+      "description": "「ママワークス」の運営に用いるシステムの設定に脆弱性があり、第三者に不正アクセスされた。",
+      "factors": [
+        "システム設定の脆弱性"
+      ]
+    },
+    "impact": {
+      "status": "partially_confirmed",
+      "affectedUsers": null,
+      "leakedData": [
+        {
+          "item": "氏名（漢字・フリガナ）",
+          "confidence": "possible"
+        },
+        {
+          "item": "生年月日",
+          "confidence": "possible"
+        },
+        {
+          "item": "性別",
+          "confidence": "possible"
+        },
+        {
+          "item": "電話番号",
+          "confidence": "possible"
+        },
+        {
+          "item": "郵便番号・住所",
+          "confidence": "possible"
+        },
+        {
+          "item": "メールアドレス",
+          "confidence": "possible"
+        },
+        {
+          "item": "職務経歴等の登録情報",
+          "confidence": "possible"
+        },
+        {
+          "item": "パスワードのハッシュ値",
+          "confidence": "possible"
+        }
+      ],
+      "systems": [
+        "ママワークス運営システム"
+      ],
+      "serviceOutage": null,
+      "financialLoss": null,
+      "description": "会員名簿とされるデータがインターネット上にアップロードされ、会員の個人情報の一部が漏えいした可能性がある。影響件数は記事に記載がない。"
+    },
+    "response": {
+      "description": "外部の専門調査会社に調査を依頼し、不正アクセスの原因となった脆弱性への対応を完了した。再発防止策を進めるとしている。",
+      "measures": [
+        "外部専門調査会社による調査",
+        "脆弱性への対応",
+        "システムのセキュリティ強化",
+        "監視体制の見直し",
+        "社内管理体制の見直し"
+      ]
+    },
+    "lessons": [
+      "システムの設定不備は情報漏えいに直結するため、定期的に設定を点検することが重要",
+      "外部からの通報で初めて漏えいが判明しており、不正アクセスを検知する監視体制の整備が必要"
+    ],
+    "organizationId": "org-aidma-holdings",
+    "updatedAt": "2026-10-20",
+    "country": "JP",
+    "industry": "人材・求人サービス",
+    "featured": false,
+    "attackMethods": [],
+    "technicalNotes": "",
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-aidma-hd-mamaworks-unauthorized-access-mvzovhu7"
+    ],
+    "createdAt": "2026-11-02",
+    "publishedAt": "2026-11-02"
+  },
+  {
+    "id": "inc-2026-zigzag-worldshopping-unauthorized-access",
+    "slug": "zigzag-worldshopping-unauthorized-access-2026-10",
+    "title": "ジグザグ 越境ECサービス「WorldShopping」への不正アクセスで海外顧客301名の個人情報が漏えい",
+    "summary": "ジグザグが運営する越境ECサービス「WorldShopping」に2026年10月15日から16日にかけて不正アクセスがあり、台湾・香港・米国など海外顧客301名の個人情報が漏えいした。",
+    "summaryDetails": "10月16日に外部からの不審なアクセスを検知し、調査したところ、10月15日から16日にかけて第三者による不正アクセスがあり、海外（台湾、香港、米国、韓国、中国ほか）の顧客301名のメールアドレス、氏名、住所、電話番号、注文に関する情報が漏えいしていた。「WorldShopping BIZ」導入EC事業者から預かっている情報は、現時点の調査では対象に含まれていない。同社は侵入経路を遮断し、メール配信システムと入力フォームの不備を修正した。あわせて攻撃者が使った認証情報を無効化して再発行し、個人情報保護委員会と各国・地域の当局へ報告している。",
+    "service": "WorldShopping",
+    "incidentDate": "2026-10-15",
+    "discoveredAt": "2026-10-16",
+    "disclosedAt": "2026-10-19",
+    "categories": [
+      "unauthorized-access",
+      "data-breach"
+    ],
+    "severity": "medium",
+    "status": "contained",
+    "verificationStatus": "confirmed",
+    "cause": {
+      "status": "partially_confirmed",
+      "description": "第三者による不正アクセス。メール配信システムと入力フォームに不備があり、攻撃者が認証情報を使用していた。",
+      "factors": [
+        "メール配信システムの不備",
+        "入力フォームの不備",
+        "攻撃者による認証情報の使用"
+      ]
+    },
+    "impact": {
+      "status": "confirmed",
+      "affectedUsers": 301,
+      "leakedData": [
+        {
+          "item": "メールアドレス",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "氏名",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "住所",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "電話番号",
+          "confidence": "confirmed"
+        },
+        {
+          "item": "注文に関する情報",
+          "confidence": "confirmed"
+        }
+      ],
+      "systems": [
+        "WorldShopping",
+        "メール配信システム",
+        "入力フォーム"
+      ],
+      "serviceOutage": null,
+      "financialLoss": null,
+      "description": "台湾、香港、米国、韓国、中国などの海外顧客301名の個人情報が漏えいした。WorldShopping BIZ導入事業者から預かっている情報は、現時点では対象外とされている。"
+    },
+    "response": {
+      "description": "侵入経路を遮断し、システムの不備を修正した。認証情報を無効化・再発行し、対象の顧客にはメールで個別に連絡している。関係当局への報告を進め、外部の専門家の助言を受けて再発防止策を策定中。",
+      "measures": [
+        "不正アクセス経路の遮断",
+        "メール配信システムおよび入力フォームの不備修正",
+        "攻撃者が使用した認証情報の無効化・再発行",
+        "対象顧客へのメールでの個別連絡",
+        "個人情報保護委員会・各国関係当局への報告",
+        "セキュリティ診断を含む再発防止策の策定"
+      ]
+    },
+    "lessons": [
+      "メール配信システムや入力フォームの実装不備を定期的なセキュリティ診断で洗い出す",
+      "認証情報の管理とローテーションを徹底する",
+      "海外顧客を抱えるサービスは、各国・地域の法令に基づく報告体制を整備しておく"
+    ],
+    "organizationId": "org-zigzag",
+    "updatedAt": "2026-10-19",
+    "country": "JP",
+    "industry": "越境ECサービス",
+    "featured": false,
+    "attackMethods": [],
+    "technicalNotes": "",
+    "timeline": [],
+    "vulnerabilityIds": [],
+    "relatedIncidentIds": [],
+    "sourceIds": [
+      "src-zigzag-worldshopping-unauthorized-access-mvzovv54"
+    ],
+    "createdAt": "2026-11-02",
+    "publishedAt": "2026-11-02"
   }
 ]
