@@ -7,7 +7,7 @@ export const dynamic = "force-static"
 const sitemap = (): MetadataRoute.Sitemap => {
   const u = (p: string, lastModified?: string) => ({ url: new URL(p, SITE_URL).toString(), lastModified })
   return [
-    ...["/", "/incidents/", "/timeline/", "/vulnerabilities/", "/techniques/", "/statistics/", "/about/"].map((p) => u(p)),
+    ...["/", "/incidents/", "/study/", "/timeline/", "/vulnerabilities/", "/techniques/", "/statistics/", "/about/"].map((p) => u(p)),
     ...incidents.map((i) => u(`/incidents/${i.slug}/`, i.updatedAt)),
     ...db.vulnerabilities.map((v) => u(`/vulnerabilities/${v.cveId}/`, v.modifiedAt ?? v.publishedAt ?? undefined)),
     ...db.techniques.map((t) => u(`/techniques/${t.slug}/`)),

@@ -54,6 +54,9 @@ const Page: FC = () => {
           <Link href="/incidents/" className={hero.primary}>
             インシデントを見る →
           </Link>
+          <Link href="/study/" className={hero.secondary}>
+            事例から学ぶ
+          </Link>
           <Link href="/statistics/" className={hero.secondary}>
             統計
           </Link>
