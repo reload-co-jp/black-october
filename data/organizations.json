@@ -1622,5 +1622,405 @@
     "website": "",
     "id": "org-zigzag",
     "country": "JP"
+  },
+  {
+    "name": "ニトリホールディングス",
+    "slug": "nitori-holdings",
+    "industry": "小売業",
+    "website": "",
+    "id": "org-nitori-holdings",
+    "country": "JP"
+  },
+  {
+    "name": "日本ネットワークセキュリティ協会（JNSA）",
+    "slug": "jnsa",
+    "industry": "業界団体（情報セキュリティ）",
+    "website": "https://www.jnsa.org/",
+    "id": "org-jnsa",
+    "country": "JP"
+  },
+  {
+    "name": "ロート製薬",
+    "slug": "rohto-pharmaceutical",
+    "industry": "製薬・化粧品",
+    "website": "",
+    "id": "org-rohto-pharmaceutical",
+    "country": "JP"
+  },
+  {
+    "name": "ウィルズ",
+    "slug": "wills",
+    "industry": "ポイントサービス",
+    "website": "",
+    "id": "org-wills",
+    "country": "JP"
+  },
+  {
+    "name": "伊万里市",
+    "slug": "imari-city",
+    "industry": "地方自治体・教育",
+    "website": "",
+    "id": "org-imari-city",
+    "country": "JP"
+  },
+  {
+    "name": "NTTドコモ",
+    "slug": "ntt-docomo",
+    "industry": "通信",
+    "website": "https://www.docomo.ne.jp/",
+    "id": "org-ntt-docomo",
+    "country": "JP"
+  },
+  {
+    "name": "NTTデータ",
+    "slug": "ntt-data",
+    "industry": "情報通信・システムインテグレーション",
+    "website": "",
+    "id": "org-ntt-data",
+    "country": "JP"
+  },
+  {
+    "name": "セガ フェイブ",
+    "slug": "sega-fave",
+    "industry": "エンターテインメント（アミューズメント機器・ゲームセンター向けサービス）",
+    "website": "",
+    "id": "org-sega-fave",
+    "country": "JP"
+  },
+  {
+    "name": "ビックカメラ",
+    "slug": "bic-camera",
+    "industry": "小売業（家電量販）",
+    "website": "",
+    "id": "org-bic-camera",
+    "country": "JP"
+  },
+  {
+    "name": "アソビュー",
+    "slug": "asoview",
+    "industry": "レジャー予約サイト運営",
+    "website": "",
+    "id": "org-asoview",
+    "country": "JP"
+  },
+  {
+    "name": "セブン‐イレブン・ジャパン",
+    "slug": "seven-eleven-japan",
+    "industry": "小売（コンビニエンスストア）",
+    "website": "https://www.sej.co.jp/",
+    "id": "org-seven-eleven-japan",
+    "country": "JP"
+  },
+  {
+    "name": "SMBCコンシューマーファイナンス株式会社",
+    "slug": "smbc-consumer-finance",
+    "industry": "金融（消費者金融・保証業務）",
+    "website": "",
+    "id": "org-smbc-consumer-finance",
+    "country": "JP"
+  },
+  {
+    "name": "東京海上ダイレクト損害保険株式会社",
+    "slug": "tokio-marine-direct",
+    "industry": "保険",
+    "website": "",
+    "id": "org-tokio-marine-direct",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社ガネーシャ",
+    "slug": "ganesha",
+    "industry": "飲食",
+    "website": "",
+    "id": "org-ganesha",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社Vook",
+    "slug": "vook",
+    "industry": "情報通信業（映像クリエイター向けWebサービス）",
+    "website": "",
+    "id": "org-vook",
+    "country": "JP"
+  },
+  {
+    "name": "MONO Investment",
+    "slug": "mono-investment",
+    "industry": "金融・投資情報サービス",
+    "website": "",
+    "id": "org-mono-investment",
+    "country": "JP"
+  },
+  {
+    "name": "黒金化成株式会社",
+    "slug": "kurogane-kasei",
+    "industry": "化学・製造業",
+    "website": "",
+    "id": "org-kurogane-kasei",
+    "country": "JP"
+  },
+  {
+    "name": "総務省消防庁",
+    "slug": "fdma",
+    "industry": "行政機関",
+    "website": "https://www.fdma.go.jp/",
+    "id": "org-fdma",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社セレス",
+    "slug": "ceres",
+    "industry": "インターネットサービス（ポイントサイト運営）",
+    "website": "",
+    "id": "org-ceres",
+    "country": "JP"
+  },
+  {
+    "name": "ソニー銀行",
+    "slug": "sony-bank",
+    "industry": "金融（銀行）",
+    "website": "",
+    "id": "org-sony-bank",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社デニーズジャパン",
+    "slug": "dennys-japan",
+    "industry": "飲食業",
+    "website": "",
+    "id": "org-dennys-japan",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社クラブネッツ",
+    "slug": "clubnets",
+    "industry": "ポイントサービス",
+    "website": "",
+    "id": "org-clubnets",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社アイスタイル",
+    "slug": "istyle",
+    "industry": "情報通信業（美容・化粧品情報サイト運営）",
+    "website": "",
+    "id": "org-istyle",
+    "country": "JP"
+  },
+  {
+    "name": "日本郵便株式会社",
+    "slug": "japan-post",
+    "industry": "郵便・物流",
+    "website": "https://www.post.japanpost.jp/",
+    "id": "org-japan-post",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社ベーシック",
+    "slug": "basic",
+    "industry": "情報通信業（マーケティングSaaS）",
+    "website": "",
+    "id": "org-basic",
+    "country": "JP"
+  },
+  {
+    "name": "株式会社ブシロード",
+    "slug": "bushiroad",
+    "industry": "エンターテインメント・ゲーム",
+    "website": "",
+    "id": "org-bushiroad",
+    "country": "JP"
+  },
+  {
+    "name": "スマートシェア株式会社",
+    "slug": "smartshare",
+    "industry": "情報通信業（SNSマーケティングツール提供）",
+    "website": "",
+    "id": "org-smartshare",
+    "country": "JP"
+  },
+  {
+    "name": "独立行政法人日本貿易振興機構（JETRO）",
+    "slug": "jetro",
+    "industry": "公的機関（貿易振興）",
+    "website": "https://www.jetro.go.jp/",
+    "id": "org-jetro",
+    "country": "JP"
+  },
+  {
+    "name": "サントリーホールディングス",
+    "slug": "suntory-holdings",
+    "industry": "食品・飲料",
+    "website": "",
+    "id": "org-suntory-holdings",
+    "country": "JP"
+  },
+  {
+    "name": "徳間書店",
+    "slug": "tokuma-shoten",
+    "industry": "出版",
+    "website": "",
+    "id": "org-tokuma-shoten",
+    "country": "JP"
+  },
+  {
+    "name": "バンダイロジパル",
+    "slug": "bandai-logipal",
+    "industry": "物流",
+    "website": "",
+    "id": "org-bandai-logipal",
+    "country": "JP"
+  },
+  {
+    "name": "GMOペイメントゲートウェイ",
+    "slug": "gmo-payment-gateway",
+    "industry": "決済サービス",
+    "website": "",
+    "id": "org-gmo-payment-gateway",
+    "country": "JP"
+  },
+  {
+    "name": "札幌市交通局",
+    "slug": "sapporo-city-transportation-bureau",
+    "industry": "地方自治体・公共交通",
+    "website": "",
+    "id": "org-sapporo-city-transportation-bureau",
+    "country": "JP"
+  },
+  {
+    "name": "シェアフル株式会社",
+    "slug": "sharefull",
+    "industry": "人材サービス（スキマバイトアプリ）",
+    "website": "",
+    "id": "org-sharefull",
+    "country": "JP"
+  },
+  {
+    "name": "技研製作所",
+    "slug": "giken",
+    "industry": "建設機械製造",
+    "website": "",
+    "id": "org-giken",
+    "country": "JP"
+  },
+  {
+    "name": "オープンドア",
+    "slug": "open-door",
+    "industry": "旅行比較サイト運営",
+    "website": "",
+    "id": "org-open-door",
+    "country": "JP"
+  },
+  {
+    "name": "三井住友海上火災保険・あいおいニッセイ同和損害保険",
+    "slug": "mitsui-sumitomo-insurance-aioi-nissay-dowa",
+    "industry": "保険業",
+    "website": "",
+    "id": "org-mitsui-sumitomo-insurance-aioi-nissay-dowa",
+    "country": "JP"
+  },
+  {
+    "name": "野村インベスター・リレーションズ",
+    "slug": "nomura-investor-relations",
+    "industry": "金融（IR支援サービス）",
+    "website": "",
+    "id": "org-nomura-investor-relations",
+    "country": "JP"
+  },
+  {
+    "name": "ウチコミ",
+    "slug": "uchicomi",
+    "industry": "不動産",
+    "website": "",
+    "id": "org-uchicomi",
+    "country": "JP"
+  },
+  {
+    "name": "横浜市",
+    "slug": "yokohama-city",
+    "industry": "地方自治体",
+    "website": "https://www.city.yokohama.lg.jp/",
+    "id": "org-yokohama-city",
+    "country": "JP"
+  },
+  {
+    "name": "TKC",
+    "slug": "tkc",
+    "industry": "情報サービス（会計事務所・企業・自治体向けシステム）",
+    "website": "",
+    "id": "org-tkc",
+    "country": "JP"
+  },
+  {
+    "name": "大阪ガス",
+    "slug": "osaka-gas",
+    "industry": "エネルギー（ガス）",
+    "website": "",
+    "id": "org-osaka-gas",
+    "country": "JP"
+  },
+  {
+    "name": "北陸電力",
+    "slug": "hokuriku-electric-power",
+    "industry": "電力",
+    "website": "",
+    "id": "org-hokuriku-electric-power",
+    "country": "JP"
+  },
+  {
+    "name": "小田急トラベル",
+    "slug": "odakyu-travel",
+    "industry": "旅行業",
+    "website": "",
+    "id": "org-odakyu-travel",
+    "country": "JP"
+  },
+  {
+    "name": "テレビ東京ダイレクト",
+    "slug": "tv-tokyo-direct",
+    "industry": "通信販売（放送グループ）",
+    "website": "",
+    "id": "org-tv-tokyo-direct",
+    "country": "JP"
+  },
+  {
+    "name": "丸井グループ",
+    "slug": "marui-group",
+    "industry": "小売・金融",
+    "website": "",
+    "id": "org-marui-group",
+    "country": "JP"
+  },
+  {
+    "name": "プレステージ・インターナショナル",
+    "slug": "prestige-international",
+    "industry": "BPO・ロードサービス",
+    "website": "",
+    "id": "org-prestige-international",
+    "country": "JP"
+  },
+  {
+    "name": "ノジマ",
+    "slug": "nojima",
+    "industry": "小売（家電量販）",
+    "website": "",
+    "id": "org-nojima",
+    "country": "JP"
+  },
+  {
+    "name": "西日本旅客鉄道（JR西日本）",
+    "slug": "jr-west",
+    "industry": "鉄道・運輸",
+    "website": "https://www.westjr.co.jp/",
+    "id": "org-jr-west",
+    "country": "JP"
+  },
+  {
+    "name": "東日本三菱自動車販売",
+    "slug": "higashi-nihon-mitsubishi-motor-sales",
+    "industry": "自動車販売",
+    "website": "",
+    "id": "org-higashi-nihon-mitsubishi-motor-sales",
+    "country": "JP"
   }
 ]
