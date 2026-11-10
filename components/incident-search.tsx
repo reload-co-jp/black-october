@@ -1,7 +1,7 @@
 "use client"
 
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
-import { FC, ReactNode, useMemo } from "react"
+import { FC, ReactNode, Suspense, useMemo } from "react"
 import { CATEGORY, SEVERITY, SEVERITY_ORDER, STATUS } from "@/lib/labels"
 import {
   EMPTY_QUERY,
@@ -14,8 +14,18 @@ import {
 import { IncidentCard } from "./incident-card"
 import { color, Grid, mono, Muted } from "./ui"
 
-const Field: FC<{ label: string; children: ReactNode }> = ({ label, children }) => (
-  <label style={{ display: "grid", fontSize: ".75rem", gap: ".2rem", color: color.muted }}>
+const Field: FC<{ label: string; children: ReactNode }> = ({
+  label,
+  children,
+}) => (
+  <label
+    style={{
+      display: "grid",
+      fontSize: ".75rem",
+      gap: ".2rem",
+      color: color.muted,
+    }}
+  >
     {label}
     {children}
   </label>
@@ -23,19 +33,39 @@ const Field: FC<{ label: string; children: ReactNode }> = ({ label, children }) 
 
 const uniq = (xs: string[]) => [...new Set(xs)].sort()
 
-export const IncidentSearch: FC<{ rows: IncidentRow[] }> = ({ rows }) => {
+/**
+ * `useSearchParams` makes everything up to the nearest Suspense boundary
+ * client-only under static export, so the fallback renders the same UI with
+ * no filters: the prerendered HTML then carries the full, crawlable list.
+ */
+export const IncidentSearch: FC<{ rows: IncidentRow[] }> = ({ rows }) => (
+  <Suspense fallback={<SearchView rows={rows} q={EMPTY_QUERY} />}>
+    <SearchFromUrl rows={rows} />
+  </Suspense>
+)
+
+const SearchFromUrl: FC<{ rows: IncidentRow[] }> = ({ rows }) => {
   const params = useSearchParams()
+  const query = params.toString()
+  const q = useMemo(() => parseQuery(new URLSearchParams(query)), [query])
+  return <SearchView rows={rows} q={q} />
+}
+
+const SearchView: FC<{ rows: IncidentRow[]; q: Query }> = ({ rows, q }) => {
   const router = useRouter()
   const pathname = usePathname()
-  const q = parseQuery(params)
-  const results = useMemo(() => searchIncidents(rows, q), [rows, params]) // eslint-disable-line react-hooks/exhaustive-deps
+  const results = useMemo(() => searchIncidents(rows, q), [rows, q])
 
   // State lives in the URL so results are shareable.
   const set = (patch: Partial<Query>) => {
     const s = toSearchParams({ ...q, ...patch }).toString()
     router.replace(s ? `${pathname}?${s}` : pathname, { scroll: false })
   }
-  const select = (key: keyof Query, options: [string, string][], all = "すべて") => (
+  const select = (
+    key: keyof Query,
+    options: [string, string][],
+    all = "すべて"
+  ) => (
     <select value={q[key]} onChange={(e) => set({ [key]: e.target.value })}>
       <option value="">{all}</option>
       {options.map(([v, l]) => (
@@ -46,7 +76,11 @@ export const IncidentSearch: FC<{ rows: IncidentRow[] }> = ({ rows }) => {
     </select>
   )
   const date = (key: keyof Query) => (
-    <input type="date" value={q[key]} onChange={(e) => set({ [key]: e.target.value })} />
+    <input
+      type="date"
+      value={q[key]}
+      onChange={(e) => set({ [key]: e.target.value })}
+    />
   )
   const pairs = (xs: string[]) => xs.map((x) => [x, x] as [string, string])
 
@@ -61,7 +95,8 @@ export const IncidentSearch: FC<{ rows: IncidentRow[] }> = ({ rows }) => {
           borderRadius: 6,
           display: "grid",
           gap: ".75rem",
-          gridTemplateColumns: "repeat(auto-fill, minmax(min(11rem, 100%), 1fr))",
+          gridTemplateColumns:
+            "repeat(auto-fill, minmax(min(11rem, 100%), 1fr))",
           marginBottom: "1.5rem",
           padding: "1rem",
         }}
@@ -76,13 +111,24 @@ export const IncidentSearch: FC<{ rows: IncidentRow[] }> = ({ rows }) => {
             />
           </Field>
         </div>
-        <Field label="カテゴリ">{select("category", Object.entries(CATEGORY))}</Field>
-        <Field label="深刻度">
-          {select("severity", SEVERITY_ORDER.map((s) => [s, SEVERITY[s]]))}
+        <Field label="カテゴリ">
+          {select("category", Object.entries(CATEGORY))}
         </Field>
-        <Field label="対応状況">{select("status", Object.entries(STATUS))}</Field>
-        <Field label="対象組織">{select("organization", pairs(uniq(rows.map((r) => r.organization))))}</Field>
-        <Field label="業種">{select("industry", pairs(uniq(rows.map((r) => r.industry))))}</Field>
+        <Field label="深刻度">
+          {select(
+            "severity",
+            SEVERITY_ORDER.map((s) => [s, SEVERITY[s]])
+          )}
+        </Field>
+        <Field label="対応状況">
+          {select("status", Object.entries(STATUS))}
+        </Field>
+        <Field label="対象組織">
+          {select("organization", pairs(uniq(rows.map((r) => r.organization))))}
+        </Field>
+        <Field label="業種">
+          {select("industry", pairs(uniq(rows.map((r) => r.industry))))}
+        </Field>
         <Field label="国内 / 海外">
           {select("region", [
             ["domestic", "国内"],
@@ -94,7 +140,10 @@ export const IncidentSearch: FC<{ rows: IncidentRow[] }> = ({ rows }) => {
         <Field label="発生日（から）">{date("occurredFrom")}</Field>
         <Field label="発生日（まで）">{date("occurredTo")}</Field>
         <Field label="並び順">
-          <select value={q.sort} onChange={(e) => set({ sort: e.target.value as Query["sort"] })}>
+          <select
+            value={q.sort}
+            onChange={(e) => set({ sort: e.target.value as Query["sort"] })}
+          >
             <option value="disclosed">公表日が新しい順</option>
             <option value="occurred">発生日が新しい順</option>
             <option value="severity">深刻度順</option>
@@ -107,7 +156,15 @@ export const IncidentSearch: FC<{ rows: IncidentRow[] }> = ({ rows }) => {
           </button>
         </div>
       </form>
-      <p aria-live="polite" style={{ ...mono, color: color.muted, fontSize: ".8rem", marginBottom: ".75rem" }}>
+      <p
+        aria-live="polite"
+        style={{
+          ...mono,
+          color: color.muted,
+          fontSize: ".8rem",
+          marginBottom: ".75rem",
+        }}
+      >
         {results.length} / {rows.length} 件
       </p>
       {results.length ? (
