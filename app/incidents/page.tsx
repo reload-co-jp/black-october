@@ -1,5 +1,4 @@
 import { Metadata } from "next"
-import { Suspense } from "react"
 import { IncidentSearch } from "@/components/incident-search"
 import { Breadcrumbs, PageTitle } from "@/components/ui"
 import { getOrganization, incidents } from "@/lib/data"
@@ -35,10 +34,7 @@ const Page = () => {
     <>
       <Breadcrumbs items={[{ name: "INCIDENTS", href: "/incidents/" }]} />
       <PageTitle kicker="INCIDENTS">インシデント一覧</PageTitle>
-      {/* useSearchParams needs a Suspense boundary under static export. */}
-      <Suspense>
-        <IncidentSearch rows={rows} />
-      </Suspense>
+      <IncidentSearch rows={rows} />
     </>
   )
 }
