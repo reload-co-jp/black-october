@@ -14,6 +14,7 @@ const sitemap = (): MetadataRoute.Sitemap => {
     ...[
       "/",
       "/incidents/",
+      "/critical/",
       "/study/",
       "/study/digest/",
       "/timeline/",
