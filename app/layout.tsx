@@ -22,6 +22,7 @@ export const metadata: Metadata = {
 
 const NAV: [string, string][] = [
   ["Incidents", "/incidents/"],
+  ["Critical", "/critical/"],
   ["Study", "/study/"],
   ["Timeline", "/timeline/"],
   ["Vulnerabilities", "/vulnerabilities/"],
