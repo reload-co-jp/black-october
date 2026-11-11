@@ -20,8 +20,8 @@ export const UnderlineNav: FC<{ items: [string, string][] }> = ({ items }) => {
                 href={href}
                 aria-current={current ? "page" : undefined}
                 style={{
-                  borderBottom: `2px solid ${current ? "#e5262b" : "transparent"}`,
-                  color: "#e6edf3",
+                  borderBottom: `2px solid ${current ? "#0969da" : "transparent"}`,
+                  color: "#1f2328",
                   display: "block",
                   fontSize: "14px",
                   fontWeight: current ? 600 : 400,

@@ -36,8 +36,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <body>
         <Header>
           <Title style={{ fontWeight: 600 }}>
-            <Link href="/" style={{ color: "#e6edf3" }}>
-              <span style={{ color: "#e5262b" }}>■</span> BLACK OCTOBER
+            <Link href="/" style={{ color: "#1f2328" }}>
+              <span style={{ color: "#cf222e" }}>■</span> BLACK OCTOBER
             </Link>
           </Title>
           <UnderlineNav items={NAV} />

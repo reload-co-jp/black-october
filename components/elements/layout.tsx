@@ -13,8 +13,8 @@ export const Title: FC<ComponentProps<"h1">> = ({
 export const Header: FC<{ children: ReactNode }> = ({ children }) => (
   <header
     style={{
-      backgroundColor: "#010409",
-      borderBottom: "1px solid #30363d",
+      backgroundColor: "#ffffff",
+      borderBottom: "1px solid #d0d7de",
       display: "flex",
       flexDirection: "column",
       gap: "8px",
@@ -42,8 +42,8 @@ export const Main: FC<{ children: ReactNode }> = ({ children }) => (
 export const Footer: FC<{ children: ReactNode }> = ({ children }) => (
   <footer
     style={{
-      borderTop: "1px solid #30363d",
-      color: "#8b949e",
+      borderTop: "1px solid #d0d7de",
+      color: "#59636e",
       fontSize: "12px",
       margin: "0 auto",
       maxWidth: "1280px",

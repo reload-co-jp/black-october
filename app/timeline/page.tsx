@@ -16,13 +16,13 @@ export const metadata: Metadata = {
 type Entry = { date: string; kind: string; title: ReactNode; description?: string | null; incidents: Incident[] }
 
 const KIND_COLOR: Record<string, string> = {
-  経緯: "#e5262b",
-  公表: "#ff7a1a",
-  [SOURCE_TYPE.official]: "#e6b800",
-  [SOURCE_TYPE.advisory]: "#a371f7",
-  [SOURCE_TYPE.government]: "#3fb950",
-  [SOURCE_TYPE.media]: "#4aa3ff",
-  [SOURCE_TYPE.research]: "#39c5cf",
+  経緯: "#57606a",
+  公表: "#bc4c00",
+  [SOURCE_TYPE.official]: "#9a6700",
+  [SOURCE_TYPE.advisory]: "#8250df",
+  [SOURCE_TYPE.government]: "#1a7f37",
+  [SOURCE_TYPE.media]: "#0550ae",
+  [SOURCE_TYPE.research]: "#1b7c83",
 }
 
 const incidentLink = (i: Incident) => (
