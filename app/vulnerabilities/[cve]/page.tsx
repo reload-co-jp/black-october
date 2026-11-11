@@ -5,7 +5,7 @@ import { IncidentCard } from "@/components/incident-card"
 import { SourceList } from "@/components/source-list"
 import { Breadcrumbs, Grid, JsonLd, List, Mono, Muted, PageTitle, Row, Section, SeverityBadge, Sidebar, WithSidebar } from "@/components/ui"
 import { cvssSeverity } from "@/lib/labels"
-import { db, getSources, incidentsForVulnerability, toCard } from "@/lib/data"
+import { db, getSources, incidentsForVulnerability, possibleIncidentsForVulnerability, toCard } from "@/lib/data"
 import { OG_BASE, SITE_NAME } from "@/lib/site"
 
 type Props = { params: Promise<{ cve: string }> }
@@ -31,6 +31,7 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
 const Page = async ({ params }: Props) => {
   const v = await find(params)
   const related = incidentsForVulnerability(v.id)
+  const possible = possibleIncidentsForVulnerability(v.id)
   return (
     <article>
       <Breadcrumbs items={[{ name: "VULNERABILITIES", href: "/vulnerabilities/" }, { name: v.cveId, href: `/vulnerabilities/${v.cveId}/` }]} />
@@ -65,6 +66,20 @@ const Page = async ({ params }: Props) => {
           <Grid min="18rem">{related.map((i) => <IncidentCard key={i.id} incident={toCard(i)} />)}</Grid>
         ) : (
           <Muted>この脆弱性に関連付けられた登録インシデントはありません。</Muted>
+        )}
+        {possible.length > 0 && (
+          <>
+            <h3 style={{ fontSize: ".95rem", margin: "1.5rem 0 .25rem" }}>関連の可能性があるインシデント</h3>
+            <Muted>被害組織や一次情報で悪用が確認されたものではありません。関連を示唆する根拠とあわせて掲載しています。</Muted>
+            <div style={{ display: "grid", gap: "1rem", marginTop: ".75rem" }}>
+              {possible.map(({ incident, note }) => (
+                <div key={incident.id} style={{ display: "grid", gap: ".4rem" }}>
+                  <IncidentCard incident={toCard(incident)} />
+                  <p style={{ fontSize: ".85rem" }}><strong>根拠:</strong> {note}</p>
+                </div>
+              ))}
+            </div>
+          </>
         )}
         <p style={{ marginTop: "1rem" }}><Link href="/vulnerabilities/">← 脆弱性一覧へ</Link></p>
       </Section>

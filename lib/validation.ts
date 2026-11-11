@@ -83,6 +83,13 @@ export const incidentSchema = z.object({
     })
   ),
   vulnerabilityIds: z.array(id),
+  /**
+   * CVEs that may be related but are not confirmed by the victim or a primary
+   * source. Kept apart from vulnerabilityIds; `note` must state the grounds.
+   */
+  possibleVulnerabilities: z
+    .array(z.object({ vulnerabilityId: id, note: z.string().min(1) }))
+    .optional(),
   relatedIncidentIds: z.array(id),
   sourceIds: z.array(id).min(1, "at least one source is required"),
   createdAt: date,
@@ -204,6 +211,11 @@ export const validateDb = (raw: Record<Collection, unknown>): string[] => {
     ref(w, "organizations", [i.organizationId])
     ref(w, "techSlug", i.attackMethods)
     ref(w, "vulnerabilities", i.vulnerabilityIds)
+    const possible = (i.possibleVulnerabilities ?? []).map((p) => p.vulnerabilityId)
+    ref(w, "vulnerabilities", possible)
+    for (const v of possible)
+      if (i.vulnerabilityIds.includes(v))
+        errors.push(`${w}: "${v}" is in both vulnerabilityIds and possibleVulnerabilities`)
     ref(w, "incidents", i.relatedIncidentIds)
     ref(w, "sources", [...i.sourceIds, ...i.timeline.flatMap((t) => t.sourceIds)])
     if (i.discoveredAt && i.incidentDate && i.discoveredAt < i.incidentDate)

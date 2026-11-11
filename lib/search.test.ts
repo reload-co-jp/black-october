@@ -49,4 +49,22 @@ describe("validateDb", () => {
     expect(errors).toMatch(/duplicate id/)
     expect(errors).toMatch(/unknown sources reference/)
   })
+  it("checks possibleVulnerabilities references and overlap", () => {
+    const [first, ...rest] = incidents
+    const withPossible = (ids: string[]) => ({
+      ...db,
+      incidents: [
+        {
+          ...first,
+          vulnerabilityIds: ["vuln-cve-2026-109618"],
+          possibleVulnerabilities: ids.map((vulnerabilityId) => ({ vulnerabilityId, note: "根拠" })),
+        },
+        ...rest,
+      ],
+    })
+    expect(validateDb(withPossible(["vuln-cve-2026-109619"]))).toEqual([])
+    const errors = validateDb(withPossible(["vuln-cve-2026-109618", "vuln-does-not-exist"])).join("\n")
+    expect(errors).toMatch(/both vulnerabilityIds and possibleVulnerabilities/)
+    expect(errors).toMatch(/unknown vulnerabilities reference "vuln-does-not-exist"/)
+  })
 })
