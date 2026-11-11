@@ -7,11 +7,11 @@ export const SEVERITY: Record<string, string> = {
 }
 export const SEVERITY_ORDER = ["critical", "high", "medium", "low", "unknown"]
 export const SEVERITY_COLOR: Record<string, string> = {
-  critical: "#ff3b3b",
-  high: "#ff7a1a",
-  medium: "#e6b800",
-  low: "#4aa3ff",
-  unknown: "#888",
+  critical: "#cf222e",
+  high: "#bc4c00",
+  medium: "#9a6700",
+  low: "#0550ae",
+  unknown: "#6e7781",
 }
 
 export const STATUS: Record<string, string> = {

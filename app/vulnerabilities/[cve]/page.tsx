@@ -38,7 +38,7 @@ const Page = async ({ params }: Props) => {
       <PageTitle kicker={v.cveId}>{v.title}</PageTitle>
       <Row style={{ marginBottom: "1rem" }}>
         <SeverityBadge value={cvssSeverity(v.cvssScore)} />
-        {v.kevStatus && <span style={{ color: "#ff3b3b", fontSize: ".85rem" }}>● 悪用確認済み（CISA KEV）</span>}
+        {v.kevStatus && <span style={{ color: "#cf222e", fontSize: ".85rem" }}>● 悪用確認済み（CISA KEV）</span>}
       </Row>
       <p>{v.description}</p>
       <WithSidebar

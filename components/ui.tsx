@@ -12,14 +12,14 @@ import {
 import { SITE_URL } from "@/lib/site"
 
 export const color = {
-  bg: "#0d1117",
-  panel: "#161b22",
-  panel2: "#21262d",
-  border: "#30363d",
-  text: "#e6edf3",
-  muted: "#8b949e",
-  accent: "#e5262b",
-  accentSoft: "rgba(229, 38, 43, 0.12)",
+  bg: "#f6f8fa",
+  panel: "#ffffff",
+  panel2: "#eef1f4",
+  border: "#d0d7de",
+  text: "#1f2328",
+  muted: "#59636e",
+  accent: "#0969da",
+  accentSoft: "rgba(9, 105, 218, 0.12)",
 }
 export const mono: CSSProperties = {
   fontFamily:
@@ -80,11 +80,11 @@ export const CategoryTags: FC<{ values: string[] }> = ({ values }) => (
 )
 
 const verificationColor: Record<string, string> = {
-  confirmed: "#3fb950",
-  partially_confirmed: "#d29922",
-  possible: "#d29922",
-  unconfirmed: "#db6d28",
-  under_investigation: "#db6d28",
+  confirmed: "#1a7f37",
+  partially_confirmed: "#9a6700",
+  possible: "#9a6700",
+  unconfirmed: "#bc4c00",
+  under_investigation: "#bc4c00",
   unknown: color.muted,
 }
 export const VerificationBadge: FC<{ value: string }> = ({ value }) => (

@@ -524,7 +524,7 @@ export const StudyBoard: FC<{ rows: StudyRow[] }> = ({ rows }) => {
           ))}
         </ul>
       ) : (
-        <p style={{ color: "#8b949e" }}>条件に一致する事例はありません。</p>
+        <p style={{ color: "#59636e" }}>条件に一致する事例はありません。</p>
       )}
     </>
   )

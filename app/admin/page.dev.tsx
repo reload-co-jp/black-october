@@ -399,7 +399,7 @@ const AdminPage: FC = () => {
               <textarea rows={3} placeholder="CVE-2026-12345, CVE-2026-23456 …（改行・カンマ区切り）" value={cveList} onChange={(e) => setCveList(e.target.value)} style={mono} />
               <button type="button" onClick={importCves} disabled={!/CVE-\d{4}-\d{4,}/i.test(cveList)}>NVDから一括取得して保存</button>
               {!draft && message && (
-                <pre style={{ ...mono, color: message.ok ? "#3ecf8e" : "#ff5a5f", fontSize: ".75rem", whiteSpace: "pre-wrap" }}>{message.text}</pre>
+                <pre style={{ ...mono, color: message.ok ? "#1a7f37" : "#cf222e", fontSize: ".75rem", whiteSpace: "pre-wrap" }}>{message.text}</pre>
               )}
             </div>
           )}
@@ -442,7 +442,7 @@ const AdminPage: FC = () => {
               <button type="button" onClick={() => setRaw(!raw)}>{raw ? "フォーム" : "JSON"}</button>
             </div>
             {message && (
-              <pre style={{ ...mono, color: message.ok ? "#3ecf8e" : "#ff5a5f", fontSize: ".75rem", whiteSpace: "pre-wrap" }}>{message.text}</pre>
+              <pre style={{ ...mono, color: message.ok ? "#1a7f37" : "#cf222e", fontSize: ".75rem", whiteSpace: "pre-wrap" }}>{message.text}</pre>
             )}
             {raw ? (
               <textarea
