@@ -58,6 +58,7 @@
 .meta {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
   gap: 0.25rem 1rem;
   margin-bottom: 0.5rem;
@@ -259,4 +260,59 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 0.75rem;
+}
+
+.view {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+.view [role="group"] {
+  display: inline-flex;
+}
+.view button {
+  padding: 1px 10px;
+  font-size: 12px;
+}
+.view button:first-child {
+  border-radius: 6px 0 0 6px;
+}
+.view button:last-child {
+  margin-left: -1px;
+  border-radius: 0 6px 6px 0;
+}
+.view button[aria-pressed="true"] {
+  border-color: #e5262b;
+  background: rgba(229, 38, 43, 0.12);
+  color: #e6edf3;
+}
+
+/* Digest mode: what / why / what to do, one line each under the row. */
+.digest {
+  display: grid;
+  gap: 0.2rem;
+  margin: 0;
+  padding: 0 0.75rem 0.65rem calc(5.5rem + 1.5rem);
+  font-size: 13px;
+  line-height: 1.55;
+}
+.digest > div {
+  display: grid;
+  grid-template-columns: 4.5em minmax(0, 1fr);
+  gap: 0.5rem;
+}
+.digest dt {
+  color: #e5262b;
+  font-size: 12px;
+  font-weight: 600;
+}
+.digest dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 40rem) {
+  .digest {
+    padding-left: 0.75rem;
+  }
 }

@@ -12,14 +12,11 @@ import {
   PageTitle,
   Section,
 } from "@/components/ui"
-import {
-  getOrganization,
-  getSources,
-  getTechnique,
-  incidents,
-} from "@/lib/data"
+import { getTechnique } from "@/lib/data"
+import { periodsOf } from "@/lib/digest"
 import { OG_BASE, SITE_NAME, SITE_URL } from "@/lib/site"
-import { classify, hasKnownCause, StudyRow, THEMES } from "@/lib/study"
+import { hasKnownCause, THEMES } from "@/lib/study"
+import { studyRows } from "@/lib/study-data"
 
 const PATH = "/study/"
 const TITLE = "セキュリティ事故・不正アクセス事例から学ぶ勉強ボード"
@@ -66,37 +63,10 @@ const STEPS: [string, string, string][] = [
 ]
 
 const Page = () => {
-  const rows: StudyRow[] = incidents.map((i) => {
-    const org = getOrganization(i.organizationId)
-    return {
-      slug: i.slug,
-      title: i.title,
-      summary: i.summary,
-      organization: org.name,
-      organizationSlug: org.slug,
-      industry: i.industry,
-      incidentDate: i.incidentDate,
-      discoveredAt: i.discoveredAt,
-      disclosedAt: i.disclosedAt,
-      severity: i.severity,
-      categories: i.categories,
-      affectedUsers: i.impact.affectedUsers,
-      leaked: i.impact.leakedData.map((d) => d.item),
-      causeStatus: i.cause.status,
-      cause: i.cause.description,
-      factors: i.cause.factors,
-      measures: i.response.measures,
-      lessons: i.lessons,
-      themes: classify(i),
-      sources: getSources(i.sourceIds).map((s) => ({
-        title: s.title,
-        url: s.url,
-        publisher: s.publisher,
-        primary: s.reliability === "primary",
-      })),
-    }
-  })
+  const rows = studyRows
   const known = rows.filter(hasKnownCause).length
+  const { months, weeks } = periodsOf(rows)
+  const [latestWeek, latestMonth] = [weeks[0], months[0]]
   const url = new URL(PATH, SITE_URL).toString()
 
   return (
@@ -167,6 +137,23 @@ const Page = () => {
           </li>
         ))}
       </ol>
+
+      <nav
+        aria-label="ダイジェスト"
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          gap: ".5rem 1.25rem",
+          marginBottom: "1rem",
+        }}
+      >
+        <span style={{ color: color.muted }}>まずは要点だけ:</span>
+        <Link href={latestWeek.path}>
+          今週のダイジェスト（{latestWeek.label}）→
+        </Link>
+        <Link href={latestMonth.path}>{latestMonth.label}のダイジェスト →</Link>
+        <Link href="/study/digest/">バックナンバー</Link>
+      </nav>
 
       <StudyBoard rows={rows} />
 
