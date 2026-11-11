@@ -23,6 +23,7 @@ import {
   StudyRow,
   THEMES,
 } from "@/lib/study"
+import { firstSentence } from "@/lib/digest"
 import { Tag, VerificationBadge } from "./ui"
 import css from "./study-board.module.css"
 
@@ -79,9 +80,10 @@ const ItemView: FC<{
   row: StudyRow
   open: boolean
   pinned: boolean
+  digest: boolean
   onToggle: (slug: string) => void
   onPin: (slug: string) => void
-}> = ({ row: r, open, pinned, onToggle, onPin }) => {
+}> = ({ row: r, open, pinned, digest, onToggle, onPin }) => {
   const known = hasKnownCause(r)
   const questions = r.themes.flatMap(
     (t) => getTheme(t)?.questions.slice(0, 2) ?? []
@@ -136,6 +138,27 @@ const ItemView: FC<{
           )}
         </span>
       </a>
+
+      {digest && !open && (
+        <dl className={css.digest}>
+          <div>
+            <dt>何が</dt>
+            <dd>{firstSentence(r.summary)}</dd>
+          </div>
+          <div>
+            <dt>なぜ</dt>
+            <dd className={known ? undefined : css.unknown}>
+              {r.cause ? firstSentence(r.cause) : "原因は調査中"}
+            </dd>
+          </div>
+          {r.lessons[0] && (
+            <div>
+              <dt>どうする</dt>
+              <dd>{r.lessons[0]}</dd>
+            </div>
+          )}
+        </dl>
+      )}
 
       {/* Only the open case is rendered: all bodies at once tripled the HTML. */}
       {open && (
@@ -266,6 +289,8 @@ const isTyping = (t: EventTarget | null) =>
 export const StudyBoard: FC<{ rows: StudyRow[] }> = ({ rows }) => {
   const [q, setQ] = useState<StudyQuery>(EMPTY_STUDY_QUERY)
   const [pinnedOnly, setPinnedOnly] = useState(false)
+  // "digest" adds one-line why/what-to-do under every row, for skimming.
+  const [digest, setDigest] = useState(false)
   const open = useSyncExternalStore(subscribeHash, readHash, noHash)
   const pinText = useSyncExternalStore(subscribePins, readPins, noHash)
   const pins = useMemo(
@@ -328,6 +353,7 @@ export const StudyBoard: FC<{ rows: StudyRow[] }> = ({ rows }) => {
           results.length &&
           writeHash(results[Math.floor(Math.random() * results.length)].slug),
         p: () => open && pin(open),
+        d: () => setDigest((v) => !v),
         "/": () => searchRef.current?.focus(),
         Escape: () => writeHash(""),
       }
@@ -439,9 +465,27 @@ export const StudyBoard: FC<{ rows: StudyRow[] }> = ({ rows }) => {
         </div>
       </form>
 
-      <p className={css.meta}>
-        <span aria-live="polite">
-          {results.length} / {rows.length} 件
+      <div className={css.meta}>
+        <span className={css.view}>
+          <span aria-live="polite">
+            {results.length} / {rows.length} 件
+          </span>
+          <span role="group" aria-label="表示">
+            <button
+              type="button"
+              aria-pressed={!digest}
+              onClick={() => setDigest(false)}
+            >
+              一覧
+            </button>
+            <button
+              type="button"
+              aria-pressed={digest}
+              onClick={() => setDigest(true)}
+            >
+              ダイジェスト
+            </button>
+          </span>
         </span>
         <span className={css.keys}>
           <span>
@@ -457,10 +501,13 @@ export const StudyBoard: FC<{ rows: StudyRow[] }> = ({ rows }) => {
             <kbd>/</kbd> 検索
           </span>
           <span>
+            <kbd>d</kbd> ダイジェスト
+          </span>
+          <span>
             <kbd>Esc</kbd> 閉じる
           </span>
         </span>
-      </p>
+      </div>
 
       {results.length ? (
         <ul className={css.list}>
@@ -470,6 +517,7 @@ export const StudyBoard: FC<{ rows: StudyRow[] }> = ({ rows }) => {
               row={r}
               open={r.slug === open}
               pinned={pins.has(r.slug)}
+              digest={digest}
               onToggle={toggle}
               onPin={pin}
             />
