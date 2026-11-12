@@ -58,6 +58,22 @@ export const vulnerabilitiesForIncident = (i: Incident) =>
   db.vulnerabilities.filter(
     (v) => i.vulnerabilityIds.includes(v.id) || v.incidentIds.includes(i.id)
   )
+
+// Unconfirmed links ("may be related"). A confirmed link always wins.
+export const possibleVulnerabilitiesForIncident = (i: Incident) => {
+  const confirmed = new Set(vulnerabilitiesForIncident(i).map((v) => v.id))
+  return (i.possibleVulnerabilities ?? [])
+    .filter((p) => !confirmed.has(p.vulnerabilityId))
+    .map((p) => ({ vulnerability: vulnMap.get(p.vulnerabilityId)!, note: p.note }))
+}
+export const possibleIncidentsForVulnerability = (id: string) => {
+  const confirmed = new Set(incidentsForVulnerability(id).map((i) => i.id))
+  return incidents.flatMap((incident) =>
+    (incident.possibleVulnerabilities ?? [])
+      .filter((p) => p.vulnerabilityId === id && !confirmed.has(incident.id))
+      .map((p) => ({ incident, note: p.note }))
+  )
+}
 export const relatedIncidents = (i: Incident) =>
   incidents.filter(
     (o) =>

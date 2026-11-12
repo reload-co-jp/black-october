@@ -26,7 +26,7 @@ const TEMPLATES: Record<Collection, () => Obj> = {
     attackMethods: [],
     impact: { status: "unconfirmed", affectedUsers: null, leakedData: [], systems: [], serviceOutage: null, financialLoss: null, description: "" },
     response: { description: "", measures: [] },
-    technicalNotes: "", lessons: [], timeline: [], vulnerabilityIds: [], relatedIncidentIds: [],
+    technicalNotes: "", lessons: [], timeline: [], vulnerabilityIds: [], possibleVulnerabilities: [], relatedIncidentIds: [],
     sourceIds: [], createdAt: today(), publishedAt: today(),
   }),
   vulnerabilities: () => ({
@@ -48,6 +48,7 @@ const TEMPLATES: Record<Collection, () => Obj> = {
 const ITEM_TEMPLATES: Record<string, () => Json> = {
   timeline: () => ({ date: today(), title: "", description: "", sourceIds: [] }),
   "impact.leakedData": () => ({ item: "", confidence: "unknown" }),
+  possibleVulnerabilities: () => ({ vulnerabilityId: "", note: "" }),
 }
 
 // Field path -> allowed values.
@@ -236,7 +237,7 @@ const AdminPage: FC = () => {
       data[c].map((r) => ({ value: String(r[valueKey]), label: String(r[labelKey]) }))
     if (key === "organizationId") return pick("organizations", "id", "name")
     if (key === "attackMethods") return pick("techniques", "slug", "nameJa")
-    if (key === "vulnerabilityIds") return pick("vulnerabilities", "id", "cveId")
+    if (key === "vulnerabilityIds" || key === "possibleVulnerabilities.vulnerabilityId") return pick("vulnerabilities", "id", "cveId")
     if (key === "relatedIncidentIds" || key === "incidentIds") return pick("incidents", "id", "title")
     if (key === "sourceIds" || key === "timeline.sourceIds") return pick("sources", "id", "title")
     return null

@@ -31,6 +31,7 @@ import {
   getTechnique,
   incidents,
   incidentSourceIds,
+  possibleVulnerabilitiesForIncident,
   relatedIncidents,
   toCard,
   vulnerabilitiesForIncident,
@@ -72,6 +73,7 @@ const Page = async ({ params }: Props) => {
   const sources = getSources(incidentSourceIds(i))
   const sourceNo = new Map(sources.map((s, n) => [s.id, n + 1]))
   const vulns = vulnerabilitiesForIncident(i)
+  const possibleVulns = possibleVulnerabilitiesForIncident(i)
   const related = relatedIncidents(i)
   const cite = (ids: string[]) =>
     ids.map((id) => (
@@ -253,6 +255,28 @@ const Page = async ({ params }: Props) => {
             </>
           ))}
         />
+        {possibleVulns.length > 0 && (
+          <>
+            <h3 style={{ fontSize: ".95rem", margin: "1rem 0 .5rem" }}>
+              関連の可能性があるCVE
+            </h3>
+            <Muted>
+              悪用が確認されたものではありません。関連を示唆する根拠とあわせて掲載しています。
+            </Muted>
+            <List
+              items={possibleVulns.map(({ vulnerability: v, note }) => (
+                <>
+                  <Link href={`/vulnerabilities/${v.cveId}/`}>
+                    <Mono>{v.cveId}</Mono>
+                  </Link>{" "}
+                  {v.title}
+                  <br />
+                  <span style={{ fontSize: ".85rem" }}>根拠: {note}</span>
+                </>
+              ))}
+            />
+          </>
+        )}
         <h3 style={{ fontSize: ".95rem", margin: "1rem 0 .5rem" }}>関連組織</h3>
         <p>
           <Link href={`/organizations/${org.slug}/`}>{org.name}</Link>

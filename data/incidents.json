@@ -20723,6 +20723,16 @@
     "technicalNotes": "",
     "timeline": [],
     "vulnerabilityIds": [],
+    "possibleVulnerabilities": [
+      {
+        "vulnerabilityId": "vuln-cve-2026-109618",
+        "note": "日本経済新聞によると、同サービスは2026年10月21日にPHPの脆弱性に伴う修正プログラム適用のため一時停止していた。同日に公開され、のちにCISA KEVに登録されたPHPの脆弱性に該当する可能性がある。ただし対象のCVE番号や今回の不正アクセスとの関係は公表されていない。"
+      },
+      {
+        "vulnerabilityId": "vuln-cve-2026-109619",
+        "note": "日本経済新聞によると、同サービスは2026年10月21日にPHPの脆弱性に伴う修正プログラム適用のため一時停止していた。同日に公開され、のちにCISA KEVに登録されたPHPの脆弱性に該当する可能性がある。ただし対象のCVE番号や今回の不正アクセスとの関係は公表されていない。"
+      }
+    ],
     "relatedIncidentIds": [],
     "sourceIds": [
       "src-nomura-investor-relations-kikan-navi-unauthorized-access-mwakmkx6"
